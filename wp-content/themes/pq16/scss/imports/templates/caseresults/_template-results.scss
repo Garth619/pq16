@@ -1,0 +1,78 @@
+#case_results_wrapper {
+  margin: 0 auto -30px;
+  width: 100%;
+  max-width: 1360px;
+  @include mq(small_monitor) {
+    margin: 0 auto 0px;
+  }
+}
+.single_case_result {
+  box-shadow: 0px 1px 20px #d1cfcf;
+  padding: 35px 20px 15px;
+  text-align: center;
+  @include mq(tablet) {
+    padding: 35px 40px 15px;
+    text-align: left;
+  }
+  @include mq(large_laptop) {
+    padding: 45px 40px 25px;
+  }
+  @include mq(small_monitor) {
+    padding: 65px 50px 45px;
+  }
+  span {
+    display: block;
+  }
+  .single_case_result_amount {
+    margin-bottom: 24px;
+    @include type(
+      (
+        size: 25px,
+        height: 28px,
+        weight: 700,
+        family: $primaryfont,
+        transform: uppercase,
+      )
+    );
+    @include mq(large_laptop) {
+      @include quick_type(35px, 40px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(40px, 45px, null);
+    }
+  }
+  .single_case_result_type {
+    @include type(
+      (
+        size: 16px,
+        height: 27px,
+        spacing: 1.8px,
+        family: $primaryfont,
+        color: $color_bright_two,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+    @include quick_type(18px, 22px, null);
+  }
+  .single_case_results_description {
+    margin-top: 20px;
+    @include type(
+      (
+        size: 16px,
+        height: 23px,
+        family: $primaryfont,
+        color: $color_light_fourteen,
+      )
+    );
+    @include mq(small_laptop) {
+      @include quick_type(18px, 25px, null);
+    }
+    @include mq(small_monitor) {
+      margin-top: 28px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

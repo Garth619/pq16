@@ -1,0 +1,102 @@
+header {
+  width: 100%;
+}
+
+#header_top {
+  @include flex(space-between);
+}
+
+#header_left {
+  padding: 8px 0 3px 20px;
+  flex-grow: 1;
+  border-bottom: 1px solid $color_light_five;
+  a {
+    display: block;
+    img {
+      width: 185px;
+    }
+  }
+}
+
+#header_middle {
+  width: 100%;
+  background: $color_light_one;
+  @include fixed(58px, null, null, 0, 1);
+}
+
+nav {
+  padding: 0 42px;
+  ul {
+    list-style: none;
+  }
+}
+
+#header_right {
+  flex-basis: 68px;
+}
+
+#menu_wrapper {
+  background: $color_bright_two;
+  @include box(100%, 58px);
+  @include flex(center, center);
+}
+
+#menu_bars {
+  text-align: center;
+  span {
+    display: block;
+  }
+  span.menu_bar {
+    background: #fff;
+    margin-bottom: 4px;
+    @include margin_lr;
+    @include box(34px, 2px);
+  }
+  span#menu_title {
+    margin-top: 5px;
+    @include type(
+      (
+        size: 11px,
+        spacing: 1.1px,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 800,
+        align: center,
+        transform: uppercase,
+      )
+    );
+  }
+}
+
+#header_bottom {
+  width: 100%;
+  padding: 10px 0;
+}
+
+#cta_wrapper {
+  @include flex(center, center);
+  span {
+    position: relative;
+    top: 1px;
+    @include type(
+      (
+        size: 12px,
+        spacing: 0.6px,
+        family: $primaryfont,
+        color: $color_bright_two,
+        weight: 800,
+      )
+    );
+  }
+  a {
+    margin-left: 6px;
+    @include type(
+      (
+        size: 18px,
+        family: $primaryfont,
+        color: $color_dark_one,
+        weight: 700,
+      )
+    );
+  }
+}

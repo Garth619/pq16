@@ -1,0 +1,117 @@
+////////////////////////////////////////////////////////////////////
+// Global Content
+////////////////////////////////////////////////////////////////////
+
+// #page_header
+
+$page_header_size: 25px;
+$page_header_size_large_laptop: 30px;
+$page_header_size_small_monitor: 45px;
+
+$page_header_height: 25px;
+$page_header_height_large_laptop: 30px;
+$page_header_height_small_monitor: 45px;
+
+$page_header_weight: 500;
+
+// #internal_header
+
+$internal_header_size: 35px;
+$internal_header_size_large_laptop: 55px;
+$internal_header_size_small_monitor: 60px;
+
+$internal_header_height: 35px;
+$internal_header_height_large_laptop: 55px;
+$internal_header_height_small_monitor: 70px;
+
+$internal_header_weight: 500;
+
+// .double_line:before,&:after
+
+$double_line_bg_color: $color_bright_two;
+
+// .content
+
+$content_size: 13px;
+$content_size_large_laptop: 15px;
+$content_size_small_monitor: 16px;
+
+$content_height: 22px;
+$content_height_large_laptop: 28px;
+$content_height_small_monitor: 30px;
+
+$content_spacing: 0.33px;
+
+// .content h2
+
+$content_h2_size: 18px;
+$content_h2_size_large_laptop: 22px;
+$content_h2_size_small_monitor: 26px;
+
+$content_h2_height: 22px;
+$content_h2_height_large_laptop: 25px;
+$content_h2_height_small_monitor: 30px;
+
+$content_h2_color: $color_bright_two;
+
+$content_h2_weight: 500;
+
+// .content h3
+
+$content_h3_size: 15px;
+$content_h3_size_large_laptop: 17px;
+$content_h3_size_small_monitor: 19px;
+
+$content_h3_height: 19px;
+$content_h3_height_large_laptop: 30px;
+$content_h3_height_small_monitor: 30px;
+
+$content_h3_spacing: 0.38px;
+
+$content_h3_weight: 700;
+
+// .content h4
+
+$content_h4_size: 16px;
+
+$content_h4_height: 18px;
+
+$content_h4_spacing: 0.4px;
+
+$content_h4_weight: 600;
+
+// .content a
+
+$content_link_color: $color_bright_two;
+
+// ul li, ol li
+
+$content_li_weight: 600;
+
+// ul li bullet
+
+$content_ul_bullet_bg_color: $color_bright_one;
+
+// ol li
+
+$content_ol_height_large_laptop: $color_bright_two;
+
+// ol li:before
+
+$content_ol_number_color: $color_bright_two;
+
+// span.double_line.blockquote:before,&:after
+
+$blockquote_double_line_bg_color: $color_bright_two;
+
+// blockquote
+
+$blockquote_size: 21px;
+$blockquote_size_large_laptop: 25px;
+$blockquote_size_small_monitor: 35px;
+
+$blockquote_height: 22px;
+$blockquote_height_large_laptop: 25px;
+$blockquote_height_small_monitor: 40px;
+
+$blockquote_weight: 500;

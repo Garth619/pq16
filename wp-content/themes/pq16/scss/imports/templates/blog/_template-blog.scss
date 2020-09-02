@@ -1,0 +1,128 @@
+.blog_post {
+  border-bottom: 3px solid $color_light_two;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  @include mq(large_laptop) {
+    margin-bottom: 45px;
+  }
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.blog_meta {
+  ul {
+    list-style: none;
+    padding: 0px 0 10px;
+    display: inline;
+    @include mq(small_monitor) {
+      padding: 0px 0 30px;
+    }
+  }
+  span,
+  li {
+    display: inline-block;
+    @include type(
+      (
+        size: 14px,
+        height: 16px,
+        family: $primaryfont,
+        color: $color_bright_one,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+    @include mq(large_laptop) {
+      @include quick_type(16px, 16px, null);
+    }
+    a {
+      color: $color_bright_one;
+      text-decoration: none;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $color_bright_two;
+      }
+    }
+  }
+  li {
+    &:before {
+      background: $color_dark_one;
+      vertical-align: top;
+      border-radius: 50%;
+      margin: 5px 10px 0 7px;
+      @include box(6px);
+      @include contentdisplay(inline-block);
+    }
+  }
+}
+
+body.single {
+  .blog_meta {
+    margin-bottom: 20px;
+  }
+  .blog_header {
+    margin-top: 0px;
+  }
+}
+
+.blog_header {
+  display: block;
+  margin-top: 20px;
+  @include type(
+    (
+      size: 27px,
+      height: 30px,
+      family: $primaryfont,
+      weight: 700,
+    )
+  );
+  a {
+    text-decoration: none;
+    color: $color_dark_one;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color_bright_two;
+    }
+  }
+  &:after {
+    background: $color_bright_two;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    @include box(86px, 3px);
+    @include contentdisplay();
+    @include mq(large_laptop) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.blog_content {
+  margin-bottom: 30px;
+}
+
+.paged_wrapper {
+  ul {
+    list-style: none;
+    @include flex(flex-end);
+    li {
+      margin-left: 10px;
+      @include type(
+        (
+          size: 16px,
+          height: 20px,
+          transform: uppercase,
+          family: $primaryfont,
+          weight: 700,
+        )
+      );
+      a {
+        color: $color_dark_one;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color_bright_two;
+        }
+      }
+    }
+  }
+}

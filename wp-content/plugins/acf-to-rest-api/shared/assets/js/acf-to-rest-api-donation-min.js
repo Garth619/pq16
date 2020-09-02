@@ -1,0 +1,1 @@
+!function(t){t(".acf-to-rest-api-donation-button-notice-dismiss").click((function(o){o.preventDefault(),t(this).closest(".acf-to-rest-api-donation-notice").slideUp(),t.post(acf_to_rest_api_donation.ajax_url,{action:"acf_to_rest_api_dismiss_notice",nonce:acf_to_rest_api_donation.nonce})}))}(jQuery);

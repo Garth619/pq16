@@ -1,0 +1,147 @@
+body {
+  color: $color_dark_one;
+}
+
+.content {
+  @include type(
+    (
+      size: 16px,
+      height: 25px,
+      spacing: 0,
+      family: $primaryfont,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: 17px;
+  }
+  h1.page_header {
+    @include type(
+      (
+        size: 38px,
+        height: 40px,
+        spacing: 0,
+        family: $primaryfont,
+        weight: 700,
+      )
+    );
+    @include mq(small_tablet) {
+      @include quick_type(40px, 42px, null);
+    }
+    &:after {
+      background: $color_bright_two;
+      margin-top: 23px;
+      @include box(100%, 3px);
+      @include contentdisplay();
+      @include mq(small_tablet) {
+        margin-top: 29px;
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 26px;
+    @include type(
+      (
+        size: 24px,
+        height: 25px,
+        spacing: 0,
+        family: $primaryfont,
+        weight: 700,
+      )
+    );
+    @include mq(small_tablet) {
+      padding-top: 20px;
+    }
+  }
+  h3 {
+    padding-top: 8px;
+    margin-bottom: 15px;
+    @include type(
+      (
+        size: 18px,
+        height: 22px,
+        family: $primaryfont,
+        color: $color_bright_one,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+    @include mq(large_laptop) {
+      margin-bottom: 25px;
+    }
+  }
+  p,
+  li {
+    > a {
+      font-weight: 700;
+      color: $color_dark_one;
+      text-decoration: underline;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $color_bright_two;
+      }
+    }
+  }
+  strong {
+    color: $color_bright_two;
+  }
+  > ul {
+    list-style: none;
+    > li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 27px;
+      &:before {
+        background: $color_bright_two;
+        border-radius: 50%;
+        @include abs(11px, null, null, 0);
+        @include box(6px);
+        @include contentdisplay();
+      }
+      > ul {
+        list-style: none;
+        margin-top: 20px;
+        margin-left: 0px;
+        > li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 27px;
+          &:before {
+            background: $color_bright_two;
+            border-radius: 50%;
+            @include abs(11px, null, null, 0);
+            @include box(6px);
+            @include contentdisplay();
+          }
+        }
+      }
+    }
+  }
+  ol {
+    list-style: none;
+    counter-reset: item;
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 27px;
+    }
+    > li:before {
+      content: counter(item) ".";
+      font-weight: 700;
+      color: $color_bright_two;
+      @include abs(0, null, null, 0);
+    }
+  }
+  > ul,
+  ol {
+    &.single_line_item {
+      margin-bottom: 27px;
+      li {
+        margin-bottom: 7px;
+      }
+    }
+  }
+  p {
+    margin-bottom: 25px;
+  }
+}

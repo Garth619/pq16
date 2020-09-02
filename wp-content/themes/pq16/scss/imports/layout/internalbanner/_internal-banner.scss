@@ -1,0 +1,69 @@
+body.page-template-default {
+  #internal_banner {
+    display: none;
+    @include mq(small_laptop) {
+      display: flex;
+    }
+  }
+}
+
+#internal_banner {
+  padding: 40px 20px;
+  @include mq(small_tablet) {
+    padding: 40px 55px 60px;
+  }
+  @include mq(small_laptop) {
+    padding: 0px 30px 0px;
+    text-align: center;
+    position: relative;
+    height: 310px;
+    @include flex(center, center);
+  }
+  @include mq(small_monitor) {
+    height: 377px;
+  }
+}
+
+#internal_banner_content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.banner_title {
+  display: inline-block;
+  text-align: center;
+  @include mq(small_laptop) {
+    display: block;
+    color: $color_light_one;
+    max-width: 875px;
+    @include margin_lr;
+    @include quick_type(48px, 58px, null);
+  }
+  @include mq(small_laptop) {
+    &:after {
+      display: none;
+    }
+  }
+  @include mq(large_laptop) {
+    @include quick_type(55px, 65px, null);
+  }
+}
+
+.internal_banner_button.free_consult_button {
+  display: none;
+  @include mq(small_laptop) {
+    margin-top: 35px;
+    display: inline-block;
+  }
+}
+
+img#banner_hero {
+  display: none;
+  @include mq(small_laptop) {
+    object-fit: cover;
+    display: block;
+    @include box(100%);
+    @include abs(0, null, null, 0);
+  }
+}

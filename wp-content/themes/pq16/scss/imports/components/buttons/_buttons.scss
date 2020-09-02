@@ -1,0 +1,164 @@
+.button {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  border-radius: 50px;
+  box-shadow: 0px 3px 7px #12283e59;
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:before,
+  &:after {
+    border-radius: 50px;
+    z-index: -1;
+    @include contentdisplay();
+    @include box(100%);
+    @include abs(0, null, null, 0);
+  }
+  &:before {
+    background: $color_grad_one;
+  }
+  &:after {
+    background: $color_grad_two;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+  }
+  span {
+    display: block;
+    z-index: 1;
+    text-align: center;
+    padding: 20px 29px;
+    @include type(
+      (
+        size: 18px,
+        spacing: 0,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 700,
+      )
+    );
+    @include mq(small_tablet) {
+      padding: 24px 34px;
+      @include quick_type(22px, null, null);
+    }
+  }
+}
+
+.button_two {
+  border: 2px solid $color_bright_two;
+  border-radius: 45px;
+  display: inline-block;
+  padding: 5px 25px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 13px,
+      height: 15px,
+      spacing: 0.65px,
+      family: $primaryfont,
+      color: $color_bright_two,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    border: 2px solid $color_bright_two;
+    color: $color_light_one;
+    background: $color_bright_two;
+  }
+}
+
+.button_three {
+  background: $color_light_two;
+  padding: 13px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 12px,
+      spacing: 0.62px,
+      family: $primaryfont,
+      color: $color_bright_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  @include mq(large_laptop) {
+    font-size: 14px;
+  }
+  &:hover {
+    background: $color_bright_one;
+    color: $color_light_one;
+  }
+}
+
+.button_four {
+  background: $color_bright_one;
+  padding: 9px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 13px,
+      height: 13px,
+      spacing: 0.65px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    background: $color_dark_one;
+    color: $color_light_one;
+  }
+}
+
+.button_five {
+  background: $color_bright_two;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 7px 33px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 14px,
+      height: 25px,
+      spacing: 0.7px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 700,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    background: $color_dark_one;
+  }
+}
+
+span.play_button {
+  display: block;
+  border-radius: 50%;
+  background: $color_light_rgba;
+  position: relative;
+  @include flex(center, center);
+  &:before {
+    background: $color_dark_one;
+    border-radius: 50%;
+    @include contentdisplay();
+  }
+  &:after {
+    @include contentdisplay();
+    transition: all 200ms ease-in-out;
+  }
+  &:hover {
+    &:after {
+      border-left-color: $color_bright_one;
+    }
+  }
+}

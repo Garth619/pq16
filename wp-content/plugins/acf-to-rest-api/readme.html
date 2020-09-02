@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="acftorestapi">ACF to REST API</h1>
+
+<p>Exposes <a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> Endpoints in the <a href="https://developer.wordpress.org/rest-api/">WordPress REST API</a></p>
+
+<p>https://wordpress.org/plugins/acf-to-rest-api/</p>
+
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#endpoints">Endpoints</a></li>
+<li><a href="#filters">Filters</a></li>
+<li><a href="#deprecated-filters">Deprecated Filters <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /></a></li>
+<li><a href="#request-api-version">Request API Version <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /></a></li>
+<li><a href="#field-settings">Field Settings <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /></a></li>
+<li><a href="#editing-the-fields">Editing the Fields</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#get-acf-fields-recursively">Get ACF Fields Recursively <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /></a></li>
+<li><a href="#cache">Cache</a></li>
+</ul>
+
+<h1 id="installation">Installation</h1>
+
+<ol>
+<li>Copy the <code>acf-to-rest-api</code> folder into your <code>wp-content/plugins</code> folder</li>
+<li>Activate the <code>ACF to REST API</code> plugin via the plugin admin page</li>
+</ol>
+
+<h1 id="endpoints">Endpoints</h1>
+
+<table>
+<colgroup>
+<col />
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th> Endpoint </th>
+	<th style="text-align:center;"> READABLE </th>
+	<th style="text-align:center;"> EDITABLE </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td> /wp-json/acf/v3/posts <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/posts/<strong>{id}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/posts/<strong>{id}</strong>/<strong>{field-name}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/pages <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/pages/<strong>{id}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/pages/<strong>{id}</strong>/<strong>{field-name}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/users <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/users/<strong>{id}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/users/<strong>{id}</strong>/<strong>{field-name}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/<strong>{taxonomy}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/<strong>{taxonomy}</strong>/<strong>{id}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/<strong>{taxonomy}</strong>/<strong>{id}</strong>/<strong>{field-name}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/comments <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/comments/<strong>{id}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/comments/<strong>{id}</strong>/<strong>{field-name}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/media <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/media/<strong>{id}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/media/<strong>{id}</strong>/<strong>{field-name}</strong> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/<strong>{post-type}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/no.png" alt="no" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/<strong>{post-type}</strong>/<strong>{id}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/<strong>{post-type}</strong>/<strong>{id}</strong>/<strong>{field-name}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/options/<strong>{id}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+<tr>
+	<td> /wp-json/acf/v3/options/<strong>{id}</strong>/<strong>{field-name}</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+	<td style="text-align:center;"> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/yes.png" alt="yes" /> </td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="filters">Filters</h1>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Filter </th>
+	<th> Argument(s) </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td> acf/rest_api/id </td>
+	<td> mixed ( string, integer, boolean ) <strong>$id</strong><br>string <strong>$type</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /><br>string <strong>$controller</strong> <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/key </td>
+	<td> string <strong>$key</strong><br>WP_REST_Request <strong>$request</strong><br>string <strong>$type</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/item_permissions/get </td>
+	<td> boolean <strong>$permission</strong><br>WP_REST_Request <strong>$request</strong><br>string <strong>$type</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/item_permissions/update </td>
+	<td> boolean <strong>$permission</strong><br>WP_REST_Request <strong>$request</strong><br>string <strong>$type</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/<strong>{type}</strong>/prepare_item </td>
+	<td> mixed ( array, boolean ) <strong>$item</strong><br>WP_REST_Request <strong>$request</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/<strong>{type}</strong>/get_fields </td>
+	<td> mixed ( array, WP_REST_Request ) <strong>$data</strong><br>mixed ( WP_REST_Request, NULL ) <strong>$request</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/field_settings/show_in_rest <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td> boolean <strong>$show</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/field_settings/edit_in_rest <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /> </td>
+	<td> boolean <strong>$edit</strong> </td>
+</tr>
+</tbody>
+</table>
+
+<p>Basic example of how to use the filters, in this case I will set a new permission to get the fields</p>
+
+<pre><code class="PHP">add_filter( 'acf/rest_api/item_permissions/get', function( $permission ) {
+  return current_user_can( 'edit_posts' );
+} );
+</code></pre>
+
+<h1 id="deprecatedfilters">Deprecated filters</h1>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Filter </th>
+	<th> Argument(s) </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td> acf/rest_api/type </td>
+	<td> string <strong>$type</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/types </td>
+	<td> array <strong>$types</strong> </td>
+</tr>
+<tr>
+	<td> acf/rest_api/default_rest_base </td>
+	<td> boolean <strong>$default</strong><br>string <strong>$type</strong> </td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="requestapiversion">Request API version</h1>
+
+<p>See below how to select the Request API Version.</p>
+
+<ol>
+<li>Open the plugins page;</li>
+<li>Click the settings link under the pluing name ( <code>ACF to REST API</code> );</li>
+<li>Select your version in the <code>ACF to REST API</code> session;</li>
+<li>Click in the button Save changes.</li>
+</ol>
+
+<figure>
+<img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/request-api-version-v3.jpg" alt="Choose request API version" />
+<figcaption>Choose request API version</figcaption>
+</figure>
+
+<p>The other alternative is to define the constant <code>ACF_TO_REST_API_REQUEST_VERSION</code> in your <code>wp-config.php</code></p>
+
+<pre><code class="PHP">define( 'ACF_TO_REST_API_REQUEST_VERSION', 2 );
+</code></pre>
+
+<h1 id="fieldsettings">Field Settings</h1>
+
+<p>In this version is possible to configure the field options via admin.</p>
+
+<p>The options are enabled using the filters below, by default theses options are disabled.</p>
+
+<pre><code class="PHP">// Enable the option show in rest
+add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
+
+// Enable the option edit in rest
+add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
+</code></pre>
+
+<p>After you activate the filters, all your fields should show these options:
+<img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/field-settings-v3.jpg" alt="Choose request API version" /></p>
+
+<h1 id="editingthefields">Editing the fields</h1>
+
+<p>The fields should be sent into the key <code>fields</code>.</p>
+
+<figure>
+<img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/field-name-v3.jpg" alt="Field Name" />
+<figcaption>Field Name</figcaption>
+</figure>
+
+<p><strong>Action:</strong> http://localhost/wp-json/acf/v3/posts/1</p>
+
+<pre><code class="HTML">&lt;form action=&quot;http://localhost/wp-json/acf/v3/posts/1&quot; method=&quot;POST&quot;&gt;
+  &lt;?php 
+    // https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/
+    wp_nonce_field( 'wp_rest' ); 
+  ?&gt;
+  &lt;label&gt;Site: &lt;input type=&quot;text&quot; name=&quot;fields[site]&quot;&gt;&lt;/label&gt;
+  &lt;button type=&quot;submit&quot;&gt;Save&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><strong>Action:</strong> http://localhost/wp-json/wp/v2/posts/1</p>
+
+<pre><code class="HTML">&lt;form action=&quot;http://localhost/wp-json/wp/v2/posts/1&quot; method=&quot;POST&quot;&gt;
+  &lt;?php 
+    // https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/
+    wp_nonce_field( 'wp_rest' ); 
+  ?&gt;
+  &lt;label&gt;Title: &lt;input type=&quot;text&quot; name=&quot;title&quot;&gt;&lt;/label&gt;
+  &lt;h3&gt;ACF&lt;/h3&gt;
+  &lt;label&gt;Site: &lt;input type=&quot;text&quot; name=&quot;fields[site]&quot;&gt;&lt;/label&gt;
+  &lt;button type=&quot;submit&quot;&gt;Save&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>Use the filter <code>acf/rest_api/key</code> to change the key <code>fields</code>.</p>
+
+<pre><code class="PHP">add_filter( 'acf/rest_api/key', function( $key, $request, $type ) {
+  return 'acf_fields';
+}, 10, 3 );
+</code></pre>
+
+<p>Now, the fields should be sent into the key <code>acf_fields</code></p>
+
+<pre><code class="HTML">&lt;form action=&quot;http://localhost/wp-json/acf/v3/posts/1&quot; method=&quot;POST&quot;&gt;
+  &lt;?php 
+    // https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/
+    wp_nonce_field( 'wp_rest' ); 
+  ?&gt;
+  &lt;label&gt;Site: &lt;input type=&quot;text&quot; name=&quot;acf_fields[site]&quot;&gt;&lt;/label&gt;
+  &lt;button type=&quot;submit&quot;&gt;Save&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h1 id="examples">Examples</h1>
+
+<p>Sample theme to edit the ACF Fields.</p>
+
+<p>https://github.com/airesvsg/acf-to-rest-api-example</p>
+
+<p>To-do list <img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /></p>
+
+<p>https://github.com/airesvsg/to-do-list-acf-to-rest-api</p>
+
+<h1 id="getacffieldsrecursivelynewhttp:airesgoncalves.com.brscreenshotacf-to-rest-apireadmenew-v3.1.png">Get ACF Fields Recursively<img src="http://airesgoncalves.com.br/screenshot/acf-to-rest-api/readme/new-v3.1.png" alt="new" /></h1>
+
+<p>https://github.com/airesvsg/acf-to-rest-api-recursive</p>
+
+<p>More details:</p>
+
+<ul>
+<li><p>Issues</p></li>
+<li><p> https://github.com/airesvsg/acf-to-rest-api/issues/109</p></li>
+<li><p> https://github.com/airesvsg/acf-to-rest-api/issues/223</p></li>
+<li><p> https://github.com/airesvsg/acf-to-rest-api/issues/9</p></li>
+<li><p>Pull Request</p></li>
+<li><p> https://github.com/airesvsg/acf-to-rest-api/pull/95</p></li>
+</ul>
+
+<h1 id="cache">Cache</h1>
+
+<p>Enable caching for WordPress REST API and increase speed of your application.</p>
+
+<p>https://github.com/airesvsg/wp-rest-api-cache</p>
+
+</body>
+</html>
+
