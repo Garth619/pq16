@@ -1,4 +1,4 @@
-# Premium Quicklauch MTMP - Theme Documentation
+# Premium Quicklauch 16 - Theme Documentation
 
 ## SCSS Structure
 
@@ -112,7 +112,7 @@ If there is a big change on the mock up that isn't reflected in this build then 
 
 1. Fork the repo
 2. Work locally on the entire theme except for the new major layout options
-3. When its time to make new layout options, set up git remote and point back to this PQ10 repo
+3. When its time to make new layout options, set up git remote and point back to this PQ16 repo
 4. Create a “New Feature” Branch
 5. Create a pull request
 6. We look over and merge into MTMP

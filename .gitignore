@@ -3,7 +3,7 @@
 !.gitignore
 !.htaccess
 !readme.md
-!pq-mtmp.sql.zip
+!pq16starter.sql.zip
 !wp-content/
 
 # ignore everything in the "wp-content" directory, except:

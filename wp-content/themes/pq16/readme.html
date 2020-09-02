@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1 id="premiumquicklauch10-themedocumentation">Premium Quicklauch 10 - Theme Documentation</h1>
+<h1 id="premiumquicklauch16-themedocumentation">Premium Quicklauch 16 - Theme Documentation</h1>
 
 <h2 id="scssstructure">SCSS Structure</h2>
 
@@ -13,22 +13,7 @@
 
 <ul>
 <li>style.scss</li>
-<li>scss
-
-<ul>
-<li>main.scss</li>
-<li>imports
-
-<ul>
-<li>base</li>
-<li>components</li>
-<li>global</li>
-<li>layout</li>
-<li>templates</li>
-<li>utils</li>
-<li>vendors</li>
-</ul></li>
-</ul></li>
+<li>scss - main.scss - imports - base - components - global - layout - templates - utils - vendors</li>
 </ul>
 
 <p>Each folder inside <strong>imports</strong> contain specific partials along with specific <strong>_variable.scss</strong> partials</p>
@@ -135,6 +120,8 @@ $secondaryfont: 'Martel', serif;
 
 </code></pre>
 
+<p>Alternatively, there are options under Dashboard-&gt; Theme Options -&gt; Fonts to self host Goggle Fonts. I have found lately that this is actually speeding up load times pretty quickly.</p>
+
 <h3 id="addinginnewfeaturesorlayouts">Adding in New Features or Layouts</h3>
 
 <p>If there is a big change on the mock up that isn&#8217;t reflected in this build then its probably appropriate to make a second layout option on your site that we can merge in. Still working out the best way to do this but possibly something like this:</p>
@@ -142,10 +129,10 @@ $secondaryfont: 'Martel', serif;
 <ol>
 <li>Fork the repo</li>
 <li>Work locally on the entire theme except for the new major layout options</li>
-<li>When its time to make new layout options, set up git remote and point back to this PQ10 repo</li>
+<li>When its time to make new layout options, set up git remote and point back to this PQ16 repo</li>
 <li>Create a “New Feature” Branch</li>
 <li>Create a pull request</li>
-<li>We look over and merge into PQ10</li>
+<li>We look over and merge into MTMP</li>
 </ol>
 
 <p><a href="https://help.github.com/en/github/getting-started-with-github/fork-a-repo">Fork and Branch</a></p>
@@ -160,9 +147,9 @@ $secondaryfont: 'Martel', serif;
 
 <pre><code>function internal_css_print() {
    echo '&lt;style&gt;';
-   
+
    include_once get_template_directory() . '/style.css';
-  
+
    echo '&lt;/style&gt;';
 }
 
