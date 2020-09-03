@@ -1,19 +1,15 @@
 header {
   width: 100%;
   background: #fff;
+  box-shadow: 0px 3px 6px #00000029;
   @include fixed(0, null, null, 0, 1);
-  @include flex(space-between, null, null, wrap);
-  @include mq(small_tablet) {
-    box-shadow: 0px 3px 6px #00000029;
-  }
 }
 
-// #header_top {
-//   @include flex(space-between);
-//   @include mq(small_tablet) {
-//     flex-grow: 1;
-//   }
-// }
+#header_inner {
+  max-width: 1920px;
+  @include margin_lr;
+  @include flex(space-between, null, null, wrap);
+}
 
 #header_left {
   padding: 8px 0 3px 20px;

@@ -90,8 +90,8 @@
 
 <header>
 
+	<div id='header_inner'>
 	
-
 		<div id='header_left'>
 		
 			<a href="<?php bloginfo('url');?>">
@@ -135,8 +135,6 @@
 		
 		</div><!-- header_right -->
 	
-
-
 	<div id='header_bottom'>
 	
 		<div id='cta_wrapper'>
@@ -169,6 +167,8 @@
 			</div><!-- menu_wrapper -->
 	
 	</div><!-- header_bottom -->
+
+	</div><!-- header_inner -->
 
 </header>
 
