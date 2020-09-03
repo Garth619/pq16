@@ -90,7 +90,7 @@
 
 <header>
 
-	<div id='header_top'>
+	
 
 		<div id='header_left'>
 		
@@ -112,19 +112,19 @@
 	
 		<div id='header_right'>
 		
-			<div id='menu_wrapper'>
+			<div class='menu_wrapper'>
 			
-				<div id='menu_bars'>
+				<div class='menu_bars'>
 				
 					<span class='menu_bar'></span><!-- menu_bar -->
 					<span class='menu_bar'></span><!-- menu_bar -->
 					<span class='menu_bar'></span><!-- menu_bar -->
 
-					<span id='menu_title'>Menu</span><!-- menu_title -->
+					<span class='menu_title'>Menu</span><!-- menu_title -->
 				
 				</div><!-- menu_bars -->
 
-				<div id='menu_close' class="fade">
+				<div class='menu_close fade'>
 				
 					<span></span>
 					<span></span>
@@ -135,7 +135,7 @@
 		
 		</div><!-- header_right -->
 	
-	</div><!-- header_top -->
+
 
 	<div id='header_bottom'>
 	
@@ -146,6 +146,27 @@
 			<a href='tel:5053733333'>(505) 373-3333</a>
 		
 		</div><!-- cta_wrapper -->
+
+		<div class='menu_wrapper'>
+			
+				<div class='menu_bars'>
+				
+					<span class='menu_bar'></span><!-- menu_bar -->
+					<span class='menu_bar'></span><!-- menu_bar -->
+					<span class='menu_bar'></span><!-- menu_bar -->
+
+					<span class='menu_title'>Menu</span><!-- menu_title -->
+				
+				</div><!-- menu_bars -->
+
+ 				<div class='menu_close fade'>
+				
+					<span></span>
+					<span></span>
+				
+				</div><!-- menu_close -->
+			
+			</div><!-- menu_wrapper -->
 	
 	</div><!-- header_bottom -->
 

@@ -435,9 +435,9 @@ jQuery(document).ready(function ($) {
 
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
-  $("#menu_wrapper").on("click", function (e) {
-    $("#header_middle").slideToggle();
-    $("#menu_bars, #menu_close").toggleClass("fade");
+  $(".menu_wrapper").on("click", function (e) {
+    $("#header_middle").toggleClass("open");
+    $(".menu_bars, .menu_close").toggleClass("fade");
   });
 
   function navDesktop() {
