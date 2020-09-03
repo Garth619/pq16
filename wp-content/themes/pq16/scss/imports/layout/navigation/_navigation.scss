@@ -52,6 +52,11 @@ nav {
       }
     }
     > li.menu-item-has-children {
+      &:hover {
+        > ul.sub-menu {
+          opacity: 1;
+        }
+      }
       > a {
         transition: all 200ms ease-in-out;
         &.active {
@@ -87,6 +92,8 @@ nav {
       background: $color_light_one;
       width: 258px;
       box-shadow: 0px 3px 5px #00000029;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
       @include abs(40px, null, null, -25px);
     }
     li {
