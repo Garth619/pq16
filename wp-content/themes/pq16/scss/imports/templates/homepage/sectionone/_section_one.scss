@@ -3,22 +3,47 @@
   margin-top: 96px;
   text-align: center;
   position: relative;
+  @include mq(small_tablet) {
+    margin-top: 58px;
+  }
 }
 
 #sec_one_inner {
   position: relative;
   z-index: 1;
+  max-width: 295px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 540px;
+  }
 }
 
 #sec_one_top {
   padding-top: 94px;
+  @include mq(small_tablet) {
+    padding-top: 66px;
+    @include flex(null, null, column);
+  }
+}
+
+#sec_one_video_wrapper {
+  @include mq(small_tablet) {
+    order: 2;
+    @include flex();
+  }
 }
 
 #sec_one_video {
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
+  margin-top: 44px;
   @include margin_lr;
   @include box(163px, 92px);
+  @include mq(small_tablet) {
+    margin: 48px 25px 0 34px;
+    @include box(205px, 116px);
+  }
   img {
     @include image();
   }
@@ -35,6 +60,35 @@
     @include abs(-15px, null, null, -15px, -1);
     @include box(163px, 92px);
     @include contentdisplay();
+    @include mq(small_tablet) {
+      @include box(205px, 116px);
+      @include abs(-21px, null, null, -21px, -1);
+    }
+  }
+}
+
+#sec_one_video_content {
+  display: none;
+  @include mq(small_tablet) {
+    display: block;
+    max-width: 228px;
+    margin-top: 77px;
+  }
+  span {
+    @include mq(small_tablet) {
+      display: block;
+      padding-top: 13px;
+      border-top: 4px solid $color_bright_one;
+      @include type(
+        (
+          size: 16px,
+          height: 24px,
+          family: $thirdfont,
+          align: left,
+          color: $color_light_one,
+        )
+      );
+    }
   }
 }
 
@@ -50,6 +104,11 @@ span#sec_one_title {
       weight: 700,
     )
   );
+  @include mq(small_tablet) {
+    order: 1;
+    text-align: left;
+    @include quick_type(55px, 55px, null);
+  }
 }
 
 a#free_consult_button {
@@ -59,6 +118,8 @@ a#free_consult_button {
   padding: 19px 10px;
   color: $color_light_one;
   background: $color_bright_two;
+  position: relative;
+  z-index: 1;
   @include type(
     (
       size: 12px,
@@ -69,6 +130,10 @@ a#free_consult_button {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    padding: 21px 10px;
+    @include quick_type(14px, null, null);
+  }
 }
 
 img#hero {
