@@ -27,8 +27,13 @@ nav {
 
 nav {
   ul.menu {
-    li.menu-item-has-children {
+    padding-bottom: 50px;
+    > li.menu-item-has-children {
       > a {
+        transition: all 200ms ease-in-out;
+        &.active {
+          color: $color_bright_two;
+        }
         &:after {
           background-image: url(#{$themepath}/images/arrow.svg);
           background-size: 12px 9px;
@@ -38,12 +43,22 @@ nav {
         }
       }
     }
+    > li.current-menu-ancestor {
+      > a {
+        color: $color_bright_two;
+      }
+    }
   }
 }
 
 nav {
   ul.sub-menu {
     display: none;
+    li.current-menu-item {
+      a {
+        color: $color_bright_two;
+      }
+    }
   }
 }
 

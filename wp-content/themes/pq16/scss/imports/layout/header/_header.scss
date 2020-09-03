@@ -22,7 +22,11 @@ header {
 
 #header_middle {
   width: 100%;
+  height: 100vh;
+  display: none;
   background: $color_light_one;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   @include fixed(58px, null, null, 0, 1);
 }
 

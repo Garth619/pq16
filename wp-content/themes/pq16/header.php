@@ -123,6 +123,13 @@
 					<span id='menu_title'>Menu</span><!-- menu_title -->
 				
 				</div><!-- menu_bars -->
+
+				<div id='menu_close'>
+				
+					<span></span>
+					<span></span>
+				
+				</div><!-- menu_close -->
 			
 			</div><!-- menu_wrapper -->
 		
