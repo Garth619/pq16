@@ -1,5 +1,52 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
+nav {
+  padding: 40px 42px;
+  ul {
+    list-style: none;
+    li {
+      @include type(
+        (
+          size: 16px,
+          height: 20px,
+          spacing: 0.75px,
+          family: $primaryfont,
+          color: $color_dark_one,
+          weight: 700,
+        )
+      );
+      a {
+        display: block;
+        text-decoration: none;
+        color: $color_dark_one;
+        padding-bottom: 23px;
+      }
+    }
+  }
+}
+
+nav {
+  ul.menu {
+    li.menu-item-has-children {
+      > a {
+        &:after {
+          background-image: url(#{$themepath}/images/arrow.svg);
+          background-size: 12px 9px;
+          margin-left: 10px;
+          @include box(12px, 9px);
+          @include contentdisplay(inline-block);
+        }
+      }
+    }
+  }
+}
+
+nav {
+  ul.sub-menu {
+    display: none;
+  }
+}
+
 // body.header_fixed {
 //   nav {
 //     @include fixed(67px, null, null, 0, 10);

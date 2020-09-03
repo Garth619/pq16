@@ -1,5 +1,7 @@
 header {
   width: 100%;
+  background: #fff;
+  @include fixed(0, null, null, 0, 1);
 }
 
 #header_top {
@@ -22,13 +24,6 @@ header {
   width: 100%;
   background: $color_light_one;
   @include fixed(58px, null, null, 0, 1);
-}
-
-nav {
-  padding: 0 42px;
-  ul {
-    list-style: none;
-  }
 }
 
 #header_right {

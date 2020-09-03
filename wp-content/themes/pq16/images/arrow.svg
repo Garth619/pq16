@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.61 6.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0e84f2;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" class="cls-1" d="M5.31,4.24l4-4a.77.77,0,0,1,1.07,0h0a.76.76,0,0,1,0,1.08L5.84,5.84a.75.75,0,0,1-1,0L.22,1.3A.77.77,0,0,1,.22.23a.75.75,0,0,1,1.07,0Z"/>
+    </g>
+  </g>
+</svg>
