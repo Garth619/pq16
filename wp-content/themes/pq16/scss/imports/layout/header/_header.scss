@@ -28,10 +28,20 @@ header {
     flex-basis: 205px;
     flex-grow: unset;
   }
+  @include mq(large_laptop) {
+    padding: 9px 0 5px 10px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 220px;
+    padding: 14px 0 9px 33px;
+  }
   a {
     display: block;
     img {
       width: 185px;
+      @include mq(small_monitor) {
+        width: 220px;
+      }
     }
   }
 }
@@ -66,6 +76,9 @@ header {
     border-top: none;
     overflow-y: unset;
     @include box(auto);
+  }
+  @include mq(small_monitor) {
+    margin-top: 33px;
   }
   &.open {
     opacity: 1;
@@ -158,6 +171,12 @@ header {
   @include mq(small_laptop) {
     flex-basis: 160px;
   }
+  @include mq(large_laptop) {
+    flex-basis: 175px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 205px;
+  }
   .menu_wrapper {
     display: none;
     @include mq(small_tablet) {
@@ -180,6 +199,9 @@ header {
   @include mq(small_laptop) {
     margin-right: 20px;
   }
+  @include mq(small_monitor) {
+    margin-right: 28px;
+  }
   span {
     position: relative;
     top: 1px;
@@ -193,6 +215,12 @@ header {
         weight: 800,
       )
     );
+    @include mq(large_laptop) {
+      font-size: 13px;
+    }
+    @include mq(small_monitor) {
+      font-size: 15px;
+    }
   }
   a {
     margin-left: 6px;
@@ -204,5 +232,11 @@ header {
         weight: 700,
       )
     );
+    @include mq(large_laptop) {
+      font-size: 20px;
+    }
+    @include mq(small_monitor) {
+      font-size: 23px;
+    }
   }
 }

@@ -21,6 +21,9 @@ nav {
       @include mq(small_laptop) {
         @include quick_type(14px, 16px, null);
       }
+      @include mq(large_laptop) {
+        @include quick_type(15px, 17px, null);
+      }
       a {
         display: block;
         text-decoration: none;
@@ -49,6 +52,13 @@ nav {
       position: relative;
       @include mq(small_laptop) {
         padding-bottom: 25px;
+      }
+      @include mq(large_laptop) {
+        padding-bottom: 19px;
+      }
+      @include mq(small_monitor) {
+        margin: 0 40px;
+        padding-bottom: 27px;
       }
     }
     > li.menu-item-has-children {
@@ -88,13 +98,19 @@ nav {
   ul.sub-menu {
     display: none;
     @include mq(small_laptop) {
-      display: block;
+      display: block !important;
       background: $color_light_one;
       width: 258px;
       box-shadow: 0px 3px 5px #00000029;
       opacity: 0;
       transition: all 200ms ease-in-out;
       @include abs(40px, null, null, -25px);
+    }
+    @include mq(large_laptop) {
+      top: 35px;
+      @include mq(small_monitor) {
+        top: 44px;
+      }
     }
     li {
       a {
