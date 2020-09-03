@@ -124,7 +124,7 @@
 				
 				</div><!-- menu_bars -->
 
-				<div id='menu_close'>
+				<div id='menu_close' class="fade">
 				
 					<span></span>
 					<span></span>

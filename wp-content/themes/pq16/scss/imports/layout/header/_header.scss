@@ -36,12 +36,19 @@ header {
 
 #menu_wrapper {
   background: $color_bright_two;
+  position: relative;
   @include box(100%, 58px);
   @include flex(center, center);
+  .fade {
+    opacity: 0;
+  }
 }
 
 #menu_bars {
   text-align: center;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+  @include abs(13px, null, null, 16px, 1);
   span {
     display: block;
   }
@@ -64,6 +71,26 @@ header {
         transform: uppercase,
       )
     );
+  }
+}
+
+#menu_close {
+  position: relative;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+  @include box(38px);
+  @include abs(10px, null, null, 15px);
+  span {
+    display: block;
+    background: $color_light_one;
+    @include abs(16px, null, null, 3px);
+    @include box(33px, 3px);
+    &:first-of-type {
+      transform: rotate(-45deg);
+    }
+    &:last-of-type {
+      transform: rotate(45deg);
+    }
   }
 }
 

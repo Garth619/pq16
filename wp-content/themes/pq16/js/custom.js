@@ -437,6 +437,7 @@ jQuery(document).ready(function ($) {
 
   $("#menu_wrapper").on("click", function (e) {
     $("#header_middle").slideToggle();
+    $("#menu_bars, #menu_close").toggleClass("fade");
   });
 
   function navDesktop() {
