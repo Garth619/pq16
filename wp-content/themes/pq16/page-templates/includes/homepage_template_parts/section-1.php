@@ -30,6 +30,20 @@
    
    </div><!-- sec_one_top -->
 
+   <div id='sec_one_bottom'>
+
+    <div id='sec_one_form'>
+    
+      <span id='sec_one_form_title'>Free Consultation</span><!-- sec_one_form_title -->
+
+      <?php gravity_form(6, false, false, false, '', true, 1245); ?>
+    
+      <span id='sec_one_required'>all fields required *</span><!-- sec_one_required -->
+      
+    </div><!-- sec_one_form -->
+   
+  </div><!-- sec_one_bottom -->
+
 </div><!-- sec_one_inner -->
 
  <a id='free_consult_button' href='#consultation'>Free Consultation</a><!-- free_consult_button -->
@@ -37,6 +51,8 @@
  <picture>
  
   <!-- <source media='(min-width: 1170px)' data-srcset='<?php echo $section_one_image_laptop_webp['url']; ?>' type='image/webp'> -->
+
+  <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero.jpg'>
  
   <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-tablet.jpg'>
  

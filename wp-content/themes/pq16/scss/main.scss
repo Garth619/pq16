@@ -43,8 +43,8 @@
 
 // global
 
-//  @import "imports/global/content/content",
-//          "imports/global/misc/global";
+ @import // "imports/global/content/content",
+         "imports/global/misc/global";
 
 // components
 
@@ -62,8 +62,8 @@
 
 // page templates
 
-@import "imports/templates/homepage/sectionone/section_one";
-//          "imports/templates/homepage/sectiontwo/section_two",
+@import "imports/templates/homepage/sectionone/section_one",
+          "imports/templates/homepage/sectiontwo/section_two";
 //          "imports/templates/homepage/sectionthree/section_three",
 //          "imports/templates/homepage/sectionfour/section_four",
 //          "imports/templates/homepage/sectionfive/section_five",

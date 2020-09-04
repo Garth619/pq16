@@ -6,6 +6,14 @@
   @include mq(small_tablet) {
     margin-top: 58px;
   }
+  @include mq(small_laptop) {
+    margin-top: 66px;
+    height: 517px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 61px;
+    height: 583px;
+  }
 }
 
 #sec_one_inner {
@@ -16,6 +24,13 @@
   @include mq(small_tablet) {
     max-width: 540px;
   }
+  @include mq(small_laptop) {
+    max-width: 1075px;
+    @include flex(space-between);
+  }
+  @include mq(large_laptop) {
+    max-width: 1204px;
+  }
 }
 
 #sec_one_top {
@@ -23,6 +38,16 @@
   @include mq(small_tablet) {
     padding-top: 66px;
     @include flex(null, null, column);
+  }
+  @include mq(small_laptop) {
+    flex-basis: 505px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    margin-left: 60px;
+  }
+  @include mq(large_laptop) {
+    margin-left: 85px;
+    flex-basis: 660px;
   }
 }
 
@@ -44,6 +69,13 @@
     margin: 48px 25px 0 34px;
     @include box(205px, 116px);
   }
+  @include mq(small_laptop) {
+    margin: 41px 35px 0 25px;
+  }
+  @include mq(large_laptop) {
+    margin: 56px 46px 0 25px;
+    @include box(221px, 121px);
+  }
   img {
     @include image();
   }
@@ -53,6 +85,12 @@
     @include flex(center, center);
     svg {
       @include box(105px);
+      @include mq(small_laptop) {
+        @include box(111px);
+      }
+      @include mq(large_laptop) {
+        @include box(117px);
+      }
     }
   }
   &:after {
@@ -64,6 +102,9 @@
       @include box(205px, 116px);
       @include abs(-21px, null, null, -21px, -1);
     }
+    @include mq(large_laptop) {
+      @include box(221px, 121px);
+    }
   }
 }
 
@@ -73,6 +114,12 @@
     display: block;
     max-width: 228px;
     margin-top: 77px;
+  }
+  @include mq(small_laptop) {
+    max-width: 233px;
+  }
+  @include mq(large_laptop) {
+    max-width: 273px;
   }
   span {
     @include mq(small_tablet) {
@@ -88,6 +135,13 @@
           color: $color_light_one,
         )
       );
+    }
+    @include mq(small_laptop) {
+      border-top: 6px solid $color_bright_one;
+    }
+    @include mq(large_laptop) {
+      padding-top: 17px;
+      @include quick_type(18px, 26px, null);
     }
   }
 }
@@ -108,6 +162,12 @@ span#sec_one_title {
     order: 1;
     text-align: left;
     @include quick_type(55px, 55px, null);
+  }
+  @include mq(small_laptop) {
+    margin-top: 33px;
+  }
+  @include mq(large_laptop) {
+    @include quick_type(65px, 65px, null);
   }
 }
 
@@ -134,10 +194,139 @@ a#free_consult_button {
     padding: 21px 10px;
     @include quick_type(14px, null, null);
   }
+  @include mq(small_laptop) {
+    display: none;
+  }
 }
 
 img#hero {
   object-fit: cover;
   @include box(100%);
   @include abs(0, null, null, 0);
+}
+
+#sec_one_bottom {
+  width: 320px;
+  flex-shrink: 0;
+  @include mq(large_laptop) {
+    width: 350px;
+  }
+}
+
+#sec_one_form {
+  margin-top: 57px;
+  background: $color_light_one;
+  box-shadow: 20px 20px 50px #00000029;
+  padding: 39px 36px;
+  @include mq(large_laptop) {
+    margin-top: 89px;
+  }
+  ul {
+    list-style: none;
+    li {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 8px;
+      @include mq(large_laptop) {
+        margin-bottom: 10px;
+      }
+      label {
+        display: none;
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid $color_light_six;
+        padding: 12px 18px;
+        @include type(
+          (
+            size: 13px,
+            weight: 700,
+            spacing: 0.65px,
+            family: $primaryfont,
+            color: $color_dark_one,
+          )
+        );
+        @include mq(large_laptop) {
+          font-size: 14px;
+        }
+        span {
+          color: red;
+        }
+      }
+      textarea {
+        height: 93px;
+      }
+    }
+  }
+  input[type="submit"] {
+    border: none;
+    width: 100%;
+    padding: 20px 10px;
+    background: $color_bright_two;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    @include type(
+      (
+        size: 14px,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 800,
+        spacing: 5px,
+        transform: uppercase,
+      )
+    );
+    &:hover {
+      background: $color_bright_three;
+    }
+  }
+  .gfield_description,
+  .validation_message {
+    margin-top: 5px;
+    @include type(
+      (
+        size: 11px,
+        spacing: 1px,
+        family: $primaryfont,
+        color: $color_bright_two,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+  }
+  span#sec_one_required {
+    display: block;
+    margin-top: 16px;
+    @include type(
+      (
+        size: 12px,
+        family: $thirdfont,
+        color: $color_light_seven,
+        transform: lowercase,
+      )
+    );
+    @include mq(large_laptop) {
+      font-size: 14px;
+    }
+  }
+}
+
+span#sec_one_form_title {
+  @include mq(small_laptop) {
+    display: block;
+    margin-bottom: 13px;
+    @include type(
+      (
+        size: 14px,
+        spacing: 2.5px,
+        family: $primaryfont,
+        color: $color_bright_two,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+  }
+  @include mq(large_laptop) {
+    margin-bottom: 21px;
+  }
 }
