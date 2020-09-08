@@ -1,19 +1,44 @@
 #section_two {
   background: $color_light_eight;
+  @include mq(small_tablet) {
+    padding: 0 0 0px 0;
+  }
 }
 
 #sec_two_inner {
   @include mq(small_tablet) {
     padding: 9px 50px;
   }
+  @include mq(tablet) {
+    padding: 0;
+    max-width: 1017px;
+    @include margin_lr;
+  }
+  @include mq(small_laptop) {
+    max-width: 1060px;
+  }
+  @include mq(large_laptop) {
+    max-width: 1208px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1525px;
+  }
 }
 
 #sec_two_slider {
+  @include mq(small_tablet) {
+    max-width: 800px;
+    @include margin_lr;
+  }
+  @include mq(tablet) {
+    max-width: 100%;
+    @include flex(space-between);
+  }
   .slick-slide {
     margin: 0 5px;
-    padding: 30px 0;
     @include mq(small_tablet) {
       margin: 0 10px;
+      padding: 30px 0;
     }
   }
   .slick-list {
@@ -26,6 +51,10 @@
     position: relative;
     margin-top: -23px;
     bottom: 20px;
+    @include mq(small_tablet) {
+      margin-top: 0px;
+      bottom: 12px;
+    }
     li.slick-active {
       button {
         &:before {
@@ -60,9 +89,12 @@
 .sec_two_slide {
   padding: 35px 30px 60px;
   @include mq(small_tablet) {
-    //padding: 35px 10px 60px;
     padding: 0;
     box-shadow: 0 3px 10px #00000029;
+  }
+  @include mq(tablet) {
+    box-shadow: none;
+    flex-basis: 30%;
   }
   .sec_two_slide_inner {
     padding: 25px 30px 70px;
@@ -77,8 +109,38 @@
       margin: 0;
       box-shadow: none;
     }
+    @include mq(tablet) {
+      padding: 72px 0px 65px;
+      height: auto;
+      background: transparent;
+      @include flex();
+    }
+    @include mq(large_laptop) {
+      padding: 75px 0px 80px;
+    }
+    @include mq(small_monitor) {
+      padding: 104px 0px 110px;
+    }
     img {
       @include box(47px);
+      @include mq(tablet) {
+        margin-top: 5px;
+        @include box(44px);
+      }
+      @include mq(large_laptop) {
+        @include box(47px);
+      }
+      @include mq(small_monitor) {
+        @include box(77px);
+      }
+    }
+    .sec_two_content {
+      @include mq(tablet) {
+        margin-left: 20px;
+      }
+      @include mq(small_monitor) {
+        margin-left: 26px;
+      }
     }
     span {
       display: block;
@@ -98,6 +160,15 @@
         @include mq(small_tablet) {
           margin-top: 15px;
         }
+        @include mq(tablet) {
+          @include quick_type(14px, null, 2.1px);
+        }
+        @include mq(large_laptop) {
+          font-size: 15px;
+        }
+        @include mq(small_monitor) {
+          font-size: 17px;
+        }
       }
       &.sec_two_descrip {
         margin-top: 11px;
@@ -109,6 +180,19 @@
             color: $color_dark_one,
           )
         );
+        @include mq(tablet) {
+          margin-top: 4px;
+          max-width: 240px;
+        }
+        @include mq(large_laptop) {
+          max-width: 270px;
+          margin-top: 8px;
+          @include quick_type(17px, 24px, null);
+        }
+        @include mq(small_monitor) {
+          max-width: 300px;
+          @include quick_type(19px, 26px, null);
+        }
       }
     }
   }

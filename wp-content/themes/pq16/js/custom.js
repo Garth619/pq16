@@ -145,6 +145,10 @@ jQuery(document).ready(function ($) {
           slidesToScroll: 2,
         },
       },
+      {
+        breakpoint: 1066,
+        settings: "unslick",
+      },
     ],
   });
 
