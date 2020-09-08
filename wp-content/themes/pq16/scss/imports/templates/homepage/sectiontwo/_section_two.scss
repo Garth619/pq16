@@ -3,45 +3,53 @@
 }
 
 #sec_two_inner {
+  @include mq(small_tablet) {
+    padding: 9px 50px;
+  }
 }
 
 #sec_two_slider {
-  .slick-track {
-  }
   .slick-slide {
     margin: 0 5px;
+    padding: 30px 0;
+    @include mq(small_tablet) {
+      margin: 0 10px;
+    }
   }
   .slick-list {
     margin: 0 -5px;
+    @include mq(small_tablet) {
+      margin: 0 -10px;
+    }
   }
   .slick-dots {
-    position:relative;
-    margin-top:-23px;
-    bottom:20px;
+    position: relative;
+    margin-top: -23px;
+    bottom: 20px;
     li.slick-active {
       button {
         &:before {
-          color:$color_bright_three;
+          color: $color_bright_three;
         }
       }
     }
     li:hover {
       button {
         &:before {
-          color:$color_bright_three;
+          color: $color_bright_three;
         }
       }
     }
     li {
-      margin:0 2px;
-      width:15px;
+      margin: 0 2px;
+      width: 15px;
       button {
-      width:15px;
+        width: 15px;
         &:before {
-          width:15px;
-          opacity:1;
-          color:$color_light_nine;
-          font-size:28px;
+          width: 15px;
+          opacity: 1;
+          color: $color_light_nine;
+          font-size: 28px;
           transition: all 200ms ease-in-out;
         }
       }
@@ -51,10 +59,24 @@
 
 .sec_two_slide {
   padding: 35px 30px 60px;
+  @include mq(small_tablet) {
+    //padding: 35px 10px 60px;
+    padding: 0;
+    box-shadow: 0 3px 10px #00000029;
+  }
   .sec_two_slide_inner {
     padding: 25px 30px 70px;
+    max-width: 360px;
     background: $color_light_one;
     box-shadow: 20px 20px 50px #00000029;
+    @include margin_lr;
+    @include mq(small_tablet) {
+      height: 273px;
+      padding: 40px 30px 70px;
+      max-width: 100%;
+      margin: 0;
+      box-shadow: none;
+    }
     img {
       @include box(47px);
     }
@@ -73,6 +95,9 @@
             transform: uppercase,
           )
         );
+        @include mq(small_tablet) {
+          margin-top: 15px;
+        }
       }
       &.sec_two_descrip {
         margin-top: 11px;

@@ -138,10 +138,11 @@ jQuery(document).ready(function ($) {
     dots: true,
     responsive: [
       {
-        breakpoint: 1170,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          adaptiveHeight: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
