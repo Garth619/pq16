@@ -1,3 +1,53 @@
 #section_three {
-  height:3000px;
+  padding: 40px 30px 30px;
+}
+
+#sec_three_content {
+  margin-top: 23px;
+}
+
+h1#sec_three_title {
+  margin-bottom: 23px;
+  @include type(
+    (
+      size: 35px,
+      height: 35px,
+      spacing: 0.35px,
+      family: $secondaryfont,
+      color: $color_dark_one,
+      weight: 600,
+      align: center,
+    )
+  );
+}
+
+.subtitle {
+  &:before,
+  &:after {
+    @include contentdisplay();
+  }
+  &:before {
+    border-top: 6px solid $color_bright_one;
+  }
+  &:after {
+    border-top: 3px solid $color_bright_one;
+  }
+  span {
+    padding: 18px 0;
+    display: block;
+    max-width: 250px;
+    @include margin_lr;
+    @include type(
+      (
+        size: 15px,
+        height: 20px,
+        spacing: 1.5px,
+        family: $primaryfont,
+        color: $color_dark_one,
+        weight: 800,
+        align: center,
+        transform: uppercase,
+      )
+    );
+  }
 }

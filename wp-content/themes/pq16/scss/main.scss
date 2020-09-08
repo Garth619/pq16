@@ -4,7 +4,7 @@
         "imports/global/colors/variables",
         "imports/global/mediaqueries/variables",
 //         "imports/global/misc/variables",
-//         "imports/global/content/variables",
+         "imports/global/content/variables",
 //         "imports/components/buttons/variables",
 //        "imports/components/internal_forms/variables",
 //          "imports/layout/header/variables",
@@ -43,7 +43,7 @@
 
 // global
 
- @import // "imports/global/content/content",
+ @import "imports/global/content/content",
          "imports/global/misc/global";
 
 // components
