@@ -1,260 +1,77 @@
 #section_four {
-  background: $color_dark_one;
+  position: relative;
+  padding: 45px 30px 55px;
+  &:after {
+    background: $color_light_ten;
+    @include abs(0, null, null, 0);
+    @include box(100%);
+    @include contentdisplay();
+  }
 }
 
 #sec_four_inner {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  padding: 65px 20px 55px;
-  @include mq(small_tablet) {
-    padding: 65px 45px 55px;
-  }
-  @include mq(small_laptop) {
-    padding: 65px 45px 75px;
-  }
-  @include mq(large_laptop) {
-    padding: 65px 28px 75px;
-  }
-  @include mq(small_monitor) {
-    max-width: 1865px;
-    @include margin_lr;
-  }
 }
 
 span#sec_four_title {
   display: inline-block;
-  background: $color_bright_one;
-  padding: 6px 35px;
   @include type(
     (
       size: 15px,
-      spacing: 3px,
+      height: 20px,
+      spacing: 1.5px,
       family: $primaryfont,
-      color: $color_light_one,
-      weight: 700,
+      weight: 800,
+      align: center,
       transform: uppercase,
     )
   );
-}
-
-#sec_four_slider_wrapper {
-  margin-top: 18px;
-  max-width: 490px;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 900px;
-    margin-top: 35px;
-  }
-  @include mq(small_laptop) {
-    max-width: 1108px;
-    @include flex(center, center);
-  }
-  @include mq(large_laptop) {
-    max-width: 100%;
-  }
-  @include mq(small_monitor) {
-    margin-top: 41px;
+  &:after {
+    margin-top: 5px;
+    background: $color_bright_one;
+    @include box(100%, 4px);
+    @include contentdisplay();
   }
 }
 
-#sec_four_slider {
-  @include mq(small_laptop) {
-    width: calc(100% - 120px);
-    order: 2;
-    padding: 0 70px;
-  }
-  @include mq(large_laptop) {
-    padding: 0 30px;
-  }
-  @include mq(small_monitor) {
-    padding: 0 80px;
-  }
-  .slick-slide {
-    padding: 20px 0 0 0;
-    margin: 0 20px;
-    @include mq(small_laptop) {
-      margin: 0 30px;
-    }
-    @include mq(large_laptop) {
-      margin: 0 20px;
-    }
-    @include mq(small_monitor) {
-      margin: 0 64px;
-    }
-  }
-  .slick-list {
-    padding: 0px 0 20px 0;
-    margin: 0 -20px;
-    @include mq(small_laptop) {
-      margin: 0 -30px;
-    }
-    @include mq(large_laptop) {
-      margin: 0 -20px;
-    }
-    @include mq(small_monitor) {
-      margin: 0 -64px;
-    }
-  }
-  .slick-dots {
-    position: static;
-    margin: 30px 0 0 0;
-    @include mq(small_tablet) {
-      margin: 10px 0 0 0;
-    }
-    li.slick-active {
-      button {
-        &:before {
-          color: $color_bright_two;
-        }
-      }
-    }
-    li:hover {
-      button {
-        &:before {
-          color: $color_bright_two;
-        }
-      }
-    }
-    li {
-      margin: 0 7px;
-      width: 20px;
-      button {
-        width: 20px;
-        &:before {
-          width: 20px;
-          opacity: 1;
-          color: $color_light_one;
-          font-size: 28px;
-          transition: all 200ms ease-in-out;
-        }
-      }
-    }
-  }
+#sec_four_att_wrapper {
+  margin: 23px 0 0 0;
+  box-shadow: 20px 20px 50px #00000029;
 }
 
-.sec_four_slide {
-  text-align: center;
-  padding: 83px 20px;
-  box-shadow: 0px 1px 20px #000000;
-  a {
-    text-decoration: none;
-    display: block;
-  }
-  @include mq(small_tablet) {
-    padding: 83px 20px 67px;
-  }
-  @include mq(small_laptop) {
-    padding: 83px 20px 97px;
-  }
-  @include mq(large_laptop) {
-    padding: 83px 20px 67px;
-  }
-  @include mq(small_monitor) {
-    padding: 83px 20px 95px;
-  }
+#sec_four_left {
   img {
-    @include margin_lr;
     @include image();
-    height: 42px;
-  }
-  span {
-    display: block;
-    &.sec_four_slide_title {
-      margin-top: 46px;
-      @include type(
-        (
-          size: 45px,
-          family: $primaryfont,
-          color: $color_light_one,
-          weight: 700,
-          transform: uppercase,
-        )
-      );
-      @include mq(large_laptop) {
-        @include quick_type(48px, null, null);
-      }
-      @include mq(small_monitor) {
-        font-size: 48px;
-        margin-top: 42px;
-      }
-    }
-    &.sec_four_slide_type {
-      margin-top: 26px;
-      @include type(
-        (
-          size: 18px,
-          spacing: 1.8px,
-          family: $primaryfont,
-          color: $color_bright_two,
-          weight: 700,
-          transform: uppercase,
-        )
-      );
-    }
-    &.sec_four_slide_descrip {
-      margin-top: 30px;
-      max-width: 400px;
-      @include margin_lr;
-      @include type(
-        (
-          size: 18px,
-          height: 25px,
-          family: $primaryfont,
-          color: $color_light_four,
-        )
-      );
-    }
   }
 }
 
-.sec_four_arrow {
-  background: $color_light_rgba_two;
-  transition: all 200ms ease-in-out;
-  margin-top: 13px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  display: none;
-  cursor: pointer;
+#sec_four_right {
+  background: $color_light_one;
   position: relative;
-  flex-basis: 60px;
-  height: 60px;
-  @include mq(small_laptop) {
-    @include flex(center, center);
-  }
-  &:before {
-    background: $color_light_one;
-    border-radius: 50%;
-    @include contentdisplay();
-    @include box(44px);
-  }
-  &:after {
-    @include contentdisplay();
-    transition: all 200ms ease-in-out;
-    @include abs(23px, null, null, 23px);
-    @include tri(left, 7px, 8px, $color_dark_one);
-    @include mq(small_laptop) {
+  z-index: 1;
+  margin-top: -12px;
+  padding: 27px 29px 39px;
+  #sec_four_right_inner {
+    text-align: left;
+    img {
+      display: none;
     }
-  }
-  &:hover {
-    background: $color_light_rgba;
-    &:after {
-      @include tri(left, 7px, 8px, $color_bright_two);
+    p {
+      @include type(
+        (
+          size: 15px,
+          height: 22px,
+          family: $primaryfont,
+          weight: 700,
+        )
+      );
     }
-  }
-}
-
-.sec_four_arrow_left {
-  order: 2;
-  @include mq(small_laptop) {
-    order: 1;
-  }
-}
-
-.sec_four_arrow_right {
-  order: 3;
-  &:after {
-    transform: rotate(-180deg);
-    @include mq(small_laptop) {
-      left: 27px;
+    a.meet_att_button {
+      display: inline-block;
+      margin-top: 23px;
+      width: 100%;
     }
   }
 }

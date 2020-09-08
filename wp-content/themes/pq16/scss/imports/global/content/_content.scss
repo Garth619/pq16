@@ -26,6 +26,9 @@ body {
         weight: 700,
       )
     );
+    @include mq(small_tablet) {
+      padding-top: 10px;
+    }
   }
   a {
     color: $color_bright_three;
