@@ -128,18 +128,17 @@ jQuery(document).ready(function ($) {
     $(".preload_section").addClass("load_after");
   });
 
-  $("#sec_one_slider").slick({
+  $("#sec_two_slider").slick({
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     mobileFirst: true,
     arrows: false,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    adaptiveHeight: true,
+    dots: true,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 1170,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
@@ -148,125 +147,125 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  $("#sec_two_left_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: false,
-    adaptiveHeight: true,
-    fade: true,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 1180,
-        settings: {
-          arrows: true,
-          prevArrow: ".sec_two_arrow_left",
-          nextArrow: ".sec_two_arrow_right",
-        },
-      },
-    ],
-  });
+  // $("#sec_two_left_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   arrows: false,
+  //   adaptiveHeight: true,
+  //   fade: true,
+  //   dots: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1180,
+  //       settings: {
+  //         arrows: true,
+  //         prevArrow: ".sec_two_arrow_left",
+  //         nextArrow: ".sec_two_arrow_right",
+  //       },
+  //     },
+  //   ],
+  // });
 
-  $("#sec_two_featured_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    adaptiveHeight: true,
-    arrows: true,
-    dots: false,
-    fade: true,
-    prevArrow: ".sec_two_featured_arrow_left",
-    nextArrow: ".sec_two_featured_arrow_right",
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1180,
-        settings: {
-          fade: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1790,
-        settings: {
-          fade: false,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-    ],
-  });
+  // $("#sec_two_featured_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   adaptiveHeight: true,
+  //   arrows: true,
+  //   dots: false,
+  //   fade: true,
+  //   prevArrow: ".sec_two_featured_arrow_left",
+  //   nextArrow: ".sec_two_featured_arrow_right",
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1180,
+  //       settings: {
+  //         fade: false,
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1790,
+  //       settings: {
+  //         fade: false,
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //       },
+  //     },
+  //   ],
+  // });
 
-  $("#sec_four_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    fade: true,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          fade: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1170,
-        settings: {
-          fade: false,
-          dots: false,
-          arrows: true,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          prevArrow: ".sec_four_arrow_left",
-          nextArrow: ".sec_four_arrow_right",
-        },
-      },
-      {
-        breakpoint: 1380,
-        settings: {
-          fade: false,
-          dots: false,
-          arrows: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          prevArrow: ".sec_four_arrow_left",
-          nextArrow: ".sec_four_arrow_right",
-        },
-      },
-    ],
-  });
+  // $("#sec_four_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   fade: true,
+  //   arrows: false,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         fade: false,
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1170,
+  //       settings: {
+  //         fade: false,
+  //         dots: false,
+  //         arrows: true,
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         prevArrow: ".sec_four_arrow_left",
+  //         nextArrow: ".sec_four_arrow_right",
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1380,
+  //       settings: {
+  //         fade: false,
+  //         dots: false,
+  //         arrows: true,
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         prevArrow: ".sec_four_arrow_left",
+  //         nextArrow: ".sec_four_arrow_right",
+  //       },
+  //     },
+  //   ],
+  // });
 
-  $("#sec_six_post_wrapper").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: false,
-    adaptiveHeight: true,
-    fade: true,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 1180,
-        settings: "unslick",
-      },
-    ],
-  });
+  // $("#sec_six_post_wrapper").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   arrows: false,
+  //   adaptiveHeight: true,
+  //   fade: true,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1180,
+  //       settings: "unslick",
+  //     },
+  //   ],
+  // });
 
   /* Related Content
 --------------------------------------------------------------------------------------- */

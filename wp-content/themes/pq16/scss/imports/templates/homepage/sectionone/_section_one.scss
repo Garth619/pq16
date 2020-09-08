@@ -94,7 +94,7 @@
     @include box(300px, 165px);
   }
   img {
-    @include image(300px, 165px);
+    @include image();
   }
   .video_overlay {
     @include abs(0, null, null, 0, 1);
@@ -239,8 +239,12 @@ img#hero {
 }
 
 #sec_one_bottom {
+  display: none;
   width: 320px;
   flex-shrink: 0;
+  @include mq(small_laptop) {
+    display:block;
+  }
   @include mq(large_laptop) {
     width: 350px;
   }
