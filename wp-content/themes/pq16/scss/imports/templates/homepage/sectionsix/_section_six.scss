@@ -2,6 +2,9 @@
   background: $color_light_ten;
   text-align: center;
   padding: 45px 0px 0;
+  @include mq(small_tablet) {
+    padding: 58px 50px 30px;
+  }
 }
 
 span#sec_six_title {
@@ -27,26 +30,28 @@ span#sec_six_title {
 #sec_six_slider {
   max-width: 800px;
   @include margin_lr;
+  @include mq(small_tablet) {
+    margin-top: 12px;
+  }
   .slick-slide {
     margin: 0 5px;
     @include mq(small_tablet) {
-      margin: 0 10px;
+      margin: 0 13px;
       padding: 30px 0;
     }
   }
   .slick-list {
     margin: 0 -5px;
     @include mq(small_tablet) {
-      margin: 0 -10px;
+      margin: 0 -13px;
     }
   }
   .slick-dots {
     position: relative;
     margin-top: -23px;
-    bottom: 25px;
+    bottom: 10px;
     @include mq(small_tablet) {
-      //margin-top: 0px;
-      //bottom: 12px;
+      margin-top: 0;
     }
     li.slick-active {
       button {
@@ -83,11 +88,11 @@ span#sec_six_title {
   padding: 24px 30px 65px;
   @include mq(small_tablet) {
     padding: 0;
+    background: $color_light_one;
     box-shadow: 0 3px 10px #00000029;
   }
   .sec_six_slide_inner {
-    background: $color_light_one;
-    padding: 45px 30px 35px;
+    padding: 52px 30px 35px;
     box-shadow: 20px 20px 50px #00000029;
     text-align: left;
     position: relative;
@@ -96,6 +101,8 @@ span#sec_six_title {
     @include mq(small_tablet) {
       box-shadow: none;
       max-width: 100%;
+      padding: 52px 30px 0px;
+      background: transparent;
     }
     img.stars {
       max-width: 117px;
@@ -114,6 +121,9 @@ span#sec_six_title {
           weight: 700,
         )
       );
+      @include mq(small_tablet) {
+        margin-top: 35px;
+      }
     }
     .sec_six_descrip {
       @include type(

@@ -176,23 +176,20 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  //   function getSlickheight() {
-  //     var stHeight = $(".client_reviews_block_slider .slick-track").height();
-  //     if ($(window).width() < 768) {
-  //       $(".client_reviews_block_slide").css("height", "auto");
-  //     }
-  //     if ($(window).width() >= 768 && $(window).width() < 1170) {
-  //       $(".client_reviews_block_slide").css("height", stHeight + "px");
-  //     }
-  //     if ($(window).width() >= 1170 && $(window).width() < 1490) {
-  //       $(".client_reviews_block_slide").css("height", "auto");
-  //     }
-  //     if ($(window).width() >= 1490) {
-  //       $(".client_reviews_block_slide").css("height", stHeight + "px");
-  //     }
-  //   }
+  function getSlickheight() {
+    var stHeight = $("#sec_six_slider .slick-track").height();
+    if ($(window).width() < 768) {
+      $(".sec_six_slide").css("height", "auto");
+    }
+    if ($(window).width() >= 768 && $(window).width() < 1170) {
+      $(".sec_six_slide").css("height", stHeight + "px");
+    }
+    if ($(window).width() >= 1170 && $(window).width() < 1490) {
+      $(".sec_six_slide").css("height", "auto");
+    }
+  }
 
-  //   getSlickheight();
+  getSlickheight();
 
   //   $(window).resize(
   //     _.debounce(function () {
