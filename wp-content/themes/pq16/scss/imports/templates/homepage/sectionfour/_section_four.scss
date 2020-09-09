@@ -7,6 +7,9 @@
   @include mq(large_laptop) {
     padding: 73px 30px 55px;
   }
+  @include mq(small_monitor) {
+    padding: 83px 30px 55px;
+  }
   &:after {
     background: $color_light_ten;
     @include abs(0, null, null, 0);
@@ -17,6 +20,9 @@
     }
     @include mq(large_laptop) {
       @include box(calc(100% - 59px), 73%);
+    }
+    @include mq(small_monitor) {
+      width: calc(100% - 158px);
     }
   }
 }
@@ -50,6 +56,9 @@ span#sec_four_title {
   );
   @include mq(small_tablet) {
     @include quick_type(16px, 21px, 4px);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(20px, 30px, 5px);
   }
   br {
     @include mq(small_tablet) {
@@ -85,6 +94,9 @@ span#sec_four_title {
   @include mq(large_laptop) {
     margin-top: 54px;
     max-width: 1172px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1265px;
   }
 }
 
@@ -127,6 +139,11 @@ span#sec_four_title {
     flex-basis: 488px;
     margin-top: 72px;
   }
+  @include mq(small_monitor) {
+    flex-basis: 547px;
+    margin-top: 56px;
+    margin-left: -132px;
+  }
   #sec_four_right_content {
     background: $color_light_one;
     padding: 27px 29px 39px;
@@ -141,9 +158,11 @@ span#sec_four_title {
     @include mq(large_laptop) {
       padding: 72px 55px 59px;
     }
+    @include mq(small_monitor) {
+      padding: 79px 80px 81px;
+    }
     #sec_four_right_content_inner {
       text-align: left;
-
       img {
         display: none;
         @include mq(small_laptop) {
@@ -153,6 +172,9 @@ span#sec_four_title {
         }
         @include mq(large_laptop) {
           @include abs(-27px, 17px, null, null);
+        }
+        @include mq(small_monitor) {
+          @include abs(-38px, 46px, null, null);
         }
       }
       p {
@@ -173,6 +195,9 @@ span#sec_four_title {
         @include mq(large_laptop) {
           @include quick_type(18px, 32px, null);
         }
+        @include mq(small_monitor) {
+          @include quick_type(19px, 35px, null);
+        }
         &:last-of-type {
           margin-bottom: 0;
         }
@@ -187,6 +212,9 @@ span#sec_four_title {
         }
         @include mq(large_laptop) {
           margin-top: 37px;
+        }
+        @include mq(small_laptop) {
+          margin-top: 20px;
         }
       }
     }
