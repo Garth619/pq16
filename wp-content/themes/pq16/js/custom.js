@@ -184,19 +184,15 @@ jQuery(document).ready(function ($) {
     if ($(window).width() >= 768 && $(window).width() < 1170) {
       $(".sec_six_slide").css("height", stHeight + "px");
     }
-    if ($(window).width() >= 1170 && $(window).width() < 1490) {
-      $(".sec_six_slide").css("height", "auto");
-    }
   }
 
   getSlickheight();
 
-  //   $(window).resize(
-  //     _.debounce(function () {
-  //       getSlickheight();
-  //     }, 100)
-  //   );
-  // };
+  $(window).resize(
+    _.debounce(function () {
+      getSlickheight();
+    }, 100)
+  );
 
   // $("#sec_two_left_slider").slick({
   //   infinite: true,

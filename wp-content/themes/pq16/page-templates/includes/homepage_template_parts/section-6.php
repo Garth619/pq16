@@ -48,7 +48,7 @@
 
 					<div class='sec_six_descrip'>
 					
-						<p>Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Arcu mauris euismod odio vestibulum arcu sagittis ullamcorper. Duis laoreet, purus</p>
+						<!-- <p>Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Arcu mauris euismod odio vestibulum arcu sagittis ullamcorper. Duis laoreet, purus</p> -->
 					
 					</div><!-- sec_six_descrip -->
 
