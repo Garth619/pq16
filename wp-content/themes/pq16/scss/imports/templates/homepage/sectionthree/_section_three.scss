@@ -69,16 +69,18 @@ h1#sec_three_title {
 .subtitle {
   &:before,
   &:after {
+    width: 100%;
+    background: $color_bright_one;
     @include contentdisplay();
   }
   &:before {
-    border-top: 6px solid $color_bright_one;
+    height: 6px;
     @include mq(small_tablet) {
-      border-top: 8px solid $color_bright_one;
+      height: 8px;
     }
   }
   &:after {
-    border-top: 3px solid $color_bright_one;
+    height: 3px;
   }
   span {
     padding: 18px 0;

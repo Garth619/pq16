@@ -2,69 +2,36 @@
 
 	<div id='sec_five_inner'>
 	
-		<span id='sec_five_header'><?php the_field( 'section_five_title' ); ?></span><!-- sec_five_header -->
-
-		<div id='sec_five_post_wrapper'>
-
-			<?php if ( have_rows( 'section_five_posts_pages' ) ) : ?>
-				<?php while ( have_rows( 'section_five_posts_pages' ) ) : the_row(); ?>
-			
-			
-					<?php $post_object = get_sub_field( 'post_page' ); ?>
-					
-					<?php if ( $post_object ): ?>
-						
-						<?php $post = $post_object; ?>
-						<?php setup_postdata( $post ); ?> 
-							
-
-							<div class='sec_five_post'>
-
-								<a href="<?php the_permalink();?>">
-
-									<div class='sec_five_post_image_wrapper'>
-									
-										<?php $post_image = get_sub_field( 'post_image' ); ?>
-					
-										<?php if ( $post_image ) { ?>
-											
-											<img class="lazyload" data-src="<?php echo $post_image['url']; ?>" alt="<?php echo $post_image['alt']; ?>" />
-					
-										<?php } ?>
-
-										<span class='post_cat_title'><?php the_sub_field( 'category' ); ?></span><!-- post_cat_title -->
-									
-									</div><!-- sec_five_post_image_wrapper -->
-
-									<div class='sec_five_post_content'>
-									
-										<span class='sec_five_post_title'><?php the_title();?></span><!-- sec_five_post_title -->
-
-										<span class='sec_five_post_descrip'><?php the_sub_field( 'description' ); ?></span><!-- sec_five_post_descrip -->
-
-										<div class='sec_five_learn_more_wrapper'>
-										
-											<span class='button_three'><?php the_sub_field( 'button_verbiage' ); ?></span><!-- button_three -->
-										
-										</div><!-- sec_five_learn_more_wrapper -->
-									
-									</div><!-- sec_five_post_content -->
-
-								</a>
-
-							</div><!-- sec_five_post -->
-
-
-						<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-				
-				<?php endwhile; ?>
-			<?php endif; ?>
+		<div id='sec_five_intro'>
 		
-		</div><!-- sec_five_post_wrapper -->
+			<p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis</p>
 
-		<a id='sec_five_button' class="button" href='<?php the_field( 'section_five_view_all_page_link' ); ?>'><span><?php the_field( 'section_five_button_verbiage' ); ?></span></a><!-- class -->
-	
+		</div><!-- sec_five_intro -->
+
+		<div id='sec_five_content' class="content">
+			
+			<div class='sec_five_col'>
+				
+					<p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae faucibus sed,eget turpis. Phasellus imperdiet a mauris ut egestas. Nulla mattis tellus in lectus posuere ultrices. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum diam nisl, ultricies ut rhoncus eu, fringilla in est.</p>
+
+					<h2>Heading Style 2 : ante pulnivar ispum vivmos maxium euqe vel mi eget behiclua tindicit</h2>
+
+					<p>Nulla pulvinar odio vitae ante pulvinar cursus auctor et nunc. Ut vitae lectus ac purus porttitor tempus ac eu magna. Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Mauris euismod odio vestibulum arcu sagittis ullamcorper. Duis laoreet, purus eget lacinia pellentesque, lacus dui varius augue, a euismod ipsum sem eget urna. Suspendisse potenti. Dolor sit amet, consectetur adipiscing elit.</p>
+				
+				</div><!-- sec_five_col -->
+
+				<div class='sec_five_col'>
+				
+					<h2 style="padding-top:0">Heading Style 2 : ante pulnivar ispum vivmos maxium euqe vel mi eget behiclua tindicit</h2>
+
+					<p>Nulla pulvinar odio vitae ante pulvinar cursus auctor et nunc. Ut vitae lectus ac purus porttitor tempus ac eu magna. Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Mauris euismod odio vestibulum arcu sagittis ullamcorper. Duis laoreet, purus eget lacinia pellentesque, lacus dui varius augue, a euismod ipsum sem eget urna. Suspendisse potenti. Dolor sit amet, consectetur adipiscing elit.</p>
+					
+					<p>Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae faucibus sed,eget turpis. Phasellus imperdiet a mauris ut egestas. Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Mauris euismod odio vestibulum arcu sagittis ullamcorper. Duis laoreet, purus eget lacinia pellentesque, lacus dui varius augue.</p>
+				
+				</div><!-- sec_five_col -->
+			
+			</div><!-- sec_five_content -->
+		
 	</div><!-- sec_five_inner -->
 
 </section><!-- section_five -->

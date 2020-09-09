@@ -11,6 +11,12 @@ body {
       family: $primaryfont,
     )
   );
+  @include mq(large_laptop) {
+    @include quick_type(16px, 28px, null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(17px, 30px, null);
+  }
   p {
     margin-bottom: 20px;
   }
