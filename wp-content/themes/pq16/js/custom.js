@@ -152,6 +152,55 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  $("#sec_six_slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    adaptiveHeight: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          adaptiveHeight: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      // {
+      //   breakpoint: 1066,
+      //   settings: "unslick",
+      // },
+    ],
+  });
+
+  //   function getSlickheight() {
+  //     var stHeight = $(".client_reviews_block_slider .slick-track").height();
+  //     if ($(window).width() < 768) {
+  //       $(".client_reviews_block_slide").css("height", "auto");
+  //     }
+  //     if ($(window).width() >= 768 && $(window).width() < 1170) {
+  //       $(".client_reviews_block_slide").css("height", stHeight + "px");
+  //     }
+  //     if ($(window).width() >= 1170 && $(window).width() < 1490) {
+  //       $(".client_reviews_block_slide").css("height", "auto");
+  //     }
+  //     if ($(window).width() >= 1490) {
+  //       $(".client_reviews_block_slide").css("height", stHeight + "px");
+  //     }
+  //   }
+
+  //   getSlickheight();
+
+  //   $(window).resize(
+  //     _.debounce(function () {
+  //       getSlickheight();
+  //     }, 100)
+  //   );
+  // };
+
   // $("#sec_two_left_slider").slick({
   //   infinite: true,
   //   slidesToShow: 1,

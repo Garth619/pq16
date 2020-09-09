@@ -1,85 +1,77 @@
 #section_six {
-  background: $color_light_two;
-}
-
-#sec_six_inner {
-  padding: 52px 11px;
-  @include mq(small_tablet) {
-    padding: 90px 11px 50px;
-  }
-  @include mq(small_laptop) {
-    padding: 90px 11px 20px;
-  }
-  @include mq(small_monitor) {
-    padding: 111px 11px 120px;
-  }
+  background: $color_light_ten;
+  text-align: center;
+  padding: 45px 0px 0;
 }
 
 span#sec_six_title {
-  display: block;
-  text-align: center;
-  max-width: 372px;
-  padding: 6px 10px;
-  background: $color_dark_one;
-  @include margin_lr;
+  display: inline-block;
   @include type(
     (
       size: 15px,
-      spacing: 3px,
+      height: 18px,
+      spacing: 1.5px,
       family: $primaryfont,
-      color: $color_light_one,
-      weight: 700,
+      weight: 800,
       transform: uppercase,
     )
   );
+  &:after {
+    margin-top: 6px;
+    background: $color_bright_one;
+    @include box(100%, 4px);
+    @include contentdisplay();
+  }
 }
 
-#sec_six_post_wrapper {
-  margin-top: 60px;
-  max-width: 490px;
+#sec_six_slider {
+  max-width: 800px;
   @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 485px;
-    margin-top: 63px;
+  .slick-slide {
+    margin: 0 5px;
+    @include mq(small_tablet) {
+      margin: 0 10px;
+      padding: 30px 0;
+    }
   }
-  @include mq(small_laptop) {
-    max-width: 1020px;
-    margin-top: 69px;
-    @include flex(space-between, null, null, wrap);
-  }
-  @include mq(large_laptop) {
-    max-width: 1120px;
+  .slick-list {
+    margin: 0 -5px;
+    @include mq(small_tablet) {
+      margin: 0 -10px;
+    }
   }
   .slick-dots {
-    margin-top: 48px;
-    position: static;
+    position: relative;
+    margin-top: -23px;
+    bottom: 25px;
     @include mq(small_tablet) {
-      margin-top: 75px;
+      //margin-top: 0px;
+      //bottom: 12px;
     }
     li.slick-active {
       button {
         &:before {
-          color: $color_bright_two;
+          color: $color_bright_three;
         }
       }
     }
     li:hover {
       button {
         &:before {
-          color: $color_bright_two;
+          color: $color_bright_three;
         }
       }
     }
     li {
-      margin: 0 8px;
+      margin: 0 2px;
       width: 15px;
       button {
         width: 15px;
         &:before {
           width: 15px;
           opacity: 1;
-          color: $color_dark_one;
-          font-size: 26px;
+          color: $color_light_nine;
+          font-size: 28px;
           transition: all 200ms ease-in-out;
         }
       }
@@ -87,176 +79,80 @@ span#sec_six_title {
   }
 }
 
-.sec_six_post {
-  text-align: center;
-  cursor: pointer;
-  @include mq(small_laptop) {
-    flex-basis: 45%;
+.sec_six_slide {
+  padding: 24px 30px 65px;
+  @include mq(small_tablet) {
+    padding: 0;
+    box-shadow: 0 3px 10px #00000029;
+  }
+  .sec_six_slide_inner {
+    background: $color_light_one;
+    padding: 45px 30px 35px;
+    box-shadow: 20px 20px 50px #00000029;
     text-align: left;
-    margin-bottom: 103px;
-  }
-  @include mq(large_laptop) {
-    flex-basis: 40%;
-  }
-  &:hover {
-    .sec_six_page_title_wrapper {
-      span.sec_six_page_title {
-        color: $color_bright_one;
-      }
+    position: relative;
+    max-width: 360px;
+    @include margin_lr;
+    @include mq(small_tablet) {
+      box-shadow: none;
+      max-width: 100%;
     }
-    .sec_six_image {
-      img {
-        transform: scale(1.2);
-      }
+    img.stars {
+      max-width: 117px;
     }
-    .button_four {
-      background: $color_dark_one;
-      color: $color_light_one;
+    img.sec_six_sm {
+      @include abs(14px, -3px, null, null);
     }
-  }
-  a {
-    cursor: pointer;
-    text-decoration: none;
-  }
-}
-
-.sec_six_meta {
-  a {
-    color: $color_bright_two;
-    transition: all 200ms ease-in-out;
-    &:hover {
-      color: $color_bright_one;
-    }
-  }
-  span {
-    display: inline;
-    @include type(
-      (
-        size: 16px,
-        height: 18px,
-        family: $primaryfont,
-        color: $color_bright_two,
-        transform: uppercase,
-        weight: 700,
-      )
-    );
-  }
-  ul {
-    list-style: none;
-    display: inline;
-    li {
-      display: inline;
+    .sec_six_intro {
+      margin-top: 28px;
       @include type(
         (
-          size: 16px,
-          height: 18px,
+          size: 18px,
+          height: 22px,
+          spacing: 0,
           family: $primaryfont,
-          color: $color_bright_two,
           weight: 700,
+        )
+      );
+    }
+    .sec_six_descrip {
+      @include type(
+        (
+          size: 15px,
+          height: 20px,
+          spacing: 0,
+          family: $thirdfont,
+        )
+      );
+    }
+    p {
+      margin-bottom: 12px;
+    }
+    span.sec_six_name {
+      display: block;
+      padding-top: 10px;
+      @include type(
+        (
+          size: 13px,
+          spacing: 1.95px,
+          family: $primaryfont,
+          weight: 800,
           transform: uppercase,
         )
       );
       &:before {
-        background: $color_dark_one;
+        background: $color_bright_one;
         border-radius: 50%;
         vertical-align: top;
-        margin: 7px 13px 0 9px;
-        @include box(5px);
+        margin-top: 4px;
+        margin-right: 7px;
+        @include box(4px);
         @include contentdisplay(inline-block);
       }
     }
   }
 }
 
-.sec_six_page_title_wrapper {
-  margin-top: 28px;
-  max-width: 450px;
-  padding: 10px;
-  @include margin_lr;
-
-  @include mq(small_tablet) {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  @include mq(small_laptop) {
-    padding: 0;
-  }
-  a {
-    @include flex();
-  }
-  .sec_six_image {
-    flex-basis: 84px;
-    flex-shrink: 0;
-    margin-right: 17px;
-    overflow: hidden;
-    img {
-      transform: scale(1);
-      transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-      @include image();
-      @include box(84px);
-    }
-  }
-
-  span.sec_six_page_title {
-    position: relative;
-    //top: -5px;
-    padding-bottom: 4px;
-    transition: all 200ms ease-in-out;
-    @include type(
-      (
-        size: 22px,
-        height: 30px,
-        align: left,
-        color: $color_dark_one,
-        family: $primaryfont,
-        weight: 700,
-      )
-    );
-    @include mq(large_laptop) {
-      max-width: 375px;
-    }
-    &.has_image {
-      @include mq(small_tablet) {
-        top: 12px;
-      }
-    }
-  }
-}
-
-span.sec_six_divider {
-  background: $color_dark_three;
-  margin: 15px 0;
-  @include box(100%, 1px);
-  @include contentdisplay();
-  @include mq(small_tablet) {
-    margin: 34px 0 15px;
-  }
-  @include mq(small_laptop) {
-    margin: 25px 0 15px;
-  }
-  &.no_image {
-    margin-top: 15px;
-  }
-}
-
-.sec_six_descrip {
-  padding: 0 15px;
-  @include type(
-    (
-      size: 16px,
-      height: 25px,
-      family: $primaryfont,
-    )
-  );
-  @include mq(small_laptop) {
-    padding: 0;
-  }
-  a {
-    color: $color_dark_one;
-  }
-}
-
-.sec_six_readmore {
-  margin-top: 20px;
-  color: $color_light_one;
+img#sec_six_bg {
+  display: none;
 }
