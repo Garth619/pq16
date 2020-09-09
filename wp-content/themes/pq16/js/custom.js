@@ -168,11 +168,13 @@ jQuery(document).ready(function ($) {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
+        breakpoint: 1170,
+        settings: {
+          adaptiveHeight: false,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
       },
-      // {
-      //   breakpoint: 1066,
-      //   settings: "unslick",
-      // },
     ],
   });
 
@@ -181,7 +183,7 @@ jQuery(document).ready(function ($) {
     if ($(window).width() < 768) {
       $(".sec_six_slide").css("height", "auto");
     }
-    if ($(window).width() >= 768 && $(window).width() < 1170) {
+    if ($(window).width() >= 768) {
       $(".sec_six_slide").css("height", stHeight + "px");
     }
   }

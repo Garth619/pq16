@@ -4,6 +4,39 @@
   padding: 45px 0px 0;
   @include mq(small_tablet) {
     padding: 58px 50px 45px;
+    position: relative;
+    z-index: 1;
+  }
+  @include mq(small_laptop) {
+    background: transparent;
+    padding: 0;
+  }
+  &:after {
+    @include mq(small_laptop) {
+      background: $color_grad_one;
+      @include abs(null, 0, 0, null, -1);
+      @include box(90%, 90%);
+      @include contentdisplay();
+    }
+  }
+}
+
+img#sec_six_bg {
+  display: none;
+  @include mq(small_laptop) {
+    display: block;
+    margin: 0 0 0 -7px;
+    @include image();
+    max-width: 86%;
+    @include abs(0, null, null, 0);
+  }
+}
+
+#sec_six_inner {
+  position: relative;
+  z-index: 1;
+  @include mq(small_laptop) {
+    padding: 72px 0 35px;
   }
 }
 
@@ -19,11 +52,28 @@ span#sec_six_title {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    color: $color_light_one;
+    text-align: left;
+    letter-spacing: 3.75px;
+    @include flex(null, center);
+  }
+  &:before {
+    width: 82px;
+    height: 2px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    background: $color_bright_one;
+    @include contentdisplay();
+  }
   &:after {
     margin-top: 6px;
     background: $color_bright_one;
     @include box(100%, 4px);
     @include contentdisplay();
+    @include mq(small_laptop) {
+      display: none;
+    }
   }
 }
 
@@ -32,6 +82,10 @@ span#sec_six_title {
   @include margin_lr;
   @include mq(small_tablet) {
     margin-top: 36px;
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+    padding: 0 52px;
   }
   .slick-track {
     padding: 5px 0 15px;
@@ -44,11 +98,17 @@ span#sec_six_title {
       box-shadow: 0 3px 10px #00000029;
       background: $color_light_one;
     }
+    @include mq(small_laptop) {
+      margin: 0 10px;
+    }
   }
   .slick-list {
     margin: 0 -5px;
     @include mq(small_tablet) {
       margin: 0 -13px;
+    }
+    @include mq(small_laptop) {
+      margin: 0 -10px;
     }
   }
   .slick-dots {
@@ -111,8 +171,14 @@ span#sec_six_title {
       padding: 52px 30px 60px;
       background: transparent;
     }
+    @include mq(small_laptop) {
+      padding: 56px 30px 60px;
+    }
     img.stars {
       max-width: 117px;
+      @include mq(small_laptop) {
+        max-width: 153px;
+      }
     }
     img.sec_six_sm {
       @include abs(14px, -3px, null, null);
@@ -133,6 +199,9 @@ span#sec_six_title {
       );
       @include mq(small_tablet) {
         margin-top: 35px;
+      }
+      @include mq(small_laptop) {
+        margin-top: 28px;
       }
     }
     .sec_six_descrip {
@@ -171,8 +240,4 @@ span#sec_six_title {
       }
     }
   }
-}
-
-img#sec_six_bg {
-  display: none;
 }
