@@ -1,11 +1,23 @@
 #section_four {
   position: relative;
   padding: 45px 30px 55px;
+  @include mq(small_tablet) {
+    padding: 55px 30px 55px;
+  }
+  @include mq(large_laptop) {
+    padding: 73px 30px 55px;
+  }
   &:after {
     background: $color_light_ten;
     @include abs(0, null, null, 0);
     @include box(100%);
     @include contentdisplay();
+    @include mq(small_tablet) {
+      @include box(100%, 78%);
+    }
+    @include mq(large_laptop) {
+      @include box(calc(100% - 59px), 73%);
+    }
   }
 }
 
@@ -13,6 +25,14 @@
   position: relative;
   z-index: 1;
   text-align: center;
+  max-width: 485px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 518px;
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+  }
 }
 
 span#sec_four_title {
@@ -28,50 +48,147 @@ span#sec_four_title {
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(16px, 21px, 4px);
+  }
+  br {
+    @include mq(small_tablet) {
+      display: none;
+    }
+  }
   &:after {
     margin-top: 5px;
     background: $color_bright_one;
     @include box(100%, 4px);
     @include contentdisplay();
+    @include mq(small_tablet) {
+      margin-top: 8px;
+    }
+    @include mq(large_laptop) {
+      margin-top: 4px;
+    }
   }
 }
 
 #sec_four_att_wrapper {
   margin: 23px 0 0 0;
   box-shadow: 20px 20px 50px #00000029;
+  @include mq(small_tablet) {
+    margin: 43px 0 0 0;
+  }
+  @include mq(small_laptop) {
+    max-width: 1030px;
+    box-shadow: none;
+    @include margin_lr;
+    @include flex();
+  }
+  @include mq(large_laptop) {
+    margin-top: 54px;
+    max-width: 1172px;
+  }
 }
 
 #sec_four_left {
+  overflow: hidden;
+  @include mq(small_laptop) {
+    flex-basis: 730px;
+    flex-shrink: 0;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 850px;
+  }
   img {
     @include image();
+    @include mq(small_tablet) {
+      transform: scale(1.1);
+      margin-top: 10px;
+    }
+    @include mq(small_laptop) {
+      transform: scale(1);
+      margin-top: 0px;
+    }
   }
 }
 
 #sec_four_right {
-  background: $color_light_one;
   position: relative;
   z-index: 1;
-  margin-top: -12px;
-  padding: 27px 29px 39px;
-  #sec_four_right_inner {
-    text-align: left;
-    img {
-      display: none;
+  margin-top: -9px;
+  @include mq(small_tablet) {
+    margin-top: -33px;
+  }
+  @include mq(small_laptop) {
+    flex-basis: 440px;
+    flex-shrink: 0;
+    margin-left: -170px;
+    margin-top: 52px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 488px;
+    margin-top: 72px;
+  }
+  #sec_four_right_content {
+    background: $color_light_one;
+    padding: 27px 29px 39px;
+    position: relative;
+    @include mq(small_tablet) {
+      padding: 36px 55px 39px;
     }
-    p {
-      @include type(
-        (
-          size: 15px,
-          height: 22px,
-          family: $primaryfont,
-          weight: 700,
-        )
-      );
+    @include mq(small_laptop) {
+      padding: 80px 55px 59px;
+      box-shadow: 20px 20px 50px #00000029;
     }
-    a.meet_att_button {
-      display: inline-block;
-      margin-top: 23px;
-      width: 100%;
+    @include mq(large_laptop) {
+      padding: 72px 55px 59px;
+    }
+    #sec_four_right_content_inner {
+      text-align: left;
+
+      img {
+        display: none;
+        @include mq(small_laptop) {
+          display: block;
+          @include box(78px, 75px);
+          @include abs(-27px, 43px, null, null);
+        }
+        @include mq(large_laptop) {
+          @include abs(-27px, 17px, null, null);
+        }
+      }
+      p {
+        @include type(
+          (
+            size: 15px,
+            height: 22px,
+            family: $primaryfont,
+            weight: 700,
+          )
+        );
+        @include mq(small_tablet) {
+          @include quick_type(16px, 28px, null);
+        }
+        @include mq(small_laptop) {
+          margin-bottom: 15px;
+        }
+        @include mq(large_laptop) {
+          @include quick_type(18px, 32px, null);
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      a.meet_att_button {
+        display: inline-block;
+        margin-top: 23px;
+        width: 100%;
+        max-width: 250px;
+        @include mq(small_tablet) {
+          margin-top: 18px;
+        }
+        @include mq(large_laptop) {
+          margin-top: 37px;
+        }
+      }
     }
   }
 }

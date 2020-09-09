@@ -13,16 +13,20 @@
 		</div><!-- sec_four_left -->
 
 		<div id='sec_four_right'>
-		
-			<div id='sec_four_right_inner'>
 
-				<img src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt=''/>
+			<div id='sec_four_right_content'>
 			
-				<p>The attorneys at Ring Jimenez, P.C. will provide you with aggressive representation in court and the kindness you need during this difficult time. We understand that pursuing a legal case can be burdensome, but you are not alone.</p>
+				<div id='sec_four_right_content_inner'>
 
-				<a class="meet_att_button button" href="">Meet Attorneys</a>
+					<img src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt=''/>
 			
-			</div><!-- sec_four_right_inner -->
+					<p>The attorneys at Ring Jimenez, P.C. will provide you with aggressive representation in court and the kindness you need during this difficult time. We understand that pursuing a legal case can be burdensome, but you are not alone.</p>
+
+					<a class="meet_att_button button" href="">Meet Attorneys</a>
+			
+				</div><!-- sec_four_right_content_inner -->
+
+			</div><!-- sec_four_right_content -->
 		
 		</div><!-- sec_four_right -->
 	

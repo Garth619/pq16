@@ -13,6 +13,10 @@
       transform: uppercase,
     )
   );
+  @include mq(large_laptop) {
+    font-size: 13px;
+    padding: 19px 23px 16px;
+  }
   &:hover {
     background: $color_bright_three;
     color: $color_light_one;
