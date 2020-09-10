@@ -38,6 +38,20 @@
 
   </div><!-- form_wrapper -->
 
+  <div id='location_wrapper'>
+  
+    <div class='location_col'>
+    
+      <a id='footer_logo' href='<?php bloginfo('url');?>'>
+      
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/logo.svg' alt=''/>
+      
+      </a><!-- footer_logo -->
+    
+    </div><!-- location_col -->
+  
+  </div><!-- location_wrapper -->
+
 </footer>
 
 <?php wp_footer();?>

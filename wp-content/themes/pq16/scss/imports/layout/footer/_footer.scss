@@ -312,3 +312,16 @@ span#footer_required {
     margin-top: 35px;
   }
 }
+
+#location_wrapper {
+  max-width: 247px;
+  padding: 55px 0 0 0;
+  @include margin_lr;
+}
+
+a#footer_logo {
+  img {
+    @include image();
+    max-width: 225px;
+  }
+}
