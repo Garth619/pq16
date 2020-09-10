@@ -14,6 +14,9 @@ footer {
   @include mq(large_laptop) {
     padding: 95px 92px 83px;
   }
+  @include mq(small_monitor) {
+    padding: 119px 92px 118px;
+  }
 }
 
 #form_inner {
@@ -22,7 +25,6 @@ footer {
   padding: 1px 0 0 0;
   @include mq(small_tablet) {
     max-width: 800px;
-
     @include margin_lr;
   }
   @include mq(small_laptop) {
@@ -30,6 +32,16 @@ footer {
     margin: 0;
     @include flex();
     width: calc(100% - 75px);
+  }
+  @include mq(large_laptop) {
+    width: calc(100% - 53px);
+  }
+  @include mq(small_monitor) {
+    max-width: 1500px;
+    width: calc(100% - 310px);
+    position: relative;
+    left: -45px;
+    @include margin_lr;
   }
 }
 
@@ -42,6 +54,14 @@ footer {
     margin-top: 51px;
     margin-right: -56px;
   }
+  @include mq(large_laptop) {
+    flex-basis: 624px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 758px;
+    margin-right: -93px;
+    margin-top: 73px;
+  }
   img#footer_icon {
     margin-top: -30px;
     @include margin_lr;
@@ -53,6 +73,9 @@ footer {
     @include mq(small_laptop) {
       top: -7px;
       right: 81px;
+    }
+    @include mq(large_laptop) {
+      right: 111px;
     }
   }
   img#footer_img {
@@ -82,6 +105,9 @@ footer {
     padding: 0 115px 62px;
     margin-top: 94px;
   }
+  @include mq(small_monitor) {
+    padding: 0 95px 83px;
+  }
   > span {
     display: block;
     &#footer_form_title {
@@ -101,6 +127,9 @@ footer {
       @include mq(small_laptop) {
         @include quick_type(16px, null, 4px);
       }
+      @include mq(small_monitor) {
+        @include quick_type(20px, null, 5px);
+      }
     }
     &#footer_form_descrip {
       margin-top: 8px;
@@ -118,11 +147,16 @@ footer {
       }
       @include mq(small_laptop) {
         margin-top: 11px;
+        max-width: 370px;
         @include quick_type(15px, 20px, null);
       }
       @include mq(large_laptop) {
         max-width: 410px;
         @include quick_type(18px, 26px, null);
+      }
+      @include mq(small_monitor) {
+        max-width: 450px;
+        @include quick_type(20px, 28px, null);
       }
     }
   }
@@ -143,6 +177,9 @@ footer {
     @include mq(large_laptop) {
       margin-top: 29px;
     }
+    @include mq(small_monitor) {
+      margin-top: 39px;
+    }
     li {
       width: 100%;
       text-align: left;
@@ -159,6 +196,9 @@ footer {
         }
         @include mq(large_laptop) {
           flex-basis: 48.5%;
+        }
+        @include mq(small_laptop) {
+          flex-basis: 49%;
         }
       }
       label {
@@ -226,6 +266,9 @@ footer {
     @include mq(large_laptop) {
       margin-top: 0px;
     }
+    @include mq(small_monitor) {
+      padding: 17px 10px;
+    }
     &:hover {
       background: $color_bright_three;
     }
@@ -266,6 +309,6 @@ span#footer_required {
     margin-top: 34px;
   }
   @include mq(small_monitor) {
-    margin-top: 30px;
+    margin-top: 35px;
   }
 }

@@ -9,6 +9,10 @@
       <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' />
 
       <picture>
+
+        <source media='(min-width: 1695px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-desktop.jpg'>
+
+        <source media='(min-width: 1380px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-large-laptop.jpg'>
       
         <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-laptop.jpg'>
       
