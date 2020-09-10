@@ -1,4 +1,32 @@
+<footer id="consultation">
 
+<div id='form_wrapper'>
+
+  <div id='form_inner'>
+
+    <div id='form_top'>
+
+      <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' />
+
+    </div><!-- form_top -->
+
+    <div id='form_bottom'>
+
+      <span id='footer_form_title'>Free Consultation</span><!-- footer_form_title -->
+
+      <span id='footer_form_descrip'>Meet with us, ask questions, get answers and discuss your options completely free of charge.</span><!-- footer_form_descrip -->
+
+      <?php gravity_form(3, false, false, false, '', true, 1345); ?>
+
+      <span id='footer_required'>all fields required *</span><!-- footer_required -->
+
+    </div><!-- form_bottom -->
+
+  </div><!-- form_inner -->
+
+  </div><!-- form_wrapper -->
+
+</footer>
 
 <?php wp_footer();?>
 

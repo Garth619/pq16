@@ -168,6 +168,8 @@ jQuery(document).ready(function ($) {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
+      },
+      {
         breakpoint: 1170,
         settings: {
           adaptiveHeight: false,

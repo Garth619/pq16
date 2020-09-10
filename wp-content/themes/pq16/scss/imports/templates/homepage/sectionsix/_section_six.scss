@@ -15,8 +15,14 @@
     @include mq(small_laptop) {
       background: $color_grad_one;
       @include abs(null, 0, 0, null, -1);
-      @include box(90%, 90%);
+      @include box(100%, calc(100% - 45px));
       @include contentdisplay();
+    }
+    @include mq(large_laptop) {
+      @include box(100%, calc(100% - 75px));
+    }
+    @include mq(small_monitor) {
+      @include box(92%, calc(100% - 95px));
     }
   }
 }
@@ -38,6 +44,12 @@ img#sec_six_bg {
   @include mq(small_laptop) {
     padding: 72px 0 35px;
   }
+  @include mq(large_laptop) {
+    padding: 77px 0 35px;
+  }
+  @include mq(small_monitor) {
+    padding: 143px 0 110px;
+  }
 }
 
 span#sec_six_title {
@@ -52,19 +64,38 @@ span#sec_six_title {
       transform: uppercase,
     )
   );
-  @include mq(small_tablet) {
+  @include mq(small_laptop) {
     color: $color_light_one;
     text-align: left;
     letter-spacing: 3.75px;
     @include flex(null, center);
   }
+  @include mq(small_laptop) {
+    font-size: 16px;
+  }
+  @include mq(small_monitor) {
+    font-size: 18px;
+    letter-spacing: 4.5px;
+  }
   &:before {
-    width: 82px;
-    height: 2px;
-    flex-shrink: 0;
-    margin-right: 12px;
-    background: $color_bright_one;
-    @include contentdisplay();
+    @include mq(small_laptop) {
+      width: 82px;
+      height: 2px;
+      flex-shrink: 0;
+      margin-right: 12px;
+      background: $color_bright_one;
+      @include contentdisplay();
+
+      width: 175px;
+      margin-right: 16px;
+    }
+    @include mq(small_monitor) {
+      width: 250px;
+      margin-right: 20px;
+    }
+    @include mq(small_monitor) {
+      width: 306px;
+    }
   }
   &:after {
     margin-top: 6px;
@@ -87,6 +118,15 @@ span#sec_six_title {
     max-width: 100%;
     padding: 0 52px;
   }
+  @include mq(large_laptop) {
+    margin-top: 44px;
+    max-width: 1325px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1500px;
+    position: relative;
+    right: -50px;
+  }
   .slick-track {
     padding: 5px 0 15px;
   }
@@ -101,6 +141,9 @@ span#sec_six_title {
     @include mq(small_laptop) {
       margin: 0 10px;
     }
+    @include mq(small_monitor) {
+      margin: 0 15px;
+    }
   }
   .slick-list {
     margin: 0 -5px;
@@ -110,11 +153,14 @@ span#sec_six_title {
     @include mq(small_laptop) {
       margin: 0 -10px;
     }
+    @include mq(small_monitor) {
+      margin: 0 -15px;
+    }
   }
   .slick-dots {
     position: relative;
     margin-top: -23px;
-    bottom: 10px;
+    bottom: 20px;
     @include mq(small_tablet) {
       margin-top: 0;
       bottom: 0px;
@@ -123,6 +169,9 @@ span#sec_six_title {
       button {
         &:before {
           color: $color_bright_three;
+          @include mq(small_laptop) {
+            color: $color_bright_one;
+          }
         }
       }
     }
@@ -130,6 +179,9 @@ span#sec_six_title {
       button {
         &:before {
           color: $color_bright_three;
+          @include mq(small_laptop) {
+            color: $color_bright_one;
+          }
         }
       }
     }
@@ -144,6 +196,9 @@ span#sec_six_title {
           color: $color_light_nine;
           font-size: 28px;
           transition: all 200ms ease-in-out;
+          @include mq(small_laptop) {
+            color: $color_light_one;
+          }
         }
       }
     }
@@ -172,18 +227,31 @@ span#sec_six_title {
       background: transparent;
     }
     @include mq(small_laptop) {
-      padding: 56px 30px 60px;
+      padding: 56px 45px 60px;
+    }
+    @include mq(large_laptop) {
+      padding: 64px 45px 60px;
+    }
+    @include mq(small_monitor) {
+      padding: 64px 45px 73px;
     }
     img.stars {
       max-width: 117px;
       @include mq(small_laptop) {
         max-width: 153px;
       }
+      @include mq(small_monitor) {
+        max-width: 170px;
+      }
     }
     img.sec_six_sm {
       @include abs(14px, -3px, null, null);
       @include mq(small_tablet) {
         top: 22px;
+      }
+      @include mq(large_laptop) {
+        top: 37px;
+        right: -6px;
       }
     }
     .sec_six_intro {
@@ -203,6 +271,14 @@ span#sec_six_title {
       @include mq(small_laptop) {
         margin-top: 28px;
       }
+      @include mq(large_laptop) {
+        margin-top: 30px;
+        @include quick_type(20px, 26px, null);
+      }
+      @include mq(small_monitor) {
+        margin-top: 56px;
+        @include quick_type(22px, 28px, null);
+      }
     }
     .sec_six_descrip {
       @include type(
@@ -213,6 +289,9 @@ span#sec_six_title {
           family: $thirdfont,
         )
       );
+      @include mq(small_monitor) {
+        @include quick_type(17px, 26px, null);
+      }
     }
     p {
       margin-bottom: 12px;
@@ -229,6 +308,12 @@ span#sec_six_title {
           transform: uppercase,
         )
       );
+      @include mq(large_laptop) {
+        padding-top: 17px;
+      }
+      @include mq(small_monitor) {
+        font-size: 15px;
+      }
       &:before {
         background: $color_bright_one;
         border-radius: 50%;
@@ -237,6 +322,10 @@ span#sec_six_title {
         margin-right: 7px;
         @include box(4px);
         @include contentdisplay(inline-block);
+        @include mq(small_monitor) {
+          margin-top: 6px;
+          margin-right: 10px;
+        }
       }
     }
   }

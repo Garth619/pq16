@@ -8,7 +8,7 @@
          "imports/components/buttons/variables",
 //        "imports/components/internal_forms/variables",
 //          "imports/layout/header/variables",
-//          "imports/layout/footer/variables",
+          "imports/layout/footer/variables",
 //         "imports/layout/internalbanner/variables",
 //         "imports/layout/navigation/variables",
 //         "imports/layout/sidebar/variables",
@@ -25,7 +25,7 @@
          "imports/templates/homepage/sectionfour/variables",
          "imports/templates/homepage/sectionfive/variables",
          "imports/templates/homepage/sectionsix/variables",
-//         "imports/templates/homepage/sectionseven/variables",
+         "imports/templates/homepage/sectionseven/variables",
 //         "imports/templates/pa-directory/variables",
 //         "imports/templates/testimonials/variables",
 //         "imports/templates/videocenter/variables",
@@ -54,11 +54,11 @@
 // layout
 
 @import "imports/layout/header/header",
-        "imports/layout/navigation/navigation";
+        "imports/layout/navigation/navigation",
         // "imports/layout/internalbanner/internal-banner",
         // "imports/layout/sidebar/sidebar",
         // "imports/layout/related_posts/related_posts",
-        //  "imports/layout/footer/footer";
+          "imports/layout/footer/footer";
 
 // page templates
 
@@ -67,8 +67,8 @@
           "imports/templates/homepage/sectionthree/section_three",
           "imports/templates/homepage/sectionfour/section_four",
           "imports/templates/homepage/sectionfive/section_five",
-          "imports/templates/homepage/sectionsix/section_six";
-//          "imports/templates/homepage/sectionseven/section_seven",
+          "imports/templates/homepage/sectionsix/section_six",
+          "imports/templates/homepage/sectionseven/section_seven";
 //          "imports/templates/pa-directory/template-pa-directory",
 //          "imports/templates/testimonials/template-testimonials",
 //          "imports/templates/about/template-about",

@@ -35,6 +35,12 @@ body {
     @include mq(small_tablet) {
       padding-top: 10px;
     }
+    @include mq(large_laptop) {
+      @include quick_type(20px, 26px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(22px, 30px, null);
+    }
   }
   a {
     color: $color_bright_three;

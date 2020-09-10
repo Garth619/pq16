@@ -1,241 +1,63 @@
-#sec_seven_inner {
-  padding: 62px 25px 90px;
-  max-width: 540px;
-  @include margin_lr;
+#section_seven {
+  padding: 48px 30px 35px;
   @include mq(small_tablet) {
-    padding: 84px 0px 72px;
-    max-width: 535px;
+    padding: 60px 75px 45px;
   }
   @include mq(small_laptop) {
-    padding: 170px 64px 114px;
-    max-width: 100%;
-    @include flex(space-between);
-  }
-  @include mq(small_monitor) {
-    max-width: 1380px;
-    padding: 153px 0 200px;
-    @include margin_lr;
-  }
-}
-
-#sec_seven_top {
-  @include mq(small_laptop) {
-    flex-shrink: 0;
-    flex-basis: 535px;
-    position: relative;
-    z-index: 1;
+    padding: 80px 75px 70px;
   }
   @include mq(large_laptop) {
-    flex-basis: 672px;
+    padding: 73px 75px 60px;
   }
   @include mq(small_monitor) {
-    flex-basis: 739px;
+    padding: 113px 75px 90px;
   }
-}
-
-#section_seven_video {
-  &.video_module {
-    position: relative;
-    margin-bottom: 30px;
-    max-width: 739px;
-    @include margin_lr;
-    @include mq(small_tablet) {
-      margin-bottom: 40px;
-    }
-    &.video_shadow {
-      border: 13px solid $color_light_one;
-      box-shadow: 0px 3px 6px #00000029;
-    }
-    &:hover {
-      span.play_button {
-        &:after {
-          border-left-color: $color_bright_one;
-        }
-      }
-    }
-    a {
-      text-decoration: none;
-    }
-    &:hover {
-      span.play_button {
-        &:after {
-          border-left-color: $color_bright_one;
-        }
-      }
-      .single_video_thumbnail {
-        .video_overlay {
-          background: $color_light_rgba_four;
-        }
-      }
-      img {
-        transform: scale(1.12);
-      }
-    }
-    .single_video_thumbnail {
-      position: relative;
-      overflow: hidden;
-      .video_overlay {
-        pointer-events: none;
-        background: transparent;
-        transition: all 300ms ease-in-out;
-        @include flex(center, center);
-        @include box(100%);
-        @include abs(0, null, null, 0, 1);
-      }
-    }
-    img#youtube_img {
-      @include box(100%);
-    }
-    .mywistia_thumbnail {
-      position: relative;
-      @include box(100%, 290px);
+  .subtitle {
+    &:before {
+      height: 6px;
       @include mq(small_laptop) {
-        @include box(100%, 310px);
+        height: 8px;
+      }
+    }
+    span {
+      max-width: 280px;
+      @include mq(small_tablet) {
+        max-width: 100%;
+        letter-spacing: 2.4px;
+      }
+      @include mq(small_laptop) {
+        letter-spacing: 3.2px;
+        padding: 29px 0 25px;
       }
       @include mq(large_laptop) {
-        @include box(100%, 400px);
+        padding: 25px 0 21px;
+        letter-spacing: 4px;
       }
       @include mq(small_monitor) {
-        @include box(100%, 471px);
-      }
-    }
-    .mywistia {
-      @include box(100%);
-      @include abs(0, null, null, 0, 1);
-    }
-    img {
-      transform: scale(1);
-      transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-      @include image();
-    }
-    span.play_button {
-      @include box(88px);
-      @include mq(small_tablet) {
-        @include box(106px);
-      }
-      @include mq(small_monitor) {
-        @include box(122px);
-      }
-      &:before {
-        @include box(70px);
-        @include mq(small_tablet) {
-          @include box(84px);
-        }
-        @include mq(small_monitor) {
-          @include box(97px);
-        }
-      }
-      &:after {
-        @include abs(32px, null, null, 40px);
-        @include tri(right, 11px, 14px, $color_bright_two);
-        @include mq(small_tablet) {
-          @include abs(38px, null, null, 46px);
-          @include tri(right, 14px, 17px, $color_bright_two);
-        }
-        @include mq(small_monitor) {
-          @include abs(43px, null, null, 54px);
-          @include tri(right, 16px, 19px, $color_bright_two);
-        }
+        letter-spacing: 5px;
+        padding: 37px 0 26px;
       }
     }
   }
 }
 
-#sec_seven_bottom {
-  text-align: center;
-  margin-top: 75px;
-  position: relative;
-  @include mq(small_tablet) {
-    margin-top: 88px;
-  }
-  @include mq(small_laptop) {
-    text-align: left;
-    margin-top: 0;
-    padding-left: 136px;
-  }
-  @include mq(large_laptop) {
-    padding-left: 200px;
-    margin-top: 27px;
-  }
+#sec_seven_inner {
+  max-width: 799px;
+  @include margin_lr;
   @include mq(small_monitor) {
-    padding-left: 0px;
-    flex-basis: 405px;
-  }
-}
-
-#sec_seven_bottom_inner {
-  position: relative;
-  z-index: 1;
-}
-
-span#sec_seven_title {
-  display: inline-block;
-  @include type(
-    (
-      size: 40px,
-      height: 42px,
-      family: $primaryfont,
-      weight: 700,
-    )
-  );
-  @include mq(small_tablet) {
-    @include quick_type(45px, 47px, null);
-  }
-  &:after {
-    margin-top: 35px;
-    background: $color_bright_one;
-    @include box(100%, 3px);
-    @include contentdisplay();
-    @include mq(small_tablet) {
-      margin-top: 30px;
-    }
-    @include mq(small_laptop) {
-      margin-top: 25px;
-    }
+    max-width: 1007px;
   }
 }
 
 #sec_seven_content {
-  margin-top: 25px;
-  @include type(
-    (
-      size: 17px,
-      height: 27px,
-      family: $primaryfont,
-    )
-  );
+  margin-top: 35px;
   @include mq(small_tablet) {
-    margin-top: 38px;
-  }
-  p {
-    margin-bottom: 20px;
-  }
-}
-
-#sec_seven_learn_more {
-  margin-top: 33px;
-  @include mq(small_tablet) {
-    margin-top: 9px;
-  }
-  @include mq(small_laptop) {
-    margin-top: 28px;
-  }
-}
-
-#sec_seven_logo {
-  width: 100%;
-  @include flex(center, null);
-  @include abs(-35px, null, null, 0);
-  img {
-  }
-  @include mq(small_laptop) {
-    top: -77px;
-    left: -59px;
+    margin-top: 25px;
   }
   @include mq(large_laptop) {
-    left: -30px;
+    margin-top: 44px;
   }
   @include mq(small_monitor) {
-    left: -130px;
+    margin-top: 33px;
   }
 }

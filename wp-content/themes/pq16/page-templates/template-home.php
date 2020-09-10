@@ -10,7 +10,7 @@
 	get_template_part( 'page-templates/includes/homepage_template_parts/section', '4' );
 	get_template_part( 'page-templates/includes/homepage_template_parts/section', '5' );
 	get_template_part( 'page-templates/includes/homepage_template_parts/section', '6' );
-	// get_template_part( 'page-templates/includes/homepage_template_parts/section', '7' );
+	get_template_part( 'page-templates/includes/homepage_template_parts/section', '7' );
 	
 	get_footer(); ?>
 

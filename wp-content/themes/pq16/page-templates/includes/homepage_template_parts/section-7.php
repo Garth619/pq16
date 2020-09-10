@@ -1,130 +1,29 @@
 <section id='section_seven'>
 
-<div id='sec_seven_inner'>
+  <div id='sec_seven_inner'>
 
-  <div id='sec_seven_top'>
-
-  <?php if(get_field('wistia_or_youtube_sec_seven') == "Youtube" ) { ?>
-
-<div id="section_seven_video" class="video_module">
-
-  <a href="https://www.youtube.com/embed/<?php the_field( 'youtube_id_sec_seven' ); ?>" data-lity>
-
-    <div class='single_video_thumbnail'>
-    
-    <div class='video_overlay'>
-
-      <span class='play_button'></span><!-- play_button -->
-
-    </div><!-- video_overlay -->
-
-    <?php if(get_field('section_seven_video_thumbnail_select') == "Leave Blank" ) { ?>
-
-      <img id="youtube_img" src="https://img.youtube.com/vi/<?php the_field( 'youtube_id_sec_seven' ); ?>/0.jpg"/>
-
-    <?php } ?>
-
-    <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
-
-      <?php $video_thumbnail_video_center = get_field( 'section_seven_video_thumbnail' ); ?>
-
-      <img class="lazyload" data-src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
-
-    <?php } ?>
-
-    
-
-    </div><!-- single_video_thumbnail -->
-
-    <span class='video_title'><?php the_field( 'video_title_video_center' ); ?></span><!-- video_title -->
-
-  </a>
-
-</div><!-- single_video -->
-
-<?php } ?>
-
-<?php if(get_field('wistia_or_youtube_sec_seven') == "Wistia" ) { ?>
-
-  <div id="section_seven_video" class="video_module">
-
-    <div class='single_video_thumbnail'>
-
-      <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
-
-        <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_sec_seven' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
-
-      <?php } ?>
-
-      <?php if(get_field('section_seven_video_thumbnail_select') == "Leave Blank" ) { ?>
-
-        <div class="mywistia_thumbnail">
-
-          <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_sec_seven' ); ?> popover=true popoverContent=thumbnail'></div><!-- mywistia -->
-
-        </div><!-- mywistia_thumbnail -->
-
-        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-
-      <?php } ?>
-
-      <div class='video_overlay'>
-
-        <span class='play_button'></span><!-- play_button -->
-
-      </div><!-- video_overlay -->
-
-    <?php if(get_field('section_seven_video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
-
-      <?php $video_thumbnail_video_center = get_field( 'section_seven_video_thumbnail' ); ?>
-
-        <img class="lazyload" data-src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
-
-      <?php } ?>
-
-      </div><!-- single_video_thumbnail -->
-
-  </div><!-- single_video -->
-
-
-<?php }?>
+  <div class='subtitle'>
+		
+    <span>Our Attorneys have helped thousands of clients</span>
   
-  </div><!-- sec_seven_top -->
+  </div><!-- subtitle -->
 
-  <div id='sec_seven_bottom'>
-
-    <div id='sec_seven_bottom_inner'>
-    
-      <span id='sec_seven_title'><?php the_field( 'section_seven_title' ); ?></span><!-- sec_seven_title -->
+  <div id='sec_seven_content' class="content">
   
-      <div id='sec_seven_content'>
-      
-        <?php the_field( 'section_seven_content' ); ?>
-      
-      </div><!-- sec_seven_content -->
+    <p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae faucibus sed,eget.</p>
 
-      <?php if(get_field('section_seven_button_verbiage') && get_field('section_seven_button_page_link')) { ?>
+    <h2>Heading Style 2 : ante pulnivar ispum vivmos maxium euqe vel mi eget behiclua tindicit</h2>
+
+    <p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae faucibus sed,eget turpis. Phasellus imperdiet a mauris ut egestas. Nulla mattis tellus in lectus posuere ultrices. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum diam nisl, ultricies ut rhoncus eu, fringilla in est.</p>
+    
+    <p>Nulla pulvinar odio vitae ante pulvinar cursus auctor et nunc. Ut vitae lectus ac purus porttitor tempus ac eu magna. Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Mauris euismod odio vestibulum arcu sagittis ullamcorper. Duis laoreet, purus eget lacinia pellentesque, lacus dui varius augue, a euismod ipsum sem eget urna. Suspendisse potenti. Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices.</p>
+
+    <h2>Heading Style 2 : ante pulnivar ispum vivmos maxium euqe vel mi eget behiclua tindicit</h2>
+
+    <p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae faucibus sed,eget.</p>
   
-        <a id='sec_seven_learn_more' class='button_five' href='<?php the_field( 'section_seven_button_page_link' ); ?>'><?php the_field( 'section_seven_button_verbiage' ); ?></a><!-- button_five -->
+  </div><!-- sec_seven_content  class="content"-->
 
-      <?php } ?>
-  
-      </div><!-- sec_seven_bottom_inner -->
-
-    <div id='sec_seven_logo'>
-    
-    <?php $section_seven_logo = get_field( 'section_seven_logo' ); ?>
-    
-    <?php if ( $section_seven_logo ) { ?>
-	    
-      <img class="lazyload" data-src="<?php echo $section_seven_logo['url']; ?>" alt="<?php echo $section_seven_logo['alt']; ?>" />
-    
-    <?php } ?>
-    
-    </div><!-- sec_seven_logo -->
-  
-  </div><!-- sec_seven_bottom -->
-
-</div><!-- sec_seven_inner -->
+  </div><!-- sec_seven_inner -->
 
 </section><!-- section_seven -->

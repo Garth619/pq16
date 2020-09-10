@@ -1,512 +1,148 @@
 footer {
-  background: $color_dark_one;
-  padding-bottom: 35px;
-  @include mq(small_tablet) {
-    padding: 86px 55px 45px;
-  }
-  @include mq(small_laptop) {
-    padding: 86px 45px 25px;
-  }
-  @include mq(large_laptop) {
-    padding: 86px 55px 25px;
-  }
+  height: 10000px;
 }
 
 #form_wrapper {
-  padding: 50px 20px;
+  background: $color_light_ten;
+  padding: 66px 30px 50px;
+}
+
+#form_inner {
+  box-shadow: 20px 20px 50px #00000029;
+  background: $color_light_one;
+  padding: 1px 0 0 0;
+}
+
+#form_top {
+  img#footer_icon {
+    margin-top: -30px;
+    @include margin_lr;
+    @include image(61px);
+  }
+}
+
+#form_bottom {
   text-align: center;
-  max-width: 490px;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    box-shadow: 0px 1px 20px #000000;
-    padding: 65px 33px 170px;
-    max-width: 690px;
-  }
-  @include mq(small_laptop) {
-    max-width: 100%;
-    padding: 65px 33px 203px;
-    max-width: 1380px;
-  }
-  @include mq(small_monitor) {
-  }
-  #gform_outer {
-    @include mq(large_laptop) {
-      max-width: 1010px;
-      @include margin_lr;
+  margin-top: 30px;
+  padding: 0 28px;
+  > span {
+    display: block;
+    &#footer_form_title {
+      @include type(
+        (
+          size: 15px,
+          spacing: 1.5px,
+          family: $primaryfont,
+          color: $color_bright_two,
+          weight: 800,
+          transform: uppercase,
+        )
+      );
     }
-    @include mq(small_monitor) {
-      max-width: 1040px;
-    }
-  }
-  .gform_wrapper {
-    margin-top: 77px;
-    @include mq(small_tablet) {
-      margin-top: 50px;
-    }
-    @include mq(small_laptop) {
-      margin-top: 65px;
+    &#footer_form_descrip {
+      margin-top: 8px;
+      @include type(
+        (
+          size: 15px,
+          height: 20px,
+          family: $thirdfont,
+        )
+      );
     }
   }
   ul {
     list-style: none;
-    text-align: left;
-    @include mq(small_tablet) {
-      @include flex(space-between, null, null, wrap);
-    }
+    margin-top: 23px;
     li {
-      margin-bottom: 23px;
-      @include mq(small_tablet) {
-        margin-bottom: 17px;
-        flex-basis: 100%;
-      }
-      @include mq(small_laptop) {
-        margin-bottom: 23px;
-      }
-      &:nth-of-type(-n + 4) {
-        @include mq(small_tablet) {
-          flex-basis: 49%;
-        }
-        @include mq(small_laptop) {
-          flex-basis: calc(33.3333333% - 12px);
-        }
-      }
-      &:nth-of-type(5) {
-        @include mq(small_laptop) {
-          flex-basis: calc(66.6666666% - 7px);
-        }
+      width: 100%;
+      text-align: left;
+      margin-bottom: 8px;
+      @include mq(large_laptop) {
+        margin-bottom: 10px;
       }
       label {
-        display: block;
-        margin-bottom: 17px;
-        @include type(
-          (
-            size: 18px,
-            spacing: 0.36px,
-            family: $primaryfont,
-            color: $color_light_one,
-            weight: 700,
-          )
-        );
-        span.gfield_required {
-          color: $color_bright_two;
-          font-weight: 700;
-        }
+        display: none;
       }
       input,
-      select,
       textarea {
         width: 100%;
-        border-radius: 5px;
-        border: none;
-        padding: 23px 15px;
-        background: $color_light_one;
+        border: 1px solid $color_light_five;
+        padding: 15px 18px;
         @include type(
           (
-            size: 18px,
+            size: 13px,
+            weight: 700,
+            spacing: 0.65px,
             family: $primaryfont,
-            color: $color_light_five,
+            color: $color_dark_one,
           )
         );
-      }
-      select {
-        padding: 25px 50px 25px 15px;
-        -webkit-appearance: none;
+        @include mq(large_laptop) {
+          font-size: 14px;
+        }
+        @include mq(small_monitor) {
+          padding: 15px 29px;
+        }
       }
       textarea {
-        height: 132px;
-      }
-      &.custom_select {
-        position: relative;
-        &:after {
-          @include abs(70px, 17px, null, null);
-          @include contentdisplay();
-          @include tri(down, 8px, 8px, $color_dark_one);
+        height: 121px;
+        @include mq(small_monitor) {
+          height: 138px;
         }
       }
     }
   }
-  .gform_footer {
-    display: inline-block;
-    position: relative;
-    margin-top: 46px;
-    z-index: 1;
-    @include mq(small_laptop) {
-      margin-top: 61px;
-    }
+  input[type="submit"] {
+    border: none;
+    width: 100%;
+    padding: 15px 10px;
+    background: $color_bright_two;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    @include type(
+      (
+        size: 14px,
+        family: $primaryfont,
+        color: $color_light_one,
+        weight: 800,
+        spacing: 5px,
+        transform: uppercase,
+      )
+    );
     &:hover {
-      &:after {
-        opacity: 1;
-      }
-    }
-    &:before,
-    &:after {
-      border-radius: 50px;
-      z-index: -1;
-      @include contentdisplay();
-      @include box(100%);
-      @include abs(0, null, null, 0);
-    }
-    &:before {
-      background: $color_grad_one;
-    }
-    &:after {
-      background: $color_grad_two;
-      opacity: 0;
-      transition: all 200ms ease-in-out;
-    }
-    input[type="submit"] {
-      background: transparent;
-      border: none;
-      padding: 19px 32px;
-      @include type(
-        (
-          size: 17px,
-          family: $primaryfont,
-          color: $color_light_one,
-          weight: 700,
-          align: center,
-        )
-      );
-      @include mq(small_laptop) {
-        font-size: 20px;
-        padding: 24px 32px;
-      }
+      background: $color_bright_three;
     }
   }
   .gfield_description,
   .validation_message {
-    margin-top: 6px;
+    margin-top: 5px;
     @include type(
       (
-        size: 15px,
+        size: 11px,
+        spacing: 1px,
         family: $primaryfont,
         color: $color_bright_two,
-        weight: 700,
+        weight: 800,
+        transform: uppercase,
       )
     );
   }
-  span#required {
+  span#footer_required {
     display: block;
-    text-align: left;
-    margin-top: -112px;
-    @include mq(small_tablet) {
-      margin-top: -105px;
-    }
-    @include mq(small_laptop) {
-      margin-top: -135px;
-    }
+    margin-top: 16px;
     @include type(
       (
-        size: 18px,
-        spacing: 0.9px,
-        family: $primaryfont,
-        color: $color_light_one,
-        weight: 700,
+        size: 12px,
+        family: $thirdfont,
+        color: $color_light_seven,
         transform: lowercase,
       )
     );
-    span {
-      @include type(
-        (
-          size: 18px,
-          spacing: 0.9px,
-          family: $primaryfont,
-          color: $color_bright_two,
-          weight: 700,
-          transform: lowercase,
-        )
-      );
+    @include mq(large_laptop) {
+      font-size: 14px;
     }
-  }
-}
-
-span#form_title {
-  display: block;
-  text-align: center;
-  max-width: 240px;
-  @include margin_lr;
-  @include type(
-    (
-      size: 40px,
-      height: 45px,
-      spacing: 0,
-      family: $primaryfont,
-      color: $color_bright_one,
-      weight: 700,
-    )
-  );
-  @include mq(small_tablet) {
-    font-size: 45px;
-    max-width: 100%;
-  }
-  @include mq(small_laptop) {
-    font-size: 50px;
-  }
-}
-
-#form_descrip {
-  margin-top: 25px;
-  max-width: 330px;
-  text-align: center;
-  @include margin_lr;
-  @include type(
-    (
-      size: 17px,
-      height: 25px,
-      family: $primaryfont,
-      color: $color_light_one,
-    )
-  );
-  @include mq(small_tablet) {
-    max-width: 100%;
-  }
-  p {
-    margin-bottom: 25px;
-    strong {
-      color: $color_bright_two;
-    }
-    br {
-      @include mq(small_tablet) {
-        display: none;
-      }
-    }
-  }
-}
-
-#footer_bottom {
-  margin-top: 140px;
-  padding: 0 22px;
-  text-align: center;
-  @include mq(small_tablet) {
-    margin-top: 60px;
-  }
-  @include mq(small_laptop) {
-    max-width: 940px;
-    margin-top: 77px;
-    @include margin_lr;
-    @include flex(space-between, center);
-  }
-  @include mq(large_laptop) {
-    margin-top: 87px;
-  }
-}
-
-a#footer_logo {
-  display: inline-block;
-  &:after {
-    background: $color_bright_one;
-    margin-top: 38px;
-    @include margin_lr;
-    @include box(109px, 3px);
-    @include contentdisplay();
-  }
-  img {
-    @include image();
-  }
-}
-span#footer_cta {
-  display: block;
-  text-align: center;
-  margin-top: 27px;
-  @include type(
-    (
-      size: 21px,
-      height: 23px,
-      spacing: 1px,
-      family: $primaryfont,
-      color: $color_light_one,
-    )
-  );
-}
-
-#social_media {
-  text-align: center;
-  margin: 36px 0px 0;
-  a {
-    margin: 0 15px;
-    text-decoration: none;
-    &:hover {
-      svg {
-        path {
-          fill: $color_bright_two !important;
-        }
-      }
-    }
-    svg {
-      path {
-        transition: all 200ms ease-in-out;
-        fill: $color_light_one !important;
-      }
-    }
-  }
-}
-
-#footer_col_one {
-  @include mq(small_laptop) {
-    margin-top: 20px;
-  }
-}
-
-#footer_col_two {
-  margin-top: 57px;
-  @include mq(small_tablet) {
-    margin-top: 68px;
-  }
-  @include mq(small_laptop) {
-    margin-top: 42px;
-    padding-right: 60px;
-  }
-}
-
-span#location_title {
-  display: block;
-  @include type(
-    (
-      size: 16px,
-      spacing: 3.2px,
-      family: $primaryfont,
-      color: $color_bright_two,
-      weight: 700,
-      transform: uppercase,
-    )
-  );
-}
-
-span#address {
-  display: block;
-  margin-top: 25px;
-  @include type(
-    (
-      size: 20px,
-      height: 24px,
-      family: $primaryfont,
-      color: $color_light_one,
-    )
-  );
-}
-
-#footer_phone {
-  display: block;
-  margin-top: 35px;
-  @include type(
-    (
-      size: 20px,
-      spacing: 2px,
-      family: $primaryfont,
-      color: $color_light_one,
-    )
-  );
-  span {
-    font-weight: 700;
-    color: $color_bright_one;
-    transition: all 200ms ease-in-out;
-    &:hover {
-      color: $color_bright_two;
-    }
-  }
-}
-
-a.get_directions {
-  display: inline-block;
-  margin-top: 38px;
-  border: 2px solid $color_light_one;
-  border-radius: 50px;
-  padding: 6px 10px 10px;
-  transition: all 200ms ease-in-out;
-  @include type(
-    (
-      size: 12px,
-      spacing: 0.6px,
-      family: $primaryfont,
-      color: $color_light_one,
-      transform: lowercase,
-    )
-  );
-  &:hover {
-    border: 2px solid $color_bright_two;
-    color: $color_bright_two;
-  }
-}
-
-#copyright_wrapper {
-  margin-top: 50px;
-  padding: 0 28px;
-  @include mq(small_laptop) {
-    padding: 0;
-  }
-  @include mq(small_monitor) {
-    margin-top: 112px;
-  }
-}
-
-#copyright_inner {
-  border-top: 1px solid $color_dark_two;
-  padding-top: 22px;
-  text-align: center;
-  max-width: 550px;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    padding-top: 17px;
-  }
-  @include mq(small_laptop) {
-    max-width: 100%;
-    padding-top: 28px;
-    max-width: 1380px;
-    @include flex(space-between, center);
-  }
-  @include mq(small_monitor) {
-  }
-  padding-left: 20px;
-  padding-right: 20px;
-  ul {
-    list-style: none;
-    margin-bottom: 30px;
-    max-width: 257px;
-    @include margin_lr;
-    @include mq(small_tablet) {
-      margin-bottom: 13px;
-      max-width: 100%;
-    }
-    @include mq(small_laptop) {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    li {
-      display: inline-block;
-      @include type(
-        (
-          size: 14px,
-          height: 25px,
-          spacing: 0.35px,
-          color: $color_light_six,
-          family: $primaryfont,
-        )
-      );
-      a {
-        color: $color_light_six;
-        text-decoration: none;
-        transition: all 200ms ease-in-out;
-        &:hover {
-          color: $color_bright_one;
-        }
-      }
-      &:after {
-        margin: 0 10px;
-        @include contentdisplay(inline-block, "|");
-      }
-      &:first-of-type,
-      &:last-of-type {
-        &:after {
-          display: none;
-        }
-      }
-      &:first-of-type {
-        &:after {
-          @include mq(small_tablet) {
-            display: inline-block;
-          }
-        }
-      }
+    @include mq(small_monitor) {
+      margin-top: 30px;
     }
   }
 }
