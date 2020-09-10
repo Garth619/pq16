@@ -8,6 +8,14 @@
 
       <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' />
 
+      <picture>
+      
+        <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-laptop.jpg'>
+      
+        <img id='footer_img' class='lazyload' data-src='<?php bloginfo('template_directory');?>/images/img-ft.jpg' alt='' />
+      
+      </picture>
+
     </div><!-- form_top -->
 
     <div id='form_bottom'>
