@@ -110,7 +110,7 @@
         <li><a href="">Disclaimery</a></li>
       </ul>
 
-      <a id='ilawyer'>
+      <a id='ilawyer' href="//ilawyermarketing.com" target="_blank" rel="noopener">
       
         <img src='<?php bloginfo('template_directory');?>/images/ft-ilawyer.svg' alt=''/>
       
