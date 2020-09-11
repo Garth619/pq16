@@ -1,5 +1,5 @@
 footer {
-  height: 10000px;
+  padding-bottom: 35px;
 }
 
 #form_wrapper {
@@ -314,7 +314,7 @@ span#footer_required {
 }
 
 #location_wrapper {
-  max-width: 247px;
+  max-width: 240px;
   padding: 55px 0 0 0;
   @include margin_lr;
 }
@@ -323,5 +323,112 @@ a#footer_logo {
   img {
     @include image();
     max-width: 225px;
+  }
+}
+
+.location_col {
+  &:nth-of-type(2) {
+    margin-top: 35px;
+  }
+  span#address {
+    display: block;
+    margin-top: 33px;
+    margin-bottom: 10px;
+  }
+  @include type(
+    (
+      size: 15px,
+      height: 22px,
+      spacing: 0.38px,
+      family: $primaryfont,
+    )
+  );
+  .footer_phone {
+    display: block;
+    text-decoration: none;
+    color: $color_dark_one;
+    span {
+      font-weight: 700;
+      display: inline-block;
+      margin-right: 5px;
+      color: $color_bright_two;
+    }
+  }
+  .get_directions {
+    margin-top: 9px;
+    display: inline-block;
+    transition: all 200ms ease-in-out;
+    @include type(
+      (
+        size: 15px,
+        family: $thirdfont,
+        color: $color_bright_two,
+        transform: lowercase,
+        decoration: underline,
+      )
+    );
+    &:hover {
+      color: $color_bright_three;
+    }
+  }
+}
+
+#location_sm {
+  margin-top: 28px;
+}
+
+#social_media {
+  a {
+    text-decoration: none;
+    margin-right: 20px;
+    &:hover {
+      svg {
+        path {
+          fill: $color_bright_two;
+        }
+      }
+    }
+    svg {
+      path {
+        fill: $color_dark_one;
+        transition: all 200ms ease-in-out;
+      }
+      path.youtube_tri {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+#copyright {
+  padding: 0 30px;
+  margin-top: 32px;
+}
+
+#copyright_inner {
+  text-align: center;
+  padding: 28px 0 0 0;
+  border-top: 1px solid $color_light_eleven;
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      @include type(
+        (
+          size: 12px,
+          height: 15px,
+          spacing: 0.6px,
+          family: $primaryfont,
+        )
+      );
+      a {
+        color: $color_dark_one;
+      }
+    }
+  }
+  a#ilawyer {
+    display: block;
+    margin-top: 11px;
   }
 }

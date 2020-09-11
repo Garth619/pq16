@@ -49,8 +49,76 @@
       </a><!-- footer_logo -->
     
     </div><!-- location_col -->
+
+    <div class='location_col'>
+
+      <div id='location_info'>
+      
+        <span id='address'>901 Rio Grande Blvd NW,<br/> Suite D-224<br/> Albuquerque, New Mexico 87104</span><!-- address -->
+
+        <a class='footer_phone' href="tel:+15053733333"><span>P</span> (505) 373-3333</a><!-- footer_phone -->
+
+        <span class='footer_phone' ><span>F</span> (505) 340-3533</span><!-- footer_phone -->
+
+        <a class='get_directions' href="" target="_blank" rel="noopener">Get Directions</a><!-- get_directions -->
+      
+      </div><!-- location_info -->
+
+      <div id='location_sm'>
+      
+        <div id='social_media'>
+        
+          <a href="" target="_blank" rel="noopener">
+
+            <?php echo file_get_contents( get_template_directory() . '/images/ft-fb.svg' ); ?>
+          
+          </a>
+
+          <a href="" target="_blank" rel="noopener">
+          
+            <?php echo file_get_contents( get_template_directory() . '/images/ft-google.svg' ); ?>
+          
+          </a>
+
+          <a href="" target="_blank" rel="noopener">
+          
+            <?php echo file_get_contents( get_template_directory() . '/images/ft-youtube.svg' ); ?>
+          
+          </a>
+
+          <a href="" target="_blank" rel="noopener">
+          
+            <?php echo file_get_contents( get_template_directory() . '/images/ft-linkedin.svg' ); ?>
+          
+          </a>
+        
+        </div><!-- social_media -->
+      
+      </div><!-- location_sm -->
+
+    </div><!-- location_col -->
   
   </div><!-- location_wrapper -->
+
+  <div id='copyright'>
+  
+    <div id='copyright_inner'>
+    
+      <ul>
+        <li>&copy; Ring Jimenez, P.C. All rights reserved.</li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Disclaimery</a></li>
+      </ul>
+
+      <a id='ilawyer'>
+      
+        <img src='<?php bloginfo('template_directory');?>/images/ft-ilawyer.svg' alt=''/>
+      
+      </a><!-- ilawyer -->
+    
+    </div><!-- copyright_inner -->
+  
+  </div><!-- copyright -->
 
 </footer>
 
