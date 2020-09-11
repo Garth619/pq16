@@ -1,12 +1,15 @@
 footer {
   padding-bottom: 35px;
+  @include mq(small_tablet) {
+    padding-bottom: 25px;
+  }
 }
 
 #form_wrapper {
   background: $color_light_ten;
   padding: 66px 30px 50px;
   @include mq(small_tablet) {
-    padding: 83px 68px 45px;
+    padding: 83px 68px 73px;
   }
   @include mq(small_laptop) {
     padding: 83px 68px 65px;
@@ -317,23 +320,51 @@ span#footer_required {
   max-width: 240px;
   padding: 55px 0 0 0;
   @include margin_lr;
+  @include mq(small_tablet) {
+    @include flex(space-between);
+    max-width: 810px;
+    padding: 49px 95px 0;
+  }
+  @include mq(small_laptop) {
+    max-width: 940px;
+    padding: 49px 0px 0;
+  }
 }
 
 a#footer_logo {
   img {
     @include image();
     max-width: 225px;
+    @include mq(small_tablet) {
+      max-width: 250px;
+    }
+    @include mq(small_laptop) {
+      max-width: 213px;
+    }
   }
 }
 
 .location_col {
+  &:first-of-type {
+    margin-right: 130px;
+  }
   &:nth-of-type(2) {
     margin-top: 35px;
+    @include mq(small_tablet) {
+      margin-top: 0;
+    }
+    @include mq(small_laptop) {
+      flex-grow: 1;
+      @include flex(space-between);
+    }
   }
   span#address {
     display: block;
     margin-top: 33px;
     margin-bottom: 10px;
+    @include mq(small_tablet) {
+      margin-top: 0;
+    }
   }
   @include type(
     (
@@ -403,12 +434,27 @@ a#footer_logo {
 #copyright {
   padding: 0 30px;
   margin-top: 32px;
+  @include mq(small_tablet) {
+    margin-top: 50px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 69px;
+    padding-bottom: 30px;
+  }
 }
 
 #copyright_inner {
   text-align: center;
   padding: 28px 0 0 0;
   border-top: 1px solid $color_light_eleven;
+  @include mq(small_tablet) {
+    max-width: 800px;
+    @include margin_lr;
+  }
+  @include mq(small_laptop) {
+    max-width: 940px;
+    @include flex(space-between);
+  }
   ul {
     list-style: none;
     li {
