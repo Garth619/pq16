@@ -5,13 +5,13 @@
 
 		<div id='sidebar_form'>
 
-			<span id='sidebar_form_title'><?php the_field( 'sidebar_form_title','option'); ?></span><!-- sidebar_form_title -->
+			<img id='sidebar_form_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt=''/>
 
-			<span id='sidebar_form_subtitle'><?php the_field( 'sidebar_subtitle','option'); ?></span><!-- sidebar_form_title -->
+			<span id='sidebar_form_title'>Free Consultation</span><!-- sidebar_form_title -->
 	
-			<?php gravity_form(4, false, false, false, '', true, 1233); ?>
+			<?php gravity_form(7, false, false, false, '', true, 1233); ?>
 
-			<span id='form_required'><span>*</span>Required Field</span><!-- form_required -->
+			<span id='sidebar_form_required'>All Fields Required <span>*</span></span><!-- form_required -->
 	
 		</div><!-- sidebar_form -->
 			

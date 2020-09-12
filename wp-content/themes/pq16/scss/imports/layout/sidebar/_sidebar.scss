@@ -12,18 +12,143 @@
 
 #sidebar_inner {
   position: relative;
+  @include mq(small_laptop) {
+    max-width: 100%;
+    padding: 45px 30px 0;
+    z-index: 1;
+  }
   &:after {
     @include mq(small_laptop) {
       background: $color_light_ten;
-      @include box(100%);
-      @include abs(0, null, null, 0);
+      @include box(100%, calc(100% - 65px));
+      @include abs(0, null, null, 0, -1);
       @include contentdisplay();
     }
   }
 }
 
+span#sidebar_form_title {
+  display: inline-block;
+  margin-bottom: 17px;
+  @include type(
+    (
+      size: 14px,
+      height: 16px,
+      spacing: 1.68px,
+      family: $primaryfont,
+      color: $color_bright_two,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+}
+
 #sidebar_form {
   display: none;
+  @include mq(small_laptop) {
+    display: block;
+    background: $color_light_one;
+    padding: 43px 40px 35px;
+    margin-bottom: 29px;
+    box-shadow: 20px 20px 50px #00000029;
+    text-align: center;
+    position: relative;
+    img#sidebar_form_icon {
+      @include box(48px);
+      @include abs(-24px, 22px, null, null);
+    }
+    ul {
+      list-style: none;
+      li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 8px;
+        @include mq(large_laptop) {
+          margin-bottom: 10px;
+        }
+        label {
+          display: none;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: 1px solid $color_light_twelve;
+          padding: 14px 18px;
+          @include type(
+            (
+              size: 13px,
+              weight: 700,
+              spacing: 0.65px,
+              family: $primaryfont,
+              color: $color_dark_one,
+            )
+          );
+          @include mq(large_laptop) {
+            font-size: 14px;
+          }
+          @include mq(small_monitor) {
+            padding: 15px 29px;
+          }
+        }
+        textarea {
+          height: 143px;
+        }
+      }
+    }
+    input[type="submit"] {
+      border: none;
+      width: 100%;
+      padding: 17px 10px;
+      background: $color_bright_two;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      @include type(
+        (
+          size: 12px,
+          family: $primaryfont,
+          color: $color_light_one,
+          weight: 800,
+          spacing: 5px,
+          transform: uppercase,
+        )
+      );
+      &:hover {
+        background: $color_bright_three;
+      }
+    }
+    .gfield_description,
+    .validation_message {
+      margin-top: 5px;
+      @include type(
+        (
+          size: 11px,
+          spacing: 1px,
+          family: $primaryfont,
+          color: $color_bright_two,
+          weight: 800,
+          transform: uppercase,
+        )
+      );
+    }
+    span#sidebar_form_required {
+      display: block;
+      margin-top: 18px;
+      @include type(
+        (
+          size: 12px,
+          family: $thirdfont,
+          color: $color_light_seven,
+          transform: lowercase,
+        )
+      );
+      @include mq(large_laptop) {
+        font-size: 14px;
+      }
+      @include mq(small_monitor) {
+        margin-top: 30px;
+      }
+    }
+  }
 }
 
 .sidebar_box {
@@ -38,6 +163,9 @@
   z-index: 1;
   background: $color_light_one;
   max-width: 292px;
+  @include mq(small_laptop) {
+    display: none;
+  }
   span {
     display: block;
     @include flex(space-between, center);
@@ -67,7 +195,14 @@
   background: $color_light_one;
   padding: 25px 32px 20px;
   box-shadow: 20px 20px 50px #00000029;
+  max-width: 292px;
   @include abs(49px, null, null, 0);
+  @include mq(small_laptop) {
+    display: block !important;
+    position: static;
+    max-width: 100%;
+    padding: 39px 38px 33px;
+  }
   h3 {
     display: none;
   }
@@ -81,6 +216,9 @@
         text-decoration: none;
         margin-bottom: 15px;
         transition: all 200ms ease-in-out;
+        @include mq(small_laptop) {
+          margin-bottom: 9px;
+        }
         &:hover {
           color: $color_bright_two;
         }
@@ -97,6 +235,9 @@
           weight: 700,
         )
       );
+      @include mq(small_laptop) {
+        font-size: 13px;
+      }
       &.active {
         > a {
           color: $color_bright_two;
