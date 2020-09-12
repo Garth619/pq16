@@ -66,12 +66,6 @@ jQuery(document).ready(function ($) {
     });
   });
 
-  if ($("#internal_banner")[0]) {
-    $("#page_wrapper").addClass("banner");
-  } else {
-    $("#page_wrapper").addClass("no_banner");
-  }
-
   /* Waypoints
      --------------------------------------------------------------------------------------- */
 
@@ -117,9 +111,9 @@ jQuery(document).ready(function ($) {
     true
   );
 
-  createWaypoint("section_three", "#section_three", "visible", 400, null, true);
-  createWaypoint("section_four", "#section_four", "visible", 400, null, true);
-  createWaypoint("section_seven", "#section_seven", "visible", 400, null, true);
+  // createWaypoint("section_three", "#section_three", "visible", 400, null, true);
+  // createWaypoint("section_four", "#section_four", "visible", 400, null, true);
+  // createWaypoint("section_seven", "#section_seven", "visible", 400, null, true);
 
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
@@ -198,132 +192,12 @@ jQuery(document).ready(function ($) {
     }, 100)
   );
 
-  // $("#sec_two_left_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   adaptiveHeight: true,
-  //   fade: true,
-  //   dots: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1180,
-  //       settings: {
-  //         arrows: true,
-  //         prevArrow: ".sec_two_arrow_left",
-  //         nextArrow: ".sec_two_arrow_right",
-  //       },
-  //     },
-  //   ],
-  // });
-
-  // $("#sec_two_featured_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   adaptiveHeight: true,
-  //   arrows: true,
-  //   dots: false,
-  //   fade: true,
-  //   prevArrow: ".sec_two_featured_arrow_left",
-  //   nextArrow: ".sec_two_featured_arrow_right",
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1180,
-  //       settings: {
-  //         fade: false,
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1790,
-  //       settings: {
-  //         fade: false,
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //       },
-  //     },
-  //   ],
-  // });
-
-  // $("#sec_four_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   fade: true,
-  //   arrows: false,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         fade: false,
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1170,
-  //       settings: {
-  //         fade: false,
-  //         dots: false,
-  //         arrows: true,
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         prevArrow: ".sec_four_arrow_left",
-  //         nextArrow: ".sec_four_arrow_right",
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1380,
-  //       settings: {
-  //         fade: false,
-  //         dots: false,
-  //         arrows: true,
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //         prevArrow: ".sec_four_arrow_left",
-  //         nextArrow: ".sec_four_arrow_right",
-  //       },
-  //     },
-  //   ],
-  // });
-
-  // $("#sec_six_post_wrapper").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   adaptiveHeight: true,
-  //   fade: true,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1180,
-  //       settings: "unslick",
-  //     },
-  //   ],
-  // });
-
-  /* Related Content
+  /* Case Results Columns
 --------------------------------------------------------------------------------------- */
 
-  // if ($(".related_post_list").length > 0) {
+  // if ($("#case_results_wrapper").length > 0) {
   //   var macyInstance = Macy({
-  //     container: ".related_post_list",
+  //     container: "#case_results_wrapper",
   //     columns: 3,
   //     margin: {
   //       x: 60,
@@ -342,9 +216,9 @@ jQuery(document).ready(function ($) {
   //           x: 30,
   //           y: 30,
   //         },
-  //         columns: 1,
+  //         columns: 2,
   //       },
-  //       767: {
+  //       695: {
   //         margin: {
   //           x: 0,
   //           y: 30,
@@ -355,83 +229,41 @@ jQuery(document).ready(function ($) {
   //   });
   // }
 
-  /* Case Results Columns
---------------------------------------------------------------------------------------- */
-
-  if ($("#case_results_wrapper").length > 0) {
-    var macyInstance = Macy({
-      container: "#case_results_wrapper",
-      columns: 3,
-      margin: {
-        x: 60,
-        y: 40,
-      },
-      breakAt: {
-        1170: {
-          margin: {
-            x: 30,
-            y: 30,
-          },
-          columns: 3,
-        },
-        1066: {
-          margin: {
-            x: 30,
-            y: 30,
-          },
-          columns: 2,
-        },
-        695: {
-          margin: {
-            x: 0,
-            y: 30,
-          },
-          columns: 1,
-        },
-      },
-    });
-  }
-
   /* PA Grids - Multpile Macy.js Columns
 --------------------------------------------------------------------------------------- */
 
-  var pagrids = document.querySelectorAll(".pa_directory_top_menu div ul.menu");
-  var macyInstances = [];
-  var macyOptions = {
-    columns: 4,
-    margin: {
-      x: 34,
-      y: 0,
-    },
-    breakAt: {
-      1695: {
-        margin: {
-          x: 35,
-          y: 0,
-        },
-      },
-      1275: 2,
-      767: {
-        margin: {
-          x: 0,
-          y: 0,
-        },
-        columns: 1,
-      },
-    },
-  };
+  // var pagrids = document.querySelectorAll(".pa_directory_top_menu div ul.menu");
+  // var macyInstances = [];
+  // var macyOptions = {
+  //   columns: 4,
+  //   margin: {
+  //     x: 34,
+  //     y: 0,
+  //   },
+  //   breakAt: {
+  //     1695: {
+  //       margin: {
+  //         x: 35,
+  //         y: 0,
+  //       },
+  //     },
+  //     1275: 2,
+  //     767: {
+  //       margin: {
+  //         x: 0,
+  //         y: 0,
+  //       },
+  //       columns: 1,
+  //     },
+  //   },
+  // };
 
-  for (var i = 0; i < pagrids.length; i++) {
-    var newId = "pagrid-instance-" + i;
-    pagrids[i].id = newId;
-    macyOptions.container = "#" + newId;
-    macyInstances.push(Macy(macyOptions));
-  }
-
-  /* Form Select Triangle
---------------------------------------------------------------------------------------- */
-
-  $("li").has("select").addClass("custom_select");
+  // for (var i = 0; i < pagrids.length; i++) {
+  //   var newId = "pagrid-instance-" + i;
+  //   pagrids[i].id = newId;
+  //   macyOptions.container = "#" + newId;
+  //   macyInstances.push(Macy(macyOptions));
+  // }
 
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
@@ -454,6 +286,13 @@ jQuery(document).ready(function ($) {
   if (!$("#sidebar_wrapper").length > 0) {
     $("#page_content").addClass("no_sidebar");
   }
+
+  /* Show Sidebar Mobile and Tablet
+--------------------------------------------------------------------------------------- */
+
+  $(".sidebar_slide_title").on("click", function (e) {
+    $(this).next(".widget").slideToggle();
+  });
 
   /* Sidebar Current Class for Blog Sidebars
 --------------------------------------------------------------------------------------- */
