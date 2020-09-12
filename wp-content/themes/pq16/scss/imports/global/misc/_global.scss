@@ -17,15 +17,17 @@
 
 #internal_main {
   margin: 96px 0 0 0;
-
   position: relative;
   z-index: 1;
   @include mq(small_tablet) {
     margin: 69px 0 0 0;
   }
   @include mq(small_laptop) {
-    margin: 66px 0 0 0;
+    margin: 61px 0 0 0;
     padding: 0;
+  }
+  @include mq(small_monitor) {
+    margin: 77px 0 0 0;
   }
 }
 
@@ -47,10 +49,20 @@
     padding: 46px 80px 0 66px;
     flex-grow: 1;
   }
+  @include mq(large_laptop) {
+    padding: 63px 132px 0 66px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1745px;
+    padding: 47px 276px 0 132px;
+  }
 }
 
 #page_content_inner {
   margin-top: 27px;
+  @include mq(small_laptop) {
+    margin-top: 34px;
+  }
 }
 
 .alignleft,

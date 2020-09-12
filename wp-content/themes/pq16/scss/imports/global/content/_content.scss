@@ -14,11 +14,20 @@ h1.page_title {
   @include mq(small_tablet) {
     @include quick_type(34px, 36px, null);
   }
+  @include mq(large_laptop) {
+    @include quick_type(38px, 40px, null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(45px, 50px, null);
+  }
   &:after {
     background: $color_bright_one;
     margin-top: 18px;
     @include box(100%, 3px);
     @include contentdisplay();
+    @include mq(small_monitor) {
+      @include box(100%, 5px);
+    }
   }
 }
 
@@ -106,6 +115,12 @@ h1.page_title {
         weight: 700,
       )
     );
+    @include mq(large_laptop) {
+      @include quick_type(18px, 24px, null);
+    }
+    @include mq(small_monitor) {
+      @include quick_type(19px, 26px, null);
+    }
   }
   a {
     color: $color_bright_three;

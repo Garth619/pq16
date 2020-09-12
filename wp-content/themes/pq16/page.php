@@ -10,7 +10,7 @@
     
     	<div id='page_content_inner' class="content">
 
-				<p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae <a href="">embeeded link</a>. embeeded link rollover t turpis. Phasellus imperdiet a mauris ut egestas. Nulla mattis tellus in lectus posuere ultrices. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum diam nisl, ultricies ut rhoncus.</p>
+				<p>Dolor sit amet, consectetur adipiscing elit. Etiam dictum diam quis quam rutrum ultrices. Nunc magna sem, faucibus quis tincidunt eget, cursus eget lorem. Nulla diam lectus, rhoncus vitae <a href="">embeded link</a>. embeeded link rollover t turpis. Phasellus imperdiet a mauris ut egestas. Nulla mattis tellus in lectus posuere ultrices. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum diam nisl, ultricies ut rhoncus.</p>
 
 				<h2>Heading Style 2 : ante pulnivar ispum vivmos maxium euqe vel mi</h2>
 
