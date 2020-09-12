@@ -1,29 +1,33 @@
 
 <div id="sidebar_wrapper">
 
-	<div id='sidebar_form'>
+	<div id='sidebar_inner'>	
 
-		<span id='sidebar_form_title'><?php the_field( 'sidebar_form_title','option'); ?></span><!-- sidebar_form_title -->
+		<div id='sidebar_form'>
 
-		<span id='sidebar_form_subtitle'><?php the_field( 'sidebar_subtitle','option'); ?></span><!-- sidebar_form_title -->
+			<span id='sidebar_form_title'><?php the_field( 'sidebar_form_title','option'); ?></span><!-- sidebar_form_title -->
+
+			<span id='sidebar_form_subtitle'><?php the_field( 'sidebar_subtitle','option'); ?></span><!-- sidebar_form_title -->
 	
-		<?php gravity_form(4, false, false, false, '', true, 1233); ?>
+			<?php gravity_form(4, false, false, false, '', true, 1233); ?>
 
-		<span id='form_required'><span>*</span>Required Field</span><!-- form_required -->
+			<span id='form_required'><span>*</span>Required Field</span><!-- form_required -->
 	
-	</div><!-- sidebar_form -->
+		</div><!-- sidebar_form -->
 			
-	<div class="sidebar_box sidebar_pa">
+		<div class="sidebar_box sidebar_pa">
 
-		<div class='sidebar_slide_title'>
+			<div class='sidebar_slide_title'>
 		
-			<span>View Practice Areas</span>
+				<span>View Practice Areas</span>
 		
-		</div><!-- sidebar_slide_title -->
+			</div><!-- sidebar_slide_title -->
 				
-		<?php bulk_sidebar(); ?>
+			<?php bulk_sidebar(); ?>
 				
-		</div><!-- sidebar_box -->
+			</div><!-- sidebar_box -->
+
+		</div><!-- sidebar_inner -->
 		
 	</div><!-- sidebar_wrapper -->
 

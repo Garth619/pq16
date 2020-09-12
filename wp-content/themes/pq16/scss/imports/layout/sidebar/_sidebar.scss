@@ -1,3 +1,27 @@
+#sidebar_wrapper {
+  margin-top: 33px;
+  @include mq(small_tablet) {
+    order: 1;
+    flex-basis: 364px;
+    flex-shrink: 0;
+  }
+  @include mq(small_laptop) {
+    margin-top: 0;
+  }
+}
+
+#sidebar_inner {
+  position: relative;
+  &:after {
+    @include mq(small_laptop) {
+      background: $color_light_ten;
+      @include box(100%);
+      @include abs(0, null, null, 0);
+      @include contentdisplay();
+    }
+  }
+}
+
 #sidebar_form {
   display: none;
 }
@@ -12,6 +36,8 @@
   box-shadow: 5px 5px 20px #00000029;
   position: relative;
   z-index: 1;
+  background: $color_light_one;
+  max-width: 292px;
   span {
     display: block;
     @include flex(space-between, center);

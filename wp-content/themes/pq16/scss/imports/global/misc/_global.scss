@@ -17,37 +17,40 @@
 
 #internal_main {
   margin: 96px 0 0 0;
-  padding: 33px 0 0 0px;
+
   position: relative;
   z-index: 1;
+  @include mq(small_tablet) {
+    margin: 69px 0 0 0;
+  }
+  @include mq(small_laptop) {
+    margin: 66px 0 0 0;
+    padding: 0;
+  }
 }
 
 #page_wrapper {
   padding: 0 30px 54px;
+  @include mq(small_tablet) {
+    padding: 0px 72px 54px;
+  }
+  @include mq(small_laptop) {
+    @include flex();
+    padding: 0 0 54px;
+  }
 }
 
 #page_content {
+  order: 2;
+  padding: 33px 0 0 0px;
+  @include mq(small_laptop) {
+    padding: 46px 80px 0 66px;
+    flex-grow: 1;
+  }
 }
 
 #page_content_inner {
   margin-top: 27px;
-}
-
-h1.page_title {
-  @include type(
-    (
-      size: 30px,
-      height: 32px,
-      family: $secondaryfont,
-      weight: 600,
-    )
-  );
-  &:after {
-    background: $color_bright_one;
-    margin-top: 18px;
-    @include box(100%, 3px);
-    @include contentdisplay();
-  }
 }
 
 .alignleft,
