@@ -14,6 +14,12 @@
 	</div><!-- sidebar_form -->
 			
 	<div class="sidebar_box sidebar_pa">
+
+		<div class='sidebar_slide_title'>
+		
+			<span>View Practice Areas</span>
+		
+		</div><!-- sidebar_slide_title -->
 				
 		<?php bulk_sidebar(); ?>
 				

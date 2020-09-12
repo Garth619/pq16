@@ -1,538 +1,111 @@
-#sidebar_wrapper {
-  padding-top: 20px;
-  @include mq(small_laptop) {
-    flex-shrink: 0;
-    width: 350px;
-    order: 1;
-    padding: 0;
-  }
-  @include mq(large_laptop) {
-    width: 430px;
-  }
-  @include mq(small_monitor) {
-    width: 475px;
-  }
-}
-
 #sidebar_form {
   display: none;
-  margin-bottom: 33px;
-  text-align: center;
-  padding: 30px 30px 160px;
-  background: $color_light_two;
-  @include mq(small_laptop) {
-    display: block;
-  }
-  @include mq(large_laptop) {
-    padding: 46px 30px 180px;
-  }
-  .gform_wrapper {
-    padding: 0 10px;
-    @include mq(small_monitor) {
-      padding: 0 30px;
-    }
-  }
-  ul {
-    list-style: none;
-    text-align: left;
-    margin-top: 36px;
-    li {
-      margin-bottom: 20px;
-      label {
-        display: block;
-        margin-bottom: 8px;
-        @include type(
-          (
-            size: 16px,
-            spacing: 0.32px,
-            family: $primaryfont,
-            weight: 700,
-          )
-        );
-        span.gfield_required {
-          color: $color_bright_two;
-          font-weight: 700;
-        }
-      }
-      input,
-      select,
-      textarea {
-        width: 100%;
-        border-radius: 5px;
-        border: none;
-        padding: 13px 15px;
-        background: $color_light_one;
-        @include type(
-          (
-            size: 18px,
-            family: $primaryfont,
-            color: $color_light_five,
-          )
-        );
-        @include mq(large_laptop) {
-          padding: 20px 15px;
-        }
-      }
-      select {
-        padding: 13px 50px 10px 15px;
-        -webkit-appearance: none;
-        @include mq(large_laptop) {
-          padding: 20px 50px 20px 15px;
-        }
-      }
-      textarea {
-        height: 158px;
-      }
-      &.custom_select {
-        position: relative;
-        &:after {
-          @include abs(45px, 17px, null, null);
-          @include contentdisplay();
-          @include tri(down, 8px, 8px, $color_dark_one);
-          @include mq(large_laptop) {
-            top: 55px;
-          }
-        }
-      }
-    }
-  }
-  .gform_footer {
-    display: inline-block;
-    position: relative;
-    margin-top: 41px;
-    z-index: 1;
-    @include mq(large_laptop) {
-      margin-top: 61px;
-    }
-    &:hover {
-      &:after {
-        opacity: 1;
-      }
-    }
-    &:before,
-    &:after {
-      border-radius: 50px;
-      z-index: -1;
-      @include contentdisplay();
-      @include box(100%);
-      @include abs(0, null, null, 0);
-    }
-    &:before {
-      background: $color_grad_one;
-    }
-    &:after {
-      background: $color_grad_two;
-      opacity: 0;
-      transition: all 200ms ease-in-out;
-    }
-    input[type="submit"] {
-      background: transparent;
-      border: none;
-      padding: 19px 32px;
-      @include type(
-        (
-          size: 17px,
-          family: $primaryfont,
-          color: $color_light_one,
-          weight: 700,
-          align: center,
-        )
-      );
-      @include mq(small_laptop) {
-      }
-      @include mq(large_laptop) {
-        font-size: 20px;
-        padding: 24px 32px;
-      }
-    }
-  }
-  .gfield_description,
-  .validation_message {
-    color: $color_light_one;
-    margin-top: 6px;
-    @include type(
-      (
-        size: 15px,
-        family: $primaryfont,
-        color: $color_bright_two,
-        weight: 700,
-      )
-    );
-  }
-  span#form_required {
-    display: block;
-    text-align: left;
-    margin-top: -135px;
-    padding: 0 10px;
-    @include type(
-      (
-        size: 16px,
-        spacing: 0.8px,
-        family: $primaryfont,
-        weight: 700,
-        transform: lowercase,
-      )
-    );
-    @include mq(small_laptop) {
-      margin-top: -115px;
-    }
-    @include mq(large_laptop) {
-      margin-top: -143px;
-    }
-    @include mq(small_monitor) {
-      padding: 0px 30px;
-    }
-    span {
-      @include type(
-        (
-          size: 16px,
-          spacing: 0.9px,
-          family: $primaryfont,
-          color: $color_bright_two,
-          weight: 700,
-          transform: lowercase,
-        )
-      );
-    }
-  }
 }
 
-span#sidebar_form_title {
-  display: block;
-  @include type(
-    (
-      size: 24px,
-      height: 25px,
-      family: $primaryfont,
-      color: $color_bright_one,
-      weight: 700,
-    )
-  );
-  @include mq(large_laptop) {
-    @include quick_type(30px, 35px, null);
-  }
+.sidebar_box {
+  background: $color_light_one;
+  position: relative;
 }
 
-span#sidebar_form_subtitle {
-  display: block;
-  margin-top: 15px;
-  max-width: 235px;
-  @include margin_lr;
-  @include type(
-    (
-      size: 17px,
-      height: 22px,
-      family: $primaryfont,
-    )
-  );
-  @include mq(large_laptop) {
-    max-width: 100%;
-    @include quick_type(19px, 25px, null);
-  }
-  strong {
-    font-weight: 700;
+.sidebar_slide_title {
+  padding: 18px 22px;
+  box-shadow: 5px 5px 20px #00000029;
+  position: relative;
+  z-index: 1;
+  span {
+    display: block;
+    @include flex(space-between, center);
+    @include type(
+      (
+        size: 12px,
+        height: 14px,
+        spacing: 1.8px,
+        family: $primaryfont,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+    &:after {
+      background-image: url(#{$themepath}/images/arrow.svg);
+      background-size: 12px 9px;
+      margin-left: 10px;
+      @include box(12px, 9px);
+      @include contentdisplay(inline-block);
+    }
   }
 }
 
 .widget {
-  background: $color_light_two;
-  padding: 30px 30px;
-  margin-bottom: 33px;
-  @include mq(large_laptop) {
-    padding: 60px 45px 119px;
-  }
-  @include mq(small_monitor) {
-    padding: 60px 60px 119px;
-  }
+  display: none;
+  width: 100%;
+  background: $color_light_one;
+  padding: 25px 32px 20px;
+  box-shadow: 20px 20px 50px #00000029;
+  @include abs(49px, null, null, 0);
   h3 {
-    display: block;
-    margin-bottom: 10px;
-    @include type(
-      (
-        size: 24px,
-        height: 25px,
-        family: $primaryfont,
-        color: $color_bright_one,
-        weight: 700,
-        align: center,
-      )
-    );
-    @include mq(large_laptop) {
-      margin-bottom: 38px;
-      @include quick_type(30px, 25px, null);
-    }
+    display: none;
   }
   ul {
     list-style: none;
     li {
-      @include type(
-        (
-          size: 16px,
-          height: 18px,
-          spacing: 0,
-          family: $primaryfont,
-          weight: 700,
-        )
-      );
-
-      @include mq(large_laptop) {
-        @include quick_type(20px, 25px, null);
-      }
       a {
         display: block;
-        padding: 13px 40px 13px 20px;
         color: $color_dark_one;
+        cursor: pointer;
         text-decoration: none;
-        border-bottom: 1px solid $color_light_seven;
+        margin-bottom: 15px;
         transition: all 200ms ease-in-out;
-        @include mq(large_laptop) {
-          padding: 16px 40px 16px 20px;
-        }
         &:hover {
-          @include mq(small_laptop) {
-            color: $color_bright_one;
-          }
+          color: $color_bright_two;
         }
       }
     }
   }
   ul.menu {
-    @include mq(large_laptop) {
-    }
     > li {
+      @include type(
+        (
+          size: 14px,
+          height: 17px,
+          family: $primaryfont,
+          weight: 700,
+        )
+      );
       &.active {
         > a {
-          color: $color_bright_one;
+          color: $color_bright_two;
         }
       }
-      &:last-of-type {
-        > a {
-          border-bottom: none;
-        }
+      > a {
       }
     }
     > li.menu-item-has-children {
-      &.active {
-        > a {
-          &:after {
-            @include tri(down, 5px, 5px, $color_bright_one);
-          }
-        }
-      }
       > a {
-        position: relative;
         &:after {
-          transition: all 200ms ease-in-out;
-          @include abs(22px, 15px, null, null);
-          @include tri(down, 5px, 5px, $color_dark_one);
-          @include contentdisplay();
-          @include mq(large_laptop) {
-            @include abs(28px, 15px, null, null);
-          }
+          background-image: url(#{$themepath}/images/arrow.svg);
+          background-size: 10px 9px;
+          margin-left: 14px;
+          margin-top: 5px;
+          vertical-align: top;
+          @include box(10px, 9px);
+          @include contentdisplay(inline-block);
         }
-      }
-    }
-    > li.current-menu-item {
-      > a {
-        color: $color_bright_one;
       }
     }
     > li.current-menu-ancestor {
       > a {
-        color: $color_bright_one;
-      }
-      ul.sub-menu {
-        display: block;
-        li.current-menu-item {
-          a {
-            color: $color_bright_one;
-          }
-        }
+        color: $color_bright_two;
       }
     }
   }
   ul.sub-menu {
     display: none;
-  }
-}
-
-.sidebar_pa {
-  // information center
-  .widget {
-    &:last-of-type {
-      margin-bottom: 0;
-      @include mq(large_laptop) {
-        padding: 60px 45px 53px;
-      }
-      @include mq(small_monitor) {
-        padding: 60px 60px 53px;
-      }
-      h3 {
-        margin-bottom: 0;
-      }
-    }
-    &:nth-of-type(2) {
-      ul {
-        margin-top: 0;
-        @include mq(large_laptop) {
-          margin-top: 21px;
-        }
-        li {
-          a {
-            position: relative;
-            padding: 33px 40px 33px 20px;
-            &:after {
-              border-radius: 50%;
-              background: $color_bright_two;
-              @include abs(40px, null, null, 0);
-              @include box(6px);
-              @include contentdisplay();
-              @include mq(small_laptop) {
-                @include abs(43px, null, null, 0);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.sidebar_blog {
-  .widget {
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-    ul {
-      li {
-        &.blog-active {
-          a {
-            color: $color_bright_one;
-          }
-        }
-        &:last-of-type {
-          a {
-            border: none;
-          }
-        }
-      }
-    }
-    &:nth-of-type(2) {
-      ul {
-        li {
-          font-weight: 400;
-          line-height: 20px;
-          position: relative;
-          font-size: 18px;
-          line-height: 25px;
-          &:before {
-            background: $color_bright_two;
-            border-radius: 50%;
-            @include abs(21px, null, null, 0);
-            @include box(6px);
-            @include contentdisplay();
-            @include mq(large_laptop) {
-              @include abs(25px, null, null, 0);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.sidebar_bio_wrapper {
-  @include mq(small_laptop) {
-    margin-top: -290px;
-  }
-  @include mq(small_monitor) {
-    margin-top: -344px;
-  }
-  .att_image_wrapper {
-    display: none;
-    @include mq(small_laptop) {
-      max-width: 100%;
-      padding: 45px;
-      margin-bottom: 37px;
-      @include flex(center, center);
-      img {
-      }
-    }
-    @include mq(small_monitor) {
-      padding: 64px;
-    }
-  }
-}
-
-.sidebar_bio {
-  background: $color_light_two;
-  padding: 30px 30px;
-  @include mq(large_laptop) {
-    padding: 60px 45px 69px;
-  }
-  @include mq(small_monitor) {
-    padding: 60px 60px 119px;
-  }
-}
-
-.sidebar_bio_list {
-  margin-bottom: 50px;
-  // max-width: 500px;
-  // @include margin_lr;
-  @include mq(large_laptop) {
-    margin-bottom: 60px;
-  }
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-  h3 {
-    display: block;
-    margin-bottom: 10px;
-    @include type(
-      (
-        size: 25px,
-        height: 26px,
-        family: $primaryfont,
-        weight: 700,
-        align: center,
-      )
-    );
-    @include mq(large_laptop) {
-      margin-bottom: 29px;
-      @include quick_type(30px, 33px, null);
-    }
-  }
-  ul {
-    list-style: none;
     li {
-      border-bottom: 1px solid $color_light_seven;
-      position: relative;
-      padding: 8px 25px;
-      @include type(
-        (
-          size: 16px,
-          height: 23px,
-          spacing: 0,
-          family: $primaryfont,
-        )
-      );
-      @include mq(large_laptop) {
-        padding: 12px 25px;
-        @include quick_type(18px, 25px, null);
-      }
-      &:last-of-type {
-        border: none;
-        padding-bottom: 0;
-      }
-      &:after {
-        background: $color_bright_two;
-        border-radius: 50%;
-        @include abs(18px, null, null, 0);
-        @include box(6px);
-        @include contentdisplay();
-        @include mq(large_laptop) {
-          top: 23px;
-        }
+      font-weight: 400;
+    }
+    > li.current-menu-item {
+      a {
+        color: $color_bright_two;
       }
     }
   }

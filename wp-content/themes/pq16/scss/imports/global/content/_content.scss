@@ -17,6 +17,37 @@ body {
   @include mq(small_monitor) {
     @include quick_type(17px, 30px, null);
   }
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 13px;
+      &:before {
+        border-radius: 50%;
+        background: $color_bright_two;
+        @include abs(11px, null, null, 0);
+        @include box(4px);
+        @include contentdisplay();
+      }
+    }
+  }
+  ol {
+    list-style: none;
+    counter-reset: item;
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 25px;
+    }
+    > li:before {
+      content: counter(item) ".";
+      font-weight: 800;
+      color: $color_bright_two;
+      @include abs(0, null, null, 0);
+    }
+  }
+  ul,
+  ol,
   p {
     margin-bottom: 20px;
   }
@@ -41,6 +72,20 @@ body {
     @include mq(small_monitor) {
       @include quick_type(22px, 30px, null);
     }
+  }
+  h3 {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    @include type(
+      (
+        size: 17px,
+        height: 22px,
+        spacing: 0.17px,
+        family: $primaryfont,
+        color: $color_bright_three,
+        weight: 700,
+      )
+    );
   }
   a {
     color: $color_bright_three;

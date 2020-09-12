@@ -15,6 +15,41 @@
   display: block;
 }
 
+#internal_main {
+  margin: 96px 0 0 0;
+  padding: 33px 0 0 0px;
+  position: relative;
+  z-index: 1;
+}
+
+#page_wrapper {
+  padding: 0 30px 54px;
+}
+
+#page_content {
+}
+
+#page_content_inner {
+  margin-top: 27px;
+}
+
+h1.page_title {
+  @include type(
+    (
+      size: 30px,
+      height: 32px,
+      family: $secondaryfont,
+      weight: 600,
+    )
+  );
+  &:after {
+    background: $color_bright_one;
+    margin-top: 18px;
+    @include box(100%, 3px);
+    @include contentdisplay();
+  }
+}
+
 .alignleft,
 img.alignleft {
   display: block;
