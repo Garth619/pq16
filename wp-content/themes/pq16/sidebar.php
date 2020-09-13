@@ -17,7 +17,7 @@
 			
 		<div class="sidebar_box sidebar_pa">
 
-			<div class='sidebar_slide_title'>
+			<div class='sidebar_slide_title sidebar_title_pa'>
 		
 				<span>View Practice Areas</span>
 		

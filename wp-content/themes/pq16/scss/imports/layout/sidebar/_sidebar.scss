@@ -196,7 +196,7 @@ span#sidebar_form_title {
   position: relative;
   z-index: 1;
   background: $color_light_one;
-  max-width: 292px;
+  max-width: 300px;
   @include mq(small_laptop) {
     display: none;
   }
@@ -229,7 +229,7 @@ span#sidebar_form_title {
   background: $color_light_one;
   padding: 25px 32px 20px;
   box-shadow: 20px 20px 50px #00000029;
-  max-width: 292px;
+  max-width: 300px;
   @include abs(49px, null, null, 0);
   @include mq(small_laptop) {
     display: block !important;
@@ -288,8 +288,6 @@ span#sidebar_form_title {
         > a {
           color: $color_bright_two;
         }
-      }
-      > a {
       }
     }
     > li.menu-item-has-children {

@@ -68,7 +68,9 @@ header, section, nav, footer {
 	display: block;
 }
 
-
+input, textarea {
+	-webkit-appearance: none;
+}
 
 .wistia_click_to_play > div > div {display: none !important}
 

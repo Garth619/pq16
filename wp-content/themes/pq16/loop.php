@@ -23,29 +23,21 @@
 
 		<div class="blog_meta">
 		
-		<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
+		<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?> in</span> 
 		
 			<?php echo get_the_category_list();?>
 	
 		</div><!-- blog_meta -->
 
-		<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
-			
-			<h2 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+		<h2 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 		
-		<?php else:?>
-		
-			<h1 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-		
-		<?php endif;?>
-
 		<div class="blog_content content">
 			
 			<?php echo wp_trim_words( get_the_content(), 54, '...' );?>
 		
 		</div><!-- blog_content -->
 		
-		<a class="button_four" href="<?php the_permalink();?>">Read More</a>
+		<a class="read_more button_two" href="<?php the_permalink();?>">Continue Reading</a>
 			
 		<?php edit_post_link( __( 'Edit'), '', '' ); ?>
 	

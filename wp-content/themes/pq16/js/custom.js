@@ -290,8 +290,16 @@ jQuery(document).ready(function ($) {
   /* Show Sidebar Mobile and Tablet
 --------------------------------------------------------------------------------------- */
 
-  $(".sidebar_slide_title").on("click", function (e) {
+  $(".sidebar_blog h3").on("click", function (e) {
+    $(this).next("ul").slideToggle();
+  });
+
+  $(".sidebar_title_pa").on("click", function (e) {
     $(this).next(".widget").slideToggle();
+  });
+
+  $(".sidebar_title_blog").on("click", function (e) {
+    $(this).next(".sidebar_blog").slideToggle();
   });
 
   /* Sidebar Current Class for Blog Sidebars

@@ -229,167 +229,6 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-/* ACF Blocks for PA Pages and Posts
--------------------------------------------------------------- */
-
-add_action('acf/init', 'my_acf_init');
-function my_acf_init() {
-	
-	// check function exists
-	if( function_exists('acf_register_block') ) {
-	
-		acf_register_block(array(
-			'name'				=> 'ilawyer-video',
-			'title'				=> __('iLawyer Video'),
-			'description'		=> __('An iLawyer video block that supports Wistia and Youtube.'),
-            'render_template'	=> 'page-templates/includes/blocks/video-block.php',
-            'enqueue_assets' => function(){
-                wp_enqueue_style( 'video-block-css', get_template_directory_uri() . '/scss/imports/components/acf_blocks/video_block/style.css' );
-                wp_enqueue_script( 'jquery-video-block', get_template_directory_uri() . '/js/acf_blocks/video_block/custom-min.js', 'jquery', '', true );
-              },
-            'category'			=> 'media',
-            'post_types'        => array('post', 'page'),
-            'supports'	        =>  array(
-                'align'	=>  false,
-            ),
-            'keywords'		    => array( 'video', 'quote' ),
-			'icon' => array(
-                'foreground' => '#3766eb',
-                'src'        => 'format-video',
-              ),
-              'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                    
-                )
-            )
-        ));
-        
-        acf_register_block(array(
-			'name'				=> 'ilawyer-case-results',
-			'title'				=> __('iLawyer Case Results'),
-			'description'		=> __('An iLawyer Case Results block.'),
-            'render_template'	=> 'page-templates/includes/blocks/featured-case-results-block.php',
-            'enqueue_assets' => function(){
-                wp_enqueue_style( 'featured-case-results-block-css', get_template_directory_uri() . '/scss/imports/components/acf_blocks/featured_case_results_block/style.css' );
-                wp_enqueue_script( 'jquery-featured-case-results-block', get_template_directory_uri() . '/js/acf_blocks/featured_case_results_block/custom-min.js', 'jquery', '', true );
-              },
-            'category'			=> 'text',
-            'post_types'        => array('post', 'page'),
-            'keywords'		    => array( 'case results', 'quote' ),
-            'supports'	        =>  array(
-                'align'	=>  false,
-            ),
-            'icon' => array(
-                'foreground' => '#3766eb',
-                'src'        => 'wordpress',
-              ),
-              'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                )
-            )
-        ));
-        
-        acf_register_block(array(
-			'name'				=> 'ilawyer-blockquote',
-			'title'				=> __('iLawyer Blockquote'),
-			'description'		=> __('An iLawyer Blockquote block.'),
-            'render_template'	=> 'page-templates/includes/blocks/blockquote-block.php',
-            'enqueue_style'     => get_template_directory_uri() . '/scss/imports/components/acf_blocks/blockquote_block/style.css',
-            'category'			=> 'text',
-            'post_types'        => array('post', 'page'),
-            'keywords'		    => array( 'quote' ),
-            'supports'	        =>  array(
-                'align'	=>  false,
-            ),
-            'icon' => array(
-                'foreground' => '#3766eb',
-                'src'        => 'format-quote',
-              ),
-              'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                )
-            )
-        ));
-        
-        acf_register_block(array(
-			'name'				=> 'ilawyer-client_reviews',
-			'title'				=> __('iLawyer Client Reviews'),
-			'description'		=> __('An iLawyer Client Reviews block.'),
-            'render_template'	=> 'page-templates/includes/blocks/client-reviews-block.php',
-            'enqueue_assets' => function(){
-                wp_enqueue_style( 'client-reviews-block-css', get_template_directory_uri() . '/scss/imports/components/acf_blocks/client_reviews_block/style.css' );
-                wp_enqueue_script( 'jquery-client-reviews-block', get_template_directory_uri() . '/js/acf_blocks/client_reviews_block/custom-min.js', 'jquery', '', true );
-              },
-            'category'			=> 'text',
-            'post_types'        => array('post', 'page'),
-            'keywords'		    => array( 'client reviews', 'quote' ),
-            'supports'	        =>  array(
-                'align'	=>  false,
-            ),
-            'icon' => array(
-                'foreground' => '#3766eb',
-                'src'        => 'format-chat',
-              ),
-              'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                )
-            )
-        ));
-
-        acf_register_block(array(
-			'name'				=> 'ilawyer-linked-cta',
-			'title'				=> __('iLawyer Linked Call to Action'),
-			'description'		=> __('An iLawyer Linked Call to Action block.'),
-            'render_template'	=> 'page-templates/includes/blocks/linked-cta-block.php',
-            'enqueue_style'     => get_template_directory_uri() . '/scss/imports/components/acf_blocks/linked_cta_block/style.css',
-            'category'			=> 'text',
-            'post_types'        => array('post', 'page'),
-            'keywords'		    => array( 'Linked Call to Action' ),
-            'supports'	        =>  array(
-                'align'	=>  false,
-            ),
-            'icon' => array(
-                'foreground' => '#3766eb',
-                'src'        => 'format-aside',
-              ),
-              'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                )
-            )
-        ));
-
-        acf_register_block(array(
-			'name'				=> 'ilawyer-timeline',
-			'title'				=> __('iLawyer Timeline'),
-			'description'		=> __('An iLawyer Timeline block.'),
-            'render_template'	=> 'page-templates/includes/blocks/timeline-block.php',
-            'enqueue_style'     => get_template_directory_uri() . '/scss/imports/components/acf_blocks/timeline_block/style.css',
-            'category'			=> 'text',
-            'post_types'        => array('post', 'page'),
-            'keywords'		    => array( 'Timeline' ),
-            'supports'	        =>  array(
-                'align'	=>  false,
-            ),
-            'icon' => array(
-                'foreground' => '#3766eb',
-                'src'        => 'editor-ul',
-              ),
-              'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                )
-            )
-        ));
-	}
-}
-
-
-
 /* Adds Default Images to ACF Image Field
 -------------------------------------------------------------- */
 
@@ -452,7 +291,7 @@ function wpbeginner_numeric_posts_nav() {
  
     /** Previous Post Link */
     if ( get_previous_posts_link() )
-        printf( '<li class="myprev">%s</li>' . "\n", get_previous_posts_link('prev') );
+        printf( '<li class="blog_arrow myprev">%s</li>' . "\n", get_previous_posts_link('') );// put "prev" string in get_previous_posts_link
  
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -482,7 +321,7 @@ function wpbeginner_numeric_posts_nav() {
  
     /** Next Post Link */
     if ( get_next_posts_link() )
-        printf( '<li class="mynext">%s</li>' . "\n", get_next_posts_link('next') );
+        printf( '<li class="blog_arrow mynext">%s</li>' . "\n", get_next_posts_link('') ); // put "next" string in get_previous_posts_link
  
     echo '</ul></div></div>' . "\n";
  

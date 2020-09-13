@@ -22,3 +22,25 @@
     color: $color_light_one;
   }
 }
+
+.button_two {
+  display: inline-block;
+  border: 1px solid $color_light_twelve;
+  padding: 12px 20px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 12px,
+      height: 14px,
+      spacing: 2.7px,
+      color: $color_dark_one,
+      family: $primaryfont,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+  &:hover {
+    border: 1px solid $color_bright_two;
+    color: $color_bright_two;
+  }
+}
