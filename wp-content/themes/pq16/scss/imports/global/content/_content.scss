@@ -40,6 +40,15 @@ h1.internal_title {
       weight: 600,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(34px, 36px, null);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(38px, 40px, null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(45px, 50px, null);
+  }
 }
 
 .content {

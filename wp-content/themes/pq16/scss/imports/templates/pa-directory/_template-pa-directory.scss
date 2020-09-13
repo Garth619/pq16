@@ -1,5 +1,9 @@
 .pa_directory_page_wrapper {
   margin-bottom: -35px;
+  @include mq(small_laptop) {
+    max-width: 915px;
+    @include margin_lr;
+  }
 }
 
 ul.pa_directory_top_menu {
