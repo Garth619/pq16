@@ -42,6 +42,13 @@
   }
 }
 
+#page_wrapper.one_col {
+  padding-top: 20px;
+  @include mq(small_laptop) {
+    display: block;
+  }
+}
+
 #page_content {
   order: 2;
   padding: 33px 0 0 0px;

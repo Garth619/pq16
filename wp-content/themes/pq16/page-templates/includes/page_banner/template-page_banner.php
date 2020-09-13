@@ -6,35 +6,19 @@
 
 			<?php if(get_field('banner_title')) : ?>
 			
-				<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-					<h1 class="internal_title banner_title"><?php the_field( 'banner_title' ); ?></h1><!-- banner_title -->
-				
-					<?php else: ?>
-				
-					<span class="internal_title banner_title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
-				
-				<?php endif;?>
+				<span class="banner_title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
 			
 			<?php else:?>
 			
-			<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-				<h1 class="internal_title banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></h1><!-- banner_title -->
+				<span class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></span><!-- banner_title -->
 
-				<?php else: ?>
-			
-				<span class="internal_title banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></span><!-- banner_title -->
-
-			<?php endif;?>
-			
 			<?php endif;?>
 
 		<?php if(get_field('turn_off_button') == "Yes") : ?>
 			
 			<?php else: ?>
 			
-				<a class="button free_consult_button internal_banner_button" href="#consultation">
+				<a class="button_three internal_banner_button" href="#consultation">
 				
 					<span><?php the_field( 'global_internal_banner_button_verbiage','option'); ?></span>
 			

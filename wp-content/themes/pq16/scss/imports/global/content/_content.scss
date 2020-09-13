@@ -31,6 +31,17 @@ h1.page_title {
   }
 }
 
+h1.internal_title {
+  @include type(
+    (
+      size: 30px,
+      height: 32px,
+      family: $secondaryfont,
+      weight: 600,
+    )
+  );
+}
+
 .content {
   @include type(
     (

@@ -44,3 +44,28 @@
     color: $color_bright_two;
   }
 }
+
+.button_three {
+  display: inline-block;
+  background: $color_bright_two;
+  padding: 18px 30px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 14px,
+      height: 16px,
+      family: $primaryfont,
+      color: $color_light_one,
+      weight: 800,
+      spacing: 4px,
+      transform: uppercase,
+    )
+  );
+  @include mq(large_laptop) {
+    padding: 20px 50px;
+    @include quick_type(16px, 18px, null);
+  }
+  &:hover {
+    background: $color_bright_three;
+  }
+}

@@ -232,38 +232,38 @@ jQuery(document).ready(function ($) {
   /* PA Grids - Multpile Macy.js Columns
 --------------------------------------------------------------------------------------- */
 
-  // var pagrids = document.querySelectorAll(".pa_directory_top_menu div ul.menu");
-  // var macyInstances = [];
-  // var macyOptions = {
-  //   columns: 4,
-  //   margin: {
-  //     x: 34,
-  //     y: 0,
-  //   },
-  //   breakAt: {
-  //     1695: {
-  //       margin: {
-  //         x: 35,
-  //         y: 0,
-  //       },
-  //     },
-  //     1275: 2,
-  //     767: {
-  //       margin: {
-  //         x: 0,
-  //         y: 0,
-  //       },
-  //       columns: 1,
-  //     },
-  //   },
-  // };
+  var pagrids = document.querySelectorAll(".pa_directory_top_menu div ul.menu");
+  var macyInstances = [];
+  var macyOptions = {
+    columns: 4,
+    margin: {
+      x: 34,
+      y: 0,
+    },
+    breakAt: {
+      1695: {
+        margin: {
+          x: 35,
+          y: 0,
+        },
+      },
+      1275: 2,
+      767: {
+        margin: {
+          x: 0,
+          y: 8,
+        },
+        columns: 1,
+      },
+    },
+  };
 
-  // for (var i = 0; i < pagrids.length; i++) {
-  //   var newId = "pagrid-instance-" + i;
-  //   pagrids[i].id = newId;
-  //   macyOptions.container = "#" + newId;
-  //   macyInstances.push(Macy(macyOptions));
-  // }
+  for (var i = 0; i < pagrids.length; i++) {
+    var newId = "pagrid-instance-" + i;
+    pagrids[i].id = newId;
+    macyOptions.container = "#" + newId;
+    macyInstances.push(Macy(macyOptions));
+  }
 
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */

@@ -10,6 +10,8 @@ get_header(); ?>
 
 		<div id='page_wrapper' class="pa_directory_page_wrapper one_col">
 
+			<h1 class='internal_title'>Practice Areas</h1><!-- page_title -->
+
 			<?php if(get_field('practice_area_directory')): ?>
 				
 				<ul class="pa_directory_top_menu">

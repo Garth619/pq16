@@ -1,60 +1,48 @@
+.pa_directory_page_wrapper {
+  margin-bottom: -35px;
+}
+
 ul.pa_directory_top_menu {
-  margin-bottom: -40px;
-  max-width: 1220px;
-  @include margin_lr;
   li {
     list-style: none;
+
     a {
       display: block;
     }
   }
   > li {
+    margin-top: 30px;
     @include type(
       (
-        size: 16px,
-        height: 19px,
-        spacing: 1.6px,
+        size: 15px,
+        height: 17px,
+        spacing: 2px,
         family: $primaryfont,
-        color: $color_bright_two,
-        weight: 700,
+        weight: 800,
         transform: uppercase,
       )
     );
     > a {
+      padding-bottom: 10px;
+      border-bottom: 4px solid $color_bright_two;
       transition: all 200ms ease-in-out;
       &:hover {
-        font-weight: 700;
-        color: $color_bright_two;
-      }
-      &:after {
-        margin-top: 17px;
-        background: $color_light_fifteen;
-        @include box(100%, 3px);
-        @include contentdisplay();
       }
     }
   }
   div {
     margin-top: 20px;
-    margin-bottom: 25px;
-    @include mq(large_laptop) {
-      margin-top: 47px;
-      margin-bottom: 135px;
-    }
     ul {
       li {
         @include type(
           (
-            size: 18px,
-            height: 21px,
-            transform: capitalize,
+            size: 16px,
+            spacing: 0.4px,
             family: $primaryfont,
+            weight: 600,
+            transform: capitalize,
           )
         );
-        @include mq(large_laptop) {
-          text-align: center;
-          @include quick_type(22px, 25px, null);
-        }
         &:last-of-type {
           a {
             border: none;
@@ -69,20 +57,14 @@ ul.pa_directory_top_menu {
         }
         &:nth-last-of-type(-n + 4) {
           a {
-            @include mq(large_laptop) {
-              border: none;
-            }
           }
         }
         a {
+          padding: 15px 0;
           color: $color_dark_one;
           text-decoration: none;
-          padding: 15px 0px;
-          border-bottom: 1px solid $color_light_sixteen;
+          border-bottom: 2px solid $color_light_eleven;
           transition: all 200ms ease-in-out;
-          @include mq(large_laptop) {
-            padding: 25px 0;
-          }
           &:hover {
             color: $color_bright_two;
           }
