@@ -10,17 +10,7 @@
 					</ul>
 				<?php endif; ?>
 
-<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-			<h2 class="blog_header"><?php the_title();?></h2>
-		
-		<?php else:?>
-		
-		<h1 class="blog_header"><?php the_title();?></h1>
-		
-		<?php endif;?>
 
-		<span class='double_line'></span><!-- double_line -->
 		
 		<div class="blog_meta">
 		

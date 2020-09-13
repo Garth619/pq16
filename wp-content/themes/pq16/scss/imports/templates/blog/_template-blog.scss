@@ -182,7 +182,8 @@ h2.blog_header {
     }
     h3 {
       display: block;
-      //margin-bottom: 15px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
       @include type(
         (
           size: 14px,
@@ -194,15 +195,15 @@ h2.blog_header {
       );
       @include mq(small_laptop) {
         font-size: 13px;
-        //margin-bottom: 9px;
       }
       @include mq(large_laptop) {
         font-size: 14px;
-        //margin-bottom: 13px;
       }
       @include mq(small_monitor) {
         font-size: 15px;
-        //margin-bottom: 17px;
+      }
+      &:hover {
+        color: $color_bright_two;
       }
       &:after {
         background-image: url(#{$themepath}/images/arrow.svg);
@@ -212,6 +213,9 @@ h2.blog_header {
         vertical-align: top;
         @include box(10px, 9px);
         @include contentdisplay(inline-block);
+      }
+      &.active {
+        color: $color_bright_two;
       }
     }
     ul {
@@ -252,6 +256,11 @@ h2.blog_header {
         }
         &.active {
           > a {
+            color: $color_bright_two;
+          }
+        }
+        &.blog-active {
+          a {
             color: $color_bright_two;
           }
         }
