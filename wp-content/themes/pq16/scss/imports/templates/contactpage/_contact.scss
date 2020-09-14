@@ -1,0 +1,32 @@
+#page_wrapper.contact_page_wrapper {
+  max-width: 747px;
+  @include margin_lr;
+}
+
+#contact_wrapper {
+  text-align: center;
+  margin-top: 30px;
+
+  > span,
+  a.contact_phone {
+    display: block;
+    @include type(
+      (
+        size: 18px,
+        height: 26px,
+        spacing: 0.45px,
+        color: $color_dark_one,
+        family: $primaryfont,
+      )
+    );
+    span {
+      color: $color_bright_two;
+      font-weight: 700;
+    }
+  }
+  a.contact_directions {
+    margin-top: 22px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
