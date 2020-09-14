@@ -107,7 +107,7 @@
       <ul>
         <li>&copy; Ring Jimenez, P.C. All rights reserved.</li>
         <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Disclaimery</a></li>
+        <li><a href="">Disclaimer</a></li>
       </ul>
 
       <a id='ilawyer' href="//ilawyermarketing.com" target="_blank" rel="noopener">

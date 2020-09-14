@@ -192,33 +192,26 @@ jQuery(document).ready(function ($) {
     }, 100)
   );
 
-  /* Case Results Columns
+  /* Testimonials Columns
 --------------------------------------------------------------------------------------- */
 
-  // if ($("#case_results_wrapper").length > 0) {
+  // if ($("#testimonials_wrapper").length > 0) {
   //   var macyInstance = Macy({
-  //     container: "#case_results_wrapper",
+  //     container: "#testimonials_wrapper",
   //     columns: 3,
   //     margin: {
   //       x: 60,
-  //       y: 40,
+  //       y: 30,
   //     },
   //     breakAt: {
   //       1170: {
   //         margin: {
-  //           x: 30,
-  //           y: 30,
-  //         },
-  //         columns: 3,
-  //       },
-  //       1066: {
-  //         margin: {
-  //           x: 30,
+  //           x: 26,
   //           y: 30,
   //         },
   //         columns: 2,
   //       },
-  //       695: {
+  //       767: {
   //         margin: {
   //           x: 0,
   //           y: 30,

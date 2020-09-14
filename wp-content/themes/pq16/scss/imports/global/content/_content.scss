@@ -56,6 +56,48 @@ h1.internal_title {
   }
 }
 
+.inner_subtitle {
+  &:before,
+  &:after {
+    width: 100%;
+    background: $color_bright_two;
+    @include contentdisplay();
+  }
+  &:before {
+    height: 4px;
+    @include mq(small_tablet) {
+      height: 6px;
+    }
+  }
+  &:after {
+    height: 2px;
+    @include mq(small_tablet) {
+      height: 3px;
+    }
+  }
+  span {
+    padding: 19px 0 16px;
+    display: block;
+    @include margin_lr;
+    @include type(
+      (
+        size: 14px,
+        height: 20px,
+        spacing: 2.1px,
+        family: $primaryfont,
+        color: $color_dark_one,
+        weight: 800,
+        align: center,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      padding: 17px 0 14px;
+      @include quick_type(15px, 20px, null);
+    }
+  }
+}
+
 .content {
   @include type(
     (
