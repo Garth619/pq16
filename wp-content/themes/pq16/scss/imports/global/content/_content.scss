@@ -60,6 +60,9 @@ h1.internal_title {
 }
 
 .inner_subtitle {
+  &.under_title {
+    margin-top: 15px;
+  }
   &:before,
   &:after {
     width: 100%;
@@ -81,6 +84,15 @@ h1.internal_title {
   span {
     padding: 19px 0 16px;
     display: block;
+    @include mq(small_tablet) {
+      padding: 17px 0 14px;
+    }
+    @include mq(small_laptop) {
+      padding: 21px 0;
+    }
+  }
+  span,
+  li {
     @include margin_lr;
     @include type(
       (
@@ -95,11 +107,17 @@ h1.internal_title {
       )
     );
     @include mq(small_tablet) {
-      padding: 17px 0 14px;
       @include quick_type(15px, 20px, null);
     }
-    @include mq(small_laptop) {
-      padding: 21px 0;
+  }
+  ul {
+    list-style: none;
+    padding: 15px 0;
+    text-align: center;
+    li {
+      padding: 0;
+      margin: 0 5px;
+      display: inline;
     }
   }
 }
