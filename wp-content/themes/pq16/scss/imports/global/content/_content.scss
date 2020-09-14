@@ -54,6 +54,9 @@ h1.internal_title {
     padding-top: 68px;
     @include quick_type(45px, 50px, null);
   }
+  &.center_title {
+    text-align: center;
+  }
 }
 
 .inner_subtitle {

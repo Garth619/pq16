@@ -12,108 +12,80 @@ get_header(); ?>
 
 		<div class='inner_subtitle'>
 		
-			<span>What our clients have said</span>
+			<span><?php the_field( 'testimonial_subtitle' ); ?></span>
 		
 		</div><!-- inner_subtitle -->
 	
 		<div id='testimonials_wrapper'>
 
-			<div class='testimonial_col'>
+			<?php if ( have_rows( 'testimonial_column_one' ) ) : ?>
+
+				<div class='testimonial_col'>
 			
-			<div class='single_testimonial'>
+				<?php while ( have_rows( 'testimonial_column_one' ) ) : the_row(); ?>
+
+					<div class='single_testimonial'>
 			
-				<img class="testi_stars" src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
+						<img class="testi_stars" src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
 
-				<img class="testi_icon" src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
+						<img class="testi_icon" src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
 
-				<div class='testi_intro'>
-				
-					<p>Curabitur scelerisque risus eget cursus arcu viverra, in tristique turpis tristique.</p>	
-				
-				</div><!-- testi_intro -->
-
-				<div class='testi_descrip'>
-				
-					<p>Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Arcu mauris euismod odio vestibulum arcu sagittis ullamcorper.</p>	
-				
-				</div><!-- testi_descrip -->
-
-				<span class='testi_name'>Client Name</span><!-- testi_name -->
+						<div class='testi_intro'>
 			
-			</div><!-- single_testimonial -->
-
-			<div class='single_testimonial'>
+							<?php the_sub_field( 'intro' ); ?>
 			
-				<img class="testi_stars" src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
+						</div><!-- testi_intro -->
 
-				<img class="testi_icon" src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
-
-				<div class='testi_intro'>
-				
-					<p>Curabitur scelerisque risus eget cursus arcu viverra, in tristique turpis tristique.</p>	
-				
-				</div><!-- testi_intro -->
-
-				<div class='testi_descrip'>
-				
-					<p>Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Arcu mauris euismod odio vestibulum arcu sagittis ullamcorper.</p>	
-				
-				</div><!-- testi_descrip -->
-
-				<span class='testi_name'>Client Name</span><!-- testi_name -->
+						<div class='testi_descrip'>
 			
-			</div><!-- single_testimonial -->
+							<?php the_sub_field( 'description' ); ?>
+			
+						</div><!-- testi_descrip -->
+
+						<span class='testi_name'><?php the_sub_field( 'client_name' ); ?></span><!-- testi_name -->
+		
+					</div><!-- single_testimonial -->
+		
+				<?php endwhile; ?>
+
+				</div><!-- testimonial_col -->
+
+			<?php endif; ?>
+
+			<?php if ( have_rows( 'testimonial_column_two' ) ) : ?>
+
+			<div class="testimonial_col">
+			
+			<?php while ( have_rows( 'testimonial_column_two' ) ) : the_row(); ?>
+
+				<div class='single_testimonial'>
+		
+					<img class="testi_stars" src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
+
+					<img class="testi_icon" src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
+
+					<div class='testi_intro'>
+		
+						<?php the_sub_field( 'intro' ); ?>
+		
+					</div><!-- testi_intro -->
+
+					<div class='testi_descrip'>
+		
+						<?php the_sub_field( 'description' ); ?>
+		
+					</div><!-- testi_descrip -->
+
+					<span class='testi_name'><?php the_sub_field( 'client_name' ); ?></span><!-- testi_name -->
+	
+				</div><!-- single_testimonial -->
+	
+			<?php endwhile; ?>
 
 			</div><!-- testimonial_col -->
 
-			<div class='testimonial_col'>
+		<?php endif; ?>
 
-			<div class='single_testimonial'>
-			
-				<img class="testi_stars" src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
-
-				<img class="testi_icon" src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
-
-				<div class='testi_intro'>
-				
-					<p>Curabitur scelerisque tristique.</p>	
-				
-				</div><!-- testi_intro -->
-
-				<div class='testi_descrip'>
-				
-					<p>Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Arcu mauris euismod odio vestibulum arcu sagittis ullamcorper.</p>	
-				
-				</div><!-- testi_descrip -->
-
-				<span class='testi_name'>Client Name</span><!-- testi_name -->
-			
-			</div><!-- single_testimonial -->
-
-			<div class='single_testimonial'>
-			
-				<img class="testi_stars" src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
-
-				<img class="testi_icon" src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
-
-				<div class='testi_intro'>
-				
-					<p>Curabitur scelerisque risus eget cursus arcu viverra, in tristique turpis tristique.</p>	
-				
-				</div><!-- testi_intro -->
-
-				<div class='testi_descrip'>
-				
-					<p>Curabitur scelerisque risus cursus arcu viverra, in tristique turpis tristique. Arcu mauris euismod odio vestibulum arcu sagittis ullamcorper.</p>	
-				
-				</div><!-- testi_descrip -->
-
-				<span class='testi_name'>Client Name</span><!-- testi_name -->
-			
-			</div><!-- single_testimonial -->
-
-			</div><!-- testimonial_col -->
-			
 		</div><!-- testimonials_wrapper -->
 
 	</div><!-- page_wrapper -->
