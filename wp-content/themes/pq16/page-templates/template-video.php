@@ -6,108 +6,161 @@ get_header(); ?>
 
 <div id="internal_main">
 
-	<?php get_template_part('page-templates/includes/page_banner/template','page_banner'); ?>
+		<div id='page_wrapper' class="video_page_wrapper one_col">
+
+			<h1 class='internal_title video_title center_title'><?php the_title();?></h1><!-- page_title -->
+
+			<div class='inner_subtitle under_title'>
+
+				<ul>
+					<li>Experienced</li>
+					<li>Resourceful</li>
+					<li>Effective</li>
+				</ul>
 	
-	<div id='page_wrapper' class="video_page_wrapper one_col">
-	
-		<div id='video_center_wrapper'>
+			</div><!-- inner_subtitle -->
 
-				<?php if ( have_rows( 'video_center_' ) ) : ?>
-					<?php while ( have_rows( 'video_center_' ) ) : the_row(); ?>
-				
-						<?php if(get_field('wistia_or_youtube') == "Youtube" ) { ?>
-
-							<div class="single_video video_module">
-
-								<a href="https://www.youtube.com/embed/<?php the_sub_field( 'youtube_id_video_center' ); ?>" data-lity>
-
-									<div class='single_video_thumbnail'>
-									
-									<div class='video_overlay'>
-
-										<span class='play_button'></span><!-- play_button -->
-
-									</div><!-- video_overlay -->
-
-									<?php if(get_sub_field('video_thumbnail_select') == "Leave Blank" ) { ?>
-
-										<img src="https://img.youtube.com/vi/<?php the_sub_field( 'youtube_id_video_center' ); ?>/0.jpg"/>
-
-									<?php } ?>
-
-									<?php if(get_sub_field('video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
-
-										<?php $video_thumbnail_video_center = get_sub_field( 'video_thumbnail_video_center' ); ?>
-				
-										<img src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
-
-									<?php } ?>
-
-									
-
-									</div><!-- single_video_thumbnail -->
-
-									<span class='video_title'><?php the_sub_field( 'video_title_video_center' ); ?></span><!-- video_title -->
+			<div id='video_wrapper'>
 			
-								</a>
+				<div class='single_video'>
+				
+					<a href="">
+					
+						<div class='single_video_thumbnail'>
+									
+							<div class='video_overlay'>
 
-							</div><!-- single_video -->
+								<?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
 
-						<?php } ?>
+							</div><!-- video_overlay -->
 
-						<?php if(get_field('wistia_or_youtube') == "Wistia" ) { ?>
+							<img src="<?php bloginfo('template_directory');?>/images/video-two.jpg" alt="" />
 
-							<div class="single_video video_module">
+						</div><!-- single_video_thumbnail -->
 
-								<div class='single_video_thumbnail'>
+						<div class='video_title_wrapper'>
+						
+							<span class='video_title'>Learn why we’re considered the top law firm in Georgia</span><!-- video_title -->
+						
+						</div><!-- video_title_wrapper -->
 
-										<?php if(get_sub_field('video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
+					</a>
+				
+				</div><!-- single_video -->
 
-											<div class='mywistia wistia_embed wistia_async_<?php the_sub_field( 'wistia_id_video_center' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
+				<div class='single_video'>
+				
+					<a href="">
+					
+						<div class='single_video_thumbnail'>
+									
+							<div class='video_overlay'>
 
-										<?php } ?>
+								<?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
 
-										<?php if(get_sub_field('video_thumbnail_select') == "Leave Blank" ) { ?>
+							</div><!-- video_overlay -->
 
-											<div class="mywistia_thumbnail">
+							<img src="<?php bloginfo('template_directory');?>/images/video-two.jpg" alt="" />
 
-												<div class='mywistia wistia_embed wistia_async_<?php the_sub_field( 'wistia_id_video_center' ); ?> popover=true popoverContent=thumbnail'></div><!-- mywistia -->
+						</div><!-- single_video_thumbnail -->
 
-											</div><!-- mywistia_thumbnail -->
+						<div class='video_title_wrapper'>
+						
+							<span class='video_title'>Learn why we’re considered the top law firm in Georgia</span><!-- video_title -->
+						
+						</div><!-- video_title_wrapper -->
 
-										<?php } ?>
+					</a>
+				
+				</div><!-- single_video -->
 
-										<div class='video_overlay'>
+				<div class='single_video'>
+				
+					<a href="">
+					
+						<div class='single_video_thumbnail'>
+									
+							<div class='video_overlay'>
 
-											<span class='play_button'></span><!-- play_button -->
+								<?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
 
-										</div><!-- video_overlay -->
+							</div><!-- video_overlay -->
 
-									<?php if(get_sub_field('video_thumbnail_select') == "Add Thumbnail Image" ) { ?>
+							<img src="<?php bloginfo('template_directory');?>/images/video-two.jpg" alt="" />
 
-										<?php $video_thumbnail_video_center = get_sub_field( 'video_thumbnail_video_center' ); ?>
+						</div><!-- single_video_thumbnail -->
 
-											<img src="<?php echo $video_thumbnail_video_center['url']; ?>" alt="<?php echo $video_thumbnail_video_center['alt']; ?>" />
+						<div class='video_title_wrapper'>
+						
+							<span class='video_title'>Learn why we’re considered the top law firm in Georgia</span><!-- video_title -->
+						
+						</div><!-- video_title_wrapper -->
 
-										<?php } ?>
+					</a>
+				
+				</div><!-- single_video -->
 
-										</div><!-- single_video_thumbnail -->
+				<div class='single_video'>
+				
+					<a href="">
+					
+						<div class='single_video_thumbnail'>
+									
+							<div class='video_overlay'>
 
-									<span class='video_title'><?php the_sub_field( 'video_title_video_center' ); ?></span><!-- video_title -->
+								<?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
 
-							</div><!-- single_video -->
+							</div><!-- video_overlay -->
 
-					<?php } ?>
-		
-				<?php endwhile; ?>
+							<img src="<?php bloginfo('template_directory');?>/images/video-two.jpg" alt="" />
+
+						</div><!-- single_video_thumbnail -->
+
+						<div class='video_title_wrapper'>
+						
+							<span class='video_title'>Learn why we’re considered the top law firm in Georgia</span><!-- video_title -->
+						
+						</div><!-- video_title_wrapper -->
+
+					</a>
+				
+				</div><!-- single_video -->
+
+				<div class='single_video'>
+				
+					<a href="">
+					
+						<div class='single_video_thumbnail'>
+									
+							<div class='video_overlay'>
+
+								<?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
+
+							</div><!-- video_overlay -->
+
+							<img src="<?php bloginfo('template_directory');?>/images/video-two.jpg" alt="" />
+
+						</div><!-- single_video_thumbnail -->
+
+						<div class='video_title_wrapper'>
+						
+							<span class='video_title'>Learn why we’re considered the top law firm in Georgia</span><!-- video_title -->
+						
+						</div><!-- video_title_wrapper -->
+
+					</a>
+				
+				</div><!-- single_video -->
 			
-			<?php endif; ?>
-		
-		</div><!-- video_center_wrapper -->
-	
-	</div><!-- page_wrapper -->
-	
+			</div><!-- video_wrapper -->
+
+		</div><!-- page_wrapper -->
+
 </div><!-- internal_main -->
+
+				
+		
+	
 
 <?php get_footer(); ?>
 
