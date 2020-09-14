@@ -95,6 +95,9 @@ h1.internal_title {
       padding: 17px 0 14px;
       @include quick_type(15px, 20px, null);
     }
+    @include mq(small_laptop) {
+      padding: 21px 0;
+    }
   }
 }
 

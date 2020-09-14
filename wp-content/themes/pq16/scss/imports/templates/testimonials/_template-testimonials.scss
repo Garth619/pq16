@@ -2,8 +2,15 @@
   padding: 33px 30px 20px;
   @include mq(small_tablet) {
     padding: 38px 42px 40px;
-    max-width: 825px;
+    max-width: 890px;
     @include margin_lr;
+  }
+  @include mq(small_laptop) {
+    padding: 44px 42px 40px;
+  }
+  @include mq(small_monitor) {
+    padding: 61px 42px 63px;
+    max-width: 1000px;
   }
 }
 
@@ -16,6 +23,9 @@
     max-width: 100%;
     @include flex(space-between);
   }
+  @include mq(small_laptop) {
+    margin-top: 44px;
+  }
   p {
     margin-bottom: 8px;
   }
@@ -23,6 +33,12 @@
 
 .testimonial_col {
   flex-basis: 48%;
+  @include mq(large_laptop) {
+    flex-basis: 47.5%;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 48%;
+  }
 }
 
 .single_testimonial {
@@ -34,15 +50,36 @@
   @include mq(small_tablet) {
     padding: 49px 35px;
   }
+  @include mq(large_laptop) {
+    margin-bottom: 35px;
+    padding: 49px 45px;
+  }
+  @include mq(small_monitor) {
+    padding: 63px 45px;
+    margin-bottom: 39px;
+  }
   img.testi_stars {
     width: 132px;
     @include image();
+    @include mq(small_laptop) {
+      width: 153px;
+    }
+    @include mq(small_monitor) {
+      width: 169px;
+    }
   }
   img.testi_icon {
     @include box(87px);
     @include abs(10px, 0, null, null);
     @include mq(small_tablet) {
       top: 24px;
+    }
+    @include mq(small_laptop) {
+      @include abs(21px, 0, null, null);
+      @include box(93px);
+    }
+    @include mq(small_monitor) {
+      top: 40px;
     }
   }
   .testi_intro {
@@ -55,6 +92,18 @@
         weight: 700,
       )
     );
+    @include mq(small_laptop) {
+      margin-top: 37px;
+      @include quick_type(18px, 24px, null);
+    }
+    @include mq(large_laptop) {
+      margin-top: 29px;
+      @include quick_type(20px, 26px, null);
+    }
+    @include mq(small_monitor) {
+      margin-top: 52px;
+      @include quick_type(22px, 28px, null);
+    }
   }
   .testi_descrip {
     @include type(
@@ -64,6 +113,16 @@
         family: $thirdfont,
       )
     );
+    @include mq(small_laptop) {
+      margin-top: 14px;
+      @include quick_type(15px, 20px, null);
+    }
+    @include mq(large_laptop) {
+      margin-top: 9px;
+    }
+    @include mq(small_monitor) {
+      @include quick_type(17px, 26px, null);
+    }
   }
   span.testi_name {
     display: block;
@@ -78,6 +137,15 @@
         transform: uppercase,
       )
     );
+    @include mq(small_laptop) {
+      font-size: 13px;
+    }
+    @include mq(large_laptop) {
+      margin-top: 26px;
+    }
+    @include mq(small_monitor) {
+      font-size: 15px;
+    }
     &:before {
       vertical-align: top;
       margin-top: 6px;
@@ -86,6 +154,9 @@
       background: $color_bright_one;
       @include box(3px);
       @include contentdisplay(inline-block);
+      @include mq(small_laptop) {
+        margin-top: 5px;
+      }
     }
   }
 }
