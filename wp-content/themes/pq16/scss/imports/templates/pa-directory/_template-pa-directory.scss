@@ -8,6 +8,16 @@
   @include mq(large_laptop) {
     max-width: 1115px;
   }
+  @include mq(small_monitor) {
+    margin-bottom: -50px;
+  }
+}
+
+h1.pa_title {
+  padding-bottom: 30px;
+  @include mq(large_laptop) {
+    padding-bottom: 40px;
+  }
 }
 
 ul.pa_directory_top_menu {
@@ -31,7 +41,10 @@ ul.pa_directory_top_menu {
       )
     );
     @include mq(small_laptop) {
-      margin-top: 36px;
+      margin-bottom: 36px;
+    }
+    @include mq(small_monitor) {
+      margin-bottom: 62px;
     }
     > a {
       padding-bottom: 10px;
@@ -42,12 +55,12 @@ ul.pa_directory_top_menu {
     }
   }
   div {
-    margin-top: 20px;
+    margin-top: 16px;
     ul {
       li {
         @include type(
           (
-            size: 16px,
+            size: 15px,
             spacing: 0.4px,
             family: $primaryfont,
             weight: 600,
@@ -75,6 +88,9 @@ ul.pa_directory_top_menu {
         }
         &:nth-last-of-type(-n + 4) {
           a {
+            @include mq(large_laptop) {
+              border: none;
+            }
           }
         }
         a {

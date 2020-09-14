@@ -237,14 +237,14 @@ jQuery(document).ready(function ($) {
   var macyOptions = {
     columns: 4,
     margin: {
-      x: 34,
-      y: 0,
+      x: 41,
+      y: 10,
     },
     breakAt: {
       1695: {
         margin: {
           x: 35,
-          y: 0,
+          y: 10,
         },
       },
       1380: 3,
@@ -252,7 +252,7 @@ jQuery(document).ready(function ($) {
       767: {
         margin: {
           x: 0,
-          y: 8,
+          y: 0,
         },
         columns: 1,
       },

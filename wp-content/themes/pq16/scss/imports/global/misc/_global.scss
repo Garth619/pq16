@@ -46,19 +46,7 @@
 }
 
 #page_wrapper.one_col {
-  // padding-top: 22px;
-  // @include mq(small_tablet) {
-  //   padding-top: 38px;
-  // }
-  @include mq(small_laptop) {
-    display: block;
-  }
-  // @include mq(large_laptop) {
-  //   padding-top: 50px;
-  // }
-  // @include mq(small_monitor) {
-  //   padding-top: 68px;
-  // }
+  display: block;
 }
 
 #page_content {
