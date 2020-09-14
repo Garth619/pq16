@@ -52,7 +52,7 @@
   transition: all 200ms ease-in-out;
   @include type(
     (
-      size: 14px,
+      size: 12px,
       height: 16px,
       family: $primaryfont,
       color: $color_light_one,
@@ -61,9 +61,18 @@
       transform: uppercase,
     )
   );
+  @include mq(small_tablet) {
+    padding: 17px 35px;
+  }
+  @include mq(small_laptop) {
+    font-size: 14px;
+  }
   @include mq(large_laptop) {
-    padding: 20px 50px;
+    padding: 24px 50px;
     @include quick_type(16px, 18px, null);
+  }
+  @include mq(small_monitor) {
+    padding: 20px 50px;
   }
   &:hover {
     background: $color_bright_three;

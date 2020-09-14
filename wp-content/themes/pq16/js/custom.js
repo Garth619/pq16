@@ -247,7 +247,8 @@ jQuery(document).ready(function ($) {
           y: 0,
         },
       },
-      1275: 2,
+      1380: 3,
+      1066: 2,
       767: {
         margin: {
           x: 0,

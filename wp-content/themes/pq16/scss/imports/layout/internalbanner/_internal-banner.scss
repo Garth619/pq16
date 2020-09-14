@@ -1,15 +1,18 @@
 #internal_banner {
   position: relative;
   display: none;
-  @include mq(small_laptop) {
+  @include mq(small_tablet) {
     display: block;
-    padding: 40px 20px;
+    padding: 78px 20px;
+  }
+  @include mq(small_laptop) {
+    padding: 61px 20px;
   }
   @include mq(large_laptop) {
-    padding: 70px 20px;
+    padding: 56px 20px;
   }
   @include mq(small_monitor) {
-    padding: 97px 20px;
+    padding: 95px 20px;
   }
 }
 
@@ -33,11 +36,20 @@ span.banner_title {
       weight: 700,
     )
   );
+  @include mq(small_tablet) {
+    max-width: 467px;
+    margin-bottom: 20px;
+    @include quick_type(35px, 35px, null);
+  }
   @include mq(small_laptop) {
-    max-width: 570px;
+    max-width: 568px;
+    @include quick_type(40px, 45px, null);
   }
   @include mq(large_laptop) {
-    max-width: 680px;
+    max-width: 630px;
+    @include quick_type(45px, 50px, null);
+  }
+  @include mq(small_monitor) {
     @include quick_type(50px, 55px, null);
   }
 }

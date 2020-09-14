@@ -1,8 +1,12 @@
 .pa_directory_page_wrapper {
-  margin-bottom: -35px;
+  margin-bottom: -50px;
   @include mq(small_laptop) {
     max-width: 915px;
+    margin-bottom: -15px;
     @include margin_lr;
+  }
+  @include mq(large_laptop) {
+    max-width: 1115px;
   }
 }
 
@@ -15,7 +19,7 @@ ul.pa_directory_top_menu {
     }
   }
   > li {
-    margin-top: 30px;
+    margin-bottom: 30px;
     @include type(
       (
         size: 15px,
@@ -26,6 +30,9 @@ ul.pa_directory_top_menu {
         transform: uppercase,
       )
     );
+    @include mq(small_laptop) {
+      margin-top: 36px;
+    }
     > a {
       padding-bottom: 10px;
       border-bottom: 4px solid $color_bright_two;
@@ -55,6 +62,13 @@ ul.pa_directory_top_menu {
         &:nth-last-of-type(-n + 2) {
           a {
             @include mq(small_tablet) {
+              border: none;
+            }
+          }
+        }
+        &:nth-last-of-type(-n + 3) {
+          a {
+            @include mq(tablet) {
               border: none;
             }
           }

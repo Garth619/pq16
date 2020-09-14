@@ -26,6 +26,9 @@
     margin: 66px 0 0 0;
     padding: 0;
   }
+  @include mq(large_laptop) {
+    margin: 61px 0 0 0;
+  }
   @include mq(small_monitor) {
     margin: 77px 0 0 0;
   }
@@ -43,19 +46,19 @@
 }
 
 #page_wrapper.one_col {
-  padding-top: 22px;
-  @include mq(small_tablet) {
-    padding-top: 38px;
-  }
+  // padding-top: 22px;
+  // @include mq(small_tablet) {
+  //   padding-top: 38px;
+  // }
   @include mq(small_laptop) {
     display: block;
   }
-  @include mq(large_laptop) {
-    padding-top: 50px;
-  }
-  @include mq(small_monitor) {
-    padding-top: 68px;
-  }
+  // @include mq(large_laptop) {
+  //   padding-top: 50px;
+  // }
+  // @include mq(small_monitor) {
+  //   padding-top: 68px;
+  // }
 }
 
 #page_content {

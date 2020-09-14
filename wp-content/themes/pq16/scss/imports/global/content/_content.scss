@@ -32,6 +32,8 @@ h1.page_title {
 }
 
 h1.internal_title {
+  padding-top: 22px;
+  padding-bottom: 30px;
   @include type(
     (
       size: 30px,
@@ -41,12 +43,16 @@ h1.internal_title {
     )
   );
   @include mq(small_tablet) {
+    padding-top: 38px;
     @include quick_type(34px, 36px, null);
   }
+
   @include mq(large_laptop) {
+    padding-top: 50px;
     @include quick_type(38px, 40px, null);
   }
   @include mq(small_monitor) {
+    padding-top: 68px;
     @include quick_type(45px, 50px, null);
   }
 }
