@@ -6,7 +6,9 @@
 #contact_wrapper {
   text-align: center;
   margin-top: 30px;
-
+  @include mq(small_monitor) {
+    margin-top: 38px;
+  }
   > span,
   a.contact_phone {
     display: block;

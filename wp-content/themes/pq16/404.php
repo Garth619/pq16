@@ -2,40 +2,29 @@
 
 <div id="internal_main">
 
-<div id='internal_banner'>
+	<div id='page_wrapper'>
 	
-		<div id='internal_banner_content'>
+   	<div id='page_content'>
 
-			<h1 class="internal_title banner_title"><?php the_field( 'not_found_title','option'); ?></h1><!-- banner_title -->
-				
-		</div><!-- internal_banner_content -->
+		 	<h1 class="page_title"><?php the_field( 'not_found_title','option'); ?></h1>
+    
+    	<div id='page_content_inner' class="content">
 
-		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
-		
-		<img id='banner_hero' src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
+					<?php the_field( 'not_found_content','option'); ?>
 
-	</div><!-- internal_banner -->
+				</div><!-- page_content_inner -->
+    	
+    	</div><!-- page_content -->
 
-	<div id='page_wrapper' class="not_found_page_wrapper one_col">
+			<?php if(!get_field('disable_sidebar')) {
 
-	<div id='not_found_wrapper'>
-	
-		
-	
-			<div id='not_found_content' class="content">
-				
-				<?php the_field( 'not_found_content','option'); ?>
-				
-			</div><!-- not_found_content -->
-	
-		</div><!-- not_found_wrapper -->
+				get_sidebar();
 
-		<?php get_template_part('page-templates/includes/main_form/template','main_form');?>
+			} ?>
 
 	</div><!-- page_wrapper -->
 
 </div><!-- internal_main -->
-
 		
-			
+
 <?php get_footer(); ?>

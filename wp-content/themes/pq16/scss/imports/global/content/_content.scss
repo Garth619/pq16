@@ -252,9 +252,11 @@ h1.internal_title {
       @include quick_type(19px, 26px, null);
     }
   }
-  a {
-    color: $color_bright_three;
+  a,
+  span.go_back {
+    color: $color_bright_two;
     transition: all 200ms ease-in-out;
+    text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
