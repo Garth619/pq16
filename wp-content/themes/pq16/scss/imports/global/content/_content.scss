@@ -91,6 +91,30 @@ h1.internal_title {
       padding: 21px 0;
     }
   }
+  ul {
+    list-style: none;
+    padding: 15px 0;
+    text-align: center;
+    li {
+      padding: 0;
+      //margin: 0 5px;
+      display: inline;
+      &:after {
+        content: "";
+        display: none;
+        vertical-align: top;
+        border-radius: 50%;
+        margin: 7px 5px 0 7px;
+        background: $color_bright_one;
+        @include box(4px);
+      }
+      &:first-of-type {
+        &:after {
+          display: inline-block;
+        }
+      }
+    }
+  }
   span,
   li {
     @include margin_lr;
@@ -108,16 +132,6 @@ h1.internal_title {
     );
     @include mq(small_tablet) {
       @include quick_type(15px, 20px, null);
-    }
-  }
-  ul {
-    list-style: none;
-    padding: 15px 0;
-    text-align: center;
-    li {
-      padding: 0;
-      margin: 0 5px;
-      display: inline;
     }
   }
 }
