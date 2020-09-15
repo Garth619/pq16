@@ -29,7 +29,7 @@
 
 			<div id='att_view_accolades'>
 		
-				<span>View Professional Details</span>
+				<span><?php the_field( 'mobile_sidebar_slide_title' ); ?></span>
 		
 			</div><!-- att_view_accolades -->
 		

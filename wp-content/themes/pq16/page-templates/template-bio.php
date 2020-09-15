@@ -9,14 +9,23 @@ get_header(); ?>
 <div id='att_banner'>
 	
 	<div id='att_banner_content'>
-		
-			<h1 class="att_title"><?php the_title();?></h1><!-- banner_title -->
 
-			<div class='att_subtitle'>
+			<div id='att_banner_left'>
 			
-				<span>Founding Attorney</span>
 			
-			</div><!-- att_subtitle -->
+			</div><!-- att_banner_left -->
+
+			<div id='att_banner_right'>
+			
+				<h1 class="att_title"><?php the_title();?></h1><!-- banner_title -->
+
+				<div class='att_subtitle'>
+			
+					<span><?php the_field( 'position' ); ?></span>
+			
+				</div><!-- att_subtitle -->
+
+			</div><!-- att_banner_right -->
 
 	</div><!-- att_banner_content -->
 	
@@ -34,14 +43,11 @@ get_header(); ?>
 
 			<div id='page_content_inner' class="content">
 				
-					<?php get_template_part( 'loop', 'page' ); ?>
+				<?php the_field( 'attorney_content' ); ?>
 
-				</div><!-- page_content_inner -->
+			</div><!-- page_content_inner -->
     	
-    	</div><!-- page_content -->
-
-		
-		 
+    </div><!-- page_content -->
 
 	</div><!-- page_wrapper -->
 
