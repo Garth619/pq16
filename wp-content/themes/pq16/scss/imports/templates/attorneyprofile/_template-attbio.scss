@@ -22,6 +22,9 @@ body.page-template-template-bio {
     @include mq(small_laptop) {
       margin-top: 55px;
     }
+    @include mq(large_laptop) {
+      margin-top: 36px;
+    }
   }
 }
 
@@ -34,7 +37,11 @@ body.page-template-template-bio {
   }
   @include mq(small_laptop) {
     min-height: 203px;
+    padding: 0 75px;
     height: auto;
+  }
+  @include mq(large_laptop) {
+    min-height: 213px;
   }
 }
 
@@ -46,13 +53,27 @@ body.page-template-template-bio {
   @include mq(small_tablet) {
     padding: 43px 0 18px;
   }
+  @include mq(small_laptop) {
+    max-width: 100%;
+    @include flex();
+  }
 }
 
 #att_banner_left {
-  display: none;
+  @include mq(small_laptop) {
+    flex-basis: 336px;
+    flex-shrink: 0;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 355px;
+  }
 }
 
 #att_banner_right {
+  @include mq(small_laptop) {
+    flex-grow: 1;
+    padding-left: 88px;
+  }
 }
 
 h1.att_title {
@@ -67,6 +88,9 @@ h1.att_title {
   );
   @include mq(small_tablet) {
     @include quick_type(34px, 36px, null);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(38px, 40px, null);
   }
 }
 
@@ -107,6 +131,10 @@ h1.att_title {
       padding: 17px 0 16px;
       @include quick_type(14px, 16px, 3.5px);
     }
+    @include mq(large_laptop) {
+      padding: 21px 0 19px;
+      @include quick_type(15px, 17px, null);
+    }
   }
 }
 
@@ -116,6 +144,14 @@ h1.att_title {
   @include mq(small_tablet) {
     flex-basis: 336px;
     flex-shrink: 0;
+  }
+  @include mq(small_laptop) {
+    margin-top: -160px;
+    box-shadow: 5px 5px 20px #00000029;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 355px;
+    margin-top: -181px;
   }
 }
 
@@ -175,6 +211,7 @@ h1.att_title {
     padding: 38px 35px 20px;
     display: block;
     position: static;
+    box-shadow: none;
   }
 }
 
@@ -182,6 +219,9 @@ h1.att_title {
   margin-bottom: 40px;
   @include mq(small_laptop) {
     margin-bottom: 28px;
+  }
+  @include mq(large_laptop) {
+    margin-bottom: 41px;
   }
   &:last-of-type {
     margin-bottom: 0;
@@ -232,4 +272,7 @@ h1.att_title {
 
 #att_intro {
   @include quick_type(16px, 28px, null);
+  @include mq(large_laptop) {
+    @include quick_type(18px, 30px, null);
+  }
 }
