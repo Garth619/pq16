@@ -23,18 +23,16 @@ get_header(); ?>
 </div><!-- att_banner -->
 
 	<div id='page_wrapper'>
-	
-   	<div id='page_content'>
-		 
-		 <?php if(!get_field('disable_sidebar')) {
+
+		<?php if(!get_field('disable_sidebar')) {
 
 			get_sidebar('bio');
 
 		} ?>
+	
+   	<div id='page_content'>
 
-		
-
- 				<div id='page_content_inner' class="content">
+			<div id='page_content_inner' class="content">
 				
 					<?php get_template_part( 'loop', 'page' ); ?>
 

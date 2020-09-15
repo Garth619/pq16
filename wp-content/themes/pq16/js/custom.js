@@ -296,6 +296,10 @@ jQuery(document).ready(function ($) {
     $(this).next(".sidebar_blog").slideToggle();
   });
 
+  $("#att_view_accolades").on("click", function (e) {
+    $(this).next(".sidebar_bio").slideToggle();
+  });
+
   /* Sidebar Current Class for Blog Sidebars
 --------------------------------------------------------------------------------------- */
 

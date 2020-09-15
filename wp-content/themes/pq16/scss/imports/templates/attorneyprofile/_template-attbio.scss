@@ -1,6 +1,14 @@
 body.page-template-template-bio {
   #page_wrapper {
     margin-top: -234px;
+    padding: 0 30px 27px;
+    @include mq(small_tablet) {
+      margin-top: -297px;
+      padding: 0 75px 27px;
+    }
+  }
+  #page_content_inner {
+    margin-top: 57px;
   }
 }
 
@@ -8,11 +16,19 @@ body.page-template-template-bio {
   padding: 0 30px;
   height: 377px;
   background: $color_light_ten;
+  @include mq(small_tablet) {
+    height: 480px;
+  }
 }
 
 #att_banner_content {
   text-align: center;
   padding: 23px 0 18px;
+  max-width: 450px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    padding: 43px 0 18px;
+  }
 }
 
 h1.att_title {
@@ -25,6 +41,9 @@ h1.att_title {
       weight: 600,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(34px, 36px, null);
+  }
 }
 
 .att_subtitle {
@@ -37,13 +56,13 @@ h1.att_title {
   &:before {
     height: 4px;
     @include mq(small_tablet) {
-      height: 6px;
+      height: 4px;
     }
   }
   &:after {
     height: 2px;
     @include mq(small_tablet) {
-      height: 3px;
+      height: 2px;
     }
   }
   span {
@@ -60,7 +79,16 @@ h1.att_title {
         align: center,
       )
     );
+    @include mq(small_tablet) {
+      padding: 17px 0 16px;
+      @include quick_type(14px, 16px, 3.5px);
+    }
   }
+}
+
+#sidebar_bio_wrapper {
+  max-width: 450px;
+  @include margin_lr;
 }
 
 #att_bio_img {
@@ -84,7 +112,9 @@ body.page-template-template-bio {
   background: $color_light_one;
   box-shadow: 5px 5px 20px #00000029;
   padding: 18px 20px;
-  max-width: 300px;
+  @include mq(small_tablet) {
+    padding: 18px 27px;
+  }
   span {
     @include flex(space-between, center);
     @include type(
@@ -108,10 +138,14 @@ body.page-template-template-bio {
 
 .sidebar_bio {
   width: 100%;
+  display: none;
   background: $color_light_one;
   padding: 28px 20px 15px;
   box-shadow: 5px 5px 20px #00000029;
   @include abs(50px, null, null, 0, -1);
+  @include mq(small_tablet) {
+    padding: 28px 45px 15px;
+  }
 }
 
 .sidebar_bio_list {
