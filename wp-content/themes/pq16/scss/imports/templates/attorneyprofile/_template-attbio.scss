@@ -1,162 +1,68 @@
-body.page-template-template-bio {
-  #internal_banner {
-    @include mq(small_laptop) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    @include mq(small_monitor) {
-      align-items: flex-end;
-    }
-  }
-  #internal_banner_content {
-    @include mq(small_laptop) {
-      padding-left: 55px;
-      padding-right: 55px;
-      width: 100%;
-      text-align: left;
-      @include flex();
-    }
-    @include mq(large_laptop) {
-      padding-left: 81px;
-      padding-right: 81px;
-    }
-    @include mq(small_monitor) {
-      max-width: 1542px;
-      padding-left: 0;
-      padding-right: 40px;
-      padding-bottom: 70px;
-    }
-  }
-  .banner_title {
-    @include mq(small_laptop) {
-      text-align: left;
-      display: inline-block;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    &:after {
-      @include mq(small_laptop) {
-        background: $color_bright_two;
-        margin: 10px 0 10px;
-        height: 3px;
-        min-width: 530px;
-        @include contentdisplay();
-      }
-      @include mq(small_monitor) {
-        min-width: 575px;
-      }
-    }
-  }
-  #page_wrapper {
-    @include mq(small_laptop) {
-      padding-top: 14px;
-    }
-  }
-  #page_content_inner {
-    @include mq(small_laptop) {
-      padding-top: 0;
-    }
-  }
+#att_banner {
+  padding: 0 30px;
 }
 
-#att_banner_left {
-  @include mq(small_laptop) {
-    @include box(350px, 1px);
-  }
-  @include mq(large_laptop) {
-    width: 430px;
-  }
-  @include mq(small_monitor) {
-    width: 475px;
-  }
+#att_banner_content {
+  text-align: center;
+  padding: 23px 0 18px;
 }
 
-#att_banner_right {
-  @include mq(small_laptop) {
-    padding-left: 60px;
-    width: calc(100% - 350px);
-    #att_banner_header_wrapper {
-      margin-top: 70px;
-    }
-  }
-  @include mq(large_laptop) {
-    width: calc(100% - 430px);
-  }
-  @include mq(small_monitor) {
-    padding-left: 150px;
-
-    width: calc(100% - 475px);
-  }
-}
-
-span#bio_position {
-  display: block;
-  margin-top: 20px;
+h1.att_title {
+  padding-bottom: 20px;
   @include type(
     (
-      size: 19px,
-      height: 22px,
-      spacing: 1.2px,
-      family: $primaryfont,
-      weight: 700,
-      transform: uppercase,
+      size: 30px,
+      height: 32px,
+      family: $secondaryfont,
+      weight: 600,
     )
   );
-  @include mq(small_laptop) {
-    text-align: left;
-    margin-top: 9px;
-    color: $color_light_one;
+}
+
+.att_subtitle {
+  &:before,
+  &:after {
+    width: 100%;
+    background: $color_bright_two;
+    @include contentdisplay();
   }
-  @include mq(small_monitor) {
-    font-size: 21px;
-    letter-spacing: 4.2px;
+  &:before {
+    height: 4px;
+    @include mq(small_tablet) {
+      height: 6px;
+    }
+  }
+  &:after {
+    height: 2px;
+    @include mq(small_tablet) {
+      height: 3px;
+    }
+  }
+  span {
+    display: block;
+    padding: 15px 0 14px;
+    @include type(
+      (
+        size: 12px,
+        height: 15px,
+        spacing: 1.8px,
+        weight: 800,
+        family: $primaryfont,
+        transform: uppercase,
+        align: center,
+      )
+    );
   }
 }
 
-.att_image_wrapper {
-  margin: 0px auto;
-  max-width: 340px;
-  background: $color_dark_one;
-  padding: 20px;
-  @include mq(small_tablet) {
-    margin-bottom: 20px;
-  }
+#att_bio_img {
   img {
     @include image();
   }
 }
 
-#page_content {
-  .att_image_wrapper {
-    @include mq(small_laptop) {
-      display: none;
-    }
-  }
-}
-
-.placeholder {
-  position: relative;
-}
-
-.placeholder_inner {
-  background: $color_light_two;
-  padding: 0 20px;
-  @include box(100%);
-  @include abs(0, null, null, 0);
-  @include flex(center, center);
-  &:after {
-    color: $color_dark_one;
-    @include contentdisplay(block, "Profile Coming Soon");
-    @include type(
-      (
-        size: 17px,
-        height: 19px,
-        spacing: 1.7px,
-        weight: 700,
-        align: center,
-        transform: uppercase,
-        family: $primaryfont,
-      )
-    );
+body.page-template-template-bio {
+  #page_content {
+    padding: 0;
   }
 }
