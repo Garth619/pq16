@@ -42,7 +42,13 @@ get_header(); ?>
    	<div id='page_content'>
 
 			<div id='page_content_inner' class="content">
+
+				<div id='att_intro'>
 				
+					<?php the_field( 'attorney_intro' ); ?>
+				
+				</div><!-- att_intro -->
+
 				<?php the_field( 'attorney_content' ); ?>
 
 			</div><!-- page_content_inner -->
