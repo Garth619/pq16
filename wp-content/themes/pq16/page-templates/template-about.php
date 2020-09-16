@@ -36,7 +36,7 @@ get_header(); ?>
 
 						<div id='about_top_content_inner'>
 						
-							<p>The attorneys at Ring Jimenez, P.C. will provide you with aggressive representation in court and the kindness you need during this difficult time. We understand that pursuing a legal case can be burdensome, but you are not alone.</p>
+							<p>Ring Jimenez, P.C. is a local New Mexico law office that represents injured people and family members who have lost loved ones throughout the state. Our attorneys live and work in-state and understand the specific challenges faced by those injured in New Mexico..</p>
 
 						</div><!-- about_top_content_inner -->
 				

@@ -31,6 +31,10 @@
     background: pink;
     @include flex(flex-end);
   }
+  @include mq(large_laptop) {
+    max-width: 1170px;
+    margin-top: 36px;
+  }
 }
 
 #about_img_wrapper {
@@ -39,6 +43,10 @@
     flex-basis: 603px;
     flex-shrink: 0;
     margin-right: -30px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 733px;
+    margin-right: -93px;
   }
   img#about_img {
     @include image();
@@ -51,6 +59,10 @@
     flex-shrink: 0;
     margin-top: 46px;
     position: relative;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 507px;
+    margin-top: 54px;
   }
   img#about_icon {
     display: none;
@@ -81,7 +93,10 @@
     padding: 63px 50px 57px;
     box-shadow: 10px 10px 30px #00000029;
   }
-
+  @include mq(large_laptop) {
+    padding: 75px 50px;
+    @include quick_type(18px, 30px, null);
+  }
   p {
     margin-bottom: 15px;
     &:last-of-type {
@@ -107,5 +122,8 @@ h1.about_title {
     max-width: 950px;
     padding: 42px 75px 33px;
     @include margin_lr;
+  }
+  @include mq(large_laptop) {
+    padding: 54px 75px 52px;
   }
 }
