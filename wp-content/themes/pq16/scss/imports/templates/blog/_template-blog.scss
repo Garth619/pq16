@@ -161,11 +161,13 @@ h2.blog_header {
   padding: 25px 32px 20px;
   width: 100%;
   max-width: 300px;
+  display: none;
   @include abs(50px, null, null, 0);
   @include mq(small_laptop) {
     padding: 39px 38px 25px;
     position: static;
     max-width: 100%;
+    display: block !important;
   }
   .widget {
     background: transparent;

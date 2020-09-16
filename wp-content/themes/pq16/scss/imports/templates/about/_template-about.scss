@@ -1,221 +1,111 @@
-span.about_title {
-  display: block;
-  @include type(
-    (
-      size: 38px,
-      height: 40px,
-      family: $primaryfont,
-      weight: 700,
-      align: center,
-    )
-  );
-  @include mq(small_monitor) {
-    @include quick_type(40px, 45px, null);
-  }
+#about_top {
+  padding: 0 30px;
   &:after {
-    background: $color_bright_two;
-    max-width: 500px;
-    margin-top: 22px;
-    @include margin_lr;
-    @include box(100%, 3px);
+    background: $color_light_ten;
+    @include box(100%, 515px);
+    @include abs(0, null, null, 0);
     @include contentdisplay();
   }
-  &.firm_title {
+}
+
+#about_top_inner {
+  position: relative;
+  z-index: 1;
+  @include mq(small_tablet) {
+    max-width: 520px;
+    @include margin_lr;
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+  }
+}
+
+#about_intro_wrapper {
+  margin-top: 20px;
+  box-shadow: 10px 10px 30px #00000029;
+  @include mq(small_laptop) {
+    margin-top: 29px;
+    box-shadow: none;
+    max-width: 1050px;
+    @include margin_lr;
+    background: pink;
+    @include flex(flex-end);
+  }
+}
+
+#about_img_wrapper {
+  overflow: hidden;
+  @include mq(small_laptop) {
+    flex-basis: 603px;
+    flex-shrink: 0;
+    margin-right: -30px;
+  }
+  img#about_img {
+    @include image();
+  }
+}
+
+#about_top_content {
+  @include mq(small_laptop) {
+    flex-basis: 441px;
+    flex-shrink: 0;
+    margin-top: 46px;
+    position: relative;
+  }
+  img#about_icon {
     display: none;
     @include mq(small_laptop) {
       display: block;
-    }
-    &:after {
-      max-width: 875px;
+      @include box(61px);
+      @include abs(-33px, 33px, null, null);
     }
   }
 }
 
-.about_description {
-  @include mq(mobile) {
-    text-align: center;
-    max-width: 535px;
-    @include margin_lr;
-  }
-  @include mq(small_laptop) {
-    margin-top: 40px;
-    max-width: 640px;
-  }
-}
-
-#about_quote {
-  display: block;
-  position: relative;
-  margin-top: 80px;
-  max-width: 318px;
-  @include margin_lr;
+#about_top_content_inner {
+  background: $color_light_one;
+  padding: 28px 28px 32px;
   @include type(
     (
-      size: 26px,
-      height: 36px,
+      size: 15px,
+      height: 22px,
       family: $primaryfont,
-      align: center,
+      weight: 700,
     )
   );
-  @include mq(mobile) {
-    max-width: 400px;
-    @include quick_type(31px, 38px, null);
+  @include mq(small_tablet) {
+    padding: 33px 68px 47px;
+    @include quick_type(16px, 28px, null);
   }
   @include mq(small_laptop) {
-    margin-top: 96px;
-    margin-bottom: 130px;
-    max-width: 520px;
-    @include quick_type(36px, 42px, null);
+    padding: 63px 50px 57px;
+    box-shadow: 10px 10px 30px #00000029;
   }
-  @include mq(large_laptop) {
-    @include quick_type(40px, 50px, null);
-  }
-  @include mq(small_monitor) {
-    max-width: 705px;
-    margin-top: 125px;
-  }
+
   p {
-    margin-bottom: 10px;
-  }
-}
-
-#about_quote_img {
-  width: 100%;
-  @include abs(-50px, null, null, 0);
-  @include flex(center);
-}
-
-#about_quote_inner {
-  position: relative;
-  z-index: 1;
-}
-
-#meet_attorneys {
-  margin-top: 65px;
-}
-
-#meet_attorneys_inner {
-  margin-top: 45px;
-  margin-bottom: -50px;
-  @include mq(small_tablet) {
-    margin-top: 65px;
-    max-width: 745px;
-    @include margin_lr;
-    @include flex(space-between, null, null, wrap);
-  }
-  @include mq(large_laptop) {
-    max-width: 1125px;
-  }
-  @include mq(small_monitor) {
-    margin-top: 84px;
-  }
-  &:after {
-    @include mq(small_tablet) {
-      flex-basis: 47%;
-      @include contentdisplay();
-    }
-    @include mq(large_laptop) {
-      flex-basis: 23%;
+    margin-bottom: 15px;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 }
 
-.single_att {
-  text-align: center;
-  max-width: 340px;
-  margin-bottom: 50px;
+h1.about_title {
+}
+
+.about_subtitle {
+  max-width: 800px;
   @include margin_lr;
+}
+
+#about_bottom {
+  padding: 33px 30px 20px;
   @include mq(small_tablet) {
-    flex-basis: 47%;
-    max-width: 100%;
-    margin: 0 0 50px;
+    padding: 42px 75px 20px;
   }
-  @include mq(large_laptop) {
-    flex-basis: 23%;
-  }
-  &:hover {
-    a {
-      .single_attorney_profile {
-        .single_att_overlay {
-          opacity: 1;
-        }
-        img {
-          transform: scale(1.15);
-        }
-      }
-    }
-    span.button_two {
-      border: 2px solid $color_bright_two;
-      color: $color_light_one;
-      background: $color_bright_two;
-    }
-  }
-  a {
-    text-decoration: none;
-    .single_attorney_profile {
-      position: relative;
-      overflow: hidden;
-      img {
-        width: 100%;
-        transform: scale(1);
-        transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-        @include image();
-      }
-      .single_att_overlay {
-        background: $color_light_rgba_four;
-        opacity: 0;
-        transition: all 200ms ease-in-out;
-        z-index: 1;
-        @include box(100%);
-        @include abs(0, null, null, 0);
-        @include flex(center, center);
-        &:before {
-          @include contentdisplay(block, "View Profile");
-          @include type(
-            (
-              size: 17px,
-              height: 19px,
-              spacing: 1.7px,
-              weight: 700,
-              transform: uppercase,
-              color: $color_light_one,
-              family: $primaryfont,
-            )
-          );
-        }
-      }
-    }
-    span {
-      &.single_att_name {
-        display: block;
-        margin-top: 25px;
-        @include type(
-          (
-            size: 30px,
-            height: 30px,
-            color: $color_dark_one,
-            family: $primaryfont,
-          )
-        );
-      }
-      &.single_att_position {
-        display: block;
-        margin-top: 13px;
-        margin-bottom: 25px;
-        @include type(
-          (
-            size: 17px,
-            height: 19px,
-            spacing: 1.7px,
-            weight: 700,
-            transform: uppercase,
-            color: $color_dark_one,
-            family: $primaryfont,
-          )
-        );
-      }
-    }
-    span.button_two {
-    }
+  @include mq(small_laptop) {
+    max-width: 950px;
+    padding: 42px 75px 33px;
+    @include margin_lr;
   }
 }

@@ -10,20 +10,32 @@ body.page-template-template-bio {
       margin-top: 0;
       padding: 0 75px 75px;
     }
+    @include mq(small_monitor) {
+      max-width: 1520px;
+      @include margin_lr;
+    }
   }
   #page_content {
     padding: 0;
     @include mq(small_laptop) {
       padding: 0px 0px 18px 88px;
     }
+    @include mq(small_monitor) {
+      padding: 0px 0px 18px 94px;
+    }
   }
   #page_content_inner {
-    margin-top: 57px;
-    @include mq(small_laptop) {
+    @include mq(small_tablet) {
       margin-top: 55px;
     }
+    @include mq(small_laptop) {
+    }
     @include mq(large_laptop) {
-      margin-top: 36px;
+      margin-top: 40px;
+    }
+    @include mq(small_monitor) {
+      max-width: 715px;
+      margin-top: 41px;
     }
   }
 }
@@ -41,7 +53,10 @@ body.page-template-template-bio {
     height: auto;
   }
   @include mq(large_laptop) {
-    min-height: 213px;
+    min-height: 211px;
+  }
+  @include mq(small_monitor) {
+    min-height: 238px;
   }
 }
 
@@ -56,6 +71,13 @@ body.page-template-template-bio {
   @include mq(small_laptop) {
     max-width: 100%;
     @include flex();
+  }
+  @include mq(large_laptop) {
+    padding: 45px 0 18px;
+  }
+  @include mq(small_monitor) {
+    padding: 63px 0 18px;
+    max-width: 1370px;
   }
 }
 
@@ -73,6 +95,10 @@ body.page-template-template-bio {
   @include mq(small_laptop) {
     flex-grow: 1;
     padding-left: 88px;
+  }
+  @include mq(small_monitor) {
+    padding-left: 94px;
+    max-width: 830px;
   }
 }
 
@@ -92,6 +118,10 @@ h1.att_title {
   @include mq(large_laptop) {
     @include quick_type(38px, 40px, null);
   }
+  @include mq(small_monitor) {
+    padding-bottom: 26px;
+    @include quick_type(45px, 40px, null);
+  }
 }
 
 .att_subtitle {
@@ -106,11 +136,17 @@ h1.att_title {
     @include mq(small_tablet) {
       height: 4px;
     }
+    @include mq(small_monitor) {
+      height: 6px;
+    }
   }
   &:after {
     height: 2px;
     @include mq(small_tablet) {
       height: 2px;
+    }
+    @include mq(small_monitor) {
+      height: 3px;
     }
   }
   span {
@@ -135,6 +171,10 @@ h1.att_title {
       padding: 21px 0 19px;
       @include quick_type(15px, 17px, null);
     }
+    @include mq(small_monitor) {
+      padding: 23px 0 20px;
+      @include quick_type(16px, 18px, null);
+    }
   }
 }
 
@@ -152,6 +192,10 @@ h1.att_title {
   @include mq(large_laptop) {
     flex-basis: 355px;
     margin-top: -181px;
+  }
+  @include mq(small_monitor) {
+    margin-top: -172px;
+    flex-basis: 368px;
   }
 }
 
@@ -209,7 +253,7 @@ h1.att_title {
   }
   @include mq(small_laptop) {
     padding: 38px 35px 20px;
-    display: block;
+    display: block !important;
     position: static;
     box-shadow: none;
   }
@@ -238,6 +282,9 @@ h1.att_title {
         transform: uppercase,
       )
     );
+    @include mq(small_monitor) {
+      @include quick_type(13px, 15px, null);
+    }
   }
   ul {
     list-style: none;
@@ -254,12 +301,19 @@ h1.att_title {
           family: $thirdfont,
         )
       );
+      @include mq(small_monitor) {
+        margin-bottom: 22px;
+        @include quick_type(16px, 20px, null);
+      }
       &:after {
         border-radius: 50%;
         background: $color_bright_two;
         @include abs(8px, null, null, 0);
         @include box(3px);
         @include contentdisplay();
+        @include mq(small_monitor) {
+          @include box(4px);
+        }
       }
       ul {
         li {
@@ -274,5 +328,31 @@ h1.att_title {
   @include quick_type(16px, 28px, null);
   @include mq(large_laptop) {
     @include quick_type(18px, 30px, null);
+  }
+}
+
+.placeholder {
+  position: relative;
+  .placeholder_inner {
+    background: $color_bright_three;
+    @include box(100%);
+    @include abs(0, null, null, 0);
+    @include flex(center, center);
+    &:after {
+      @include contentdisplay(block, "Profile Coming Soon");
+      @include type(
+        (
+          size: 14px,
+          family: $primaryfont,
+          color: $color_light_one,
+          spacing: 1.5px,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+      @include mq(small_tablet) {
+        font-size: 16px;
+      }
+    }
   }
 }

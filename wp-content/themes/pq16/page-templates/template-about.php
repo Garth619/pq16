@@ -6,100 +6,64 @@ get_header(); ?>
 
 <div id="internal_main">
 
-	<?php get_template_part('page-templates/includes/page_banner/template','page_banner'); ?>
+		<div id='about_top'>
+
+			<div id='about_top_inner'>
+			
+				<h1 class="internal_title center_title about_title"><?php the_title();?></h1>
+
+				<div class='inner_subtitle under_title about_subtitle'>
+
+					<ul>
+						<li>Experienced</li>
+						<li>Resourceful</li>
+						<li>Effective</li>
+				</ul>
 	
-	<div id='page_wrapper' class="one_col">
-	
-		<div id='about_top_wrapper'>
+				</div><!-- inner_subtitle -->
 
-		<span class='about_title firm_title'><?php the_field( 'about_firm_subtitle' ); ?></span><!-- about_title -->
-
-		<div class='about_description content'>
-		
-			<?php the_field( 'about_content' ); ?>
-		
-		</div><!-- about_description -->
-
-		<div id='about_quote'>
-
-			<div id='about_quote_inner'>
+				<div id='about_intro_wrapper'>
 			
-				<?php the_field( 'about_quote' ); ?>
-			
-			</div><!-- about_quote_inner -->
+					<div id='about_img_wrapper'>
+				
+						<img id='about_img' src='<?php bloginfo('template_directory');?>/images/img-team.jpg' alt=''/>
+				
+					</div><!-- about_img_wrapper -->
 
-			<div id="about_quote_img">
-			
-				<?php $about_quote_logo = get_field( 'about_quote_logo' ); ?>
-				
-				<?php if ( $about_quote_logo ) { ?>
-				
-					<img src="<?php echo $about_quote_logo['url']; ?>" alt="<?php echo $about_quote_logo['alt']; ?>" />
-				
-				<?php } ?>
-			
-			</div>
-			
-		</div><!-- about_quote -->
-		
-		</div><!-- about_top_wrapper -->
+					<div id='about_top_content' class="content">
 
-		<?php $meet_attorneys = get_field( 'meet_attorneys' ); ?>
-		
-		<?php if ( $meet_attorneys ): ?>
-			<div id='meet_attorneys'>
-		
-		<span class='about_title meet_title'><?php the_field( 'meet_the_attorneys_subtitle' ); ?></span><!-- about_title -->
+						<img id='about_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt="about icon svg"/>
 
-		<div id='meet_attorneys_inner'>
-			<?php foreach ( $meet_attorneys as $post ):  ?>
-			<?php setup_postdata ( $post ); ?>
-			<div class='single_att'>
+						<div id='about_top_content_inner'>
+						
+							<p>The attorneys at Ring Jimenez, P.C. will provide you with aggressive representation in court and the kindness you need during this difficult time. We understand that pursuing a legal case can be burdensome, but you are not alone.</p>
+
+						</div><!-- about_top_content_inner -->
 				
-				<a href="<?php the_permalink();?>">
-				
-					<div class='single_attorney_profile'>
+					</div><!-- about_top_content -->
+			
+				</div><!-- about_intro_wrapper -->
+
+			</div><!-- about_top_inner -->
+		
+		</div><!-- about_top -->
+
+		<div id='about_bottom'>
+		
+			<div id='about_bottom_inner' class="content">
+			
+				<h2>Superior New Mexico Accident Attorneys</h2>
+
+				<p>Iris L. M. Ring, Esq. and Francisco J. Jimenez, Esq. earned their legal degrees from the University of New Mexico, and prior to founding Ring Jimenez, P.C. practiced law in the state. Both Ms. Ring and Mr. Jimenez founded the firm with the purpose of providing the highest quality legal representation to every client. Our firm is made up of effective litigators who will not settle for anything less than what you and your family deserve.</p>
 					
-						<div class='single_att_overlay'></div><!-- single_att_overlay -->
-
-						<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
-
-						<?php if ( $attorney_profile ) : ?>
-		
-							<img class="att_image" src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
-
-							<?php else: ?>
-
-							<div class="placeholder">
-
-								<div class='placeholder_inner'></div><!-- placeholder_inner -->
-
-									<img class="att_image" src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' alt="Placeholder Profile Image"/>
-
-							</div><!-- placeholder -->
-
-						<?php endif;?>
+				<p>Our attorneys handle a wide variety of personal injury cases and are willing to travel throughout the state to meet with clients and investigate cases. We understand that an injury can happen anywhere and that you might not be able to travel because of your injuries. Our firm has the employees, resources and technology necessary to properly advocate on your behalf. Our attorneys and support staff are always available to our clients, and we are always willing to provide up-to-the-minute information on the status of our clients’ legal matters.</p>
 					
-					</div><!-- single_attorney_profile -->
-
-					<span class='single_att_name'><?php the_title();?></span><!-- single_att_name -->
-
-					<span class='single_att_position'><?php the_field( 'position' ); ?></span><!-- single_att_position -->
-
-					<span class='button_two'>Learn More</span><!-- button_two -->
-					
-				</a>
+				<p>When you hire Ring Jimenez, P.C. you can be confident that our attorneys will aggressively pursue your case, so you can focus on recovering from your injuries. We will fight with the wrongdoers and the insurance carriers so you don’t have to. We recognize how much an injury affects your life, and our attorneys will be there to help you every step of the way. Call Ring Jimenez, P.C. today at (505) 373-3333 to set up your FREE consultation with an attorney.</p>
 			
-			</div><!-- single_att -->
-			<?php endforeach; ?>
-			<?php wp_reset_postdata(); ?>
-			</div><!-- meet_attorneys_inner -->
+			</div><!-- about_bottom_inner -->
 		
-		</div><!-- meet_attorneys -->
-		<?php endif; ?>
-	
-	</div><!-- page_wrapper -->
-	
+		</div><!-- about_bottom -->
+
 </div><!-- internal_main -->
 		
 <?php get_footer(); ?>

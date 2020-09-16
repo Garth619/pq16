@@ -19,7 +19,19 @@
 
 			<div class='sidebar_slide_title sidebar_title_pa'>
 		
-				<span>View Practice Areas</span>
+				<span>
+					
+					<?php if(get_field('practice_area_sidebar_slide_title')) :
+
+						the_field('practice_area_sidebar_slide_title');
+
+					else:
+
+						echo "View Practice Areas";
+
+					endif; ?>
+
+				</span>
 		
 			</div><!-- sidebar_slide_title -->
 				
