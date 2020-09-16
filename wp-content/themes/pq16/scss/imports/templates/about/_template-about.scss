@@ -28,12 +28,14 @@
     box-shadow: none;
     max-width: 1050px;
     @include margin_lr;
-    background: pink;
     @include flex(flex-end);
   }
   @include mq(large_laptop) {
     max-width: 1170px;
     margin-top: 36px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1263px;
   }
 }
 
@@ -47,6 +49,10 @@
   @include mq(large_laptop) {
     flex-basis: 733px;
     margin-right: -93px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 812px;
+    margin-right: -96px;
   }
   img#about_img {
     @include image();
@@ -64,12 +70,19 @@
     flex-basis: 507px;
     margin-top: 54px;
   }
+  @include mq(small_monitor) {
+    flex-basis: 547px;
+  }
   img#about_icon {
     display: none;
     @include mq(small_laptop) {
       display: block;
       @include box(61px);
       @include abs(-33px, 33px, null, null);
+    }
+    @include mq(small_monitor) {
+      @include box(78px);
+      @include abs(-40px, 40px, null, null);
     }
   }
 }
@@ -97,6 +110,9 @@
     padding: 75px 50px;
     @include quick_type(18px, 30px, null);
   }
+  @include mq(small_monitor) {
+    @include quick_type(20px, 34px, null);
+  }
   p {
     margin-bottom: 15px;
     &:last-of-type {
@@ -106,6 +122,9 @@
 }
 
 h1.about_title {
+  @include mq(small_monitor) {
+    padding-top: 56px;
+  }
 }
 
 .about_subtitle {
@@ -125,5 +144,8 @@ h1.about_title {
   }
   @include mq(large_laptop) {
     padding: 54px 75px 52px;
+  }
+  @include mq(small_monitor) {
+    padding: 65px 75px 70px;
   }
 }

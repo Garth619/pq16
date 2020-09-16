@@ -77,8 +77,8 @@ h1.internal_title {
   }
   &:before {
     height: 4px;
-    @include mq(small_tablet) {
-      //height: 6px;
+    @include mq(small_monitor) {
+      height: 6px;
     }
   }
   &:after {
@@ -88,6 +88,9 @@ h1.internal_title {
     }
     @include mq(small_laptop) {
       height: 2px;
+    }
+    @include mq(small_monitor) {
+      height: 3px;
     }
   }
   span {
@@ -109,6 +112,9 @@ h1.internal_title {
     }
     @include mq(small_laptop) {
       padding: 19px 0;
+    }
+    @include mq(small_monitor) {
+      padding: 20px 0;
     }
     li {
       padding: 0;
