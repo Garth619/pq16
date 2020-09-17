@@ -7,26 +7,50 @@
     <div id='sec_one_video_wrapper'>
     
       <div id='sec_one_video'>
-     
-       <img src='<?php bloginfo('template_directory');?>/images/video.png' alt=''/>
 
-       <div class='video_overlay'>
-       
-         <?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
-       
-       </div><!-- video_overlay -->
+        <?php if(get_field('wistia_or_youtube_section_one') == "Youtube") { ?>
+
+          <a href="https://www.youtube.com/embed/<?php the_field( 'youtube_id_section_one' ); ?>" data-lity>
+
+        <?php } ?>
+
+        <?php if(get_field('wistia_or_youtube_section_one') == "Wistia") { ?>
+
+          <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_section_one' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
+
+        <?php } ?>
      
-     </div><!-- sec_one_video -->
+        <?php $section_one_video_background = get_field( 'section_one_video_background' ); ?>
+      
+        <?php if ( $section_one_video_background ) { ?>
+	      
+          <img src="<?php echo $section_one_video_background['url']; ?>" alt="<?php echo $section_one_video_background['alt']; ?>" />
+      
+        <?php } ?>
+
+        <div class='video_overlay'>
+       
+          <?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
+       
+        </div><!-- video_overlay -->
+
+        <?php if(get_field('wistia_or_youtube_section_one') == "Youtube") { ?>
+
+          </a>
+  
+        <?php } ?>
+     
+      </div><!-- sec_one_video -->
 
      <div id='sec_one_video_content'>
      
-       <span>Learn why we’re considered the top law firm in New Mexico</span>
+       <span><?php the_field( 'section_one_video_caption' ); ?></span>
      
      </div><!-- sec_one_video_content -->
 
      </div><!-- sec_video_wrapper -->
 
-     <span id='sec_one_title'>Representing<br/> New Mexicans who have been injured.</span><!-- sec_one_title -->
+     <span id='sec_one_title'><?php the_field( 'section_one_title' ); ?></span><!-- sec_one_title -->
    
    </div><!-- sec_one_top -->
 
@@ -49,8 +73,6 @@
  <a id='free_consult_button' href='#consultation'>Free Consultation</a><!-- free_consult_button -->
 
  <picture>
- 
-  <!-- <source media='(min-width: 1170px)' data-srcset='<?php echo $section_one_image_laptop_webp['url']; ?>' type='image/webp'> -->
 
   <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero.jpg'>
  

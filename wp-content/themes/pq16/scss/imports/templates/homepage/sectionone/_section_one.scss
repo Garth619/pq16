@@ -93,8 +93,15 @@
     margin: 83px 46px 0 30px;
     @include box(300px, 165px);
   }
+  a {
+    display: block;
+  }
   img {
     @include image();
+  }
+  .mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 2);
   }
   .video_overlay {
     @include abs(0, null, null, 0, 1);
@@ -243,7 +250,7 @@ img#hero {
   width: 320px;
   flex-shrink: 0;
   @include mq(small_laptop) {
-    display:block;
+    display: block;
   }
   @include mq(large_laptop) {
     width: 350px;
