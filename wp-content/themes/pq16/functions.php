@@ -34,31 +34,7 @@ function load_my_styles_scripts() {
  
  add_action( 'wp_enqueue_scripts', 'load_my_styles_scripts', 20 );
 
-/* Backend/Admin Styles and Scripts
--------------------------------------------------------------- */
 
-
-function admin_scripts($hook) {
-
-    if ( 'post.php' != $hook && 'post-new.php' != $hook )
-        return;
-    // Styles
-
-    // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor 
-
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/imports/components/acf_blocks/admin/myadmin.css', '', 5, 'all' ); 
-
-    // Scripts
-
-    // The files below are needed to properly show a few ACF Gutenberg Blocks in the text editor
-
-    wp_enqueue_script( 'jquery-lity', get_template_directory_uri() . '/js/lity-min.js', 'jquery', '', true );
-
-    wp_enqueue_script( 'jquery-slick', get_template_directory_uri() . '/js/slick-min.js', 'jquery', '', true );
-
-  }
-
-  add_action('admin_enqueue_scripts', 'admin_scripts');
 
 
 /* CSS in Header for Lighthouse

@@ -10,15 +10,23 @@ get_header(); ?>
 
 			<h1 class='internal_title video_title center_title'><?php the_title();?></h1><!-- page_title -->
 
-			<div class='inner_subtitle under_title'>
+			<?php if ( have_rows( 'video_subtitles' ) ) : ?>
 
-				<ul>
-					<li>Experienced</li>
-					<li>Resourceful</li>
-					<li>Effective</li>
-				</ul>
+				<div class='inner_subtitle under_title'>
+
+					<ul>
+
+						<?php while ( have_rows( 'video_subtitles' ) ) : the_row(); ?>
+
+							<li><?php the_sub_field( 'subtitle' ); ?></li>
 	
-			</div><!-- inner_subtitle -->
+						<?php endwhile; ?>
+
+					</ul>
+
+				</div><!-- inner_subtitle -->
+
+			<?php endif; ?>
 
 			<div id='video_wrapper'>
 

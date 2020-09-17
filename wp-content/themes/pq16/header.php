@@ -95,8 +95,14 @@
 		<div id='header_left'>
 		
 			<a href="<?php bloginfo('url');?>">
-		
-				<img src='<?php bloginfo('template_directory');?>/images/logo.svg' />
+
+				<?php $logo = get_field( 'logo','option'); ?>
+				
+				<?php if ( $logo ) { ?>
+					
+					<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+				
+				<?php } ?>
 	
 			</a>
 		
@@ -139,9 +145,9 @@
 	
 		<div id='cta_wrapper'>
 		
-			<span>CALL or TEXT</span>
+			<span><?php the_field( 'free_consultation_call_to_action','option'); ?></span>
 
-			<a href='tel:5053733333'>(505) 373-3333</a>
+			<a href='tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('header_phone', 'option')); ?>'><?php the_field( 'header_phone','option'); ?></a>
 		
 		</div><!-- cta_wrapper -->
 

@@ -8,7 +8,7 @@
 
 		<img id='sidebar_form_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt=''/>
 
-		<span id='sidebar_form_title'>Free Consultation</span><!-- sidebar_form_title -->
+		<span id='sidebar_form_title'><?php the_field('sidebar_form_title','option');?></span><!-- sidebar_form_title -->
 
 		<?php gravity_form(7, false, false, false, '', true, 1233); ?>
 

@@ -12,21 +12,35 @@ get_header(); ?>
 			
 				<h1 class="internal_title center_title about_title"><?php the_title();?></h1>
 
-				<div class='inner_subtitle under_title about_subtitle'>
+				<?php if ( have_rows( 'about_subtitles' ) ) : ?>
 
-					<ul>
-						<li>Experienced</li>
-						<li>Resourceful</li>
-						<li>Effective</li>
-				</ul>
+					<div class='inner_subtitle under_title about_subtitle'>
+
+						<ul>
+				
+						<?php while ( have_rows( 'about_subtitles' ) ) : the_row(); ?>
 	
-				</div><!-- inner_subtitle -->
+							<li><?php the_sub_field( 'list_items' ); ?></li>
+						
+						<?php endwhile; ?>
+
+						</ul>
+	
+					</div><!-- inner_subtitle -->
+
+				<?php endif; ?>
 
 				<div id='about_intro_wrapper'>
 			
 					<div id='about_img_wrapper'>
-				
-						<img id='about_img' src='<?php bloginfo('template_directory');?>/images/img-team.jpg' alt=''/>
+
+					<?php $about_image = get_field( 'about_image' ); ?>
+					
+					<?php if ( $about_image ) { ?>
+						
+						<img id='about_img' src="<?php echo $about_image['url']; ?>" alt="<?php echo $about_image['alt']; ?>" />
+					
+					<?php } ?>
 				
 					</div><!-- about_img_wrapper -->
 
@@ -36,7 +50,7 @@ get_header(); ?>
 
 						<div id='about_top_content_inner'>
 						
-							<p>Ring Jimenez, P.C. is a local New Mexico law office that represents injured people and family members who have lost loved ones throughout the state. Our attorneys live and work in-state and understand the specific challenges faced by those injured in New Mexico.</p>
+							<?php the_field( 'about_intro' ); ?>
 
 						</div><!-- about_top_content_inner -->
 				
@@ -52,13 +66,7 @@ get_header(); ?>
 		
 			<div id='about_bottom_inner' class="content">
 			
-				<h2>Superior New Mexico Accident Attorneys</h2>
-
-				<p>Iris L. M. Ring, Esq. and Francisco J. Jimenez, Esq. earned their legal degrees from the University of New Mexico, and prior to founding Ring Jimenez, P.C. practiced law in the state. Both Ms. Ring and Mr. Jimenez founded the firm with the purpose of providing the highest quality legal representation to every client. Our firm is made up of effective litigators who will not settle for anything less than what you and your family deserve.</p>
-					
-				<p>Our attorneys handle a wide variety of personal injury cases and are willing to travel throughout the state to meet with clients and investigate cases. We understand that an injury can happen anywhere and that you might not be able to travel because of your injuries. Our firm has the employees, resources and technology necessary to properly advocate on your behalf. Our attorneys and support staff are always available to our clients, and we are always willing to provide up-to-the-minute information on the status of our clients’ legal matters.</p>
-					
-				<p>When you hire Ring Jimenez, P.C. you can be confident that our attorneys will aggressively pursue your case, so you can focus on recovering from your injuries. We will fight with the wrongdoers and the insurance carriers so you don’t have to. We recognize how much an injury affects your life, and our attorneys will be there to help you every step of the way. Call Ring Jimenez, P.C. today at (505) 373-3333 to set up your FREE consultation with an attorney.</p>
+				<?php the_content();?>
 			
 			</div><!-- about_bottom_inner -->
 		
