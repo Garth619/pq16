@@ -207,6 +207,9 @@ span#sec_four_title {
         margin-top: 23px;
         width: 100%;
         max-width: 250px;
+        padding: 9px 23px;
+        text-decoration: none;
+        color: $color_bright_three;
         @include mq(small_tablet) {
           margin-top: 18px;
         }
@@ -215,6 +218,9 @@ span#sec_four_title {
         }
         @include mq(small_laptop) {
           margin-top: 20px;
+        }
+        &:hover {
+          color: $color_light_one;
         }
       }
     }

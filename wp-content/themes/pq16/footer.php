@@ -6,31 +6,45 @@
 
     <div id='form_top'>
 
-      <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' />
+      <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt="footer icon svg"/>
 
       <picture>
 
-        <source media='(min-width: 1695px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-desktop.jpg'>
+        <?php $footer_monitor_background = get_field( 'footer_monitor_background','option'); ?>
+        
+        <?php if ( $footer_monitor_background ) { ?>
+          
+          <source media='(min-width: 1695px)' data-srcset='<?php echo $footer_monitor_background['url']; ?>'>
+        
+        <?php } ?>
 
-        <source media='(min-width: 1380px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-large-laptop.jpg'>
+        <?php $footer_large_laptop_background = get_field( 'footer_large_laptop_background','option'); ?>
+        
+        <?php if ( $footer_large_laptop_background ) { ?>
+
+          <source media='(min-width: 1380px)' data-srcset='<?php echo $footer_large_laptop_background['url']; ?>'>
+        
+        <?php } ?>
+
+        <?php $footer_small_laptop_background = get_field( 'footer_small_laptop_background','option'); ?>
+        
+       <img id='footer_img' class="lazyload" data-src="<?php echo $footer_small_laptop_background['url']; ?>" alt="<?php echo $footer_small_laptop_background['alt']; ?>" />
+        
       
-        <source media='(min-width: 1170px)' data-srcset='<?php bloginfo('template_directory'); ?>/images/img-ft-laptop.jpg'>
-      
-        <img id='footer_img' class='lazyload' data-src='<?php bloginfo('template_directory');?>/images/img-ft.jpg' alt='' />
-      
-      </picture>
+
+    </picture>
 
     </div><!-- form_top -->
 
     <div id='form_bottom'>
 
-      <span id='footer_form_title'>Free Consultation</span><!-- footer_form_title -->
+      <span id='footer_form_title'><?php the_field( 'form_title','option'); ?></span><!-- footer_form_title -->
 
-      <span id='footer_form_descrip'>Meet with us, ask questions, get answers and discuss your options completely free of charge.</span><!-- footer_form_descrip -->
+      <span id='footer_form_descrip'><?php the_field( 'form_subtitle','option'); ?></span><!-- footer_form_descrip -->
 
       <?php gravity_form(3, false, false, false, '', true, 1345); ?>
 
-      <span id='footer_required'>all fields required *</span><!-- footer_required -->
+      <span id='footer_required'><?php the_field( 'required_field_verbiage','option'); ?></span><!-- footer_required -->
 
     </div><!-- form_bottom -->
 
@@ -43,9 +57,11 @@
     <div class='location_col'>
     
       <a id='footer_logo' href='<?php bloginfo('url');?>'>
+
+        <?php $footer_logo = get_field( 'footer_logo','option'); ?>
       
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/logo.svg' alt=''/>
-      
+        <img class="lazyload" src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>" />
+
       </a><!-- footer_logo -->
     
     </div><!-- location_col -->
@@ -54,43 +70,65 @@
 
       <div id='location_info'>
       
-        <span id='address'>901 Rio Grande Blvd NW,<br/> Suite D-224<br/> Albuquerque, New Mexico 87104</span><!-- address -->
+        <span id='address'><?php the_field( 'address','option'); ?></span><!-- address -->
 
-        <a class='footer_phone' href="tel:+15053733333"><span>P</span> (505) 373-3333</a><!-- footer_phone -->
+        <a class='footer_phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>"><span>P</span> <?php the_field( 'footer_phone','option'); ?></a><!-- footer_phone -->
 
-        <span class='footer_phone' ><span>F</span> (505) 340-3533</span><!-- footer_phone -->
+        <span class='footer_phone' ><span>F</span> <?php the_field( 'footer_fax','option'); ?></span><!-- footer_phone -->
 
-        <a class='get_directions' href="" target="_blank" rel="noopener">Get Directions</a><!-- get_directions -->
+        <a class='get_directions' href="<?php the_field( 'get_directions_link','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage','option'); ?></a><!-- get_directions -->
       
       </div><!-- location_info -->
 
       <div id='location_sm'>
       
         <div id='social_media'>
-        
-          <a href="" target="_blank" rel="noopener">
 
-            <?php echo file_get_contents( get_template_directory() . '/images/ft-fb.svg' ); ?>
-          
-          </a>
+        <?php if ( have_rows( 'social_media','option') ) : ?>
+	        <?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
 
-          <a href="" target="_blank" rel="noopener">
-          
-            <?php echo file_get_contents( get_template_directory() . '/images/ft-google.svg' ); ?>
-          
-          </a>
+            <?php if(get_sub_field('icon') == "Facebook") { ?>
 
-          <a href="" target="_blank" rel="noopener">
-          
-            <?php echo file_get_contents( get_template_directory() . '/images/ft-youtube.svg' ); ?>
-          
-          </a>
+              <a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
+  
+                <?php echo file_get_contents( get_template_directory() . '/images/ft-fb.svg' ); ?>
 
-          <a href="" target="_blank" rel="noopener">
-          
-            <?php echo file_get_contents( get_template_directory() . '/images/ft-linkedin.svg' ); ?>
-          
-          </a>
+              </a>
+
+            <?php } ?>
+
+            <?php if(get_sub_field('icon') == "Google") { ?>
+
+              <a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
+
+                <?php echo file_get_contents( get_template_directory() . '/images/ft-google.svg' ); ?>
+
+              </a>
+
+            <?php } ?>
+
+            <?php if(get_sub_field('icon') == "Youtube") { ?>
+
+              <a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
+
+                <?php echo file_get_contents( get_template_directory() . '/images/ft-youtube.svg' ); ?>
+
+              </a>
+
+            <?php } ?>
+
+            <?php if(get_sub_field('icon') == "LinkedIn") { ?>
+
+              <a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
+
+                <?php echo file_get_contents( get_template_directory() . '/images/ft-linkedin.svg' ); ?>
+
+              </a>
+
+            <?php } ?>
+
+          <?php endwhile; ?>
+        <?php endif; ?>
         
         </div><!-- social_media -->
       
