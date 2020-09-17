@@ -10,24 +10,32 @@
 
 			<h1 class='internal_title contact_title center_title'><?php the_title();?></h1><!-- page_title -->
 
-			<div class='inner_subtitle under_title'>
+			<?php if ( have_rows( 'contact_subtitles' ) ) : ?>
 
-				<ul>
-					<li>Experienced</li>
-					<li>Resourceful</li>
-					<li>Effective</li>
-				</ul>
+				<div class='inner_subtitle under_title'>
+
+					<ul>
+				
+						<?php while ( have_rows( 'contact_subtitles' ) ) : the_row(); ?>
+
+							<li><?php the_sub_field( 'subtitle' ); ?></li>
+					
+						<?php endwhile; ?>
+
+					</ul>
 	
-			</div><!-- inner_subtitle -->
+				</div><!-- inner_subtitle -->
+
+			<?php endif; ?>
 
 			<div id='contact_wrapper'>
 			
-				<span class="contact_address">901 Rio Grande Blvd NW,<br/> Suite D-224<br/> Albuquerque, New Mexico 87104</span> 
+				<span class="contact_address"><?php the_field( 'address','option'); ?></span> 
 			
-				<a class='contact_phone' href="tel:5053733333"><span>P</span> (505) 373-3333</a><!-- contact_phone -->		
-				<span class='contact_phone'><span>F</span> (505) 340-3533</span><!-- contact_phone -->
+				<a class='contact_phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>"><span>P</span> <?php the_field( 'footer_phone','option'); ?></a><!-- contact_phone -->		
+				<span class='contact_phone'><span>F</span> <?php the_field( 'footer_fax','option'); ?></span><!-- contact_phone -->
 
-				<a class='button_two contact_directions' href="" target="_blank" rel="noopener">Directions</a><!-- button_three -->
+				<a class='button_two contact_directions' href="<?php the_field( 'get_directions_link','option'); ?>" target="_blank" rel="noopener">Directions</a><!-- button_three -->
 			
 			</div><!-- contact_wrapper -->
 

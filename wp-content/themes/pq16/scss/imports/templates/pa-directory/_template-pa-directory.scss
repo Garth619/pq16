@@ -57,7 +57,21 @@ ul.pa_directory_top_menu {
   div {
     margin-top: 16px;
     ul {
+      @include mq(tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        grid-gap: 0px 30px;
+      }
+      @include mq(large_laptop) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @include mq(small_monitor) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 0px 40px;
+      }
       li {
+        border-bottom: 2px solid $color_light_eleven;
         @include type(
           (
             size: 15px,
@@ -67,37 +81,32 @@ ul.pa_directory_top_menu {
             transform: capitalize,
           )
         );
+        @include mq(small_monitor) {
+          margin-bottom: 10px;
+        }
         &:last-of-type {
-          a {
+          border: none;
+        }
+        &:nth-last-of-type(-n + 2) {
+          @include mq(tablet) {
             border: none;
           }
         }
-        &:nth-last-of-type(-n + 2) {
-          a {
-            @include mq(small_tablet) {
-              border: none;
-            }
-          }
-        }
         &:nth-last-of-type(-n + 3) {
-          a {
-            @include mq(tablet) {
-              border: none;
-            }
+          @include mq(large_laptop) {
+            border: none;
           }
         }
         &:nth-last-of-type(-n + 4) {
-          a {
-            @include mq(large_laptop) {
-              border: none;
-            }
+          @include mq(small_monitor) {
+            border: none;
           }
         }
         a {
           padding: 15px 0;
           color: $color_dark_one;
           text-decoration: none;
-          border-bottom: 2px solid $color_light_eleven;
+
           transition: all 200ms ease-in-out;
           &:hover {
             color: $color_bright_two;

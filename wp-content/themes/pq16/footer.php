@@ -30,8 +30,6 @@
         
        <img id='footer_img' class="lazyload" data-src="<?php echo $footer_small_laptop_background['url']; ?>" alt="<?php echo $footer_small_laptop_background['alt']; ?>" />
         
-      
-
     </picture>
 
     </div><!-- form_top -->
@@ -143,14 +141,26 @@
     <div id='copyright_inner'>
     
       <ul>
-        <li>&copy; Ring Jimenez, P.C. All rights reserved.</li>
-        <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Disclaimer</a></li>
+
+        <li>&copy; <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+        
+        <?php if(get_field('disclaimer','option') && get_field('disclaimer_title','option')) { ?>
+          
+          <li><a href="<?php the_field( 'disclaimer','option'); ?>"><?php the_field( 'disclaimer_title','option'); ?></a></li>
+        
+        <?php } ?>
+        
+        <?php if(get_field('privacy_policy','option') && get_field('privacy_policy_title','option')) { ?>
+          
+          <li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>
+        
+        <?php } ?>
+
       </ul>
 
       <a id='ilawyer' href="//ilawyermarketing.com" target="_blank" rel="noopener">
       
-        <img src='<?php bloginfo('template_directory');?>/images/ft-ilawyer.svg' alt=''/>
+        <img src='<?php bloginfo('template_directory');?>/images/ft-ilawyer.svg' alt='iLawyer Marketing Logo'/>
       
       </a><!-- ilawyer -->
     

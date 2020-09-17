@@ -73,6 +73,7 @@
     }
     img {
       @include image();
+      width: 100%;
     }
     .video_overlay {
       pointer-events: none;
