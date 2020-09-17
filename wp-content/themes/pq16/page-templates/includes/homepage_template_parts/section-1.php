@@ -58,7 +58,7 @@
 
     <div id='sec_one_form'>
     
-      <span id='sec_one_form_title'>Free Consultation</span><!-- sec_one_form_title -->
+      <span id='sec_one_form_title'><?php the_field( 'section_one_form_title' ); ?></span><!-- sec_one_form_title -->
 
       <?php gravity_form(6, false, false, false, '', true, 1245); ?>
     
