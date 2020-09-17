@@ -72,7 +72,7 @@
 
         <a class='footer_phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>"><span>P</span> <?php the_field( 'footer_phone','option'); ?></a><!-- footer_phone -->
 
-        <span class='footer_phone' ><span>F</span> <?php the_field( 'footer_fax','option'); ?></span><!-- footer_phone -->
+        <a class='footer_phone' ><span>F</span> <?php the_field( 'footer_fax','option'); ?></a><!-- footer_phone -->
 
         <a class='get_directions' href="<?php the_field( 'get_directions_link','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage','option'); ?></a><!-- get_directions -->
       

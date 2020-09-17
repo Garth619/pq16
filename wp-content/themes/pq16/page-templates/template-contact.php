@@ -33,7 +33,7 @@
 				<span class="contact_address"><?php the_field( 'address','option'); ?></span> 
 			
 				<a class='contact_phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>"><span>P</span> <?php the_field( 'footer_phone','option'); ?></a><!-- contact_phone -->		
-				<span class='contact_phone'><span>F</span> <?php the_field( 'footer_fax','option'); ?></span><!-- contact_phone -->
+				<a class='contact_phone'><span>F</span> <?php the_field( 'footer_fax','option'); ?></a><!-- contact_phone -->
 
 				<a class='button_two contact_directions' href="<?php the_field( 'get_directions_link','option'); ?>" target="_blank" rel="noopener">Directions</a><!-- button_three -->
 			
