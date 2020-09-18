@@ -7,7 +7,7 @@ footer {
 
 #form_wrapper {
   background: $color_light_ten;
-  padding: 59px 30px 50px;
+  padding: 67px 30px 50px;
   @include mq(small_tablet) {
     padding: 83px 68px 73px;
   }
@@ -146,6 +146,7 @@ footer {
         )
       );
       @include mq(small_tablet) {
+        max-width: 410px;
         @include quick_type(16px, 24px, null);
       }
       @include mq(small_laptop) {
@@ -322,7 +323,7 @@ span#footer_required {
   @include margin_lr;
   @include mq(small_tablet) {
     @include flex(space-between);
-    max-width: 810px;
+    max-width: 770px;
     padding: 49px 95px 0;
   }
   @include mq(small_laptop) {
@@ -356,7 +357,12 @@ a#footer_logo {
 
 .location_col {
   &:first-of-type {
-    margin-right: 130px;
+    @include mq(small_tablet) {
+      margin-right: 70px;
+    }
+    @include mq(small_laptop) {
+      margin-right: 121px;
+    }
     @include mq(large_laptop) {
       margin-right: 145px;
     }
@@ -471,7 +477,7 @@ a#footer_logo {
   padding: 28px 0 0 0;
   border-top: 1px solid $color_light_eleven;
   @include mq(small_tablet) {
-    max-width: 800px;
+    max-width: 600px;
     @include margin_lr;
   }
   @include mq(small_laptop) {

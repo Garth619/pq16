@@ -142,7 +142,13 @@
     
       <ul>
 
-        <li>&copy; <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+        <li>&copy; <?php echo date("Y"); ?>  <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+
+        <?php if(get_field('privacy_policy','option') && get_field('privacy_policy_title','option')) { ?>
+          
+          <li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>
+        
+        <?php } ?>
         
         <?php if(get_field('disclaimer','option') && get_field('disclaimer_title','option')) { ?>
           
@@ -150,12 +156,6 @@
         
         <?php } ?>
         
-        <?php if(get_field('privacy_policy','option') && get_field('privacy_policy_title','option')) { ?>
-          
-          <li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>
-        
-        <?php } ?>
-
       </ul>
 
       <a id='ilawyer' href="//ilawyermarketing.com" target="_blank" rel="noopener">

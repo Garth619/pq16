@@ -41,7 +41,7 @@
 }
 
 #sec_one_top {
-  padding-top: 94px;
+  padding-top: 49px;
   @include mq(small_tablet) {
     padding-top: 66px;
     @include flex(null, null, column);
