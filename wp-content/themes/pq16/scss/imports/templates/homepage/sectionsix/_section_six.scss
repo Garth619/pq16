@@ -123,9 +123,10 @@ span#sec_six_title {
     max-width: 1325px;
   }
   @include mq(small_monitor) {
-    max-width: 1500px;
+    max-width: 1700px;
+    margin-top: 74px;
+    padding-left: 219px;
     position: relative;
-    right: -50px;
   }
   .slick-track {
     padding: 5px 0 15px;

@@ -93,7 +93,7 @@ span#sec_four_title {
   }
   @include mq(large_laptop) {
     margin-top: 54px;
-    max-width: 1172px;
+    max-width: 1212px;
   }
   @include mq(small_monitor) {
     max-width: 1265px;
@@ -138,6 +138,7 @@ span#sec_four_title {
   @include mq(large_laptop) {
     flex-basis: 488px;
     margin-top: 72px;
+    margin-left: -167px;
   }
   @include mq(small_monitor) {
     flex-basis: 547px;
