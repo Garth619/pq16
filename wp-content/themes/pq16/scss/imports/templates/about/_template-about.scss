@@ -1,8 +1,9 @@
 #about_top {
   padding: 0 30px;
+  position: relative;
   &:after {
     background: $color_light_ten;
-    @include box(100%, 515px);
+    @include box(100%, calc(100% - 35px));
     @include abs(0, null, null, 0);
     @include contentdisplay();
   }
@@ -80,6 +81,10 @@
       @include box(61px);
       @include abs(-33px, 33px, null, null);
     }
+    @include mq(large_laptop) {
+      @include box(70px);
+      @include abs(-33px, 45px, null, null);
+    }
     @include mq(small_monitor) {
       @include box(78px);
       @include abs(-40px, 40px, null, null);
@@ -111,6 +116,7 @@
     @include quick_type(18px, 30px, null);
   }
   @include mq(small_monitor) {
+    padding: 75px 81px;
     @include quick_type(20px, 34px, null);
   }
   p {
