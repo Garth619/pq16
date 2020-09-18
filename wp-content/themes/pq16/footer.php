@@ -8,29 +8,33 @@
 
       <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt="footer icon svg"/>
 
-      <picture>
+      <div id='footer_image_wrapper'>
+      
+        <picture>
 
-        <?php $footer_monitor_background = get_field( 'footer_monitor_background','option'); ?>
-        
-        <?php if ( $footer_monitor_background ) { ?>
+          <?php $footer_monitor_background = get_field( 'footer_monitor_background','option'); ?>
           
-          <source media='(min-width: 1695px)' data-srcset='<?php echo $footer_monitor_background['url']; ?>'>
-        
-        <?php } ?>
+          <?php if ( $footer_monitor_background ) { ?>
+            
+            <source media='(min-width: 1695px)' data-srcset='<?php echo $footer_monitor_background['url']; ?>'>
+          
+          <?php } ?>
 
-        <?php $footer_large_laptop_background = get_field( 'footer_large_laptop_background','option'); ?>
-        
-        <?php if ( $footer_large_laptop_background ) { ?>
+          <?php $footer_large_laptop_background = get_field( 'footer_large_laptop_background','option'); ?>
+          
+          <?php if ( $footer_large_laptop_background ) { ?>
 
-          <source media='(min-width: 1380px)' data-srcset='<?php echo $footer_large_laptop_background['url']; ?>'>
-        
-        <?php } ?>
+            <source media='(min-width: 1380px)' data-srcset='<?php echo $footer_large_laptop_background['url']; ?>'>
+          
+          <?php } ?>
 
-        <?php $footer_small_laptop_background = get_field( 'footer_small_laptop_background','option'); ?>
-        
-       <img id='footer_img' class="lazyload" data-src="<?php echo $footer_small_laptop_background['url']; ?>" alt="<?php echo $footer_small_laptop_background['alt']; ?>" />
-        
-    </picture>
+          <?php $footer_small_laptop_background = get_field( 'footer_small_laptop_background','option'); ?>
+          
+        <img id='footer_img' class="lazyload" data-src="<?php echo $footer_small_laptop_background['url']; ?>" alt="<?php echo $footer_small_laptop_background['alt']; ?>" />
+          
+      </picture>
+
+    </div><!-- footer_image_wrapper -->
 
     </div><!-- form_top -->
 

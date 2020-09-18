@@ -71,7 +71,7 @@ footer {
     @include image(61px);
     @include mq(small_tablet) {
       @include image(76px);
-      @include abs(0, 40px, null, null);
+      @include abs(0, 40px, null, null, 1);
     }
     @include mq(small_laptop) {
       top: -7px;
@@ -80,6 +80,9 @@ footer {
     @include mq(large_laptop) {
       right: 111px;
     }
+  }
+  #footer_image_wrapper {
+    overflow: hidden;
   }
   img#footer_img {
     display: none;

@@ -19,15 +19,19 @@
           <div class='mywistia wistia_embed wistia_async_<?php the_field( 'wistia_id_section_one' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
 
         <?php } ?>
-     
-        <?php $section_one_video_background = get_field( 'section_one_video_background' ); ?>
-      
-        <?php if ( $section_one_video_background ) { ?>
-	      
-          <img src="<?php echo $section_one_video_background['url']; ?>" alt="<?php echo $section_one_video_background['alt']; ?>" />
-      
-        <?php } ?>
 
+        <div id='sec_one_img_wrapper'>
+        
+          <?php $section_one_video_background = get_field( 'section_one_video_background' ); ?>
+      
+          <?php if ( $section_one_video_background ) { ?>
+      
+            <img src="<?php echo $section_one_video_background['url']; ?>" alt="<?php echo $section_one_video_background['alt']; ?>" />
+    
+          <?php } ?>
+        
+        </div><!-- sec_one_img_wrapper -->
+     
         <div class='video_overlay'>
        
           <?php echo file_get_contents( get_template_directory() . '/images/btn-play.svg' ); ?>
@@ -72,15 +76,21 @@
 
  <a id='free_consult_button' href='#consultation'>Free Consultation</a><!-- free_consult_button -->
 
- <picture>
+ <div id='sec_one_image_wrapper'>
+ 
+  <picture>
 
-  <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero.jpg'>
+    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero.jpg'>
+
+    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-tablet.jpg'>
+
+    <img id="hero" src='<?php bloginfo('template_directory'); ?>/images/hero-mobile.jpg' alt='' />
+
+  </picture>
  
-  <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-tablet.jpg'>
+ </div><!-- sec_one_image_wrapper -->
+
  
-  <img id="hero" src='<?php bloginfo('template_directory'); ?>/images/hero-mobile.jpg' alt='' />
- 
- </picture>
 
 
 </section><!-- section_one -->

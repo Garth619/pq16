@@ -32,18 +32,14 @@
     transform: scale($scale, $scale);
     transition-delay: $delay, $delay;
   }
-
-  // section one
-
-  #section_one {
-    overflow: hidden;
-  }
+  // homepage
   img#hero {
-    @include img_scale(1.2);
+    @include img_scale(1.1);
   }
   body.ready {
     img#hero {
-      @include fire_return_scale(1);
+      @include img_scale(1);
+      transition-delay: 300ms;
     }
   }
   span#sec_one_title {
@@ -54,136 +50,123 @@
       @include fire_transform_opacity(300ms);
     }
   }
-  #sec_one_content {
+  #sec_one_video_wrapper {
     @include transform_opacity(-25px);
   }
   body.ready {
-    #sec_one_content {
-      @include fire_transform_opacity(500ms);
+    #sec_one_video_wrapper {
+      @include fire_transform_opacity(700ms);
     }
   }
-  #section_one {
-    a.free_consult_button {
-      @include transform_opacity(-25px);
+  #sec_one_bottom {
+    @include transform_opacity(-25px);
+  }
+  body.ready {
+    #sec_one_bottom {
+      @include fire_transform_opacity(300ms);
+    }
+  }
+  #sec_four_right {
+    transform: translateY(40px);
+    transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #section_four.visible {
+    #sec_four_right {
+      transform: translateY(0px);
+    }
+  }
+  #sec_four_left {
+    overflow: hidden;
+    img {
+      @include img_scale(1.1);
+    }
+  }
+  #section_four.visible {
+    #sec_four_left {
+      overflow: hidden;
+      img {
+        @include img_scale(1);
+      }
+    }
+  }
+  #sec_six_image {
+    overflow: hidden;
+  }
+  img#sec_six_bg {
+    @include img_scale(1.1);
+  }
+  #section_six.visible {
+    img#sec_six_bg {
+      @include img_scale(1);
+    }
+  }
+  span#sec_six_title {
+    @include transform_opacity(-25px);
+  }
+  #section_six.visible {
+    span#sec_six_title {
+      @include fire_transform_opacity(300ms);
+    }
+  }
+  img#footer_img {
+  }
+  #consultation.visible {
+    img#footer_img {
+      @include img_scale(1);
+    }
+  }
+  // about page
+  #about_top_content {
+    transform: translateY(40px);
+    transition: all 1000ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  body.ready {
+    #about_top_content {
+      transform: translateY(0px);
+      transition-delay: 200ms;
+    }
+  }
+  #about_img_wrapper {
+    overflow: hidden;
+    img {
+      @include img_scale(1.1);
     }
   }
   body.ready {
-    #section_one {
-      a.free_consult_button {
-        @include fire_transform_opacity(700ms);
+    #about_img_wrapper {
+      overflow: hidden;
+      img {
+        @include img_scale(1);
+        transition-delay: 200ms;
       }
     }
   }
-  // #sec_one_bottom {
-  //   @include transform_opacity(-25px);
-  // }
-  // body.ready {
-  //   #sec_one_bottom {
-  //     @include fire_transform_opacity(700ms);
-  //   }
-  // }
-
-  // section three
-
-  #section_three {
-    .content {
-      h1.page_header {
-        &:after {
-          @include line_animation(left);
-        }
-      }
+  // att bio
+  #att_bio_img {
+    overflow: hidden;
+    img.att_image {
+      @include img_scale(1.1);
     }
-    &.visible {
-      .content {
-        h1.page_header {
-          &:after {
-            @include fire_return_scale(1);
-          }
-        }
+  }
+  body.ready {
+    #att_bio_img {
+      img.att_image {
+        @include img_scale(1);
+        transition-delay: 200ms;
       }
     }
   }
-
-  // section_four
-
-  .sec_four_slide {
-    a {
-      transform: translateY(-35px);
-    }
-  }
-  #section_four.visible {
-    .sec_four_slide {
-      a {
-        transform: translateY(0px);
-        transition: $transition;
-      }
-    }
-  }
-  .sec_four_arrow {
-    opacity: 0;
-    transition: opacity 400ms ease-in-out,
-      transform 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-  }
-  .sec_four_arrow_right {
-    transform: translateX(20px);
-  }
-  .sec_four_arrow_left {
-    transform: translateX(-20px);
-  }
-  #section_four.visible {
-    .sec_four_arrow {
-      opacity: 1;
-    }
-    .sec_four_arrow_right {
-      transform: translateX(0px);
-    }
-    .sec_four_arrow_left {
-      transform: translateX(0px);
-    }
-  }
-
-  // section seven
-
-  span#sec_seven_title {
-    &:after {
-      @include line_animation(left);
-    }
-  }
-  #section_seven.visible {
-    span#sec_seven_title {
-      &:after {
-        @include fire_return_scale(1);
-      }
-    }
-  }
-
-  // internal banner
-
+  // internal banners
   #internal_banner {
     overflow: hidden;
   }
-
   img#banner_hero {
-    @include img_scale(1.2);
+    @include img_scale(1.15);
   }
   body.ready {
-    #banner_hero {
-      @include fire_return_scale(1);
-    }
-  }
-
-  // about title
-
-  span.about_title.firm_title {
-    &:after {
-      @include line_animation(center);
-    }
-  }
-  body.ready {
-    span.about_title.firm_title {
-      &:after {
-        @include fire_return_scale(1);
-      }
+    img#banner_hero {
+      @include img_scale(1);
+      transition-delay: 200ms;
     }
   }
 }

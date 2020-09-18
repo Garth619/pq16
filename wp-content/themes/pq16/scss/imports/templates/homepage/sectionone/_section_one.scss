@@ -76,6 +76,7 @@
   z-index: 1;
   flex-shrink: 0;
   margin-top: 44px;
+  cursor: pointer;
   @include margin_lr;
   @include box(163px, 92px);
   @include mq(small_tablet) {
@@ -93,10 +94,25 @@
     margin: 83px 46px 0 30px;
     @include box(300px, 165px);
   }
+  &:hover {
+    img {
+      transform: scale(1.07);
+    }
+    svg {
+      path.play_tri {
+        fill: $color_bright_one;
+      }
+    }
+  }
   a {
     display: block;
   }
+  #sec_one_img_wrapper {
+    overflow: hidden;
+  }
   img {
+    transform: scale(1);
+    transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include image();
   }
   .mywistia {
@@ -117,6 +133,9 @@
       }
       @include mq(small_monitor) {
         @include box(138px);
+      }
+      path.play_tri {
+        transition: all 200ms ease-in-out;
       }
     }
   }
@@ -237,6 +256,12 @@ a#free_consult_button {
   @include mq(small_laptop) {
     display: none;
   }
+}
+
+#sec_one_image_wrapper {
+  overflow: hidden;
+  @include box(100%);
+  @include abs(0, null, null, 0);
 }
 
 img#hero {
