@@ -152,7 +152,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     mobileFirst: true,
     arrows: false,
-    adaptiveHeight: true,
+    //adaptiveHeight: true,
     dots: true,
     responsive: [
       {
@@ -161,6 +161,7 @@ jQuery(document).ready(function ($) {
           adaptiveHeight: false,
           slidesToShow: 2,
           slidesToScroll: 2,
+          //dots: false,
         },
       },
       {
@@ -168,6 +169,7 @@ jQuery(document).ready(function ($) {
         settings: {
           adaptiveHeight: false,
           slidesToShow: 3,
+          dots: false,
           slidesToScroll: 3,
         },
       },

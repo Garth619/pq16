@@ -51,13 +51,13 @@ img#sec_six_bg {
   position: relative;
   z-index: 1;
   @include mq(small_laptop) {
-    padding: 72px 0 35px;
+    padding: 72px 0 55px;
   }
   @include mq(large_laptop) {
-    padding: 77px 0 35px;
+    padding: 77px 0 55px;
   }
   @include mq(small_monitor) {
-    padding: 143px 0 110px;
+    padding: 143px 0 135px;
   }
 }
 
@@ -67,7 +67,7 @@ span#sec_six_title {
     (
       size: 15px,
       height: 18px,
-      spacing: 1.5px,
+      spacing: 2px,
       family: $primaryfont,
       weight: 800,
       transform: uppercase,
@@ -216,7 +216,8 @@ span#sec_six_title {
 }
 
 .sec_six_slide {
-  padding: 24px 30px 65px;
+  //padding: 24px 30px 65px;
+  padding: 24px 30px 49px;
   @include mq(small_tablet) {
     padding: 0;
     background: transparent;
@@ -237,7 +238,7 @@ span#sec_six_title {
       background: transparent;
     }
     @include mq(small_laptop) {
-      padding: 56px 45px 60px;
+      padding: 50px 45px 70px;
     }
     @include mq(large_laptop) {
       padding: 64px 45px 60px;

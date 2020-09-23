@@ -12,7 +12,7 @@
 		
 		<?php if ( $section_four_image ) { ?>
 	
-			<img src="<?php echo $section_four_image['url']; ?>" alt="<?php echo $section_four_image['alt']; ?>" />
+			<img class="lazyload" data-src="<?php echo $section_four_image['url']; ?>" alt="<?php echo $section_four_image['alt']; ?>" />
 		
 		<?php } ?>
 		
@@ -24,7 +24,7 @@
 			
 				<div id='sec_four_right_content_inner'>
 
-					<img src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt='Section Four Icon'/>
+					<img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt='Section Four Icon'/>
 			
 					<?php the_field( 'section_four_intro' ); ?>
 

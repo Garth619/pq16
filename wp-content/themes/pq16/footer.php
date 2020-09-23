@@ -6,7 +6,7 @@
 
     <div id='form_top'>
 
-      <img id='footer_icon' src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt="footer icon svg"/>
+      <img id='footer_icon' class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/ico-sp-3.svg' alt="footer icon svg"/>
 
       <div id='footer_image_wrapper'>
       
@@ -62,7 +62,7 @@
 
         <?php $footer_logo = get_field( 'footer_logo','option'); ?>
       
-        <img class="lazyload" src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>" />
+        <img class="lazyload" data-src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>" />
 
       </a><!-- footer_logo -->
     
@@ -164,7 +164,7 @@
 
       <a id='ilawyer' href="//ilawyermarketing.com" target="_blank" rel="noopener">
       
-        <img src='<?php bloginfo('template_directory');?>/images/ft-ilawyer.svg' alt='iLawyer Marketing Logo'/>
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/ft-ilawyer.svg' alt='iLawyer Marketing Logo'/>
       
       </a><!-- ilawyer -->
     

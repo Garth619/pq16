@@ -14,9 +14,9 @@
 
 					<div class='sec_six_slide_inner'>
 
-						<img class='stars' src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
+						<img class='stars lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-stars.svg' alt=''/>
 
-						<img class='sec_six_sm' src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
+						<img class='sec_six_sm lazyload' data-src='<?php bloginfo('template_directory');?>/images/ico-fb.svg' alt=''/>
 
 						<div class='sec_six_intro'>
 	
@@ -50,7 +50,7 @@
 			
 			<?php if ( $section_six_background ) { ?>
 			
-				<img id='sec_six_bg' src="<?php echo $section_six_background['url']; ?>" alt="<?php echo $section_six_background['alt']; ?>" />
+				<img id='sec_six_bg' class="lazyload" data-src="<?php echo $section_six_background['url']; ?>" alt="<?php echo $section_six_background['alt']; ?>" />
 
 			<?php } ?>
 		

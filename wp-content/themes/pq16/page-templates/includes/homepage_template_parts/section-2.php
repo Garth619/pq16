@@ -18,7 +18,7 @@
 		
                 <?php if ( $icon ) { ?>
 			
-                  <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
+                  <img class="lazyload" data-src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
 		
                 <?php } ?>
   
