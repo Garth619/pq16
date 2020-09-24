@@ -30,13 +30,13 @@
 
 #sec_five_intro {
   @include mq(small_laptop) {
-    max-width: 582px;
+    max-width: 708px;
   }
   @include mq(large_laptop) {
-    max-width: 654px;
+    max-width: 795px;
   }
   @include mq(small_monitor) {
-    max-width: 725px;
+    max-width: 885px;
   }
   &:before {
     background: $color_bright_one;

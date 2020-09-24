@@ -6,7 +6,7 @@
          "imports/global/misc/variables",
          "imports/global/content/variables",
          "imports/components/buttons/variables",
-//        "imports/components/internal_forms/variables",
+        "imports/components/internal_forms/variables",
          "imports/layout/header/variables",
           "imports/layout/footer/variables",
          "imports/layout/internalbanner/variables",
@@ -46,8 +46,8 @@
 
 // components
 
-  @import "imports/components/buttons/buttons";
-//         "imports/components/internal_forms/internal_content_forms";
+  @import "imports/components/buttons/buttons",
+         "imports/components/internal_forms/internal_content_forms";
 
 // layout
 

@@ -4,7 +4,7 @@
     padding: 47px 75px 60px;
   }
   @include mq(small_laptop) {
-    padding: 85px 75px 60px;
+    padding: 60px 75px;
   }
   @include mq(large_laptop) {
     padding: 78px 75px 80px;
@@ -36,8 +36,8 @@ h1#sec_three_title {
   margin-bottom: 23px;
   @include type(
     (
-      size: 35px,
-      height: 35px,
+      size: 40px,
+      height: 40px,
       spacing: 0.35px,
       family: $secondaryfont,
       color: $color_dark_one,
@@ -46,21 +46,23 @@ h1#sec_three_title {
     )
   );
   @include mq(small_tablet) {
-    max-width: 480px;
+    max-width: 570px;
     margin-bottom: 36px;
     @include margin_lr;
     @include quick_type(55px, 55px, null);
   }
   @include mq(small_laptop) {
-    max-width: 100%;
+    max-width: 500px;
     margin-bottom: 28px;
     @include quick_type(50px, 55px, null);
   }
   @include mq(large_laptop) {
+    max-width: 600px;
     margin-bottom: 33px;
     @include quick_type(60px, 60px, null);
   }
   @include mq(small_monitor) {
+    max-width: 700px;
     margin-bottom: 55px;
     @include quick_type(70px, 70px, null);
   }

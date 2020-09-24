@@ -1,7 +1,7 @@
 #page_wrapper.testimonials_page_wrapper {
-  padding: 33px 30px 20px;
+  padding: 40px 30px 20px;
   @include mq(small_tablet) {
-    padding: 38px 42px 40px;
+    padding: 40px 42px 40px;
     max-width: 890px;
     @include margin_lr;
   }

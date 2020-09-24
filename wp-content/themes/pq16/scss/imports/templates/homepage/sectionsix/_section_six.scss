@@ -259,10 +259,11 @@ span#sec_six_title {
       @include abs(14px, -3px, null, null);
       @include mq(small_tablet) {
         top: 22px;
+        right:15px;
       }
       @include mq(large_laptop) {
         top: 37px;
-        right: -6px;
+        right: 15px;
       }
     }
     .sec_six_intro {

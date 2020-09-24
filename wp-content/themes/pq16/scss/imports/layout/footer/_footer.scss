@@ -34,7 +34,7 @@ footer {
     max-width: 100%;
     margin: 0;
     @include flex();
-    width: calc(100% - 75px);
+    width: calc(100% - 60px);
   }
   @include mq(large_laptop) {
     width: calc(100% - 53px);

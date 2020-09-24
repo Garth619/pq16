@@ -32,7 +32,7 @@ h1.page_title {
 }
 
 h1.internal_title {
-  padding-top: 22px;
+  padding-top: 40px;
   @include type(
     (
       size: 30px,
@@ -205,14 +205,23 @@ h1.internal_title {
   }
   ul {
     list-style: none;
+    &.two_col {
+      @include mq(small_tablet) {
+        column-count:2;
+        column-gap:45px;
+      }
+     }
     li {
       position: relative;
-      padding-left: 13px;
+      padding-left: 17px;
+      margin-bottom:10px;
+      display: inline-block;
+      width:100%;
       &:before {
         border-radius: 50%;
-        background: $color_bright_two;
+        background: $color_bright_three;
         @include abs(11px, null, null, 0);
-        @include box(4px);
+        @include box(6px);
         @include contentdisplay();
       }
     }

@@ -1,6 +1,6 @@
 body.page-template-template-bio {
   #page_wrapper {
-    margin-top: -234px;
+    margin-top: -211px;
     padding: 0 30px 27px;
     @include mq(small_tablet) {
       margin-top: -297px;
@@ -62,7 +62,7 @@ body.page-template-template-bio {
 
 #att_banner_content {
   text-align: center;
-  padding: 23px 0 18px;
+  padding: 40px 0 18px;
   max-width: 450px;
   @include margin_lr;
   @include mq(small_tablet) {

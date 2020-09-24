@@ -7,7 +7,7 @@ function load_my_styles_scripts() {
     
     // Styles
     
-   	// wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
+   	wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
     
     // Disables jquery then registers it again to go into footer
     
@@ -41,16 +41,16 @@ function load_my_styles_scripts() {
 -------------------------------------------------------------- */
  
  
-function internal_css_print() {
-   echo '<style>';
+// function internal_css_print() {
+//    echo '<style>';
    
-   include_once get_template_directory() . '/style.css';
+//    include_once get_template_directory() . '/style.css';
   
-   echo '</style>';
-}
+//    echo '</style>';
+// }
 
 
-add_action( 'wp_head', 'internal_css_print' );
+// add_action( 'wp_head', 'internal_css_print' );
 
 
 /* Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed

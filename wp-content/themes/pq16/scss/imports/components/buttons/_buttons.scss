@@ -1,31 +1,31 @@
 .button {
-  border: 2px solid $color_bright_three;
+  border: 2px solid $button_color_border;
   padding: 17px 25px;
   transition: all 200ms ease-in-out;
   @include type(
     (
-      size: 12px,
-      spacing: 3px,
+      size: $button_size,
+      spacing: $button_spacing,
       family: $primaryfont,
-      color: $color_bright_three,
-      weight: 800,
+      color: $button_color,
+      weight: $button_weight,
       align: center,
       transform: uppercase,
     )
   );
   @include mq(large_laptop) {
-    font-size: 13px;
+    font-size: $button_size_large_laptop;
     padding: 19px 23px 16px;
   }
   &:hover {
-    background: $color_bright_three;
-    color: $color_light_one;
+    background: $button_color_bg_hover;
+    color: $color_bright_three;
   }
 }
 
 .button_two {
   display: inline-block;
-  border: 1px solid $color_light_twelve;
+  border: 1px solid $button_two_color_border;
   padding: 12px 20px;
   transition: all 200ms ease-in-out;
   @include type(

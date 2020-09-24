@@ -6,7 +6,7 @@
     @include margin_lr;
   }
   @include mq(large_laptop) {
-    max-width: 1200px;
+    max-width: 1070px;
   }
   @include mq(small_monitor) {
     margin-bottom: -50px;
