@@ -5,23 +5,35 @@ body {
 h1.page_title {
   @include type(
     (
-      size: 30px,
-      height: 32px,
+      size: $page_title_size,
+      height: $page_title_height,
       family: $secondaryfont,
-      weight: 600,
+      weight: $page_title_weight,
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(34px, 36px, null);
+    @include quick_type(
+      $page_title_size_tablet,
+      $page_title_height_tablet,
+      null
+    );
   }
   @include mq(large_laptop) {
-    @include quick_type(38px, 40px, null);
+    @include quick_type(
+      $page_title_size_large_laptop,
+      $page_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(45px, 50px, null);
+    @include quick_type(
+      $page_title_size_small_monitor,
+      $page_title_height_small_monitor,
+      null
+    );
   }
   &:after {
-    background: $color_bright_one;
+    background: $page_title_line_bg_color;
     margin-top: 18px;
     @include box(100%, 3px);
     @include contentdisplay();
@@ -35,24 +47,35 @@ h1.internal_title {
   padding-top: 40px;
   @include type(
     (
-      size: 30px,
-      height: 32px,
+      size: $internal_title_size,
+      height: $internal_title_height,
       family: $secondaryfont,
-      weight: 600,
+      weight: $internal_title_weight,
     )
   );
   @include mq(small_tablet) {
     padding-top: 38px;
-    @include quick_type(34px, 36px, null);
+    @include quick_type(
+      $internal_title_size_small_tablet,
+      $internal_title_height_small_tablet,
+      null
+    );
   }
-
   @include mq(large_laptop) {
     padding-top: 50px;
-    @include quick_type(38px, 40px, null);
+    @include quick_type(
+      $internal_title_size_large_laptop,
+      $internal_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding-top: 68px;
-    @include quick_type(45px, 50px, null);
+    @include quick_type(
+      $internal_title_size_small_monitor,
+      $internal_title_height_small_monitor,
+      null
+    );
   }
   &.center_title {
     text-align: center;
@@ -72,7 +95,7 @@ h1.internal_title {
   &:before,
   &:after {
     width: 100%;
-    background: $color_bright_two;
+    background: $inner_subtitle_bg_color;
     @include contentdisplay();
   }
   &:before {
@@ -122,24 +145,28 @@ h1.internal_title {
       @include margin_lr;
       @include type(
         (
-          size: 12px,
-          height: 18px,
-          spacing: 2.1px,
+          size: $inner_subtitle_list_size,
+          height: $inner_subtitle_list_height,
+          spacing: $inner_subtitle_list_spacing,
           family: $primaryfont,
-          color: $color_dark_one,
-          weight: 800,
+          color: $inner_subtitle_list_color,
+          weight: $inner_subtitle_list_weight,
           align: center,
           transform: uppercase,
         )
       );
       @include mq(small_tablet) {
-        @include quick_type(14px, 20px, null);
+        @include quick_type(
+          $inner_subtitle_list_size_small_tablet,
+          $inner_subtitle_list_height_small_tablet,
+          null
+        );
       }
       @include mq(large_laptop) {
-        letter-spacing: 3.2px;
+        letter-spacing: $inner_subtitle_list_spacing_large_laptop;
       }
       @include mq(small_monitor) {
-        font-size: 16px;
+        font-size: $inner_subtitle_list_size_small_monitor;
       }
       &:after {
         content: "";
@@ -172,18 +199,22 @@ h1.internal_title {
     @include margin_lr;
     @include type(
       (
-        size: 14px,
-        height: 20px,
-        spacing: 2.1px,
+        size: $inner_subtitle_span_size,
+        height: $inner_subtitle_span_height,
+        spacing: $inner_subtitle_span_spacing,
         family: $primaryfont,
-        color: $color_dark_one,
-        weight: 800,
+        color: $inner_subtitle_span_color,
+        weight: $inner_subtitle_span_weight,
         align: center,
         transform: uppercase,
       )
     );
     @include mq(small_tablet) {
-      @include quick_type(15px, 20px, null);
+      @include quick_type(
+        $inner_subtitle_span_size_small_tablet,
+        $inner_subtitle_span_height_small_tablet,
+        null
+      );
     }
   }
 }
@@ -207,16 +238,16 @@ h1.internal_title {
     list-style: none;
     &.two_col {
       @include mq(small_tablet) {
-        column-count:2;
-        column-gap:45px;
+        column-count: 2;
+        column-gap: 45px;
       }
-     }
+    }
     li {
       position: relative;
       padding-left: 17px;
-      margin-bottom:10px;
+      margin-bottom: 10px;
       display: inline-block;
-      width:100%;
+      width: 100%;
       &:before {
         border-radius: 50%;
         background: $color_bright_three;

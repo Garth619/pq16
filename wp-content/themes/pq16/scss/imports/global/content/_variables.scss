@@ -2,116 +2,68 @@
 // Global Content
 ////////////////////////////////////////////////////////////////////
 
-// #page_header
+// h1.page_title
 
-$page_header_size: 25px;
-$page_header_size_large_laptop: 30px;
-$page_header_size_small_monitor: 45px;
+$page_title_size: 30px;
+$page_title_size_tablet: 34px;
+$page_title_size_large_laptop: 38px;
+$page_title_size_small_monitor: 45px;
 
-$page_header_height: 25px;
-$page_header_height_large_laptop: 30px;
-$page_header_height_small_monitor: 45px;
+$page_title_height: 32px;
+$page_title_height_tablet: 36px;
+$page_title_height_large_laptop: 40px;
+$page_title_height_small_monitor: 50px;
 
-$page_header_weight: 500;
+$page_title_weight: 600;
 
-// #internal_header
+// h1.page_title:after
 
-$internal_header_size: 35px;
-$internal_header_size_large_laptop: 55px;
-$internal_header_size_small_monitor: 60px;
+$page_title_line_bg_color: $color_bright_one;
 
-$internal_header_height: 35px;
-$internal_header_height_large_laptop: 55px;
-$internal_header_height_small_monitor: 70px;
+// h1.internal_title
 
-$internal_header_weight: 500;
+$internal_title_size: 30px;
+$internal_title_size_small_tablet: 34px;
+$internal_title_size_large_laptop: 38px;
+$internal_title_size_small_monitor: 45px;
 
-// .double_line:before,&:after
+$internal_title_height: 32px;
+$internal_title_height_small_tablet: 36px;
+$internal_title_height_large_laptop: 40px;
+$internal_title_height_small_monitor: 50px;
 
-$double_line_bg_color: $color_bright_two;
+$internal_title_weight: 600;
 
-// .content
+// .inner_subtitle :before, :after
 
-$content_size: 13px;
-$content_size_large_laptop: 15px;
-$content_size_small_monitor: 16px;
+$inner_subtitle_bg_color: $color_bright_two;
 
-$content_height: 22px;
-$content_height_large_laptop: 28px;
-$content_height_small_monitor: 30px;
+// .inner_subtitle ul li
 
-$content_spacing: 0.33px;
+$inner_subtitle_list_size: 12px;
+$inner_subtitle_list_size_small_tablet: 14px;
+$inner_subtitle_list_size_small_monitor: 16px;
 
-// .content h2
+$inner_subtitle_list_height: 18px;
+$inner_subtitle_list_height_small_tablet: 20px;
 
-$content_h2_size: 18px;
-$content_h2_size_large_laptop: 22px;
-$content_h2_size_small_monitor: 26px;
+$inner_subtitle_list_spacing: 2.1px;
+$inner_subtitle_list_spacing_large_laptop: 3.2px;
 
-$content_h2_height: 22px;
-$content_h2_height_large_laptop: 25px;
-$content_h2_height_small_monitor: 30px;
+$inner_subtitle_list_color: $color_dark_one;
 
-$content_h2_color: $color_bright_two;
+$inner_subtitle_list_weight: 800;
 
-$content_h2_weight: 500;
+// .inner_subtitle span
 
-// .content h3
+$inner_subtitle_span_size: 14px;
+$inner_subtitle_span_size_small_tablet: 15px;
 
-$content_h3_size: 15px;
-$content_h3_size_large_laptop: 17px;
-$content_h3_size_small_monitor: 19px;
+$inner_subtitle_span_height: 20px;
+$inner_subtitle_span_height_small_tablet: 20px;
 
-$content_h3_height: 19px;
-$content_h3_height_large_laptop: 30px;
-$content_h3_height_small_monitor: 30px;
+$inner_subtitle_span_spacing: 2.1px;
 
-$content_h3_spacing: 0.38px;
+$inner_subtitle_span_color: $color_dark_one;
 
-$content_h3_weight: 700;
-
-// .content h4
-
-$content_h4_size: 16px;
-
-$content_h4_height: 18px;
-
-$content_h4_spacing: 0.4px;
-
-$content_h4_weight: 600;
-
-// .content a
-
-$content_link_color: $color_bright_two;
-
-// ul li, ol li
-
-$content_li_weight: 600;
-
-// ul li bullet
-
-$content_ul_bullet_bg_color: $color_bright_one;
-
-// ol li
-
-$content_ol_height_large_laptop: $color_bright_two;
-
-// ol li:before
-
-$content_ol_number_color: $color_bright_two;
-
-// span.double_line.blockquote:before,&:after
-
-$blockquote_double_line_bg_color: $color_bright_two;
-
-// blockquote
-
-$blockquote_size: 21px;
-$blockquote_size_large_laptop: 25px;
-$blockquote_size_small_monitor: 35px;
-
-$blockquote_height: 22px;
-$blockquote_height_large_laptop: 25px;
-$blockquote_height_small_monitor: 40px;
-
-$blockquote_weight: 500;
+$inner_subtitle_span_weight: 800;
