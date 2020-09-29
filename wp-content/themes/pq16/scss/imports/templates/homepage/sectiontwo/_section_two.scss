@@ -1,7 +1,12 @@
 #section_two {
   background: $color_light_eight;
+  min-height:369px;
   @include mq(small_tablet) {
     padding: 0 0 0px 0;
+    min-height:374px;
+  }
+  @include mq(tablet) {
+    min-height:auto;
   }
 }
 

@@ -1,8 +1,8 @@
 <section id='section_two'>
 
-	<div id='sec_two_inner'>
+	<div id='sec_two_inner' class="preload_section">
   
-    <div id='sec_two_slider'>
+    <div id='sec_two_slider' class="preload_slider">
 
     <?php if ( have_rows( 'section_two_selling_points' ) ) : ?>
 	      
