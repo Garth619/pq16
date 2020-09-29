@@ -18,7 +18,7 @@
     padding: 19px 23px 16px;
   }
   &:hover {
-    background: $button_color_bg_hover;
+    background: $button_bg_color_hover;
     color: $color_bright_three;
   }
 }
@@ -30,34 +30,34 @@
   transition: all 200ms ease-in-out;
   @include type(
     (
-      size: 12px,
-      height: 14px,
-      spacing: 2.7px,
-      color: $color_dark_one,
+      size: $button_two_size,
+      height: $button_two_height,
+      spacing: $button_two_spacing,
+      color: $button_two_color,
       family: $primaryfont,
-      weight: 800,
+      weight: $button_two_weight,
       transform: uppercase,
     )
   );
   &:hover {
-    border: 1px solid $color_bright_two;
-    color: $color_bright_two;
+    border: 1px solid $button_two_color_border_hover;
+    color: $button_two_color_hover;
   }
 }
 
 .button_three {
   display: inline-block;
-  background: $color_bright_two;
+  background: $button_three_bg_color;
   padding: 18px 30px;
   transition: all 200ms ease-in-out;
   @include type(
     (
-      size: 12px,
-      height: 16px,
+      size: $button_three_size,
+      height: $button_three_height,
       family: $primaryfont,
-      color: $color_light_one,
-      weight: 800,
-      spacing: 4px,
+      color: $button_three_color,
+      weight: $button_three_weight,
+      spacing: $button_three_spacing,
       transform: uppercase,
     )
   );
@@ -65,16 +65,20 @@
     padding: 17px 35px;
   }
   @include mq(small_laptop) {
-    font-size: 14px;
+    font-size: $button_three_size_small_laptop;
   }
   @include mq(large_laptop) {
     padding: 24px 50px;
-    @include quick_type(16px, 18px, null);
+    @include quick_type(
+      $button_three_size_large_laptop,
+      $button_three_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding: 20px 50px;
   }
   &:hover {
-    background: $color_bright_three;
+    background: $button_three_bg_color_hover;
   }
 }

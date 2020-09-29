@@ -2,3 +2,37 @@
 // Internal Forms
 ////////////////////////////////////////////////////////////////////
 
+// input,select,textarea
+
+$internal_form_size: 13px;
+$internal_form_size_large_laptop: 14px;
+
+$internal_form_weight: 700;
+
+$internal_form_spacing: 0.65px;
+
+$internal_form_color: $color_dark_one;
+
+// submit
+
+$internal_submit_bg_color: $color_bright_two;
+$internal_submit_bg_color_hover: $color_bright_three;
+
+$internal_submit_size: 12px;
+$internal_submit_size_small_monitor: 14px;
+
+$internal_submit_color: $color_light_one;
+
+$internal_submit_weight: 800;
+
+$internal_submit_spacing: 5px;
+
+// error message .gfield_description, .validation_message
+
+$internal_form_error_size: 11px;
+
+$internal_form_error_spacing: 1px;
+
+$internal_form_error_color: $color_bright_two;
+
+$internal_form_error_weight: 800;

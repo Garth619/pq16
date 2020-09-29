@@ -44,15 +44,15 @@
             padding: 14px 15px;
             @include type(
               (
-                size: 13px,
-                weight: 700,
-                spacing: 0.65px,
+                size: $internal_form_size,
+                weight: $internal_form_weight,
+                spacing: $internal_form_spacing,
                 family: $primaryfont,
-                color: $color_dark_one,
+                color: $internal_form_color,
               )
             );
             @include mq(large_laptop) {
-              font-size: 14px;
+              font-size: $internal_form_size_large_laptop;
               padding: 12px 15px;
             }
             @include mq(small_monitor) {
@@ -103,35 +103,35 @@
   input[type="submit"] {
     border: none;
     padding: 17px 40px;
-    background: $color_bright_two;
+    background: $internal_submit_bg_color;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     @include type(
       (
-        size: 12px,
+        size: $internal_submit_size,
         family: $primaryfont,
-        color: $color_light_one,
-        weight: 800,
-        spacing: 5px,
+        color: $internal_submit_color,
+        weight: $internal_submit_weight,
+        spacing: $internal_submit_spacing,
         transform: uppercase,
       )
     );
     @include mq(small_monitor) {
-      font-size: 14px;
+      font-size: $internal_submit_size_small_monitor;
     }
     &:hover {
-      background: $color_bright_three;
+      background: $internal_submit_bg_color_hover;
     }
   }
   .gfield_description,
   .validation_message {
     @include type(
       (
-        size: 11px,
-        spacing: 1px,
+        size: $internal_form_error_size,
+        spacing: $internal_form_error_spacing,
         family: $primaryfont,
-        color: $color_bright_two,
-        weight: 800,
+        color: $internal_form_error_color,
+        weight: $internal_form_error_weight,
         transform: uppercase,
       )
     );

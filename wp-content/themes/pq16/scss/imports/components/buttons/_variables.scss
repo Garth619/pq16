@@ -13,10 +13,40 @@ $button_color: $color_bright_three;
 
 $button_color_border: $color_bright_three;
 
-$button_color_bg_hover: $color_bright_three;
+$button_bg_color_hover: $color_bright_three;
 
 $button_weight: 800;
 
 // .button_two
 
 $button_two_color_border: $color_light_twelve;
+$button_two_color_border_hover: $color_bright_two;
+
+$button_two_color: $color_dark_one;
+$button_two_color_hover: $color_bright_two;
+
+$button_two_size: 12px;
+
+$button_two_height: 14px;
+
+$button_two_spacing: 2.7px;
+
+$button_two_weight: 800;
+
+// .button_three
+
+$button_three_bg_color: $color_bright_two;
+$button_three_bg_color_hover: $color_bright_three;
+
+$button_three_color: $color_light_one;
+
+$button_three_size: 12px;
+$button_three_size_small_laptop: 14px;
+$button_three_size_large_laptop: 16px;
+
+$button_three_height: 16px;
+$button_three_height_large_laptop: 18px;
+
+$button_three_weight: 800;
+
+$button_three_spacing: 4px;

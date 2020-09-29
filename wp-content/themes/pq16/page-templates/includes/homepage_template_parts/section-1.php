@@ -124,7 +124,7 @@
     
     <?php if ( $section_one_background_mobile_webp ) { ?>
       
-      <source media='(min-width: 450px)' srcset='<?php echo $section_one_background_mobile_webp['url']; ?>' type='image/webp'>
+      <source media='(min-width: 550px)' srcset='<?php echo $section_one_background_mobile_webp['url']; ?>' type='image/webp'>
 	  
     <?php } ?>
     
@@ -132,11 +132,11 @@
 
     <?php if ( $section_one_background_mobile ) { ?>
 
-      <source media='(min-width: 450px)' srcset='<?php echo $section_one_background_mobile['url']; ?>'>
+      <source media='(min-width: 550px)' srcset='<?php echo $section_one_background_mobile['url']; ?>'>
     
     <?php } ?>
 
-    <?php $section_one_background_small_mobile_webp = get_field( 'section_one_background_mobile_webp' ); ?>
+    <?php $section_one_background_small_mobile_webp = get_field( 'section_one_background_small_mobile' ); ?>
     
     <?php if ( $section_one_background_small_mobile_webp ) { ?>
 
