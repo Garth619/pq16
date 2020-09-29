@@ -88,6 +88,8 @@
 
 <body id="header_trigger" <?php body_class(); ?>>
 
+<div class="unsupported-browser"></div>
+
 <header>
 
 	<div id='header_inner'>
