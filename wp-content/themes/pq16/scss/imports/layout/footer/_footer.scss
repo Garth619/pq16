@@ -119,22 +119,30 @@ footer {
     &#footer_form_title {
       @include type(
         (
-          size: 15px,
-          spacing: 1.5px,
+          size: $footer_form_title_size,
+          spacing: $footer_form_title_spacing,
           family: $primaryfont,
-          color: $color_bright_two,
-          weight: 800,
+          color: $footer_form_title_color,
+          weight: $footer_form_title_weight,
           transform: uppercase,
         )
       );
       @include mq(small_tablet) {
-        font-size: 16px;
+        font-size: $footer_form_title_size_small_tablet;
       }
       @include mq(small_laptop) {
-        @include quick_type(16px, null, 4px);
+        @include quick_type(
+          $footer_form_title_size_small_laptop,
+          null,
+          $footer_form_title_spacing_small_laptop
+        );
       }
       @include mq(small_monitor) {
-        @include quick_type(20px, null, 5px);
+        @include quick_type(
+          $footer_form_title_size_small_monitor,
+          null,
+          $footer_form_title_spacing_small_monitor
+        );
       }
     }
     &#footer_form_descrip {
@@ -143,14 +151,18 @@ footer {
       @include margin_lr;
       @include type(
         (
-          size: 15px,
-          height: 20px,
+          size: $footer_form_descrip_size,
+          height: $footer_form_descrip_height,
           family: $thirdfont,
         )
       );
       @include mq(small_tablet) {
         max-width: 410px;
-        @include quick_type(16px, 24px, null);
+        @include quick_type(
+          $footer_form_descrip_size_small_tablet,
+          $footer_form_descrip_height_small_tablet,
+          null
+        );
       }
       @include mq(small_laptop) {
         margin-top: 11px;
@@ -159,11 +171,19 @@ footer {
       }
       @include mq(large_laptop) {
         max-width: 410px;
-        @include quick_type(18px, 26px, null);
+        @include quick_type(
+          $footer_form_descrip_size_small_laptop,
+          $footer_form_descrip_height_small_laptop,
+          null
+        );
       }
       @include mq(small_monitor) {
         max-width: 450px;
-        @include quick_type(20px, 28px, null);
+        @include quick_type(
+          $footer_form_descrip_size_small_monitor,
+          $footer_form_descrip_height_small_monitor,
+          null
+        );
       }
     }
   }
@@ -218,18 +238,18 @@ footer {
         padding: 15px 18px;
         @include type(
           (
-            size: 13px,
-            weight: 700,
-            spacing: 0.65px,
+            size: $footer_form_size,
+            weight: $footer_form_weight,
+            spacing: $footer_form_spacing,
             family: $primaryfont,
-            color: $color_dark_one,
+            color: $footer_form_color,
           )
         );
         @include mq(small_laptop) {
           padding: 17px 18px;
         }
         @include mq(large_laptop) {
-          font-size: 14px;
+          font-size: $footer_form_size_large_laptop;
           padding: 15px 18px;
         }
         @include mq(small_monitor) {
@@ -253,16 +273,16 @@ footer {
     border: none;
     width: 100%;
     padding: 15px 10px;
-    background: $color_bright_two;
+    background: $footer_submit_bg_color;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     @include type(
       (
-        size: 14px,
+        size: $footer_submit_size,
         family: $primaryfont,
-        color: $color_light_one,
-        weight: 800,
-        spacing: 5px,
+        color: $footer_submit_color,
+        weight: $footer_submit_weight,
+        spacing: $footer_submit_spacing,
         transform: uppercase,
       )
     );
@@ -277,7 +297,7 @@ footer {
       padding: 17px 10px;
     }
     &:hover {
-      background: $color_bright_three;
+      background: $footer_submit_bg_color_hover;
     }
   }
   .gfield_description,
@@ -285,11 +305,11 @@ footer {
     margin-top: 5px;
     @include type(
       (
-        size: 11px,
-        spacing: 1px,
+        size: $footer_form_error,
+        spacing: $footer_form_error_spacing,
         family: $primaryfont,
-        color: $color_bright_two,
-        weight: 800,
+        color: $footer_form_error_color,
+        weight: $footer_form_error_weight,
         transform: uppercase,
       )
     );
@@ -301,9 +321,9 @@ span#footer_required {
   margin-top: 20px;
   @include type(
     (
-      size: 12px,
+      size: $footer_required_size,
       family: $thirdfont,
-      spacing: 0.3px,
+      spacing: $footer_required_spacing,
       color: $color_light_seven,
       transform: lowercase,
     )
@@ -312,7 +332,7 @@ span#footer_required {
     margin-top: 23px;
   }
   @include mq(large_laptop) {
-    font-size: 14px;
+    font-size: $footer_required_size_large_laptop;
     margin-top: 34px;
   }
   @include mq(small_monitor) {
@@ -390,24 +410,28 @@ a#footer_logo {
   }
   @include type(
     (
-      size: 15px,
-      height: 22px,
-      spacing: 0.38px,
+      size: $address_size,
+      height: $address_height,
+      spacing: $address_spacing,
       family: $primaryfont,
     )
   );
   @include mq(small_monitor) {
-    @include quick_type(16px, 24px, null);
+    @include quick_type(
+      $address_size_small_monitor,
+      $address_height_small_monitor,
+      null
+    );
   }
   .footer_phone {
     display: block;
     text-decoration: none;
-    color: $color_dark_one;
+    color: $footer_phone_color;
     span {
-      font-weight: 700;
+      font-weight: $footer_phone_span_weight;
       display: inline-block;
       margin-right: 5px;
-      color: $color_bright_two;
+      color: $footer_phone_span_color;
     }
   }
   .get_directions {
@@ -416,18 +440,18 @@ a#footer_logo {
     transition: all 200ms ease-in-out;
     @include type(
       (
-        size: 15px,
+        size: $get_directions_size,
         family: $thirdfont,
-        color: $color_bright_two,
+        color: $get_directions_color,
         transform: lowercase,
         decoration: underline,
       )
     );
     @include mq(small_monitor) {
-      font-size: 16px;
+      font-size: $get_directions_size_small_monitor;
     }
     &:hover {
-      color: $color_bright_three;
+      color: $get_directions_color_hover;
     }
   }
 }
@@ -446,13 +470,13 @@ a#footer_logo {
     &:hover {
       svg {
         path {
-          fill: $color_bright_two;
+          fill: $social_media_svg_color_hover;
         }
       }
     }
     svg {
       path {
-        fill: $color_dark_one;
+        fill: $social_media_svg_color;
         transition: all 200ms ease-in-out;
       }
       path.youtube_tri {
@@ -502,17 +526,17 @@ a#footer_logo {
       margin: 0 5px;
       @include type(
         (
-          size: 12px,
-          height: 15px,
-          spacing: 0.6px,
+          size: $copyright_size,
+          height: $copyright_height,
+          spacing: $copyright_spacing,
           family: $primaryfont,
         )
       );
       a {
-        color: $color_dark_one;
+        color: $copyright_color;
         transition: all 200ms ease-in-out;
         &:hover {
-          color: $color_bright_two;
+          color: $copyright_color_hover;
         }
       }
     }

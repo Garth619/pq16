@@ -67,3 +67,61 @@ $inner_subtitle_span_spacing: 2.1px;
 $inner_subtitle_span_color: $color_dark_one;
 
 $inner_subtitle_span_weight: 800;
+
+// .content
+
+$content_size: 15px;
+$content_size_large_laptop: 16px;
+$content_size_small_monitor: 17px;
+
+$content_height: 26px;
+$content_height_large_laptop: 28px;
+$content_height_small_monitor: 30px;
+
+$content_spacing: 0.15px;
+
+// .content ul li:before
+
+$content_list_bullet_bg_color: $color_bright_three;
+
+// .content ol li:before
+
+$content_list_number_color: $color_bright_two;
+
+$content_list_number_weight: 800;
+
+// .content h2
+
+$h2_size: 19px;
+$h2_size_large_laptop: 20px;
+$h2_size_small_monitor: 22px;
+
+$h2_height: 24px;
+$h2_height_large_laptop: 26px;
+$h2_height_small_monitor: 30px;
+
+$h2_spacing: 0.19px;
+
+$h2_color: $color_bright_three;
+
+$h2_weight: 700;
+
+// .content h3
+
+$h3_size: 17px;
+$h3_size_large_laptop: 18px;
+$h3_size_small_monitor: 19px;
+
+$h3_height: 22px;
+$h3_height_large_laptop: 24px;
+$h3_height_small_monitor: 26px;
+
+$h3_spacing: 0.17px;
+
+$h3_color: $color_bright_three;
+
+$h3_weight: 700;
+
+// link
+
+$link_color: $color_bright_two;

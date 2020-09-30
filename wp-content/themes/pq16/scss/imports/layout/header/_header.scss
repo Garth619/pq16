@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background: #fff;
+  background: $header_bg_color;
   box-shadow: 0px 3px 6px #00000029;
   @include fixed(0, null, null, 0, 5);
 }
@@ -45,7 +45,7 @@ header {
 #header_middle {
   width: 100%;
   height: 100vh;
-  background: $color_light_one;
+  background: $header_middle_bg_color;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   opacity: 0;
@@ -62,7 +62,7 @@ header {
     left: auto;
     right: 0;
     top: 58px;
-    border-top: 1px solid $color_light_five;
+    border-top: 1px solid $header_middle_border_color;
     box-shadow: 0px 3px 6px #00000029;
   }
   @include mq(small_laptop) {
@@ -97,7 +97,7 @@ header {
 }
 
 .menu_wrapper {
-  background: $color_bright_two;
+  background: $menu_wrapper_bg_color;
   position: relative;
   @include box(100%, 58px);
   @include flex(center, center);
@@ -115,7 +115,7 @@ header {
     display: block;
   }
   span.menu_bar {
-    background: #fff;
+    background: $menu_bar_bg_color;
     margin-bottom: 4px;
     @include margin_lr;
     @include box(34px, 2px);
@@ -124,11 +124,11 @@ header {
     margin-top: 5px;
     @include type(
       (
-        size: 11px,
-        spacing: 1.1px,
+        size: $menu_title_size,
+        spacing: $menu_title_spacing,
         family: $primaryfont,
-        color: $color_light_one,
-        weight: 800,
+        color: $menu_title_color,
+        weight: $menu_title_weight,
         align: center,
         transform: uppercase,
       )
@@ -144,7 +144,7 @@ header {
   @include abs(10px, null, null, 15px);
   span {
     display: block;
-    background: $color_light_one;
+    background: $menu_close_bg_color;
     @include abs(16px, null, null, 3px);
     @include box(33px, 3px);
     &:first-of-type {
@@ -206,35 +206,35 @@ header {
     margin-bottom: 3px;
     @include type(
       (
-        size: 12px,
-        spacing: 0.6px,
+        size: $cta_wrapper_size,
+        spacing: $cta_wrapper_spacing,
         family: $primaryfont,
-        color: $color_bright_two,
-        weight: 800,
+        color: $cta_wrapper_color,
+        weight: $cta_wrapper_weight,
       )
     );
     @include mq(large_laptop) {
-      font-size: 13px;
+      font-size: $cta_wrapper_size_large_laptop;
     }
     @include mq(small_monitor) {
-      font-size: 15px;
+      font-size: $cta_wrapper_size_small_monitor;
     }
   }
   a {
     margin-left: 6px;
     @include type(
       (
-        size: 18px,
+        size: $cta_wrapper_phone_size,
         family: $primaryfont,
-        color: $color_dark_one,
-        weight: 700,
+        color: $cta_wrapper_phone_color,
+        weight: $cta_wrapper_phone_weight,
       )
     );
     @include mq(large_laptop) {
-      font-size: 20px;
+      font-size: $cta_wrapper_phone_size_large_laptop;
     }
     @include mq(small_monitor) {
-      font-size: 23px;
+      font-size: $cta_wrapper_phone_size_small_monitor;
     }
   }
 }

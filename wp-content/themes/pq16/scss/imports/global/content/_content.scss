@@ -222,17 +222,25 @@ h1.internal_title {
 .content {
   @include type(
     (
-      size: 15px,
-      height: 26px,
-      spacing: 0.15px,
+      size: $content_size,
+      height: $content_height,
+      spacing: $content_spacing,
       family: $primaryfont,
     )
   );
   @include mq(large_laptop) {
-    @include quick_type(16px, 28px, null);
+    @include quick_type(
+      $content_size_large_laptop,
+      $content_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(17px, 30px, null);
+    @include quick_type(
+      $content_size_small_monitor,
+      $content_height_small_monitor,
+      null
+    );
   }
   ul {
     list-style: none;
@@ -250,7 +258,7 @@ h1.internal_title {
       width: 100%;
       &:before {
         border-radius: 50%;
-        background: $color_bright_three;
+        background: $content_list_bullet_bg_color;
         @include abs(11px, null, null, 0);
         @include box(6px);
         @include contentdisplay();
@@ -267,8 +275,8 @@ h1.internal_title {
     }
     > li:before {
       content: counter(item) ".";
-      font-weight: 800;
-      color: $color_bright_two;
+      font-weight: $content_list_number_weight;
+      color: $content_list_number_color;
       @include abs(0, null, null, 0);
     }
   }
@@ -281,22 +289,26 @@ h1.internal_title {
     margin-bottom: 8px;
     @include type(
       (
-        size: 19px,
-        height: 24px,
-        spacing: 0.19px,
+        size: $h2_size,
+        height: $h2_height,
+        spacing: $h2_spacing,
         family: $secondaryfont,
-        color: $color_bright_three,
-        weight: 700,
+        color: $h2_color,
+        weight: $h2_weight,
       )
     );
     @include mq(small_tablet) {
       padding-top: 10px;
     }
     @include mq(large_laptop) {
-      @include quick_type(20px, 26px, null);
+      @include quick_type($h2_size_large_laptop, $h2_height_large_laptop, null);
     }
     @include mq(small_monitor) {
-      @include quick_type(22px, 30px, null);
+      @include quick_type(
+        $h2_size_small_monitor,
+        $h2_height_small_monitor,
+        null
+      );
     }
   }
   h3 {
@@ -304,24 +316,28 @@ h1.internal_title {
     padding-bottom: 7px;
     @include type(
       (
-        size: 17px,
-        height: 22px,
-        spacing: 0.17px,
+        size: $h3_size,
+        height: $h3_height,
+        spacing: $h3_spacing,
         family: $primaryfont,
-        color: $color_bright_three,
-        weight: 700,
+        color: $h3_color,
+        weight: $h3_weight,
       )
     );
     @include mq(large_laptop) {
-      @include quick_type(18px, 24px, null);
+      @include quick_type($h3_size_large_laptop, $h3_height_large_laptop, null);
     }
     @include mq(small_monitor) {
-      @include quick_type(19px, 26px, null);
+      @include quick_type(
+        $h3_size_small_monitor,
+        $h3_height_small_monitor,
+        null
+      );
     }
   }
   a,
   span.go_back {
-    color: $color_bright_two;
+    color: $link_color;
     transition: all 200ms ease-in-out;
     text-decoration: none;
     &:hover {

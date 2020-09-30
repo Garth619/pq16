@@ -2,3 +2,116 @@
 // Footer
 ////////////////////////////////////////////////////////////////////
 
+// #footer_form_title
+
+$footer_form_title_size: 15px;
+$footer_form_title_size_small_tablet: 16px;
+$footer_form_title_size_small_laptop: 16px;
+$footer_form_title_size_small_monitor: 20px;
+
+$footer_form_title_spacing: 1.5px;
+$footer_form_title_spacing_small_laptop: 4px;
+$footer_form_title_spacing_small_monitor: 5px;
+
+$footer_form_title_color: $color_bright_two;
+
+$footer_form_title_weight: 800;
+
+// #footer_form_descrip
+
+$footer_form_descrip_size: 15px;
+$footer_form_descrip_size_small_tablet: 16px;
+$footer_form_descrip_size_small_laptop: 18px;
+$footer_form_descrip_size_small_monitor: 20px;
+
+$footer_form_descrip_height: 20px;
+$footer_form_descrip_height_small_tablet: 24px;
+$footer_form_descrip_height_small_laptop: 26px;
+$footer_form_descrip_height_small_monitor: 28px;
+
+// #footer .gform_wrapper ul li input, selet, textarea
+
+$footer_form_size: 13px;
+$footer_form_size_large_laptop: 14px;
+
+$footer_form_weight: 700;
+
+$footer_form_spacing: 0.65px;
+
+$footer_form_color: $color_dark_one;
+
+// footer submit
+
+$footer_submit_bg_color: $color_bright_two;
+$footer_submit_bg_color_hover: $color_bright_three;
+
+$footer_submit_size: 14px;
+
+$footer_submit_color: $color_light_one;
+
+$footer_submit_weight: 800;
+
+$footer_submit_spacing: 5px;
+
+// footer  .gfield_description, .validation_message
+
+$footer_form_error: 11px;
+
+$footer_form_error_spacing: 1px;
+
+$footer_form_error_color: $color_bright_two;
+
+$footer_form_error_weight: 800;
+
+// span#footer_required
+
+$footer_required_size: 12px;
+$footer_required_size_large_laptop: 14px;
+
+$footer_required_spacing: 0.3px;
+
+$footer_required_color: $color_light_seven;
+
+// span#address
+
+$address_size: 15px;
+$address_size_small_monitor: 16px;
+
+$address_height: 22px;
+$address_height_small_monitor: 24px;
+
+$address_spacing: 0.38px;
+
+// .footer_phone
+
+$footer_phone_color: $color_dark_one;
+
+// .footer_phone span
+
+$footer_phone_span_weight: 700;
+
+$footer_phone_span_color: $color_bright_two;
+
+// .get_directions
+
+$get_directions_size: 15px;
+$get_directions_size_small_monitor: 16px;
+
+$get_directions_color: $color_bright_two;
+$get_directions_color_hover: $color_bright_three;
+
+// social_media a svg path
+
+$social_media_svg_color: $color_dark_one;
+$social_media_svg_color_hover: $color_bright_two;
+
+// #copyright_inner ul li
+
+$copyright_size: 12px;
+
+$copyright_height: 15px;
+
+$copyright_spacing: 0.6px;
+
+$copyright_color: $color_dark_one;
+$copyright_color_hover: $color_bright_two;

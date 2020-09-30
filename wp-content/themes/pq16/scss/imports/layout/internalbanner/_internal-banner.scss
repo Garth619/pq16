@@ -29,28 +29,44 @@ span.banner_title {
   @include margin_lr;
   @include type(
     (
-      size: 40px,
-      height: 45px,
+      size: $banner_title_size,
+      height: $banner_title_height,
       family: $secondaryfont,
-      color: $color_light_one,
-      weight: 700,
+      color: $banner_title_color,
+      weight: $banner_title_weight,
     )
   );
   @include mq(small_tablet) {
     max-width: 467px;
     margin-bottom: 20px;
-    @include quick_type(35px, 35px, null);
+    @include quick_type(
+      $banner_title_size_small_tablet,
+      $banner_title_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
     max-width: 568px;
-    @include quick_type(40px, 45px, null);
+    @include quick_type(
+      $banner_title_size_small_laptop,
+      $banner_title_height_small_laptop,
+      null
+    );
   }
   @include mq(large_laptop) {
     max-width: 630px;
-    @include quick_type(45px, 50px, null);
+    @include quick_type(
+      $banner_title_size_large_laptop,
+      $banner_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(50px, 55px, null);
+    @include quick_type(
+      $banner_title_size_small_monitor,
+      $banner_title_height_small_monitor,
+      null
+    );
   }
 }
 
