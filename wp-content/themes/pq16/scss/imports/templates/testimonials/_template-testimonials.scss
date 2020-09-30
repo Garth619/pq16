@@ -42,7 +42,7 @@
 }
 
 .single_testimonial {
-  background: $color_light_one;
+  background: $single_testi_bg_color;
   box-shadow: 5px 5px 20px #00000029;
   position: relative;
   padding: 43px 35px;
@@ -86,42 +86,62 @@
     margin-top: 33px;
     @include type(
       (
-        size: 15px,
-        height: 19px,
+        size: $testi_intro_size,
+        height: $testi_intro_height,
         family: $primaryfont,
-        weight: 700,
+        weight: $testi_intro_weight,
       )
     );
     @include mq(small_laptop) {
       margin-top: 37px;
-      @include quick_type(18px, 24px, null);
+      @include quick_type(
+        $testi_intro_size_small_laptop,
+        $testi_intro_height_small_laptop,
+        null
+      );
     }
     @include mq(large_laptop) {
       margin-top: 29px;
-      @include quick_type(20px, 26px, null);
+      @include quick_type(
+        $testi_intro_size_large_laptop,
+        $testi_intro_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       margin-top: 52px;
-      @include quick_type(22px, 28px, null);
+      @include quick_type(
+        $testi_intro_size_small_monitor,
+        $testi_intro_height_small_monitor,
+        null
+      );
     }
   }
   .testi_descrip {
     @include type(
       (
-        size: 13px,
-        height: 18px,
+        size: $testi_descrip_size,
+        height: $testi_descrip_height,
         family: $thirdfont,
       )
     );
     @include mq(small_laptop) {
       margin-top: 14px;
-      @include quick_type(15px, 20px, null);
+      @include quick_type(
+        $testi_descrip_size_small_laptop,
+        $testi_descrip_height_small_laptop,
+        null
+      );
     }
     @include mq(large_laptop) {
       margin-top: 9px;
     }
     @include mq(small_monitor) {
-      @include quick_type(17px, 26px, null);
+      @include quick_type(
+        $testi_descrip_size_small_monitor,
+        $testi_descrip_height_large_laptop,
+        null
+      );
     }
   }
   span.testi_name {
@@ -129,29 +149,29 @@
     margin-top: 20px;
     @include type(
       (
-        size: 12px,
-        height: 14px,
-        spacing: 1.8px,
+        size: $testi_name_size,
+        height: $testi_name_height,
+        spacing: $testi_name_spacing,
         family: $primaryfont,
-        weight: 800,
+        weight: $testi_name_weight,
         transform: uppercase,
       )
     );
     @include mq(small_laptop) {
-      font-size: 13px;
+      font-size: $testi_name_size_small_laptop;
     }
     @include mq(large_laptop) {
       margin-top: 26px;
     }
     @include mq(small_monitor) {
-      font-size: 15px;
+      font-size: $testi_name_size_small_monitor;
     }
     &:before {
       vertical-align: top;
       margin-top: 6px;
       margin-right: 7px;
       border-radius: 50%;
-      background: $color_bright_one;
+      background: $testi_name_dot_bg_color;
       @include box(3px);
       @include contentdisplay(inline-block);
       @include mq(small_laptop) {

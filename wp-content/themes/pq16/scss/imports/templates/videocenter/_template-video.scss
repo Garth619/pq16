@@ -54,7 +54,7 @@
       .video_overlay {
         svg {
           path.play_tri {
-            fill: $color_bright_one;
+            fill: $video_play_button_hover;
           }
         }
       }
@@ -93,7 +93,7 @@
           @include box(130px);
         }
         path.play_tri {
-          fill: $color_bright_two;
+          fill: $video_play_button;
           transition: all 200ms ease-in-out;
         }
       }
@@ -108,11 +108,11 @@
       @include margin_lr;
       @include type(
         (
-          size: 16px,
-          height: 20px,
-          color: $color_dark_one,
+          size: $video_title_size,
+          height: $video_title_height,
+          color: $video_title_color,
           family: $primaryfont,
-          weight: 700,
+          weight: $video_title_weight,
         )
       );
     }

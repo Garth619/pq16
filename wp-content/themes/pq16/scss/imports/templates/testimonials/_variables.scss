@@ -1,3 +1,47 @@
 ////////////////////////////////////////////////////////////////////
 // Testimonials Page
 ////////////////////////////////////////////////////////////////////
+
+// .single_testimonial
+
+$single_testi_bg_color: $color_light_one;
+
+// .testi_intro
+
+$testi_intro_size: 15px;
+$testi_intro_size_small_laptop: 18px;
+$testi_intro_size_large_laptop: 20px;
+$testi_intro_size_small_monitor: 22px;
+
+$testi_intro_height: 19px;
+$testi_intro_height_small_laptop: 24px;
+$testi_intro_height_large_laptop: 26px;
+$testi_intro_height_small_monitor: 28px;
+
+$testi_intro_weight: 700;
+
+// .testi_descrip
+
+$testi_descrip_size: 13px;
+$testi_descrip_size_small_laptop: 15px;
+$testi_descrip_size_small_monitor: 17px;
+
+$testi_descrip_height: 18px;
+$testi_descrip_height_small_laptop: 20px;
+$testi_descrip_height_large_laptop: 26px;
+
+// span.testi_name
+
+$testi_name_size: 12px;
+$testi_name_size_small_laptop: 13px;
+$testi_name_size_small_monitor: 15px;
+
+$testi_name_height: 14px;
+
+$testi_name_spacing: 1.8px;
+
+$testi_name_weight: 800;
+
+// span.testi_name:before
+
+$testi_name_dot_bg_color: $color_bright_one;

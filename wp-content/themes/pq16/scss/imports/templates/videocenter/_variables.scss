@@ -1,3 +1,18 @@
 ////////////////////////////////////////////////////////////////////
 // Video Center Page
 ////////////////////////////////////////////////////////////////////
+
+// span.video_title
+
+$video_title_size: 16px;
+
+$video_title_height: 20px;
+
+$video_title_color: $color_dark_one;
+
+$video_title_weight: 700;
+
+// .single_video .single_video_thumbnail .video_overlay svg path.play_tri
+
+$video_play_button: $color_bright_two;
+$video_play_button_hover: $color_bright_one;
