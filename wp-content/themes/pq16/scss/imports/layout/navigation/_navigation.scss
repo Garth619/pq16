@@ -10,24 +10,32 @@ nav {
     li {
       @include type(
         (
-          size: 16px,
-          height: 20px,
-          spacing: 0.75px,
+          size: $nav_size,
+          height: $nav_height,
+          spacing: $nav_spacing,
           family: $primaryfont,
-          color: $color_dark_one,
-          weight: 700,
+          color: $nav_color,
+          weight: $nav_weight,
         )
       );
       @include mq(small_laptop) {
-        @include quick_type(14px, 16px, null);
+        @include quick_type(
+          $nav_size_small_laptop,
+          $nav_height_small_laptop,
+          null
+        );
       }
       @include mq(large_laptop) {
-        @include quick_type(15px, 17px, null);
+        @include quick_type(
+          $nav_size_large_laptop,
+          $nav_height_large_laptop,
+          null
+        );
       }
       a {
         display: block;
         text-decoration: none;
-        color: $color_dark_one;
+        color: $nav_color;
         padding-bottom: 23px;
         @include mq(small_tablet) {
           padding-bottom: 26px;
@@ -71,7 +79,7 @@ nav {
       > a {
         transition: all 200ms ease-in-out;
         &.active {
-          color: $color_bright_two;
+          color: $nav_active_color;
         }
         &:after {
           background-image: url(#{$themepath}/images/arrow.svg);
@@ -89,7 +97,7 @@ nav {
     }
     > li.current-menu-ancestor {
       > a {
-        color: $color_bright_two;
+        color: $nav_current_color;
       }
     }
   }
@@ -100,7 +108,7 @@ nav {
     display: none;
     @include mq(small_laptop) {
       display: block !important;
-      background: $color_light_one;
+      background: $nav_bg_color_small_laptop;
       width: 258px;
       box-shadow: 0px 3px 5px #00000029;
       opacity: 0;
@@ -122,15 +130,15 @@ nav {
         }
         &:hover {
           @include mq(small_laptop) {
-            background: $color_light_two;
-            color: $color_bright_two;
+            background: $nav_bg_color_hover;
+            color: $nav_color_hover;
           }
         }
       }
     }
     li.current-menu-item {
       a {
-        color: $color_bright_two;
+        color: $nav_current_color;
       }
     }
   }

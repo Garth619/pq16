@@ -1,3 +1,37 @@
 ////////////////////////////////////////////////////////////////////
 // Navigation
 ////////////////////////////////////////////////////////////////////
+
+// nav ul li
+
+$nav_size: 16px;
+$nav_size_small_laptop: 14px;
+$nav_size_large_laptop: 15px;
+
+$nav_height: 20px;
+$nav_height_small_laptop: 16px;
+$nav_height_large_laptop: 17px;
+
+$nav_spacing: 0.75px;
+
+$nav_color: $color_dark_one;
+
+$nav_weight: 700;
+
+// nav ul.menu li.active a
+
+$nav_active_color: $color_bright_two;
+
+// nav ul.menu li.current-menu-ancestor a, nav ul.menu li.current-menu-item a
+
+$nav_current_color: $color_bright_two;
+
+// nav ul.sub-menu
+
+$nav_bg_color_small_laptop: $color_light_one;
+
+// nav ul.sub-menu li a
+
+$nav_bg_color_hover: $color_light_two;
+
+$nav_color_hover: $color_bright_two;

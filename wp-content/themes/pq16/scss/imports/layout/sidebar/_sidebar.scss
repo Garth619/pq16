@@ -28,7 +28,7 @@
   }
   &:after {
     @include mq(small_laptop) {
-      background: $color_light_ten;
+      background: $sidebar_inner_bg_color;
       @include box(100%, calc(100% - 65px));
       @include abs(0, null, null, 0, -1);
       @include contentdisplay();
@@ -41,12 +41,12 @@ span#sidebar_form_title {
   margin-bottom: 17px;
   @include type(
     (
-      size: 14px,
-      height: 16px,
-      spacing: 1.68px,
+      size: $idebar_form_title_size,
+      height: $idebar_form_title_height,
+      spacing: $idebar_form_title_spacing,
       family: $primaryfont,
-      color: $color_bright_two,
-      weight: 800,
+      color: $sidebar_form_title_color,
+      weight: $sidebar_form_title_weight,
       transform: uppercase,
     )
   );
@@ -55,7 +55,11 @@ span#sidebar_form_title {
   }
   @include mq(small_monitor) {
     margin-bottom: 28px;
-    @include quick_type(16px, null, 2.88px);
+    @include quick_type(
+      $idebar_form_title_size_small_monitor,
+      null,
+      $idebar_form_title_spacing_small_monitor
+    );
   }
 }
 
@@ -98,19 +102,19 @@ span#sidebar_form_title {
         input,
         textarea {
           width: 100%;
-          border: 1px solid $color_light_twelve;
+          border: 1px solid $sidebar_form_border_color;
           padding: 14px 18px;
           @include type(
             (
-              size: 13px,
-              weight: 700,
-              spacing: 0.65px,
+              size: $sidebar_form_border_size,
+              weight: $sidebar_form_border_weight,
+              spacing: $sidebar_form_border_spacing,
               family: $primaryfont,
-              color: $color_dark_one,
+              color: $sidebar_form_border_color,
             )
           );
           @include mq(large_laptop) {
-            font-size: 14px;
+            font-size: $sidebar_form_border_size_large_laptop;
             padding: 12px 18px;
           }
           @include mq(small_monitor) {
@@ -129,25 +133,25 @@ span#sidebar_form_title {
       border: none;
       width: 100%;
       padding: 17px 10px;
-      background: $color_bright_two;
+      background: $sidebar_submit_bg_color;
       cursor: pointer;
       transition: all 200ms ease-in-out;
       @include type(
         (
-          size: 12px,
+          size: $sidebar_submit_size,
           family: $primaryfont,
-          color: $color_light_one,
-          weight: 800,
-          spacing: 5px,
+          color: $sidebar_submit_color,
+          weight: $sidebar_submit_weight,
+          spacing: $sidebar_submit_spacing,
           transform: uppercase,
         )
       );
       @include mq(small_monitor) {
         padding: 19px 10px;
-        font-size: 14px;
+        font-size: $sidebar_submit_size_small_monitor;
       }
       &:hover {
-        background: $color_bright_three;
+        background: $sidebar_submit_bg_color_hover;
       }
     }
     .gfield_description,
@@ -155,11 +159,11 @@ span#sidebar_form_title {
       margin-top: 5px;
       @include type(
         (
-          size: 11px,
-          spacing: 1px,
+          size: $sidebar_error_size,
+          spacing: $sidebar_error_spacing,
           family: $primaryfont,
-          color: $color_bright_two,
-          weight: 800,
+          color: $sidebar_error_color,
+          weight: $sidebar_error_weight,
           transform: uppercase,
         )
       );
@@ -169,9 +173,9 @@ span#sidebar_form_title {
       margin-top: 18px;
       @include type(
         (
-          size: 12px,
+          size: $sidebar_required_size,
           family: $thirdfont,
-          color: $color_light_seven,
+          color: $sidebar_required_color,
           transform: lowercase,
         )
       );
@@ -179,14 +183,14 @@ span#sidebar_form_title {
         margin-top: 25px;
       }
       @include mq(small_monitor) {
-        font-size: 14px;
+        font-size: $sidebar_required_size_small_monitor;
       }
     }
   }
 }
 
 .sidebar_box {
-  background: $color_light_one;
+  background: $sidebar_box_bg_color;
   position: relative;
 }
 
@@ -195,7 +199,7 @@ span#sidebar_form_title {
   box-shadow: 5px 5px 20px #00000029;
   position: relative;
   z-index: 1;
-  background: $color_light_one;
+  background: $sidebar_slide_title_bg_color;
   max-width: 300px;
   @include mq(small_laptop) {
     display: none;
@@ -205,11 +209,11 @@ span#sidebar_form_title {
     @include flex(space-between, center);
     @include type(
       (
-        size: 12px,
-        height: 14px,
-        spacing: 1.8px,
+        size: $sidebar_slide_title_size,
+        height: $sidebar_slide_title_height,
+        spacing: $sidebar_slide_title_spacing,
         family: $primaryfont,
-        weight: 800,
+        weight: $sidebar_slide_title_weight,
         transform: uppercase,
       )
     );
@@ -226,7 +230,7 @@ span#sidebar_form_title {
 .widget {
   display: none;
   width: 100%;
-  background: $color_light_one;
+  background: $widget_bg_color;
   padding: 25px 32px 20px;
   box-shadow: 20px 20px 50px #00000029;
   max-width: 300px;
@@ -245,7 +249,7 @@ span#sidebar_form_title {
     li {
       a {
         display: block;
-        color: $color_dark_one;
+        color: $widget_color;
         cursor: pointer;
         text-decoration: none;
         margin-bottom: 15px;
@@ -260,7 +264,7 @@ span#sidebar_form_title {
           margin-bottom: 17px;
         }
         &:hover {
-          color: $color_bright_two;
+          color: $widget_color_hover;
         }
       }
     }
@@ -269,24 +273,24 @@ span#sidebar_form_title {
     > li {
       @include type(
         (
-          size: 14px,
-          height: 17px,
+          size: $widget_ulmenu_li_size,
+          height: $widget_ulmenu_li_height,
           family: $primaryfont,
-          weight: 700,
+          weight: $widget_ulmenu_li_weight,
         )
       );
       @include mq(small_laptop) {
-        font-size: 13px;
+        font-size: $widget_ulmenu_li_size_small_laptop;
       }
       @include mq(large_laptop) {
-        font-size: 14px;
+        font-size: $widget_ulmenu_li_size_large_laptop;
       }
       @include mq(small_monitor) {
-        font-size: 15px;
+        font-size: $widget_ulmenu_li_size_small_monitor;
       }
       &.active {
         > a {
-          color: $color_bright_two;
+          color: $widget_ulmenu_active_color;
         }
       }
     }
@@ -305,18 +309,18 @@ span#sidebar_form_title {
     }
     > li.current-menu-ancestor {
       > a {
-        color: $color_bright_two;
+        color: $widget_ulmenu_current_color;
       }
     }
   }
   ul.sub-menu {
     display: none;
     li {
-      font-weight: 400;
+      font-weight: $widget_ulsubmenu_weight;
     }
     > li.current-menu-item {
       a {
-        color: $color_bright_two;
+        color: $widget_ulsubmenu_current_color;
       }
     }
   }

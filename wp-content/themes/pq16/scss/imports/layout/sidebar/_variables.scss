@@ -1,3 +1,115 @@
 ////////////////////////////////////////////////////////////////////
 // Sidebar
 ////////////////////////////////////////////////////////////////////
+
+// #sidebar_inner:after
+
+$sidebar_inner_bg_color: $color_light_ten;
+
+// span#sidebar_form_title
+
+$idebar_form_title_size: 14px;
+$idebar_form_title_size_small_monitor: 16px;
+
+$idebar_form_title_height: 16px;
+
+$idebar_form_title_spacing: 1.68px;
+$idebar_form_title_spacing_small_monitor: 2.88px;
+
+$sidebar_form_title_color: $color_bright_two;
+
+$sidebar_form_title_weight: 800;
+
+// #sidebar_form ul li input, select,textarea
+
+$sidebar_form_border_color: $color_light_twelve;
+
+$sidebar_form_border_size: 13px;
+$sidebar_form_border_size_large_laptop: 14px;
+
+$sidebar_form_border_weight: 700;
+
+$sidebar_form_border_spacing: 0.65px;
+
+// sidebar submit
+
+$sidebar_submit_bg_color: $color_bright_two;
+$sidebar_submit_bg_color_hover: $color_bright_three;
+
+$sidebar_submit_size: 12px;
+$sidebar_submit_size_small_monitor: 14px;
+
+$sidebar_submit_color: $color_light_one;
+
+$sidebar_submit_weight: 800;
+
+$sidebar_submit_spacing: 5px;
+
+// .gfield_description, .validation_message
+
+$sidebar_error_size: 11px;
+
+$sidebar_error_spacing: 1px;
+
+$sidebar_error_color: $color_bright_two;
+
+$sidebar_error_weight: 800;
+
+// span#sidebar_form_required
+
+$sidebar_required_size: 12px;
+$sidebar_required_size_small_monitor: 14px;
+
+$sidebar_required_color: $color_light_seven;
+
+// .sidebar_box
+
+$sidebar_box_bg_color: $color_light_one;
+
+// .sidebar_slide_title
+
+$sidebar_slide_title_bg_color: $color_light_one;
+
+// .sidebar_slide_title span
+
+$sidebar_slide_title_size: 12px;
+
+$sidebar_slide_title_height: 14px;
+
+$sidebar_slide_title_spacing: 1.8px;
+
+$sidebar_slide_title_weight: 800;
+
+// .widget
+
+$widget_bg_color: $color_light_one;
+
+// .widget ul li a
+
+$widget_color: $color_dark_one;
+$widget_color_hover: $color_bright_two;
+
+// .widget ul.menu li
+
+$widget_ulmenu_li_size: 14px;
+$widget_ulmenu_li_size_small_laptop: 13px;
+$widget_ulmenu_li_size_large_laptop: 14px;
+$widget_ulmenu_li_size_small_monitor: 15px;
+
+$widget_ulmenu_li_height: 17px;
+
+$widget_ulmenu_li_weight: 700;
+
+// .widget ul.menu li.active a
+
+$widget_ulmenu_active_color: $color_bright_two;
+
+// .widget ul.menu li.current-menu-ancestor a
+
+$widget_ulmenu_current_color: $color_bright_two;
+
+// .widget ul.sub-menu li.current-menu-item a
+
+$widget_ulsubmenu_weight: 400;
+
+$widget_ulsubmenu_current_color: $color_bright_two;
