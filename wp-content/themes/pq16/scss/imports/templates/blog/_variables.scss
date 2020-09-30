@@ -2,3 +2,71 @@
 // Blog
 ////////////////////////////////////////////////////////////////////
 
+// .blog_meta span.date, li
+
+$blog_meta_size: 14px;
+
+$blog_meta_height: 17px;
+
+$blog_meta_spacing: 2.1px;
+
+$blog_meta_weight: 800;
+
+// .blog_meta ul li a
+
+$blog_meta_color: $color_dark_one;
+$blog_meta_color_hover: $color_bright_two;
+
+// h2.blog_header
+
+$h2_blog_header_color_hover: $color_bright_one;
+
+// a.read_more
+
+$read_more_color: $color_dark_one;
+$read_more_color_hover: $color_bright_two;
+
+// .paged_wrapper ul li
+
+$paged_wrapper_size: 16px;
+
+$paged_wrapper_height: 18px;
+
+$paged_wrapper_spacing: 0.4px;
+
+$paged_wrapper_weight: 600;
+
+$paged_wrapper_color: $color_dark_one;
+$paged_wrapper_color_hover: $color_bright_two;
+
+// .paged_wrapper ul li.blog_arrow a:hover
+
+$paged_wrapper_arrow_bg_color: $color_bright_two;
+
+// .sidebar_blog h3
+
+$sidebar_blog_h3_size: 14px;
+$sidebar_blog_h3_size_small_laptop: 13px;
+$sidebar_blog_h3_size_large_laptop: 14px;
+$sidebar_blog_h3_size_small_monitor: 15px;
+
+$sidebar_blog_h3_height: 17px;
+
+$sidebar_blog_h3_weight: 700;
+
+$sidebar_blog_h3_spacing: 0.75px;
+
+// .sidebar_blog h3:hover
+
+$sidebar_blog_h3_color_hover: $color_bright_two;
+
+// .sidebar_blog ul li
+
+$sidebar_blog_li_size: 14px;
+$sidebar_blog_li_size_small_laptop: 13px;
+$sidebar_blog_li_size_large_laptop: 14px;
+$sidebar_blog_li_size_small_monitor: 15px;
+
+$sidebar_blog_li_height: 17px;
+
+$sidebar_blog_li_active: $color_bright_two;

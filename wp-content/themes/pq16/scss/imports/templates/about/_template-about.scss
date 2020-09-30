@@ -2,7 +2,7 @@
   padding: 0 30px;
   position: relative;
   &:after {
-    background: $color_light_ten;
+    background: $about_top_bg_color;
     @include box(100%, calc(100% - 35px));
     @include abs(0, null, null, 0);
     @include contentdisplay();
@@ -97,15 +97,19 @@
   padding: 28px 28px 32px;
   @include type(
     (
-      size: 15px,
-      height: 22px,
+      size: $about_top_size,
+      height: $about_top_height,
       family: $primaryfont,
-      weight: 700,
+      weight: $about_top_weight,
     )
   );
   @include mq(small_tablet) {
     padding: 33px 68px 47px;
-    @include quick_type(16px, 28px, null);
+    @include quick_type(
+      $about_top_size_small_tablet,
+      $about_top_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
     padding: 63px 50px 57px;
@@ -113,11 +117,19 @@
   }
   @include mq(large_laptop) {
     padding: 75px 50px;
-    @include quick_type(18px, 30px, null);
+    @include quick_type(
+      $about_top_size_large_laptop,
+      $about_top_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding: 75px 81px;
-    @include quick_type(20px, 34px, null);
+    @include quick_type(
+      $about_top_size_small_monitor,
+      $about_top_height_small_monitor,
+      null
+    );
   }
   p {
     margin-bottom: 15px;

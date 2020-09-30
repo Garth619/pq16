@@ -106,21 +106,29 @@ h1.att_title {
   padding-bottom: 20px;
   @include type(
     (
-      size: 30px,
-      height: 32px,
+      size: $att_title_size,
+      height: $att_title_height,
       family: $secondaryfont,
-      weight: 600,
+      weight: $att_title_weight,
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(34px, 36px, null);
+    @include quick_type(
+      $att_title_size_small_tablet,
+      $att_title_height_small_tablet,
+      null
+    );
   }
   @include mq(large_laptop) {
-    @include quick_type(38px, 40px, null);
+    @include quick_type(
+      $att_title_size_large_laptop,
+      $att_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding-bottom: 26px;
-    @include quick_type(45px, 40px, null);
+    @include quick_type($att_title_size_small_monitor, null, null);
   }
 }
 
@@ -128,7 +136,7 @@ h1.att_title {
   &:before,
   &:after {
     width: 100%;
-    background: $color_bright_two;
+    background: $att_subtitle_bg_color;
     @include contentdisplay();
   }
   &:before {
@@ -154,10 +162,10 @@ h1.att_title {
     padding: 15px 0 14px;
     @include type(
       (
-        size: 12px,
-        height: 15px,
-        spacing: 1.8px,
-        weight: 800,
+        size: $att_subtitle_size,
+        height: $att_subtitle_height,
+        spacing: $att_subtitle_spacing,
+        weight: $att_subtitle_weight,
         family: $primaryfont,
         transform: uppercase,
         align: center,
@@ -165,15 +173,27 @@ h1.att_title {
     );
     @include mq(small_tablet) {
       padding: 17px 0 16px;
-      @include quick_type(14px, 16px, 3.5px);
+      @include quick_type(
+        $att_subtitle_size_small_tablet,
+        $att_subtitle_height_small_tablet,
+        $att_subtitle_spacing_small_tablet
+      );
     }
     @include mq(large_laptop) {
       padding: 21px 0 19px;
-      @include quick_type(15px, 17px, null);
+      @include quick_type(
+        $att_subtitle_size_large_laptop,
+        $att_subtitle_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       padding: 23px 0 20px;
-      @include quick_type(16px, 18px, null);
+      @include quick_type(
+        $att_subtitle_size_small_monitor,
+        $att_subtitle_height_small_monitor,
+        null
+      );
     }
   }
 }
@@ -211,7 +231,7 @@ h1.att_title {
 }
 
 #att_view_accolades {
-  background: $color_light_one;
+  background: $att_view_accolades_bg_color;
   box-shadow: 5px 5px 20px #00000029;
   padding: 18px 20px;
   @include mq(small_tablet) {
@@ -224,11 +244,11 @@ h1.att_title {
     @include flex(space-between, center);
     @include type(
       (
-        size: 12px,
-        height: 14px,
-        spacing: 1.8px,
+        size: $att_view_accolades_size,
+        height: $att_view_accolades_height,
+        spacing: $att_view_accolades_spacing,
         family: $primaryfont,
-        weight: 800,
+        weight: $att_view_accolades_weight,
         transform: uppercase,
       )
     );
@@ -244,7 +264,7 @@ h1.att_title {
 .sidebar_bio {
   width: 100%;
   display: none;
-  background: $color_light_one;
+  background: $sidebar_bio_bg_color;
   padding: 28px 20px 15px;
   box-shadow: 5px 5px 20px #00000029;
   @include abs(50px, null, null, 0, -1);
@@ -274,16 +294,20 @@ h1.att_title {
     margin-bottom: 7px;
     @include type(
       (
-        size: 12px,
-        height: 14px,
-        spacing: 1.8px,
+        size: $sidebar_bio_list_h3_size,
+        height: $sidebar_bio_list_h3_height,
+        spacing: $sidebar_bio_list_h3_spacing,
         family: $primaryfont,
-        weight: 800,
+        weight: $sidebar_bio_list_h3_weight,
         transform: uppercase,
       )
     );
     @include mq(small_monitor) {
-      @include quick_type(13px, 15px, null);
+      @include quick_type(
+        $sidebar_bio_list_h3_size_small_monitor,
+        $sidebar_bio_list_h3_height_small_monitor,
+        null
+      );
     }
   }
   ul {
@@ -296,18 +320,22 @@ h1.att_title {
       position: relative;
       @include type(
         (
-          size: 14px,
-          height: 18px,
+          size: $sidebar_bio_list_li_size,
+          height: $sidebar_bio_list_li_height,
           family: $thirdfont,
         )
       );
       @include mq(small_monitor) {
         margin-bottom: 22px;
-        @include quick_type(16px, 20px, null);
+        @include quick_type(
+          $sidebar_bio_list_li_size_small_monitor,
+          $sidebar_bio_list_li_height_small_monitor,
+          null
+        );
       }
       &:after {
         border-radius: 50%;
-        background: $color_bright_two;
+        background: $sidebar_bio_list_bullet_bg_color;
         @include abs(8px, null, null, 0);
         @include box(3px);
         @include contentdisplay();
@@ -334,7 +362,7 @@ h1.att_title {
 .placeholder {
   position: relative;
   .placeholder_inner {
-    background: $color_bright_three;
+    background: $placeholder_inner_bg_color;
     @include box(100%);
     @include abs(0, null, null, 0);
     @include flex(center, center);
@@ -342,16 +370,16 @@ h1.att_title {
       @include contentdisplay(block, "Profile Coming Soon");
       @include type(
         (
-          size: 14px,
+          size: $placeholder_inner_size,
           family: $primaryfont,
-          color: $color_light_one,
-          spacing: 1.5px,
-          weight: 700,
+          color: $placeholder_inner_color,
+          spacing: $placeholder_inner_spacing,
+          weight: $placeholder_inner_weight,
           transform: uppercase,
         )
       );
       @include mq(small_tablet) {
-        font-size: 16px;
+        font-size: $placeholder_inner_size_small_tablet;
       }
     }
   }

@@ -1,3 +1,90 @@
 ////////////////////////////////////////////////////////////////////
 // Attorney Bio Page
 ////////////////////////////////////////////////////////////////////
+
+// h1.att_title
+
+$att_title_size: 30px;
+$att_title_size_small_tablet: 34px;
+$att_title_size_large_laptop: 38px;
+$att_title_size_small_monitor: 45px;
+
+$att_title_height: 32px;
+$att_title_height_small_tablet: 36px;
+$att_title_height_large_laptop: 40px;
+
+$att_title_weight: 600;
+
+// .att_subtitle:before, &:after
+
+$att_subtitle_bg_color: $color_bright_two;
+
+$att_subtitle_size: 12px;
+$att_subtitle_size_small_tablet: 14px;
+$att_subtitle_size_large_laptop: 15px;
+$att_subtitle_size_small_monitor: 16px;
+
+$att_subtitle_height: 15px;
+$att_subtitle_height_small_tablet: 16px;
+$att_subtitle_height_large_laptop: 17px;
+$att_subtitle_height_small_monitor: 18px;
+
+$att_subtitle_spacing: 1.8px;
+$att_subtitle_spacing_small_tablet: 3.5px;
+
+$att_subtitle_weight: 800;
+
+// #att_view_accolades
+
+$att_view_accolades_bg_color: $color_light_one;
+
+$att_view_accolades_size: 12px;
+
+$att_view_accolades_height: 14px;
+
+$att_view_accolades_spacing: 1.8px;
+
+$att_view_accolades_weight: 800;
+
+// .sidebar_bio
+
+$sidebar_bio_bg_color: $color_light_one;
+
+// .sidebar_bio_list h3
+
+$sidebar_bio_list_h3_size: 12px;
+$sidebar_bio_list_h3_size_small_monitor: 13px;
+
+$sidebar_bio_list_h3_height: 14px;
+$sidebar_bio_list_h3_height_small_monitor: 15px;
+
+$sidebar_bio_list_h3_spacing: 1.8px;
+
+$sidebar_bio_list_h3_weight: 800;
+
+// .sidebar_bio_list ul li
+
+$sidebar_bio_list_li_size: 14px;
+$sidebar_bio_list_li_size_small_monitor: 16px;
+
+$sidebar_bio_list_li_height: 18px;
+$sidebar_bio_list_li_height_small_monitor: 20px;
+
+// .sidebar_bio_list ul li:after
+
+$sidebar_bio_list_bullet_bg_color: $color_bright_two;
+
+// .placeholder_inner
+
+$placeholder_inner_bg_color: $color_bright_three;
+
+// .placeholder_inner:after
+
+$placeholder_inner_size: 14px;
+$placeholder_inner_size_small_tablet: 16px;
+
+$placeholder_inner_color: $color_light_one;
+
+$placeholder_inner_spacing: 1.5px;
+
+$placeholder_inner_weight: 700;

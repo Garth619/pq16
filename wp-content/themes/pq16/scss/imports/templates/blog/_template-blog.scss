@@ -13,11 +13,11 @@
     li {
       @include type(
         (
-          size: 14px,
-          height: 17px,
-          spacing: 2.1px,
+          size: $blog_meta_size,
+          height: $blog_meta_height,
+          spacing: $blog_meta_spacing,
           family: $primaryfont,
-          weight: 800,
+          weight: $blog_meta_weight,
           transform: uppercase,
         )
       );
@@ -39,10 +39,10 @@
           }
         }
         a {
-          color: $color_dark_one;
+          color: $blog_meta_color;
           text-decoration: none;
           &:hover {
-            color: $color_bright_two;
+            color: $blog_meta_color_hover;
           }
         }
       }
@@ -55,7 +55,7 @@ h2.blog_header {
   a {
     text-decoration: none;
     &:hover {
-      color: $color_bright_one;
+      color: $h2_blog_header_color_hover;
       text-decoration: none;
     }
   }
@@ -63,9 +63,9 @@ h2.blog_header {
 .content {
   a.read_more {
     margin-top: 25px;
-    color: $color_dark_one;
+    color: $read_more_color;
     &:hover {
-      color: $color_bright_two;
+      color: $read_more_color_hover;
       text-decoration: none;
     }
   }
@@ -77,23 +77,24 @@ h2.blog_header {
     li {
       padding-left: 0;
       margin: 0 10px;
+      width: auto;
       @include type(
         (
-          size: 16px,
-          height: 18px,
-          spacing: 0.4px,
+          size: $paged_wrapper_size,
+          height: $paged_wrapper_height,
+          spacing: $paged_wrapper_spacing,
           family: $secondaryfont,
-          weight: 600,
+          weight: $paged_wrapper_weight,
         )
       );
       &:before {
         display: none;
       }
       a {
-        color: $color_dark_one;
+        color: $paged_wrapper_color;
         text-decoration: none;
         &:hover {
-          color: $color_bright_two;
+          color: $paged_wrapper_color_hover;
           text-decoration: none;
         }
       }
@@ -123,7 +124,7 @@ h2.blog_header {
             background-image: url(#{$themepath}/images/arrow.svg);
           }
           &:hover {
-            background: $color_bright_two;
+            background: $paged_wrapper_arrow_bg_color;
             &:before {
               opacity: 1;
             }
@@ -188,21 +189,21 @@ h2.blog_header {
       transition: all 200ms ease-in-out;
       @include type(
         (
-          size: 14px,
-          height: 17px,
-          weight: 700,
-          spacing: 0.75px,
+          size: $sidebar_blog_h3_size,
+          height: $sidebar_blog_h3_height,
+          weight: $sidebar_blog_h3_weight,
+          spacing: $sidebar_blog_h3_spacing,
           family: $primaryfont,
         )
       );
       @include mq(small_laptop) {
-        font-size: 13px;
+        font-size: $sidebar_blog_h3_size_small_laptop;
       }
       @include mq(large_laptop) {
-        font-size: 14px;
+        font-size: $sidebar_blog_h3_size_large_laptop;
       }
       @include mq(small_monitor) {
-        font-size: 15px;
+        font-size: $sidebar_blog_h3_size_small_monitor;
       }
       &:hover {
         color: $color_bright_two;
@@ -217,7 +218,7 @@ h2.blog_header {
         @include contentdisplay(inline-block);
       }
       &.active {
-        color: $color_bright_two;
+        color: $sidebar_blog_h3_color_hover;
       }
     }
     ul {
@@ -237,19 +238,19 @@ h2.blog_header {
       > li {
         @include type(
           (
-            size: 14px,
-            height: 17px,
+            size: $sidebar_blog_li_size,
+            height: $sidebar_blog_li_height,
             family: $primaryfont,
           )
         );
         @include mq(small_laptop) {
-          font-size: 13px;
+          font-size: $sidebar_blog_li_size_small_laptop;
         }
         @include mq(large_laptop) {
-          font-size: 14px;
+          font-size: $sidebar_blog_li_size_large_laptop;
         }
         @include mq(small_monitor) {
-          font-size: 15px;
+          font-size: $sidebar_blog_li_size_small_monitor;
         }
         &:last-of-type {
           a {
@@ -258,12 +259,12 @@ h2.blog_header {
         }
         &.active {
           > a {
-            color: $color_bright_two;
+            color: $sidebar_blog_li_active;
           }
         }
         &.blog-active {
           a {
-            color: $color_bright_two;
+            color: $sidebar_blog_li_active;
           }
         }
       }
