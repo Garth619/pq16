@@ -127,7 +127,7 @@ If there is a big change on the mock up that isn't reflected in this build then 
 3. When its time to make new layout options, set up git remote and point back to this PQ16 repo
 4. Create a “New Feature” Branch
 5. Create a pull request
-6. We look over and merge into MTMP
+6. We look over and merge into the theme
 
 [Fork and Branch](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 
@@ -153,7 +153,7 @@ add_action( 'wp_head', 'internal_css_print' );
 
 ```
 
-Future builds will integrate our typical way of handling these files for page speed
+Future builds will integrate our typical way of handling these files for page speed when I get some free time. Sam's stragetgy works great.
 
 ## Feedback
 
