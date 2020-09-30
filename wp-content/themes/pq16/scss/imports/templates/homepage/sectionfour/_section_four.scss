@@ -11,7 +11,7 @@
     padding: 83px 30px 0px;
   }
   &:after {
-    background: $color_light_ten;
+    background: $section_four_bg_color;
     @include abs(0, null, null, 0);
     @include box(100%);
     @include contentdisplay();
@@ -45,20 +45,28 @@ span#sec_four_title {
   display: inline-block;
   @include type(
     (
-      size: 15px,
-      height: 20px,
-      spacing: 1.5px,
+      size: $sec_four_title_size,
+      height: $sec_four_title_height,
+      spacing: $sec_four_title_spacing,
       family: $primaryfont,
-      weight: 800,
+      weight: $sec_four_title_weight,
       align: center,
       transform: uppercase,
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(16px, 21px, 4px);
+    @include quick_type(
+      $sec_four_title_size_small_tablet,
+      $sec_four_title_height_small_tablet,
+      $sec_four_title_spacing_small_tablet
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(20px, 30px, 5px);
+    @include quick_type(
+      $sec_four_title_size_small_monitor,
+      $sec_four_title_height_small_monitor,
+      $sec_four_title_spacing_small_monitor
+    );
   }
   br {
     @include mq(small_tablet) {
@@ -67,7 +75,7 @@ span#sec_four_title {
   }
   &:after {
     margin-top: 5px;
-    background: $color_bright_one;
+    background: $sec_four_title_line_bg_color;
     @include box(100%, 4px);
     @include contentdisplay();
     @include mq(small_tablet) {
@@ -146,7 +154,7 @@ span#sec_four_title {
     margin-left: -132px;
   }
   #sec_four_right_content {
-    background: $color_light_one;
+    background: $sec_four_right_content_bg_color;
     padding: 27px 29px 39px;
     position: relative;
     @include mq(small_tablet) {
@@ -181,23 +189,35 @@ span#sec_four_title {
       p {
         @include type(
           (
-            size: 15px,
-            height: 22px,
+            size: $sec_four_right_content_size,
+            height: $sec_four_right_content_height,
             family: $primaryfont,
-            weight: 700,
+            weight: $sec_four_right_content_weight,
           )
         );
         @include mq(small_tablet) {
-          @include quick_type(16px, 28px, null);
+          @include quick_type(
+            $sec_four_right_content_size_small_tablet,
+            $sec_four_right_content_height_small_tablet,
+            null
+          );
         }
         @include mq(small_laptop) {
           margin-bottom: 15px;
         }
         @include mq(large_laptop) {
-          @include quick_type(18px, 32px, null);
+          @include quick_type(
+            $sec_four_right_content_size_large_laptop,
+            $sec_four_right_content_height_large_laptop,
+            null
+          );
         }
         @include mq(small_monitor) {
-          @include quick_type(19px, 35px, null);
+          @include quick_type(
+            $sec_four_right_content_size_small_monitor,
+            $sec_four_right_content_height_small_monitor,
+            null
+          );
         }
         &:last-of-type {
           margin-bottom: 0;
@@ -210,7 +230,7 @@ span#sec_four_title {
         max-width: 250px;
         padding: 9px 23px;
         text-decoration: none;
-        color: $color_bright_three;
+        color: $meet_att_button_color;
         @include mq(small_tablet) {
           margin-top: 18px;
         }
@@ -221,7 +241,7 @@ span#sec_four_title {
           margin-top: 20px;
         }
         &:hover {
-          color: $color_light_one;
+          color: $meet_att_button_color_hover;
         }
       }
     }

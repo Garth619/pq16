@@ -1,3 +1,40 @@
 ////////////////////////////////////////////////////////////////////
 // Section Three
 ////////////////////////////////////////////////////////////////////
+
+// h1#sec_three_title
+
+$sec_three_title_size: 40px;
+$sec_three_title_size_small_tablet: 55px;
+$sec_three_title_size_small_laptop: 50px;
+$sec_three_title_size_large_laptop: 60px;
+$sec_three_title_size_small_monitor: 70px;
+
+$sec_three_title_height: 40px;
+$sec_three_title_height_small_tablet: 55px;
+$sec_three_title_height_large_laptop: 60px;
+$sec_three_title_height_small_monitor: 70px;
+
+$sec_three_title_spacing: 0.35px;
+
+$sec_three_title_color: $color_dark_one;
+
+$sec_three_title_weight: 600;
+
+// .subtitle span
+
+$sec_three_subtitle_size: 15px;
+$sec_three_subtitle_size_small_tablet: 16px;
+$sec_three_subtitle_size_small_monitor: 20px;
+
+$sec_three_subtitle_height: 20px;
+$sec_three_subtitle_height_small_tablet: 22px;
+$sec_three_subtitle_height_small_monitor: 26px;
+
+$sec_three_subtitle_spacing: 1.5px;
+$sec_three_subtitle_spacing_small_tablet: 4px;
+$sec_three_subtitle_spacing_small_monitor: 4px;
+
+$sec_three_subtitle_color: $color_dark_one;
+
+$sec_three_subtitle_weight: 800;

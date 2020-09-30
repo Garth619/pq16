@@ -36,12 +36,12 @@ h1#sec_three_title {
   margin-bottom: 23px;
   @include type(
     (
-      size: 40px,
-      height: 40px,
-      spacing: 0.35px,
+      size: $sec_three_title_size,
+      height: $sec_three_title_height,
+      spacing: $sec_three_title_spacing,
       family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 600,
+      color: $sec_three_title_color,
+      weight: $sec_three_title_weight,
       align: center,
     )
   );
@@ -49,22 +49,34 @@ h1#sec_three_title {
     max-width: 570px;
     margin-bottom: 36px;
     @include margin_lr;
-    @include quick_type(55px, 55px, null);
+    @include quick_type(
+      $sec_three_title_size_small_tablet,
+      $sec_three_title_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
     max-width: 500px;
     margin-bottom: 28px;
-    @include quick_type(50px, 55px, null);
+    @include quick_type($sec_three_title_size_small_laptop, null, null);
   }
   @include mq(large_laptop) {
     max-width: 600px;
     margin-bottom: 33px;
-    @include quick_type(60px, 60px, null);
+    @include quick_type(
+      $sec_three_title_size_large_laptop,
+      $sec_three_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 700px;
     margin-bottom: 55px;
-    @include quick_type(70px, 70px, null);
+    @include quick_type(
+      $sec_three_title_size_small_monitor,
+      $sec_three_title_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -91,12 +103,12 @@ h1#sec_three_title {
     @include margin_lr;
     @include type(
       (
-        size: 15px,
-        height: 20px,
-        spacing: 1.5px,
+        size: $sec_three_subtitle_size,
+        height: $sec_three_subtitle_height,
+        spacing: $sec_three_subtitle_spacing,
         family: $primaryfont,
-        color: $color_dark_one,
-        weight: 800,
+        color: $sec_three_subtitle_color,
+        weight: $sec_three_subtitle_weight,
         align: center,
         transform: uppercase,
       )
@@ -104,14 +116,22 @@ h1#sec_three_title {
     @include mq(small_tablet) {
       padding: 18px 0 22px;
       max-width: 100%;
-      @include quick_type(16px, 22px, 4px);
+      @include quick_type(
+        $sec_three_subtitle_size_small_tablet,
+        $sec_three_subtitle_height_small_tablet,
+        $sec_three_subtitle_spacing_small_tablet
+      );
     }
     @include mq(small_laptop) {
       padding: 25px 0 19px;
     }
     @include mq(small_monitor) {
       padding: 28px 0 23px;
-      @include quick_type(20px, 26px, 4px);
+      @include quick_type(
+        $sec_three_subtitle_size_small_monitor,
+        $sec_three_subtitle_height_small_monitor,
+        $sec_three_subtitle_spacing_small_monitor
+      );
     }
   }
 }

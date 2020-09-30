@@ -39,7 +39,7 @@
     max-width: 885px;
   }
   &:before {
-    background: $color_bright_one;
+    background: $sec_five_intro_line_bg_color;
     margin-bottom: 17px;
     @include box(100%, 6px);
     @include contentdisplay();
@@ -56,23 +56,39 @@
   p {
     @include type(
       (
-        size: 22px,
-        height: 28px,
+        size: $sec_five_intro_size,
+        height: $sec_five_intro_height,
         family: $secondaryfont,
-        weight: 700,
+        weight: $sec_five_intro_weight,
       )
     );
     @include mq(small_tablet) {
-      @include quick_type(26px, 34px, null);
+      @include quick_type(
+        $sec_five_intro_size_small_tablet,
+        $sec_five_intro_height_small_tablet,
+        null
+      );
     }
     @include mq(small_laptop) {
-      @include quick_type(28px, 36px, null);
+      @include quick_type(
+        $sec_five_intro_size_small_laptop,
+        $sec_five_intro_height_small_laptop,
+        null
+      );
     }
     @include mq(large_laptop) {
-      @include quick_type(32px, 42px, null);
+      @include quick_type(
+        $sec_five_intro_size_large_laptop,
+        $sec_five_intro_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
-      @include quick_type(35px, 50px, null);
+      @include quick_type(
+        $sec_five_intro_size_small_monitor,
+        $sec_five_intro_height_small_monitor,
+        null
+      );
     }
   }
 }

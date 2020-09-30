@@ -1,3 +1,23 @@
 /////////////////////////////////////////////////////////////////////
 // Section Five
 ////////////////////////////////////////////////////////////////////
+
+// #sec_five_intro:before
+
+$sec_five_intro_line_bg_color: $color_bright_one;
+
+// #sec_five_intro p
+
+$sec_five_intro_size: 22px;
+$sec_five_intro_size_small_tablet: 26px;
+$sec_five_intro_size_small_laptop: 28px;
+$sec_five_intro_size_large_laptop: 32px;
+$sec_five_intro_size_small_monitor: 35px;
+
+$sec_five_intro_height: 28px;
+$sec_five_intro_height_small_tablet: 34px;
+$sec_five_intro_height_small_laptop: 36px;
+$sec_five_intro_height_large_laptop: 42px;
+$sec_five_intro_height_small_monitor: 50px;
+
+$sec_five_intro_weight: 700;

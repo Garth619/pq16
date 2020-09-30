@@ -1,3 +1,50 @@
 /////////////////////////////////////////////////////////////////////
 // Section Four
 ////////////////////////////////////////////////////////////////////
+
+// section_four:after
+
+$section_four_bg_color: $color_light_ten;
+
+// span#sec_four_title
+
+$sec_four_title_size: 15px;
+$sec_four_title_size_small_tablet: 16px;
+$sec_four_title_size_small_monitor: 20px;
+
+$sec_four_title_height: 20px;
+$sec_four_title_height_small_tablet: 21px;
+$sec_four_title_height_small_monitor: 30px;
+
+$sec_four_title_spacing: 1.5px;
+$sec_four_title_spacing_small_tablet: 4px;
+$sec_four_title_spacing_small_monitor: 5px;
+
+$sec_four_title_weight: 800;
+
+// span#sec_four_title:after
+
+$sec_four_title_line_bg_color: $color_bright_one;
+
+// #sec_four_right_content
+
+$sec_four_right_content_bg_color: $color_light_one;
+
+// #sec_four_right_content_inner p
+
+$sec_four_right_content_size: 15px;
+$sec_four_right_content_size_small_tablet: 16px;
+$sec_four_right_content_size_large_laptop: 18px;
+$sec_four_right_content_size_small_monitor: 19px;
+
+$sec_four_right_content_height: 22px;
+$sec_four_right_content_height_small_tablet: 28px;
+$sec_four_right_content_height_large_laptop: 32px;
+$sec_four_right_content_height_small_monitor: 35px;
+
+$sec_four_right_content_weight: 700;
+
+// a.meet_att_button
+
+$meet_att_button_color: $color_bright_three;
+$meet_att_button_color_hover: $color_light_one;

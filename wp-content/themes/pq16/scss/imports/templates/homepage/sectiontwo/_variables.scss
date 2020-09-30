@@ -2,4 +2,43 @@
 // Section Two
 ////////////////////////////////////////////////////////////////////
 
+// #section_two
 
+$section_two_bg_color: $color_light_eight;
+
+// .slick-dots
+
+$section_two_slick_dots_bg_color: $color_bright_three;
+$section_two_slick_dots_bg_color_hover: $color_bright_three;
+
+// .sec_two_slide_inner
+
+$sec_two_slide_inner_bg_color: $color_light_one;
+
+// span.sec_two_slide_title
+
+$sec_two_slide_title_size: 15px;
+$sec_two_slide_title_size_tablet: 14px;
+$sec_two_slide_title_size_large_laptop: 15px;
+$sec_two_slide_title_size_small_monitor: 17px;
+
+$sec_two_slide_title_height: 20px;
+
+$sec_two_slide_title_spacing: 2.25px;
+$sec_two_slide_title_spacing_small_tablet: 2.1px;
+
+$sec_two_slide_title_color: $color_bright_three;
+
+$sec_two_slide_title_weight: 800;
+
+// span.sec_two_descrip
+
+$sec_two_descrip_size: 15px;
+$sec_two_descrip_size_large_laptop: 17px;
+$sec_two_descrip_size_small_monitor: 19px;
+
+$sec_two_descrip_height: 20px;
+$sec_two_descrip_height_large_laptop: 24px;
+$sec_two_descrip_height_small_monitor: 26px;
+
+$sec_two_descrip_color: $color_dark_one;

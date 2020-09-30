@@ -1,12 +1,12 @@
 #section_two {
-  background: $color_light_eight;
-  min-height:369px;
+  background: $section_two_bg_color;
+  min-height: 369px;
   @include mq(small_tablet) {
     padding: 0 0 0px 0;
-    min-height:374px;
+    min-height: 374px;
   }
   @include mq(tablet) {
-    min-height:auto;
+    min-height: auto;
   }
 }
 
@@ -63,14 +63,14 @@
     li.slick-active {
       button {
         &:before {
-          color: $color_bright_three;
+          color: $section_two_slick_dots_bg_color;
         }
       }
     }
     li:hover {
       button {
         &:before {
-          color: $color_bright_three;
+          color: $section_two_slick_dots_bg_color_hover;
         }
       }
     }
@@ -104,7 +104,7 @@
   .sec_two_slide_inner {
     padding: 25px 30px 70px;
     max-width: 360px;
-    background: $color_light_one;
+    background: $sec_two_slide_inner_bg_color;
     box-shadow: 20px 20px 50px #00000029;
     @include margin_lr;
     @include mq(small_tablet) {
@@ -153,12 +153,12 @@
         margin-top: 21px;
         @include type(
           (
-            size: 15px,
-            height: 20px,
-            spacing: 2.25px,
+            size: $sec_two_slide_title_size,
+            height: $sec_two_slide_title_height,
+            spacing: $sec_two_slide_title_spacing,
             family: $primaryfont,
-            color: $color_bright_three,
-            weight: 800,
+            color: $sec_two_slide_title_color,
+            weight: $sec_two_slide_title_weight,
             transform: uppercase,
           )
         );
@@ -166,23 +166,27 @@
           margin-top: 15px;
         }
         @include mq(tablet) {
-          @include quick_type(14px, null, 2.1px);
+          @include quick_type(
+            $sec_two_slide_title_size_tablet,
+            null,
+            $sec_two_slide_title_spacing_small_tablet
+          );
         }
         @include mq(large_laptop) {
-          font-size: 15px;
+          font-size: $sec_two_slide_title_size_large_laptop;
         }
         @include mq(small_monitor) {
-          font-size: 17px;
+          font-size: $sec_two_slide_title_size_small_monitor;
         }
       }
       &.sec_two_descrip {
         margin-top: 11px;
         @include type(
           (
-            size: 15px,
-            height: 20px,
+            size: $sec_two_descrip_size,
+            height: $sec_two_descrip_height,
             family: $thirdfont,
-            color: $color_dark_one,
+            color: $sec_two_descrip_color,
           )
         );
         @include mq(tablet) {
@@ -192,11 +196,19 @@
         @include mq(large_laptop) {
           max-width: 270px;
           margin-top: 8px;
-          @include quick_type(17px, 24px, null);
+          @include quick_type(
+            $sec_two_descrip_size_large_laptop,
+            $sec_two_descrip_height_large_laptop,
+            null
+          );
         }
         @include mq(small_monitor) {
           max-width: 300px;
-          @include quick_type(19px, 26px, null);
+          @include quick_type(
+            $sec_two_descrip_size_small_monitor,
+            $sec_two_descrip_height_small_monitor,
+            null
+          );
         }
       }
     }

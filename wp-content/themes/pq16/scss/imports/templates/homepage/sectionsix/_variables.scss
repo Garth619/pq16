@@ -1,3 +1,32 @@
 ////////////////////////////////////////////////////////////////////
 // Section Six
 ////////////////////////////////////////////////////////////////////
+
+// #section_six
+
+$section_six_bg_color: $color_light_ten;
+
+// #section_six:after
+
+$section_six_after_bg_color: $color_grad_one;
+
+// span#sec_six_title
+
+$sec_six_title_size: 15px;
+$sec_six_title_size_small_laptop: 16px;
+$sec_six_title_size_small_monitor: 18px;
+
+$sec_six_title_height: 18px;
+
+$sec_six_title_spacing: 2px;
+
+$sec_six_title_weight: 800;
+
+$sec_six_title_color: $color_light_one;
+
+$sec_six_title_spacing: 3.75px;
+$sec_six_title_spacing_small_monitor: 4.5px;
+
+// span#sec_six_title:before, :after
+
+$sec_six_title_bg_color: $color_bright_one;
