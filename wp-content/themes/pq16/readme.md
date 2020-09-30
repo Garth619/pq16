@@ -115,7 +115,7 @@ Overall some of the strategies (mostly on the homepage) involve:
 - Using picture tags at different browser window widths
 - Using Webp images in critical css areas
 - Lazy loading all images when scrolling
-- We are currently taking all of our js frameworks and combining, minifying and loading them after a few seconds on the homepage. This gets around some of the Google Lighthouse penalties. (can be found in the footer.php file)
+- We are currently taking most of our js frameworks and combining, minifying and loading them after a few seconds on the homepage. This gets around some of the Google Lighthouse penalties. (can be found in the footer.php file)
 - Sometimes loading fonts locally actually gets us a better score than pulling from Google fonts
 
 ### Adding in New Features or Layouts
