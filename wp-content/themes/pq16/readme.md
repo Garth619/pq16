@@ -76,7 +76,7 @@ This file is where you will can work side by side with the related **\_variables
 
 The designers are aware that margins and padding don't have to be perfect. The whole idea of building PQL Themes is to update fonts, colors, backgrounds, images etc and not spend time on every little positioning aspect. But if a margin etc needs to be adjusted thats totally fine too.
 
-Partials contain alot of `@includes`.
+Partials contain alot of `@includes`/mixins.
 
 Get familiar with **scss/imports/utils/\_mixins_do_not_edit.scss** to better understand all of the **@includes** throughout the theme. They include:
 
