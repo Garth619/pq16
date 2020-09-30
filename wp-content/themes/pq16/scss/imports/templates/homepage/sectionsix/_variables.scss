@@ -30,3 +30,52 @@ $sec_six_title_spacing_small_monitor: 4.5px;
 // span#sec_six_title:before, :after
 
 $sec_six_title_bg_color: $color_bright_one;
+
+// #sec_six_slider .slick-slide
+
+$sec_six_slider_bg_color: $color_light_one;
+
+// #sec_six_slider .slick-dots
+
+$sec_six_slider_dots_bg_color: $color_light_nine;
+$sec_six_slider_dots_bg_color_small_laptop: $color_light_one;
+
+$sec_six_slider_dots_bg_color_active: $color_bright_three;
+$sec_six_slider_dots_bg_color_active_small_laptop: $color_bright_one;
+
+// .sec_six_slide_inner
+
+$sec_six_slide_bg_color: $color_light_one;
+
+// .sec_six_intro
+
+$sec_six_intro_size: 18px;
+
+$sec_six_intro_height: 22px;
+
+$sec_six_intro_spacing: 0;
+
+$sec_six_intro_weight: 700;
+
+// .sec_six_descrip
+
+$sec_six_descrip_size: 15px;
+$sec_six_descrip_size_small_monitor: 17px;
+
+$sec_six_descrip_height: 20px;
+$sec_six_descrip_height_small_monitor: 26px;
+
+$sec_six_descrip_spacing: 0;
+
+//  span.sec_six_name
+
+$sec_six_name_size: 13px;
+$sec_six_name_size_small_monitor: 15px;
+
+$sec_six_name_spacing: 1.95px;
+
+$sec_six_name_weight: 800;
+
+//  span.sec_six_name:before
+
+$sec_six_name_bullet_bg_color: $color_bright_one;

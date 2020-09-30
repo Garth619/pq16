@@ -28,8 +28,6 @@ $small_monitor: 1695px !default;
 $monitor: 1800px !default;
 $large_monitor: 2050px !default;
 
-// $internal_xlarge_monitor: 1760px !default!default;
-
 $media_queries: (
   mobile: (
     breakpoint: "(min-width: #{$mobile})",
@@ -58,7 +56,7 @@ $media_queries: (
   large_monitor: (
     breakpoint: "(min-width: #{$large_monitor})",
   ),
-);
+) !default;
 
 // see _mixins.scss for media query mixin
 
@@ -66,114 +64,1273 @@ $media_queries: (
 // Colors
 ////////////////////////////////////////////////////////////////////
 
+$color_light_one: #fff !default;
+$color_light_two: #ececec !default;
+$color_light_three: #989898 !default;
+$color_light_four: #707070 !default;
+$color_light_five: #d9d9d9 !default;
+$color_light_six: #afafaf !default;
+$color_light_seven: #7e7e7e !default;
+$color_light_eight: #f6f6f6 !default;
+$color_light_nine: #a2a2a2 !default;
+$color_light_ten: #f2f2f2 !default;
+$color_light_eleven: #d9d9d9 !default;
+$color_light_twelve: #c7c7c7 !default;
+
+$color_bright_one: #34c9fc !default;
+$color_bright_two: #0e84f2 !default;
+$color_bright_three: #034eb8 !default;
+
+$color_dark_one: #111c30 !default;
+$color_dark_two: #000000 !default;
+
+$color_grad_one: linear-gradient(126deg, #0e84f2 10%, #02275c 100%) !default;
+
 ////////////////////////////////////////////////////////////////////
 // Global Content
 ////////////////////////////////////////////////////////////////////
+
+// h1.page_title
+
+$page_title_size: 30px !default;
+$page_title_size_tablet: 34px !default;
+$page_title_size_large_laptop: 38px !default;
+$page_title_size_small_monitor: 45px !default;
+
+$page_title_height: 32px !default;
+$page_title_height_tablet: 36px !default;
+$page_title_height_large_laptop: 40px !default;
+$page_title_height_small_monitor: 50px !default;
+
+$page_title_weight: 600 !default;
+
+// h1.page_title:after
+
+$page_title_line_bg_color: $color_bright_one !default;
+
+// h1.internal_title
+
+$internal_title_size: 30px !default;
+$internal_title_size_small_tablet: 34px !default;
+$internal_title_size_large_laptop: 38px !default;
+$internal_title_size_small_monitor: 45px !default;
+
+$internal_title_height: 32px !default;
+$internal_title_height_small_tablet: 36px !default;
+$internal_title_height_large_laptop: 40px !default;
+$internal_title_height_small_monitor: 50px !default;
+
+$internal_title_weight: 600 !default;
+
+// .inner_subtitle :before, :after
+
+$inner_subtitle_bg_color: $color_bright_two !default;
+
+// .inner_subtitle ul li
+
+$inner_subtitle_list_size: 12px !default;
+$inner_subtitle_list_size_small_tablet: 14px !default;
+$inner_subtitle_list_size_small_monitor: 16px !default;
+
+$inner_subtitle_list_height: 18px !default;
+$inner_subtitle_list_height_small_tablet: 20px !default;
+
+$inner_subtitle_list_spacing: 2.1px !default;
+$inner_subtitle_list_spacing_large_laptop: 3.2px !default;
+
+$inner_subtitle_list_color: $color_dark_one !default;
+
+$inner_subtitle_list_weight: 800 !default;
+
+// .inner_subtitle span
+
+$inner_subtitle_span_size: 14px !default;
+$inner_subtitle_span_size_small_tablet: 15px !default;
+
+$inner_subtitle_span_height: 20px !default;
+$inner_subtitle_span_height_small_tablet: 20px !default;
+
+$inner_subtitle_span_spacing: 2.1px !default;
+
+$inner_subtitle_span_color: $color_dark_one !default;
+
+$inner_subtitle_span_weight: 800 !default;
+
+// .content
+
+$content_size: 15px !default;
+$content_size_large_laptop: 16px !default;
+$content_size_small_monitor: 17px !default;
+
+$content_height: 26px !default;
+$content_height_large_laptop: 28px !default;
+$content_height_small_monitor: 30px !default;
+
+$content_spacing: 0.15px !default;
+
+// .content ul li:before
+
+$content_list_bullet_bg_color: $color_bright_three !default;
+
+// .content ol li:before
+
+$content_list_number_color: $color_bright_two !default;
+
+$content_list_number_weight: 800 !default;
+
+// .content h2
+
+$h2_size: 19px !default;
+$h2_size_large_laptop: 20px !default;
+$h2_size_small_monitor: 22px !default;
+
+$h2_height: 24px !default;
+$h2_height_large_laptop: 26px !default;
+$h2_height_small_monitor: 30px !default;
+
+$h2_spacing: 0.19px !default;
+
+$h2_color: $color_bright_three !default;
+
+$h2_weight: 700 !default;
+
+// .content h3
+
+$h3_size: 17px !default;
+$h3_size_large_laptop: 18px !default;
+$h3_size_small_monitor: 19px !default;
+
+$h3_height: 22px !default;
+$h3_height_large_laptop: 24px !default;
+$h3_height_small_monitor: 26px !default;
+
+$h3_spacing: 0.17px !default;
+
+$h3_color: $color_bright_three !default;
+
+$h3_weight: 700 !default;
+
+// link
+
+$link_color: $color_bright_two !default;
 
 ////////////////////////////////////////////////////////////////////
 // Global Misc
 ////////////////////////////////////////////////////////////////////
 
+// .gform_wrapper ul li placeholder
+
+$internal_form_placeholder_color: $color_dark_one !default;
+
 ////////////////////////////////////////////////////////////////////
 // Buttons
 ////////////////////////////////////////////////////////////////////
+
+// .button
+
+$button_size: 12px !default;
+$button_size_large_laptop: 13px !default;
+
+$button_spacing: 3px !default;
+
+$button_color: $color_bright_three !default;
+
+$button_color_border: $color_bright_three !default;
+
+$button_bg_color_hover: $color_bright_three !default;
+
+$button_weight: 800 !default;
+
+// .button_two
+
+$button_two_color_border: $color_light_twelve !default;
+$button_two_color_border_hover: $color_bright_two !default;
+
+$button_two_color: $color_dark_one !default;
+$button_two_color_hover: $color_bright_two !default;
+
+$button_two_size: 12px !default;
+
+$button_two_height: 14px !default;
+
+$button_two_spacing: 2.7px !default;
+
+$button_two_weight: 800 !default;
+
+// .button_three
+
+$button_three_bg_color: $color_bright_two !default;
+$button_three_bg_color_hover: $color_bright_three !default;
+
+$button_three_color: $color_light_one !default;
+
+$button_three_size: 12px !default;
+$button_three_size_small_laptop: 14px !default;
+$button_three_size_large_laptop: 16px !default;
+
+$button_three_height: 16px !default;
+$button_three_height_large_laptop: 18px !default;
+
+$button_three_weight: 800 !default;
+
+$button_three_spacing: 4px !default;
 
 ////////////////////////////////////////////////////////////////////
 // Internal Forms
 ////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-// Logo Slider
-////////////////////////////////////////////////////////////////////
+// input,select,textarea
+
+$internal_form_size: 13px !default;
+$internal_form_size_large_laptop: 14px !default;
+
+$internal_form_weight: 700 !default;
+
+$internal_form_spacing: 0.65px !default;
+
+$internal_form_color: $color_dark_one !default;
+
+// submit
+
+$internal_submit_bg_color: $color_bright_two !default;
+$internal_submit_bg_color_hover: $color_bright_three !default;
+
+$internal_submit_size: 12px !default;
+$internal_submit_size_small_monitor: 14px !default;
+
+$internal_submit_color: $color_light_one !default;
+
+$internal_submit_weight: 800 !default;
+
+$internal_submit_spacing: 5px !default;
+
+// error message .gfield_description, .validation_message
+
+$internal_form_error_size: 11px !default;
+
+$internal_form_error_spacing: 1px !default;
+
+$internal_form_error_color: $color_bright_two !default;
+
+$internal_form_error_weight: 800 !default;
 
 ////////////////////////////////////////////////////////////////////
 // Header
 ////////////////////////////////////////////////////////////////////
 
+// header
+
+$header_bg_color: $color_light_one !default;
+
+// #header_middle
+
+$header_middle_bg_color: $color_light_one !default;
+
+$header_middle_border_color: $color_light_five !default;
+
+// .menu_wrapper
+
+$menu_wrapper_bg_color: $color_bright_two !default;
+
+// span.menu_bar
+
+$menu_bar_bg_color: $color_light_one !default;
+
+// span.menu_title
+
+$menu_title_size: 11px !default;
+
+$menu_title_spacing: 1.1px !default;
+
+$menu_title_color: $color_light_one !default;
+
+$menu_title_weight: 800 !default;
+
+// .menu_close span
+
+$menu_close_bg_color: $color_light_one !default;
+
+// #cta_wrapper span
+
+$cta_wrapper_size: 12px !default;
+$cta_wrapper_size_large_laptop: 13px !default;
+$cta_wrapper_size_small_monitor: 15px !default;
+
+$cta_wrapper_spacing: 0.6px !default;
+
+$cta_wrapper_color: $color_bright_two !default;
+
+$cta_wrapper_weight: 800 !default;
+
+// #cta_wrapper a
+
+$cta_wrapper_phone_size: 18px !default;
+$cta_wrapper_phone_size_large_laptop: 20px !default;
+$cta_wrapper_phone_size_small_monitor: 23px !default;
+
+$cta_wrapper_phone_color: $color_dark_one !default;
+
+$cta_wrapper_phone_weight: 700 !default;
+
 ////////////////////////////////////////////////////////////////////
 // Navigation
 ////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-// Footer
-////////////////////////////////////////////////////////////////////
+// nav ul li
 
-////////////////////////////////////////////////////////////////////
-// Footer and Contact Page Locations
-////////////////////////////////////////////////////////////////////
+$nav_size: 16px !default;
+$nav_size_small_laptop: 14px !default;
+$nav_size_large_laptop: 15px !default;
 
-////////////////////////////////////////////////////////////////////
-// Internal Banner
-////////////////////////////////////////////////////////////////////
+$nav_height: 20px !default;
+$nav_height_small_laptop: 16px !default;
+$nav_height_large_laptop: 17px !default;
+
+$nav_spacing: 0.75px !default;
+
+$nav_color: $color_dark_one !default;
+
+$nav_weight: 700 !default;
+
+// nav ul.menu li.active a
+
+$nav_active_color: $color_bright_two !default;
+
+// nav ul.menu li.current-menu-ancestor a, nav ul.menu li.current-menu-item a
+
+$nav_current_color: $color_bright_two !default;
+
+// nav ul.sub-menu
+
+$nav_bg_color_small_laptop: $color_light_one !default;
+
+// nav ul.sub-menu li a
+
+$nav_bg_color_hover: $color_light_two !default;
+
+$nav_color_hover: $color_bright_two !default;
 
 ////////////////////////////////////////////////////////////////////
 // Sidebar
 ////////////////////////////////////////////////////////////////////
 
+// #sidebar_inner:after
+
+$sidebar_inner_bg_color: $color_light_ten !default;
+
+// span#sidebar_form_title
+
+$idebar_form_title_size: 14px !default;
+$idebar_form_title_size_small_monitor: 16px !default;
+
+$idebar_form_title_height: 16px !default;
+
+$idebar_form_title_spacing: 1.68px !default;
+$idebar_form_title_spacing_small_monitor: 2.88px !default;
+
+$sidebar_form_title_color: $color_bright_two !default;
+
+$sidebar_form_title_weight: 800 !default;
+
+// #sidebar_form ul li input, select,textarea
+
+$sidebar_form_border_color: $color_light_twelve !default;
+
+$sidebar_form_border_size: 13px !default;
+$sidebar_form_border_size_large_laptop: 14px !default;
+
+$sidebar_form_border_weight: 700 !default;
+
+$sidebar_form_border_spacing: 0.65px !default;
+
+// sidebar submit
+
+$sidebar_submit_bg_color: $color_bright_two !default;
+$sidebar_submit_bg_color_hover: $color_bright_three !default;
+
+$sidebar_submit_size: 12px !default;
+$sidebar_submit_size_small_monitor: 14px !default;
+
+$sidebar_submit_color: $color_light_one !default;
+
+$sidebar_submit_weight: 800 !default;
+
+$sidebar_submit_spacing: 5px !default;
+
+// .gfield_description, .validation_message
+
+$sidebar_error_size: 11px !default;
+
+$sidebar_error_spacing: 1px !default;
+
+$sidebar_error_color: $color_bright_two !default;
+
+$sidebar_error_weight: 800 !default;
+
+// span#sidebar_form_required
+
+$sidebar_required_size: 12px !default;
+$sidebar_required_size_small_monitor: 14px !default;
+
+$sidebar_required_color: $color_light_seven !default;
+
+// .sidebar_box
+
+$sidebar_box_bg_color: $color_light_one !default;
+
+// .sidebar_slide_title
+
+$sidebar_slide_title_bg_color: $color_light_one !default;
+
+// .sidebar_slide_title span
+
+$sidebar_slide_title_size: 12px !default;
+
+$sidebar_slide_title_height: 14px !default;
+
+$sidebar_slide_title_spacing: 1.8px !default;
+
+$sidebar_slide_title_weight: 800 !default;
+
+// .widget
+
+$widget_bg_color: $color_light_one !default;
+
+// .widget ul li a
+
+$widget_color: $color_dark_one !default;
+$widget_color_hover: $color_bright_two !default;
+
+// .widget ul.menu li
+
+$widget_ulmenu_li_size: 14px !default;
+$widget_ulmenu_li_size_small_laptop: 13px !default;
+$widget_ulmenu_li_size_large_laptop: 14px !default;
+$widget_ulmenu_li_size_small_monitor: 15px !default;
+
+$widget_ulmenu_li_height: 17px !default;
+
+$widget_ulmenu_li_weight: 700 !default;
+
+// .widget ul.menu li.active a
+
+$widget_ulmenu_active_color: $color_bright_two !default;
+
+// .widget ul.menu li.current-menu-ancestor a
+
+$widget_ulmenu_current_color: $color_bright_two !default;
+
+// .widget ul.sub-menu li.current-menu-item a
+
+$widget_ulsubmenu_weight: 400 !default;
+
+$widget_ulsubmenu_current_color: $color_bright_two !default;
+
+////////////////////////////////////////////////////////////////////
+// Internal Banner
+////////////////////////////////////////////////////////////////////
+
+// span.banner_title
+
+$banner_title_size: 40px !default;
+$banner_title_size_small_tablet: 35px !default;
+$banner_title_size_small_laptop: 40px !default;
+$banner_title_size_large_laptop: 45px !default;
+$banner_title_size_small_monitor: 50px !default;
+
+$banner_title_height: 45px !default;
+$banner_title_height_small_tablet: 35px !default;
+$banner_title_height_small_laptop: 45px !default;
+$banner_title_height_large_laptop: 50px !default;
+$banner_title_height_small_monitor: 55px !default;
+
+$banner_title_color: $color_light_one !default;
+
+$banner_title_weight: 700 !default;
+
+////////////////////////////////////////////////////////////////////
+// Footer
+////////////////////////////////////////////////////////////////////
+
+// #footer_form_title
+
+$footer_form_title_size: 15px !default;
+$footer_form_title_size_small_tablet: 16px !default;
+$footer_form_title_size_small_laptop: 16px !default;
+$footer_form_title_size_small_monitor: 20px !default;
+
+$footer_form_title_spacing: 1.5px !default;
+$footer_form_title_spacing_small_laptop: 4px !default;
+$footer_form_title_spacing_small_monitor: 5px !default;
+
+$footer_form_title_color: $color_bright_two !default;
+
+$footer_form_title_weight: 800 !default;
+
+// #footer_form_descrip
+
+$footer_form_descrip_size: 15px !default;
+$footer_form_descrip_size_small_tablet: 16px !default;
+$footer_form_descrip_size_small_laptop: 18px !default;
+$footer_form_descrip_size_small_monitor: 20px !default;
+
+$footer_form_descrip_height: 20px !default;
+$footer_form_descrip_height_small_tablet: 24px !default;
+$footer_form_descrip_height_small_laptop: 26px !default;
+$footer_form_descrip_height_small_monitor: 28px !default;
+
+// #footer .gform_wrapper ul li input, selet, textarea
+
+$footer_form_size: 13px !default;
+$footer_form_size_large_laptop: 14px !default;
+
+$footer_form_weight: 700 !default;
+
+$footer_form_spacing: 0.65px !default;
+
+$footer_form_color: $color_dark_one !default;
+
+// footer submit
+
+$footer_submit_bg_color: $color_bright_two !default;
+$footer_submit_bg_color_hover: $color_bright_three !default;
+
+$footer_submit_size: 14px !default;
+
+$footer_submit_color: $color_light_one !default;
+
+$footer_submit_weight: 800 !default;
+
+$footer_submit_spacing: 5px !default;
+
+// footer  .gfield_description, .validation_message
+
+$footer_form_error: 11px !default;
+
+$footer_form_error_spacing: 1px !default;
+
+$footer_form_error_color: $color_bright_two !default;
+
+$footer_form_error_weight: 800 !default;
+
+// span#footer_required
+
+$footer_required_size: 12px !default;
+$footer_required_size_large_laptop: 14px !default;
+
+$footer_required_spacing: 0.3px !default;
+
+$footer_required_color: $color_light_seven !default;
+
+// span#address
+
+$address_size: 15px !default;
+$address_size_small_monitor: 16px !default;
+
+$address_height: 22px !default;
+$address_height_small_monitor: 24px !default;
+
+$address_spacing: 0.38px !default;
+
+// .footer_phone
+
+$footer_phone_color: $color_dark_one !default;
+
+// .footer_phone span
+
+$footer_phone_span_weight: 700 !default;
+
+$footer_phone_span_color: $color_bright_two !default;
+
+// .get_directions
+
+$get_directions_size: 15px !default;
+$get_directions_size_small_monitor: 16px !default;
+
+$get_directions_color: $color_bright_two !default;
+$get_directions_color_hover: $color_bright_three !default;
+
+// social_media a svg path
+
+$social_media_svg_color: $color_dark_one !default;
+$social_media_svg_color_hover: $color_bright_two !default;
+
+// #copyright_inner ul li
+
+$copyright_size: 12px !default;
+
+$copyright_height: 15px !default;
+
+$copyright_spacing: 0.6px !default;
+
+$copyright_color: $color_dark_one !default;
+$copyright_color_hover: $color_bright_two !default;
+
 ////////////////////////////////////////////////////////////////////
 // Section One
 ////////////////////////////////////////////////////////////////////
+
+// #sec_one_video .video_overlay svg path.play_tri
+
+$sec_one_video_tri_bg_color: $color_bright_one !default;
+
+// #sec_one_video:after
+
+$sec_one_video_bg_color: $color_bright_three !default;
+
+// #sec_one_video_content span
+
+$sec_one_video_content_size: 16px !default;
+$sec_one_video_content_size_large_laptop: 18px !default;
+$sec_one_video_content_size_small_monitor: 19px !default;
+
+$sec_one_video_content_height: 24px !default;
+$sec_one_video_content_height_large_laptop: 26px !default;
+$sec_one_video_content_height_small_monitor: 30px !default;
+
+$sec_one_video_content_color: $color_light_one !default;
+
+$sec_one_video_content_border_color: $color_bright_one !default;
+
+// span#sec_one_title
+
+$sec_one_title_size: 35px !default;
+$sec_one_title_size_small_tablet: 55px !default;
+$sec_one_title_size_large_laptop: 65px !default;
+$sec_one_title_size_small_monitor: 75px !default;
+
+$sec_one_title_height: 35px !default;
+$sec_one_title_height_small_tablet: 55px !default;
+$sec_one_title_height_large_laptop: 65px !default;
+$sec_one_title_height_small_monitor: 75px !default;
+
+$sec_one_title_color: $color_light_one !default;
+
+$sec_one_title_weight: 700 !default;
+
+// a#free_consult_button
+
+$free_consult_button_bg_color: $color_bright_two !default;
+
+$free_consult_button_size: 12px !default;
+$free_consult_button_size_small_tablet: 14px !default;
+
+$free_consult_button_color: $color_light_one !default;
+
+$free_consult_button_weight: 800 !default;
+
+$free_consult_button_spacing: 3.2px !default;
+
+// #sec_one_form
+
+$sec_one_form_bg_color: $color_light_one !default;
+
+// #sec_one_form ul li input, #sec_one_form ul li textarea
+
+$sec_one_form_border_color: $color_light_six !default;
+
+$sec_one_form_border_size: 13px !default;
+$sec_one_form_border_size_large_laptop: 14px !default;
+
+$sec_one_form_border_weight: 700 !default;
+
+$sec_one_form_border_spacing: 0.65px !default;
+
+$sec_one_form_color: $color_dark_one !default;
+
+// submit
+
+$sec_one_submit_bg_color: $color_bright_two !default;
+$sec_one_submit_bg_color_hover: $color_bright_three !default;
+
+$sec_one_submit_size: 14px !default;
+
+$sec_one_submit_color: $color_light_one !default;
+
+$sec_one_submit_weight: 800 !default;
+
+$sec_one_submit_spacing: 5px !default;
+
+// .gfield_description, .validation_message
+
+$sec_one_form_error_size: 11px !default;
+
+$sec_one_form_error_spacing: 1px !default;
+
+$sec_one_form_error_color: $color_bright_two !default;
+
+$sec_one_form_error_weight: 800 !default;
+
+// span#sec_one_required
+
+$sec_one_required_size: 12px !default;
+$sec_one_required_size_large_laptop: 14px !default;
+
+$sec_one_required_color: $color_light_seven !default;
+
+// span#sec_one_form_title
+
+$sec_one_form_title_size: 14px !default;
+$sec_one_form_title_size_small_monitor: 20px !default;
+
+$sec_one_form_title_spacing: 2.5px !default;
+
+$sec_one_form_title_color: $color_bright_two !default;
+
+$sec_one_form_title_weight: 800 !default;
 
 ////////////////////////////////////////////////////////////////////
 // Section Two
 ////////////////////////////////////////////////////////////////////
 
+// #section_two
+
+$section_two_bg_color: $color_light_eight !default;
+
+// .slick-dots
+
+$section_two_slick_dots_bg_color: $color_bright_three !default;
+$section_two_slick_dots_bg_color_hover: $color_bright_three !default;
+
+// .sec_two_slide_inner
+
+$sec_two_slide_inner_bg_color: $color_light_one !default;
+
+// span.sec_two_slide_title
+
+$sec_two_slide_title_size: 15px !default;
+$sec_two_slide_title_size_tablet: 14px !default;
+$sec_two_slide_title_size_large_laptop: 15px !default;
+$sec_two_slide_title_size_small_monitor: 17px !default;
+
+$sec_two_slide_title_height: 20px !default;
+
+$sec_two_slide_title_spacing: 2.25px !default;
+$sec_two_slide_title_spacing_small_tablet: 2.1px !default;
+
+$sec_two_slide_title_color: $color_bright_three !default;
+
+$sec_two_slide_title_weight: 800 !default;
+
+// span.sec_two_descrip
+
+$sec_two_descrip_size: 15px !default;
+$sec_two_descrip_size_large_laptop: 17px !default;
+$sec_two_descrip_size_small_monitor: 19px !default;
+
+$sec_two_descrip_height: 20px !default;
+$sec_two_descrip_height_large_laptop: 24px !default;
+$sec_two_descrip_height_small_monitor: 26px !default;
+
+$sec_two_descrip_color: $color_dark_one !default;
+
 ////////////////////////////////////////////////////////////////////
 // Section Three
 ////////////////////////////////////////////////////////////////////
+
+// h1#sec_three_title
+
+$sec_three_title_size: 40px !default;
+$sec_three_title_size_small_tablet: 55px !default;
+$sec_three_title_size_small_laptop: 50px !default;
+$sec_three_title_size_large_laptop: 60px !default;
+$sec_three_title_size_small_monitor: 70px !default;
+
+$sec_three_title_height: 40px !default;
+$sec_three_title_height_small_tablet: 55px !default;
+$sec_three_title_height_large_laptop: 60px !default;
+$sec_three_title_height_small_monitor: 70px !default;
+
+$sec_three_title_spacing: 0.35px !default;
+
+$sec_three_title_color: $color_dark_one !default;
+
+$sec_three_title_weight: 600 !default;
+
+// .subtitle span
+
+$sec_three_subtitle_size: 15px !default;
+$sec_three_subtitle_size_small_tablet: 16px !default;
+$sec_three_subtitle_size_small_monitor: 20px !default;
+
+$sec_three_subtitle_height: 20px !default;
+$sec_three_subtitle_height_small_tablet: 22px !default;
+$sec_three_subtitle_height_small_monitor: 26px !default;
+
+$sec_three_subtitle_spacing: 1.5px !default;
+$sec_three_subtitle_spacing_small_tablet: 4px !default;
+$sec_three_subtitle_spacing_small_monitor: 4px !default;
+
+$sec_three_subtitle_color: $color_dark_one !default;
+
+$sec_three_subtitle_weight: 800 !default;
 
 /////////////////////////////////////////////////////////////////////
 // Section Four
 ////////////////////////////////////////////////////////////////////
 
+// section_four:after
+
+$section_four_bg_color: $color_light_ten !default;
+
+// span#sec_four_title
+
+$sec_four_title_size: 15px !default;
+$sec_four_title_size_small_tablet: 16px !default;
+$sec_four_title_size_small_monitor: 20px !default;
+
+$sec_four_title_height: 20px !default;
+$sec_four_title_height_small_tablet: 21px !default;
+$sec_four_title_height_small_monitor: 30px !default;
+
+$sec_four_title_spacing: 1.5px !default;
+$sec_four_title_spacing_small_tablet: 4px !default;
+$sec_four_title_spacing_small_monitor: 5px !default;
+
+$sec_four_title_weight: 800 !default;
+
+// span#sec_four_title:after
+
+$sec_four_title_line_bg_color: $color_bright_one !default;
+
+// #sec_four_right_content
+
+$sec_four_right_content_bg_color: $color_light_one !default;
+
+// #sec_four_right_content_inner p
+
+$sec_four_right_content_size: 15px !default;
+$sec_four_right_content_size_small_tablet: 16px !default;
+$sec_four_right_content_size_large_laptop: 18px !default;
+$sec_four_right_content_size_small_monitor: 19px !default;
+
+$sec_four_right_content_height: 22px !default;
+$sec_four_right_content_height_small_tablet: 28px !default;
+$sec_four_right_content_height_large_laptop: 32px !default;
+$sec_four_right_content_height_small_monitor: 35px !default;
+
+$sec_four_right_content_weight: 700 !default;
+
+// a.meet_att_button
+
+$meet_att_button_color: $color_bright_three !default;
+$meet_att_button_color_hover: $color_light_one !default;
+
 /////////////////////////////////////////////////////////////////////
 // Section Five
 ////////////////////////////////////////////////////////////////////
+
+// #sec_five_intro:before
+
+$sec_five_intro_line_bg_color: $color_bright_one !default;
+
+// #sec_five_intro p
+
+$sec_five_intro_size: 22px !default;
+$sec_five_intro_size_small_tablet: 26px !default;
+$sec_five_intro_size_small_laptop: 28px !default;
+$sec_five_intro_size_large_laptop: 32px !default;
+$sec_five_intro_size_small_monitor: 35px !default;
+
+$sec_five_intro_height: 28px !default;
+$sec_five_intro_height_small_tablet: 34px !default;
+$sec_five_intro_height_small_laptop: 36px !default;
+$sec_five_intro_height_large_laptop: 42px !default;
+$sec_five_intro_height_small_monitor: 50px !default;
+
+$sec_five_intro_weight: 700 !default;
 
 ////////////////////////////////////////////////////////////////////
 // Section Six
 ////////////////////////////////////////////////////////////////////
 
+// #section_six
+
+$section_six_bg_color: $color_light_ten !default;
+
+// #section_six:after
+
+$section_six_after_bg_color: $color_grad_one !default;
+
+// span#sec_six_title
+
+$sec_six_title_size: 15px !default;
+$sec_six_title_size_small_laptop: 16px !default;
+$sec_six_title_size_small_monitor: 18px !default;
+
+$sec_six_title_height: 18px !default;
+
+$sec_six_title_spacing: 2px !default;
+
+$sec_six_title_weight: 800 !default;
+
+$sec_six_title_color: $color_light_one !default;
+
+$sec_six_title_spacing: 3.75px !default;
+$sec_six_title_spacing_small_monitor: 4.5px !default;
+
+// span#sec_six_title:before, :after
+
+$sec_six_title_bg_color: $color_bright_one !default;
+
+// #sec_six_slider .slick-slide
+
+$sec_six_slider_bg_color: $color_light_one !default;
+
+// #sec_six_slider .slick-dots
+
+$sec_six_slider_dots_bg_color: $color_light_nine !default;
+$sec_six_slider_dots_bg_color_small_laptop: $color_light_one !default;
+
+$sec_six_slider_dots_bg_color_active: $color_bright_three !default;
+$sec_six_slider_dots_bg_color_active_small_laptop: $color_bright_one !default;
+
+// .sec_six_slide_inner
+
+$sec_six_slide_bg_color: $color_light_one !default;
+
+// .sec_six_intro
+
+$sec_six_intro_size: 18px !default;
+
+$sec_six_intro_height: 22px !default;
+
+$sec_six_intro_spacing: 0 !default;
+
+$sec_six_intro_weight: 700 !default;
+
+// .sec_six_descrip
+
+$sec_six_descrip_size: 15px !default;
+$sec_six_descrip_size_small_monitor: 17px !default;
+
+$sec_six_descrip_height: 20px !default;
+$sec_six_descrip_height_small_monitor: 26px !default;
+
+$sec_six_descrip_spacing: 0 !default;
+
+//  span.sec_six_name
+
+$sec_six_name_size: 13px !default;
+$sec_six_name_size_small_monitor: 15px !default;
+
+$sec_six_name_spacing: 1.95px !default;
+
+$sec_six_name_weight: 800 !default;
+
+//  span.sec_six_name:before
+
+$sec_six_name_bullet_bg_color: $color_bright_one !default;
+
 ////////////////////////////////////////////////////////////////////
 // Section Seven
 ////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-// Not Found
-////////////////////////////////////////////////////////////////////
+// #section_seven .subtitle span
+
+$section_seven_subtitle_spacing_small_tablet: 2.4px !default;
+$section_seven_subtitle_spacing_small_laptop: 3.2px !default;
+$section_seven_subtitle_spacing_large_laptop: 4px !default;
+$section_seven_subtitle_spacing_small_monitor: 5px !default;
 
 ////////////////////////////////////////////////////////////////////
 // About Page
 ////////////////////////////////////////////////////////////////////
 
+// #about_top:after
+
+$about_top_bg_color: $color_light_ten !default;
+
+// #about_top_content_inner
+
+$about_top_size: 15px !default;
+$about_top_size_small_tablet: 16px !default;
+$about_top_size_large_laptop: 18px !default;
+$about_top_size_small_monitor: 20px !default;
+
+$about_top_height: 22px !default;
+$about_top_height_small_tablet: 28px !default;
+$about_top_height_large_laptop: 30px !default;
+$about_top_height_small_monitor: 34px !default;
+
+$about_top_weight: 700 !default;
+
 ////////////////////////////////////////////////////////////////////
 // Attorney Bio Page
 ////////////////////////////////////////////////////////////////////
+
+// h1.att_title
+
+$att_title_size: 30px !default;
+$att_title_size_small_tablet: 34px !default;
+$att_title_size_large_laptop: 38px !default;
+$att_title_size_small_monitor: 45px !default;
+
+$att_title_height: 32px !default;
+$att_title_height_small_tablet: 36px !default;
+$att_title_height_large_laptop: 40px !default;
+
+$att_title_weight: 600 !default;
+
+// .att_subtitle:before, &:after
+
+$att_subtitle_bg_color: $color_bright_two !default;
+
+$att_subtitle_size: 12px !default;
+$att_subtitle_size_small_tablet: 14px !default;
+$att_subtitle_size_large_laptop: 15px !default;
+$att_subtitle_size_small_monitor: 16px !default;
+
+$att_subtitle_height: 15px !default;
+$att_subtitle_height_small_tablet: 16px !default;
+$att_subtitle_height_large_laptop: 17px !default;
+$att_subtitle_height_small_monitor: 18px !default;
+
+$att_subtitle_spacing: 1.8px !default;
+$att_subtitle_spacing_small_tablet: 3.5px !default;
+
+$att_subtitle_weight: 800 !default;
+
+// #att_view_accolades
+
+$att_view_accolades_bg_color: $color_light_one !default;
+
+$att_view_accolades_size: 12px !default;
+
+$att_view_accolades_height: 14px !default;
+
+$att_view_accolades_spacing: 1.8px !default;
+
+$att_view_accolades_weight: 800 !default;
+
+// .sidebar_bio
+
+$sidebar_bio_bg_color: $color_light_one !default;
+
+// .sidebar_bio_list h3
+
+$sidebar_bio_list_h3_size: 12px !default;
+$sidebar_bio_list_h3_size_small_monitor: 13px !default;
+
+$sidebar_bio_list_h3_height: 14px !default;
+$sidebar_bio_list_h3_height_small_monitor: 15px !default;
+
+$sidebar_bio_list_h3_spacing: 1.8px !default;
+
+$sidebar_bio_list_h3_weight: 800 !default;
+
+// .sidebar_bio_list ul li
+
+$sidebar_bio_list_li_size: 14px !default;
+$sidebar_bio_list_li_size_small_monitor: 16px !default;
+
+$sidebar_bio_list_li_height: 18px !default;
+$sidebar_bio_list_li_height_small_monitor: 20px !default;
+
+// .sidebar_bio_list ul li:after
+
+$sidebar_bio_list_bullet_bg_color: $color_bright_two !default;
+
+// .placeholder_inner
+
+$placeholder_inner_bg_color: $color_bright_three !default;
+
+// .placeholder_inner:after
+
+$placeholder_inner_size: 14px !default;
+$placeholder_inner_size_small_tablet: 16px !default;
+
+$placeholder_inner_color: $color_light_one !default;
+
+$placeholder_inner_spacing: 1.5px !default;
+
+$placeholder_inner_weight: 700 !default;
 
 ////////////////////////////////////////////////////////////////////
 // Blog
 ////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-// Case Results Page
-////////////////////////////////////////////////////////////////////
+// .blog_meta span.date, li
+
+$blog_meta_size: 14px !default;
+
+$blog_meta_height: 17px !default;
+
+$blog_meta_spacing: 2.1px !default;
+
+$blog_meta_weight: 800 !default;
+
+// .blog_meta ul li a
+
+$blog_meta_color: $color_dark_one !default;
+$blog_meta_color_hover: $color_bright_two !default;
+
+// h2.blog_header
+
+$h2_blog_header_color_hover: $color_bright_one !default;
+
+// a.read_more
+
+$read_more_color: $color_dark_one !default;
+$read_more_color_hover: $color_bright_two !default;
+
+// .paged_wrapper ul li
+
+$paged_wrapper_size: 16px !default;
+
+$paged_wrapper_height: 18px !default;
+
+$paged_wrapper_spacing: 0.4px !default;
+
+$paged_wrapper_weight: 600 !default;
+
+$paged_wrapper_color: $color_dark_one !default;
+$paged_wrapper_color_hover: $color_bright_two !default;
+
+// .paged_wrapper ul li.blog_arrow a:hover
+
+$paged_wrapper_arrow_bg_color: $color_bright_two !default;
+
+// .sidebar_blog h3
+
+$sidebar_blog_h3_size: 14px !default;
+$sidebar_blog_h3_size_small_laptop: 13px !default;
+$sidebar_blog_h3_size_large_laptop: 14px !default;
+$sidebar_blog_h3_size_small_monitor: 15px !default;
+
+$sidebar_blog_h3_height: 17px !default;
+
+$sidebar_blog_h3_weight: 700 !default;
+
+$sidebar_blog_h3_spacing: 0.75px !default;
+
+// .sidebar_blog h3:hover
+
+$sidebar_blog_h3_color_hover: $color_bright_two !default;
+
+// .sidebar_blog ul li
+
+$sidebar_blog_li_size: 14px !default;
+$sidebar_blog_li_size_small_laptop: 13px !default;
+$sidebar_blog_li_size_large_laptop: 14px !default;
+$sidebar_blog_li_size_small_monitor: 15px !default;
+
+$sidebar_blog_li_height: 17px !default;
+
+$sidebar_blog_li_active: $color_bright_two !default;
 
 ////////////////////////////////////////////////////////////////////
 // Contact Page
 ////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-// Meet The Team Page
-////////////////////////////////////////////////////////////////////
+// a.contact_phone
+
+$contact_phone_size: 18px !default;
+
+$contact_phone_height: 26px !default;
+
+$contact_phone_spacing: 0.45px !default;
+
+$contact_phone_color: $color_dark_one !default;
+
+// #contact_wrapper span
+
+$contact_span_color: $color_bright_two !default;
+
+$contact_span_weight: 700 !default;
 
 ////////////////////////////////////////////////////////////////////
 // PA Directory Page
 ////////////////////////////////////////////////////////////////////
 
+// ul.pa_directory_top_menu li
+
+$pa_directory_title_size: 15px !default;
+
+$pa_directory_title_height: 17px !default;
+
+$pa_directory_title_spacing: 2px !default;
+
+$pa_directory_title_weight: 800 !default;
+
+$pa_directory_border: $color_bright_two !default;
+
+// ul.pa_directory_top_menu div ul li
+
+$pa_directory_list_border_color: $color_light_eleven !default;
+
+$pa_directory_list_size: 15px !default;
+
+$pa_directory_list_spacing: 0.4px !default;
+
+$pa_directory_list_weight: 600 !default;
+
+$pa_directory_list_color: $color_dark_one !default;
+$pa_directory_list_color_hover: $color_bright_two !default;
+
 ////////////////////////////////////////////////////////////////////
 // Testimonials Page
 ////////////////////////////////////////////////////////////////////
 
+// .single_testimonial
+
+$single_testi_bg_color: $color_light_one !default;
+
+// .testi_intro
+
+$testi_intro_size: 15px !default;
+$testi_intro_size_small_laptop: 18px !default;
+$testi_intro_size_large_laptop: 20px !default;
+$testi_intro_size_small_monitor: 22px !default;
+
+$testi_intro_height: 19px !default;
+$testi_intro_height_small_laptop: 24px !default;
+$testi_intro_height_large_laptop: 26px !default;
+$testi_intro_height_small_monitor: 28px !default;
+
+$testi_intro_weight: 700 !default;
+
+// .testi_descrip
+
+$testi_descrip_size: 13px !default;
+$testi_descrip_size_small_laptop: 15px !default;
+$testi_descrip_size_small_monitor: 17px !default;
+
+$testi_descrip_height: 18px !default;
+$testi_descrip_height_small_laptop: 20px !default;
+$testi_descrip_height_large_laptop: 26px !default;
+
+// span.testi_name
+
+$testi_name_size: 12px !default;
+$testi_name_size_small_laptop: 13px !default;
+$testi_name_size_small_monitor: 15px !default;
+
+$testi_name_height: 14px !default;
+
+$testi_name_spacing: 1.8px !default;
+
+$testi_name_weight: 800 !default;
+
+// span.testi_name:before
+
+$testi_name_dot_bg_color: $color_bright_one !default;
+
 ////////////////////////////////////////////////////////////////////
 // Video Center Page
 ////////////////////////////////////////////////////////////////////
+
+// span.video_title
+
+$video_title_size: 16px !default;
+
+$video_title_height: 20px !default;
+
+$video_title_color: $color_dark_one !default;
+
+$video_title_weight: 700 !default;
+
+// .single_video .single_video_thumbnail .video_overlay svg path.play_tri
+
+$video_play_button: $color_bright_two !default;
+$video_play_button_hover: $color_bright_one !default;
