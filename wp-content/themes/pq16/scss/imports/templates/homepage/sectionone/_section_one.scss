@@ -100,7 +100,7 @@
     }
     svg {
       path.play_tri {
-        fill: $color_bright_one;
+        fill: $sec_one_video_tri_bg_color;
       }
     }
   }
@@ -140,7 +140,7 @@
     }
   }
   &:after {
-    background: $color_bright_three;
+    background: $sec_one_video_bg_color;
     @include abs(-15px, null, null, -15px, -1);
     @include box(163px, 92px);
     @include contentdisplay();
@@ -181,23 +181,31 @@
       border-top: 4px solid $color_bright_one;
       @include type(
         (
-          size: 16px,
-          height: 24px,
+          size: $sec_one_video_content_size,
+          height: $sec_one_video_content_height,
           family: $thirdfont,
           align: left,
-          color: $color_light_one,
+          color: $sec_one_video_content_color,
         )
       );
     }
     @include mq(small_laptop) {
-      border-top: 6px solid $color_bright_one;
+      border-top: 6px solid $sec_one_video_content_border_color;
     }
     @include mq(large_laptop) {
       padding-top: 17px;
-      @include quick_type(18px, 26px, null);
+      @include quick_type(
+        $sec_one_video_content_size_large_laptop,
+        $sec_one_video_content_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
-      @include quick_type(19px, 30px, null);
+      @include quick_type(
+        $sec_one_video_content_size_small_monitor,
+        $sec_one_video_content_height_small_monitor,
+        null
+      );
     }
   }
 }
@@ -207,26 +215,38 @@ span#sec_one_title {
   margin-top: 20px;
   @include type(
     (
-      size: 35px,
-      height: 35px,
+      size: $sec_one_title_size,
+      height: $sec_one_title_height,
       family: $secondaryfont,
-      color: $color_light_one,
-      weight: 700,
+      color: $sec_one_title_color,
+      weight: $sec_one_title_weight,
     )
   );
   @include mq(small_tablet) {
     order: 1;
     text-align: left;
-    @include quick_type(55px, 55px, null);
+    @include quick_type(
+      $sec_one_title_size_small_tablet,
+      $sec_one_title_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
     margin-top: 0px;
   }
   @include mq(large_laptop) {
-    @include quick_type(65px, 65px, null);
+    @include quick_type(
+      $sec_one_title_size_large_laptop,
+      $sec_one_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(75px, 75px, null);
+    @include quick_type(
+      $sec_one_title_size_small_monitor,
+      $sec_one_title_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -236,22 +256,22 @@ a#free_consult_button {
   margin-top: 70px;
   padding: 19px 10px;
   color: $color_light_one;
-  background: $color_bright_two;
+  background: $free_consult_button_bg_color;
   position: relative;
   z-index: 1;
   @include type(
     (
-      size: 12px,
+      size: $free_consult_button_size,
       family: $primaryfont,
-      color: $color_light_one,
-      weight: 800,
-      spacing: 3.2px,
+      color: $free_consult_button_color,
+      weight: $free_consult_button_weight,
+      spacing: $free_consult_button_spacing,
       transform: uppercase,
     )
   );
   @include mq(small_tablet) {
     padding: 21px 10px;
-    @include quick_type(14px, null, null);
+    @include quick_type($free_consult_button_size_small_tablet, null, null);
   }
   @include mq(small_laptop) {
     display: none;
@@ -287,7 +307,7 @@ img#hero {
 
 #sec_one_form {
   margin-top: 57px;
-  background: $color_light_one;
+  background: $sec_one_form_bg_color;
   box-shadow: 20px 20px 50px #00000029;
   padding: 39px 36px;
   @include mq(large_laptop) {
@@ -312,19 +332,19 @@ img#hero {
       input,
       textarea {
         width: 100%;
-        border: 1px solid $color_light_six;
+        border: 1px solid $sec_one_form_border_color;
         padding: 12px 18px;
         @include type(
           (
-            size: 13px,
-            weight: 700,
-            spacing: 0.65px,
+            size: $sec_one_form_border_size,
+            weight: $sec_one_form_border_weight,
+            spacing: $sec_one_form_border_spacing,
             family: $primaryfont,
-            color: $color_dark_one,
+            color: $sec_one_form_color,
           )
         );
         @include mq(large_laptop) {
-          font-size: 14px;
+          font-size: $sec_one_form_border_size_large_laptop;
         }
         @include mq(small_monitor) {
           padding: 15px 29px;
@@ -342,21 +362,21 @@ img#hero {
     border: none;
     width: 100%;
     padding: 20px 10px;
-    background: $color_bright_two;
+    background: $sec_one_submit_bg_color;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     @include type(
       (
-        size: 14px,
+        size: $sec_one_submit_size,
         family: $primaryfont,
-        color: $color_light_one,
-        weight: 800,
-        spacing: 5px,
+        color: $sec_one_submit_color,
+        weight: $sec_one_submit_weight,
+        spacing: $sec_one_submit_spacing,
         transform: uppercase,
       )
     );
     &:hover {
-      background: $color_bright_three;
+      background: $sec_one_submit_bg_color_hover;
     }
   }
   .gfield_description,
@@ -364,11 +384,11 @@ img#hero {
     margin-top: 5px;
     @include type(
       (
-        size: 11px,
-        spacing: 1px,
+        size: $sec_one_form_error_size,
+        spacing: $sec_one_form_error_spacing,
         family: $primaryfont,
-        color: $color_bright_two,
-        weight: 800,
+        color: $sec_one_form_error_color,
+        weight: $sec_one_form_error_weight,
         transform: uppercase,
       )
     );
@@ -378,14 +398,14 @@ img#hero {
     margin-top: 16px;
     @include type(
       (
-        size: 12px,
+        size: $sec_one_required_size,
         family: $thirdfont,
-        color: $color_light_seven,
+        color: $sec_one_required_color,
         transform: lowercase,
       )
     );
     @include mq(large_laptop) {
-      font-size: 14px;
+      font-size: $sec_one_required_size_large_laptop;
     }
     @include mq(small_monitor) {
       margin-top: 30px;
@@ -399,11 +419,11 @@ span#sec_one_form_title {
     margin-bottom: 13px;
     @include type(
       (
-        size: 14px,
-        spacing: 2.5px,
+        size: $sec_one_form_title_size,
+        spacing: $sec_one_form_title_spacing,
         family: $primaryfont,
-        color: $color_bright_two,
-        weight: 800,
+        color: $sec_one_form_title_color,
+        weight: $sec_one_form_title_weight,
         transform: uppercase,
       )
     );
@@ -412,7 +432,7 @@ span#sec_one_form_title {
     margin-bottom: 21px;
   }
   @include mq(small_monitor) {
-    font-size: 20px;
+    font-size: $sec_one_form_title_size_small_monitor;
     margin-bottom: 27px;
   }
 }

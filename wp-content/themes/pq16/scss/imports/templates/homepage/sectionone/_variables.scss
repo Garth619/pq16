@@ -1,3 +1,112 @@
 ////////////////////////////////////////////////////////////////////
 // Section One
 ////////////////////////////////////////////////////////////////////
+
+// #sec_one_video .video_overlay svg path.play_tri
+
+$sec_one_video_tri_bg_color: $color_bright_one;
+
+// #sec_one_video:after
+
+$sec_one_video_bg_color: $color_bright_three;
+
+// #sec_one_video_content span
+
+$sec_one_video_content_size: 16px;
+$sec_one_video_content_size_large_laptop: 18px;
+$sec_one_video_content_size_small_monitor: 19px;
+
+$sec_one_video_content_height: 24px;
+$sec_one_video_content_height_large_laptop: 26px;
+$sec_one_video_content_height_small_monitor: 30px;
+
+$sec_one_video_content_color: $color_light_one;
+
+$sec_one_video_content_border_color: $color_bright_one;
+
+// span#sec_one_title
+
+$sec_one_title_size: 35px;
+$sec_one_title_size_small_tablet: 55px;
+$sec_one_title_size_large_laptop: 65px;
+$sec_one_title_size_small_monitor: 75px;
+
+$sec_one_title_height: 35px;
+$sec_one_title_height_small_tablet: 55px;
+$sec_one_title_height_large_laptop: 65px;
+$sec_one_title_height_small_monitor: 75px;
+
+$sec_one_title_color: $color_light_one;
+
+$sec_one_title_weight: 700;
+
+// a#free_consult_button
+
+$free_consult_button_bg_color: $color_bright_two;
+
+$free_consult_button_size: 12px;
+$free_consult_button_size_small_tablet: 14px;
+
+$free_consult_button_color: $color_light_one;
+
+$free_consult_button_weight: 800;
+
+$free_consult_button_spacing: 3.2px;
+
+// #sec_one_form
+
+$sec_one_form_bg_color: $color_light_one;
+
+// #sec_one_form ul li input, #sec_one_form ul li textarea
+
+$sec_one_form_border_color: $color_light_six;
+
+$sec_one_form_border_size: 13px;
+$sec_one_form_border_size_large_laptop: 14px;
+
+$sec_one_form_border_weight: 700;
+
+$sec_one_form_border_spacing: 0.65px;
+
+$sec_one_form_color: $color_dark_one;
+
+// submit
+
+$sec_one_submit_bg_color: $color_bright_two;
+$sec_one_submit_bg_color_hover: $color_bright_three;
+
+$sec_one_submit_size: 14px;
+
+$sec_one_submit_color: $color_light_one;
+
+$sec_one_submit_weight: 800;
+
+$sec_one_submit_spacing: 5px;
+
+// .gfield_description, .validation_message
+
+$sec_one_form_error_size: 11px;
+
+$sec_one_form_error_spacing: 1px;
+
+$sec_one_form_error_color: $color_bright_two;
+
+$sec_one_form_error_weight: 800;
+
+// span#sec_one_required
+
+$sec_one_required_size: 12px;
+$sec_one_required_size_large_laptop: 14px;
+
+$sec_one_required_color: $color_light_seven;
+
+// span#sec_one_form_title
+
+$sec_one_form_title_size: 14px;
+$sec_one_form_title_size_small_monitor: 20px;
+
+$sec_one_form_title_spacing: 2.5px;
+
+$sec_one_form_title_color: $color_bright_two;
+
+$sec_one_form_title_weight: 800;
