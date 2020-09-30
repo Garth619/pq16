@@ -14,16 +14,16 @@
     display: block;
     @include type(
       (
-        size: 18px,
-        height: 26px,
-        spacing: 0.45px,
-        color: $color_dark_one,
+        size: $contact_phone_size,
+        height: $contact_phone_height,
+        spacing: $contact_phone_spacing,
+        color: $contact_phone_color,
         family: $primaryfont,
       )
     );
     span {
-      color: $color_bright_two;
-      font-weight: 700;
+      color: $contact_span_color;
+      font-weight: $contact_span_weight;
     }
   }
   a.contact_directions {

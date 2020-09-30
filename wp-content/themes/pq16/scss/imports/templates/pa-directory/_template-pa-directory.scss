@@ -32,11 +32,11 @@ ul.pa_directory_top_menu {
     margin-bottom: 30px;
     @include type(
       (
-        size: 15px,
-        height: 17px,
-        spacing: 2px,
+        size: $pa_directory_title_size,
+        height: $pa_directory_title_height,
+        spacing: $pa_directory_title_spacing,
         family: $primaryfont,
-        weight: 800,
+        weight: $pa_directory_title_weight,
         transform: uppercase,
       )
     );
@@ -48,7 +48,7 @@ ul.pa_directory_top_menu {
     }
     > a {
       padding-bottom: 10px;
-      border-bottom: 4px solid $color_bright_two;
+      border-bottom: 4px solid $pa_directory_border;
       transition: all 200ms ease-in-out;
       &:hover {
       }
@@ -71,13 +71,13 @@ ul.pa_directory_top_menu {
         grid-gap: 0px 40px;
       }
       li {
-        border-bottom: 2px solid $color_light_eleven;
+        border-bottom: 2px solid $pa_directory_list_border_color;
         @include type(
           (
-            size: 15px,
-            spacing: 0.4px,
+            size: $pa_directory_list_size,
+            spacing: $pa_directory_list_spacing,
             family: $primaryfont,
-            weight: 600,
+            weight: $pa_directory_list_weight,
             transform: capitalize,
           )
         );
@@ -104,12 +104,12 @@ ul.pa_directory_top_menu {
         }
         a {
           padding: 15px 0;
-          color: $color_dark_one;
+          color: $pa_directory_list_color;
           text-decoration: none;
 
           transition: all 200ms ease-in-out;
           &:hover {
-            color: $color_bright_two;
+            color: $pa_directory_list_color_hover;
           }
         }
       }
